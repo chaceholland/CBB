@@ -88,6 +88,16 @@ mkdir -p backups
 tar -czf "backups/cbb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/
 ```
 
+### Update Rosters from ESPN
+```bash
+cd ~/Desktop/CBB
+node verify-update-rosters.mjs --verify-only  # Check changes first
+node verify-update-rosters.mjs                # Run full update
+./deploy.sh                                   # Deploy to Vercel
+```
+
+See [Roster Update Guide](docs/ROSTER_UPDATE_GUIDE.md) for details.
+
 ## 🎨 Features
 
 ### UI Features
