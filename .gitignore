@@ -20,3 +20,8 @@ debug_*.html
 *.bak
 *.backup
 .vercel
+
+# Roster update outputs
+data/roster_verification_report_*.json
+data/failed_teams.json
+backups/full_snapshot_*/
