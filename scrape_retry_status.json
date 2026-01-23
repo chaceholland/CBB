@@ -1,0 +1,38 @@
+{
+  "status": "complete",
+  "startTime": "2025-12-11T09:21:28.698Z",
+  "totalTeams": 22,
+  "completed": 22,
+  "currentTeam": "Washington State",
+  "totalPitchers": 107,
+  "totalHeadshots": 55,
+  "errors": [
+    "Georgia Tech",
+    "Miami",
+    "SMU",
+    "Stanford",
+    "Virginia Tech",
+    "Arizona",
+    "Arizona State",
+    "BYU",
+    "Cincinnati",
+    "Colorado",
+    "UCF",
+    "Iowa",
+    "Nebraska",
+    "Oregon",
+    "Penn State",
+    "Purdue",
+    "Wisconsin",
+    "Clemson"
+  ],
+  "successes": [
+    "Duke",
+    "Notre Dame",
+    "Virginia",
+    "Washington State"
+  ],
+  "lastUpdate": "2025-12-11T09:31:00.709Z",
+  "progress": "100%",
+  "endTime": "2025-12-11T09:31:00.709Z"
+}

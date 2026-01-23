@@ -1,0 +1,82 @@
+{
+  "SEC": {
+    "name": "SEC",
+    "teams": 16
+  },
+  "Independent": {
+    "name": "Independent",
+    "teams": 224
+  },
+  "Sun Belt": {
+    "name": "Sun Belt",
+    "teams": 13
+  },
+  "Big 12": {
+    "name": "Big 12",
+    "teams": 15
+  },
+  "Big West": {
+    "name": "Big West",
+    "teams": 10
+  },
+  "Mountain West": {
+    "name": "Mountain West",
+    "teams": 6
+  },
+  "ACC": {
+    "name": "ACC",
+    "teams": 17
+  },
+  "Big Ten": {
+    "name": "Big Ten",
+    "teams": 18
+  },
+  "Big East": {
+    "name": "Big East",
+    "teams": 10
+  },
+  "C-USA": {
+    "name": "C-USA",
+    "teams": 9
+  },
+  "American": {
+    "name": "American",
+    "teams": 11
+  },
+  "Ivy League": {
+    "name": "Ivy League",
+    "teams": 7
+  },
+  "Atlantic 10": {
+    "name": "Atlantic 10",
+    "teams": 14
+  },
+  "Pac-12": {
+    "name": "Pac-12",
+    "teams": 2
+  },
+  "Colonial": {
+    "name": "Colonial",
+    "teams": 12
+  },
+  "WAC": {
+    "name": "WAC",
+    "teams": 9
+  },
+  "SWAC": {
+    "name": "SWAC",
+    "teams": 12
+  },
+  "Southland": {
+    "name": "Southland",
+    "teams": 7
+  },
+  "MAAC": {
+    "name": "MAAC",
+    "teams": 9
+  },
+  "Southern": {
+    "name": "Southern",
+    "teams": 9
+  }
+}

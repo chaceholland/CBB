@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "team": "arkansas",
+    "displayName": "Arkansas Razorbacks",
+    "logo": "https://d1baseball.com/wp-content/uploads/logos/arkansas.png"
+  },
+  {
+    "id": 2,
+    "team": "arizona",
+    "displayName": "Arizona Wildcats",
+    "logo": "https://d1baseball.com/wp-content/uploads/logos/arizona.png"
+  }
+]

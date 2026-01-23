@@ -1,0 +1,29 @@
+{
+  "64": {
+    "teamName": "Stanford Cardinal",
+    "teamId": "64",
+    "slug": "stanford-cardinal",
+    "conference": "ACC",
+    "base": "https://gostanford.com",
+    "roster": "/sports/baseball/roster",
+    "verified": true
+  },
+  "93": {
+    "teamName": "Duke Blue Devils",
+    "teamId": "93",
+    "slug": "duke-blue-devils",
+    "conference": "ACC",
+    "base": "https://goduke.com",
+    "roster": "/sports/baseball/roster",
+    "verified": true
+  },
+  "126": {
+    "teamName": "Texas Longhorns",
+    "teamId": "126",
+    "slug": "texas-longhorns",
+    "conference": "SEC",
+    "base": "https://texassports.com",
+    "roster": "/sports/baseball/roster",
+    "verified": true
+  }
+}

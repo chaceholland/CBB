@@ -1,0 +1,7045 @@
+{
+  "south-carolina": {
+    "team": {
+      "name": "South Carolina",
+      "abbrev": "SC",
+      "espnId": "2579",
+      "rosterUrl": "https://gamecocksonline.com/sports/baseball/roster/",
+      "scheduleUrl": "https://gamecocksonline.com/sports/baseball/schedule/"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:07:38.778Z"
+  },
+  "texas": {
+    "team": {
+      "name": "Texas",
+      "abbrev": "TEX",
+      "espnId": "251",
+      "rosterUrl": "https://texaslonghorns.com/sports/baseball/roster",
+      "scheduleUrl": "https://texaslonghorns.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:08:19.900Z"
+  },
+  "georgia": {
+    "team": {
+      "name": "Georgia",
+      "abbrev": "UGA",
+      "espnId": "61",
+      "rosterUrl": "https://georgiadogs.com/sports/baseball/roster",
+      "scheduleUrl": "https://georgiadogs.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:09:09.385Z"
+  },
+  "florida": {
+    "team": {
+      "name": "Florida",
+      "abbrev": "FLA",
+      "espnId": "57",
+      "rosterUrl": "https://floridagators.com/sports/baseball/roster",
+      "scheduleUrl": "https://floridagators.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:09:40.097Z"
+  },
+  "lsu": {
+    "team": {
+      "name": "LSU",
+      "abbrev": "LSU",
+      "espnId": "99",
+      "rosterUrl": "https://lsusports.net/sports/baseball/roster",
+      "scheduleUrl": "https://lsusports.net/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:10:33.239Z"
+  },
+  "tennessee": {
+    "team": {
+      "name": "Tennessee",
+      "abbrev": "TENN",
+      "espnId": "2633",
+      "rosterUrl": "https://utsports.com/sports/baseball/roster",
+      "scheduleUrl": "https://utsports.com/sports/baseball/schedule"
+    },
+    "games": [
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri) 4:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 4 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 4 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 12 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 12 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 12 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 12 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 11:30 AM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 11:30 AM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 11:30 AM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 11:30 AM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 4 (Wed) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 4 (Wed) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 4 (Wed) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 4 (Wed) 4 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat) 2 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat) 2 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat) 2 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat) 2 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 5 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 5 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 5 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 5 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 23 (Thu) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 23 (Thu) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 23 (Thu) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 23 (Thu) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri) 6:30 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat) 6 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 10 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 10 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 10 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 10 (Sun) 1 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 12 (Tue) 5 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 12 (Tue) 5 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 12 (Tue) 5 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 12 (Tue) 5 PM ET",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat) TBD",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun) TBD",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      }
+    ],
+    "scrapedAt": "2025-12-04T23:10:59.605Z"
+  },
+  "vanderbilt": {
+    "team": {
+      "name": "Vanderbilt",
+      "abbrev": "VAN",
+      "espnId": "238",
+      "rosterUrl": "https://vucommodores.com/sports/baseball/roster",
+      "scheduleUrl": "https://vucommodores.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:11:29.409Z"
+  },
+  "arkansas": {
+    "team": {
+      "name": "Arkansas",
+      "abbrev": "ARK",
+      "espnId": "8",
+      "rosterUrl": "https://arkansasrazorbacks.com/sports/baseball/roster/",
+      "scheduleUrl": "https://arkansasrazorbacks.com/sports/baseball/schedule/"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:11:59.456Z"
+  },
+  "ole-miss": {
+    "team": {
+      "name": "Ole Miss",
+      "abbrev": "MISS",
+      "espnId": "145",
+      "rosterUrl": "https://olemisssports.com/sports/baseball/roster",
+      "scheduleUrl": "https://olemisssports.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:12:55.804Z"
+  },
+  "mississippi-state": {
+    "team": {
+      "name": "Mississippi State",
+      "abbrev": "MSST",
+      "espnId": "344",
+      "rosterUrl": "https://hailstate.com/sports/baseball/roster",
+      "scheduleUrl": "https://hailstate.com/sports/baseball/schedule"
+    },
+    "games": [
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 18 (Wed) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 18 (Wed) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 18 (Wed) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 18 (Wed) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 11 a.m.",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 11 a.m.",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 11 a.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 11 a.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 3 p.m.",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 3 p.m.",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 3 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 3 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 2:30 p.m.",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 2:30 p.m.",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 2:30 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 2:30 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri) 4 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun) 1 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 2 (Thu) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 2 (Thu) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 2 (Thu) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 2 (Thu) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 26 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 26 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 26 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 26 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue) 6 p.m.",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 7 (Thu) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 7 (Thu) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 7 (Thu) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 7 (Thu) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat) TBA",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun) TBA",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      }
+    ],
+    "scrapedAt": "2025-12-04T23:13:50.266Z"
+  },
+  "alabama": {
+    "team": {
+      "name": "Alabama",
+      "abbrev": "ALA",
+      "espnId": "333",
+      "rosterUrl": "https://rolltide.com/sports/baseball/roster",
+      "scheduleUrl": "https://rolltide.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:14:44.397Z"
+  },
+  "auburn": {
+    "team": {
+      "name": "Auburn",
+      "abbrev": "AUB",
+      "espnId": "2",
+      "rosterUrl": "https://auburntigers.com/sports/baseball/roster",
+      "scheduleUrl": "https://auburntigers.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:15:29.898Z"
+  },
+  "kentucky": {
+    "team": {
+      "name": "Kentucky",
+      "abbrev": "UK",
+      "espnId": "96",
+      "rosterUrl": "https://ukathletics.com/sports/baseball/roster",
+      "scheduleUrl": "https://ukathletics.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:16:03.589Z"
+  },
+  "missouri": {
+    "team": {
+      "name": "Missouri",
+      "abbrev": "MIZ",
+      "espnId": "142",
+      "rosterUrl": "https://mutigers.com/sports/baseball/roster",
+      "scheduleUrl": "https://mutigers.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:16:39.423Z"
+  },
+  "texas-am": {
+    "team": {
+      "name": "Texas A&M",
+      "abbrev": "TAMU",
+      "espnId": "245",
+      "rosterUrl": "https://12thman.com/sports/baseball/roster",
+      "scheduleUrl": "https://12thman.com/sports/baseball/schedule"
+    },
+    "games": [
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 13 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 14 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 15 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 17 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 20 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 21 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 22 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 24 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 7:00 PM",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 7:00 PM",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 7:00 PM",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 27 (Fri) 7:00 PM",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 7:00 PM",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 7:00 PM",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 7:00 PM",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Feb 28 (Sat) 7:00 PM",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 6:30 PM",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 6:30 PM",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 6:30 PM",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 1 (Sun) 6:30 PM",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 3 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 6 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 7 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 8 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 10 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 13 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 14 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 15 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 17 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 20 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 21 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 22 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 24 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 27 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 28 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 29 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Mar 31 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 2 (Thu)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 2 (Thu)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 2 (Thu)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 2 (Thu)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 3 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 4 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 7 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 10 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 11 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 12 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 14 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 17 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 18 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 19 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 21 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 24 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 25 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 26 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 26 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 26 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 26 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Apr 28 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 1 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 2 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 3 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 5 (Tue)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 8 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 9 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 10 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 10 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 10 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 10 (Sun)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 14 (Thu)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 15 (Fri)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 16 (Sat)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 19 (Tue)- May 24 (Sun)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 29 (Fri)- Jun 1 (Mon)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 29 (Fri)- Jun 1 (Mon)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 29 (Fri)- Jun 1 (Mon)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "May 29 (Fri)- Jun 1 (Mon)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Jun 5 (Fri)- Jun 8 (Mon)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Jun 5 (Fri)- Jun 8 (Mon)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Jun 5 (Fri)- Jun 8 (Mon)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Jun 5 (Fri)- Jun 8 (Mon)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Jun 12 (Fri)- Jun 22 (Mon)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Jun 12 (Fri)- Jun 22 (Mon)",
+        "isHome": true,
+        "isConference": true
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Jun 12 (Fri)- Jun 22 (Mon)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "Jun 12 (Fri)- Jun 22 (Mon)",
+        "isHome": true,
+        "isConference": false
+      },
+      {
+        "date": "",
+        "opponent": "History",
+        "location": "",
+        "time": "",
+        "isHome": true,
+        "isConference": false
+      }
+    ],
+    "scrapedAt": "2025-12-04T23:17:16.119Z"
+  },
+  "oklahoma": {
+    "team": {
+      "name": "Oklahoma",
+      "abbrev": "OU",
+      "espnId": "201",
+      "rosterUrl": "https://soonersports.com/sports/baseball/roster",
+      "scheduleUrl": "https://soonersports.com/sports/baseball/schedule"
+    },
+    "games": [],
+    "scrapedAt": "2025-12-04T23:17:44.262Z"
+  }
+}

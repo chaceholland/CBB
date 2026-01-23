@@ -1,0 +1,336 @@
+[
+  {
+    "team": "Texas",
+    "teamKey": "texas",
+    "espnId": "251",
+    "scrapedAt": "2025-11-26T20:09:22.224Z",
+    "season": "2026",
+    "gameCount": 54,
+    "games": [
+      {
+        "date": "Jan 31",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Feb 13",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Feb 14",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Feb 15",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Feb 17",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Feb 20",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Feb 21",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Feb 22",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Feb 24",
+        "opponent": "Houston, Texas",
+        "homeAway": "home",
+        "location": "Daikin Park"
+      },
+      {
+        "date": "Feb 27",
+        "opponent": "Houston, Texas",
+        "homeAway": "home",
+        "location": "Daikin Park"
+      },
+      {
+        "date": "Feb 28",
+        "opponent": "Houston, Texas",
+        "homeAway": "home",
+        "location": "Daikin Park"
+      },
+      {
+        "date": "Mar 1",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 3",
+        "opponent": "USC Upstate",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 6",
+        "opponent": "USC Upstate",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 7",
+        "opponent": "USC Upstate",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 8",
+        "opponent": "Texas State",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 10",
+        "opponent": "Ole Miss",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 13",
+        "opponent": "Ole Miss",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 14",
+        "opponent": "Ole Miss",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 15",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 17",
+        "opponent": "Auburn",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 20",
+        "opponent": "Auburn",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 21",
+        "opponent": "Auburn",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 22",
+        "opponent": "Houston, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 24",
+        "opponent": "Oklahoma",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 26",
+        "opponent": "Oklahoma",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 27",
+        "opponent": "Oklahoma",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 28",
+        "opponent": "Texas State",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Mar 31",
+        "opponent": "South Carolina",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 2",
+        "opponent": "South Carolina",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 3",
+        "opponent": "South Carolina",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 4",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 7",
+        "opponent": "Texas A&M",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 10",
+        "opponent": "Texas A&M",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 11",
+        "opponent": "Texas A&M",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 12",
+        "opponent": "Texas A&M - Corpus Christi",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 14",
+        "opponent": "Alabama",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 17",
+        "opponent": "Alabama",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 18",
+        "opponent": "Alabama",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 19",
+        "opponent": "Air Force",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 21",
+        "opponent": "Vanderbilt",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 24",
+        "opponent": "Vanderbilt",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 25",
+        "opponent": "Vanderbilt",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 26",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "Apr 28",
+        "opponent": "Mississippi State",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 1",
+        "opponent": "Mississippi State",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 2",
+        "opponent": "Mississippi State",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 3",
+        "opponent": "Austin, Texas",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 5",
+        "opponent": "Tennessee",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 8",
+        "opponent": "Tennessee",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 9",
+        "opponent": "Tennessee",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 10",
+        "opponent": "Missouri",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 14",
+        "opponent": "Missouri",
+        "homeAway": "home",
+        "location": ""
+      },
+      {
+        "date": "May 15",
+        "opponent": "Missouri",
+        "homeAway": "home",
+        "location": ""
+      }
+    ]
+  }
+]

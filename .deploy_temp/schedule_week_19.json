@@ -1,0 +1,48 @@
+{
+  "games": [
+    {
+      "id": "401778103",
+      "espn_game_id": "401778103",
+      "date": "2025-06-21T23:00Z",
+      "week": 19,
+      "season": 2025,
+      "season_type": 6,
+      "home_team_id": "85",
+      "away_team_id": "146",
+      "home_team_name": "LSU Tigers",
+      "away_team_name": "Coastal Carolina Chanticleers",
+      "venue": "Charles Schwab Field",
+      "city": "Omaha",
+      "state": "Nebraska",
+      "status": "STATUS_FINAL",
+      "home_score": "1",
+      "away_score": "0",
+      "broadcast": "ESPN, ESPN+",
+      "notes": "Men's College World Series Championship Final - Game 1",
+      "home": "85",
+      "away": "146"
+    },
+    {
+      "id": "401778104",
+      "espn_game_id": "401778104",
+      "date": "2025-06-22T18:30Z",
+      "week": 19,
+      "season": 2025,
+      "season_type": 6,
+      "home_team_id": "146",
+      "away_team_id": "85",
+      "home_team_name": "Coastal Carolina Chanticleers",
+      "away_team_name": "LSU Tigers",
+      "venue": "Charles Schwab Field",
+      "city": "Omaha",
+      "state": "Nebraska",
+      "status": "STATUS_FINAL",
+      "home_score": "3",
+      "away_score": "5",
+      "broadcast": "ABC, ESPN+",
+      "notes": "Men's College World Series Championship Final - Game 2",
+      "home": "146",
+      "away": "85"
+    }
+  ]
+}

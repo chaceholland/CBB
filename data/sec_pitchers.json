@@ -1,0 +1,262 @@
+{
+  "fetchedAt": "2025-10-30T13:36:50.533Z",
+  "data": [
+    {
+      "team_id": "alabama",
+      "team": "Alabama Crimson Tide",
+      "pitchers": []
+    },
+    {
+      "team_id": "arkansas",
+      "team": "Arkansas Razorbacks",
+      "pitchers": []
+    },
+    {
+      "team_id": "auburn",
+      "team": "Auburn Tigers",
+      "pitchers": []
+    },
+    {
+      "team_id": "florida",
+      "team": "Florida Gators",
+      "pitchers": []
+    },
+    {
+      "team_id": "georgia",
+      "team": "Georgia Bulldogs",
+      "pitchers": [
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP/1B"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        }
+      ]
+    },
+    {
+      "team_id": "kentucky",
+      "team": "Kentucky Wildcats",
+      "pitchers": [
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position 1B/RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP/OF"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position LHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        },
+        {
+          "name": "",
+          "position": "Position RHP"
+        }
+      ]
+    },
+    {
+      "team_id": "lsu",
+      "team": "LSU Tigers",
+      "pitchers": []
+    },
+    {
+      "team_id": "mississippi‑state",
+      "team": "Mississippi State Bulldogs",
+      "pitchers": []
+    },
+    {
+      "team_id": "ole‑miss",
+      "team": "Ole Miss Rebels",
+      "pitchers": [
+        {
+          "name": "",
+          "position": "Position LHP"
+        }
+      ]
+    },
+    {
+      "team_id": "south‑carolina",
+      "team": "South Carolina Gamecocks",
+      "pitchers": []
+    },
+    {
+      "team_id": "tennessee",
+      "team": "Tennessee Volunteers",
+      "pitchers": []
+    },
+    {
+      "team_id": "vanderbilt",
+      "team": "Vanderbilt Commodores",
+      "pitchers": []
+    },
+    {
+      "team_id": "texas‑a&m",
+      "team": "Texas A&M Aggies",
+      "pitchers": []
+    },
+    {
+      "team_id": "missouri",
+      "team": "Missouri Tigers",
+      "pitchers": []
+    }
+  ]
+}

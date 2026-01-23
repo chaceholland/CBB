@@ -1,0 +1,703 @@
+{
+  "fetchedAt": "2025-10-30T17:00:21.017Z",
+  "data": [
+    {
+      "team_id": "alabama",
+      "team": "Alabama Crimson Tide",
+      "pitchers": []
+    },
+    {
+      "team_id": "arkansas",
+      "team": "Arkansas Razorbacks",
+      "pitchers": []
+    },
+    {
+      "team_id": "auburn",
+      "team": "Auburn Tigers",
+      "pitchers": []
+    },
+    {
+      "team_id": "florida",
+      "team": "Florida Gators",
+      "pitchers": []
+    },
+    {
+      "team_id": "georgia",
+      "team": "Georgia Bulldogs",
+      "pitchers": []
+    },
+    {
+      "team_id": "kentucky",
+      "team": "Kentucky Wildcats",
+      "pitchers": [
+        {
+          "jersey": "0 Jaxon Jelkin RHP 6-5",
+          "name": "195 lbs.",
+          "position": "RHP",
+          "year": "",
+          "hometown": "twitter",
+          "raw": "0 Jaxon Jelkin RHP 6-5 \n                                                            195 lbs.\n                                                     Junior \n                                                                                                Omaha, Neb.\n                                                                                                                                                 \n                                                                                                                                                            Houston\n                                                                                     twitter"
+        },
+        {
+          "jersey": "5 Jack Bennett RHP 6-2",
+          "name": "210 lbs.",
+          "position": "RHP",
+          "year": "",
+          "hometown": "Western Kentucky",
+          "raw": "5 Jack Bennett RHP 6-2 \n                                                            210 lbs.\n                                                     Senior \n                                                                                                Paducah, Ky.\n                                                                                                                                                 \n                                                                                                                                                            Western Kentucky"
+        },
+        {
+          "jersey": "7 Toby Peterson LHP/UT 6-2",
+          "name": "185 lbs.",
+          "position": "LHP",
+          "year": "7 Toby Peterson LHP/UT 6-2",
+          "hometown": "Palatine, Ill.",
+          "raw": "7 Toby Peterson LHP/UT 6-2 \n                                                            185 lbs.\n                                                     Freshman \n                                                                                                Palatine, Ill."
+        },
+        {
+          "jersey": "8 Nile Adcock RHP 6-2",
+          "name": "180 lbs.",
+          "position": "RHP",
+          "year": "",
+          "hometown": "twitter",
+          "raw": "8 Nile Adcock RHP 6-2 \n                                                            180 lbs.\n                                                     Senior \n                                                                                                Pinckneyville, Ill.\n                                                                                                                                                 \n                                                                                                                                                            Kaskaskia CC\n                                                                                     twitter"
+        },
+        {
+          "jersey": "12 Connor Mattison RHP 6-2",
+          "name": "195 lbs.",
+          "position": "RHP",
+          "year": "12 Connor Mattison RHP 6-2",
+          "hometown": "Grand Canyon",
+          "raw": "12 Connor Mattison RHP 6-2 \n                                                            195 lbs.\n                                                     Junior \n                                                                                                Goodyear, Ariz.\n                                                                                                                                                 \n                                                                                                                                                            Grand Canyon"
+        },
+        {
+          "jersey": "16 Ira",
+          "name": "Austin IV RHP 6-2",
+          "position": "RHP",
+          "year": "",
+          "hometown": "New Orleans",
+          "raw": "16 Ira  Austin IV RHP 6-2 \n                                                            175 lbs.\n                                                     Senior \n                                                                                                Metairie, La.\n                                                                                                                                                 \n                                                                                                                                                            New Orleans"
+        },
+        {
+          "jersey": "17 Cameron Owens RHP/INF 5-11",
+          "name": "180 lbs.",
+          "position": "RHP",
+          "year": "Redshirt Freshman",
+          "hometown": "twitter",
+          "raw": "17 Cameron Owens RHP/INF 5-11 \n                                                            180 lbs.\n                                                     Redshirt Freshman \n                                                                                                Harrodsburg, Ky.\n                                                                                      twitter"
+        },
+        {
+          "jersey": "19 Jack",
+          "name": "Sams RHP 6-3",
+          "position": "RHP",
+          "year": "Freshman",
+          "hometown": "Lexington, Ky.",
+          "raw": "19 Jack  Sams RHP 6-3 \n                                                            195 lbs.\n                                                     Freshman \n                                                                                                Lexington, Ky."
+        },
+        {
+          "jersey": "20 Tommy Skelding RHP 6-3",
+          "name": "190 lbs.",
+          "position": "RHP",
+          "year": "Redshirt Sophomore",
+          "hometown": "twitter",
+          "raw": "20 Tommy Skelding RHP 6-3 \n                                                            190 lbs.\n                                                     Redshirt Sophomore \n                                                                                                Atwater, Ohio\n                                                                                      twitter"
+        },
+        {
+          "jersey": "21 Chase Alderman RHP 6-5",
+          "name": "205 lbs.",
+          "position": "RHP",
+          "year": "Redshirt Sophomore",
+          "hometown": "twitter",
+          "raw": "21 Chase Alderman RHP 6-5 \n                                                            205 lbs.\n                                                     Redshirt Sophomore \n                                                                                                Morehead, Ky.\n                                                                                                                                                 \n                                                                                                                                                            Eastern Kentucky\n                                                                                     twitter"
+        },
+        {
+          "jersey": "22 Burkley Bounds RHP 6-2",
+          "name": "200 lbs.",
+          "position": "RHP",
+          "year": "Sophomore",
+          "hometown": "Eastern Kentucky",
+          "raw": "22 Burkley Bounds RHP 6-2 \n                                                            200 lbs.\n                                                     Sophomore \n                                                                                                Lexington, Ky.\n                                                                                                                                                 \n                                                                                                                                                            Eastern Kentucky"
+        },
+        {
+          "jersey": "28 Lucas Hail RHP 5-10",
+          "name": "175 lbs.",
+          "position": "RHP",
+          "year": "Freshman",
+          "hometown": "Brandenburg, Ky.",
+          "raw": "28 Lucas Hail RHP 5-10 \n                                                            175 lbs.\n                                                     Freshman \n                                                                                                Brandenburg, Ky."
+        },
+        {
+          "jersey": "30 Bryson Treichel RHP 6-4",
+          "name": "190 lbs.",
+          "position": "RHP",
+          "year": "30 Bryson Treichel RHP 6-4",
+          "hometown": "North Florida",
+          "raw": "30 Bryson Treichel RHP 6-4 \n                                                            190 lbs.\n                                                     Sophomore \n                                                                                                DeLand, Fla.\n                                                                                                                                                 \n                                                                                                                                                            North Florida"
+        },
+        {
+          "jersey": "31 Oliver Boone RHP 6-4",
+          "name": "215 lbs.",
+          "position": "RHP",
+          "year": "Redshirt Sophomore",
+          "hometown": "twitter",
+          "raw": "31 Oliver Boone RHP 6-4 \n                                                            215 lbs.\n                                                     Redshirt Sophomore \n                                                                                                North Hollywood, Calif.\n                                                                                                                                                 \n                                                                                                                                                            California\n                                                                                     twitter"
+        },
+        {
+          "jersey": "35 Jackson Soucie LHP 6-4",
+          "name": "225 lbs.",
+          "position": "LHP",
+          "year": "35 Jackson Soucie LHP 6-4",
+          "hometown": "South Carolina",
+          "raw": "35 Jackson Soucie LHP 6-4 \n                                                            225 lbs.\n                                                     Senior \n                                                                                                Cambridge, Ontario\n                                                                                                                                                 \n                                                                                                                                                            South Carolina"
+        },
+        {
+          "jersey": "36 Nate Harris RHP 6-4",
+          "name": "225 lbs.",
+          "position": "RHP",
+          "year": "Sophomore",
+          "hometown": "twitter",
+          "raw": "36 Nate Harris RHP 6-4 \n                                                            225 lbs.\n                                                     Sophomore \n                                                                                                Yorkville, Ill.\n                                                                                      twitter"
+        },
+        {
+          "jersey": "38 Ryan Mullan RHP 6-2",
+          "name": "235 lbs.",
+          "position": "RHP",
+          "year": "",
+          "hometown": "Loyola Marymount",
+          "raw": "38 Ryan Mullan RHP 6-2 \n                                                            235 lbs.\n                                                     Junior \n                                                                                                Chino Hills, Calif.\n                                                                                                                                                 \n                                                                                                                                                            Loyola Marymount"
+        },
+        {
+          "jersey": "45 Leighton Harris LHP 6-3",
+          "name": "210 lbs.",
+          "position": "LHP",
+          "year": "Sophomore",
+          "hometown": "twitter",
+          "raw": "45 Leighton Harris LHP 6-3 \n                                                            210 lbs.\n                                                     Sophomore \n                                                                                                Lexington, Ky.\n                                                                                      twitter"
+        },
+        {
+          "jersey": "47 Will Coleman LHP 6-1",
+          "name": "180 lbs.",
+          "position": "LHP",
+          "year": "Freshman",
+          "hometown": "Newburgh, Ind.",
+          "raw": "47 Will Coleman LHP 6-1 \n                                                            180 lbs.\n                                                     Freshman \n                                                                                                Newburgh, Ind."
+        },
+        {
+          "jersey": "48 Ben Cleaver LHP 6-3",
+          "name": "185 lbs.",
+          "position": "LHP",
+          "year": "Thompsons Station, Tenn.",
+          "hometown": "twitter",
+          "raw": "48 Ben Cleaver LHP 6-3 \n                                                            185 lbs.\n                                                     Junior \n                                                                                                Thompsons Station, Tenn.\n                                                                                      twitter"
+        },
+        {
+          "jersey": "49 Tristan",
+          "name": "Hunter RHP 6-2",
+          "position": "RHP",
+          "year": "Sophomore",
+          "hometown": "twitter",
+          "raw": "49 Tristan  Hunter RHP 6-2 \n                                                            185 lbs.\n                                                     Sophomore \n                                                                                                Forsyth, Mo.\n                                                                                      twitter"
+        },
+        {
+          "jersey": "50 Will Pryor RHP 6-2",
+          "name": "205 lbs.",
+          "position": "RHP",
+          "year": "",
+          "hometown": "Belmont",
+          "raw": "50 Will Pryor RHP 6-2 \n                                                            205 lbs.\n                                                     Junior \n                                                                                                Whitwell, Tenn.\n                                                                                                                                                 \n                                                                                                                                                            Belmont"
+        }
+      ]
+    },
+    {
+      "team_id": "lsu",
+      "team": "LSU Tigers",
+      "pitchers": []
+    },
+    {
+      "team_id": "mississippi-state",
+      "team": "Mississippi State Bulldogs",
+      "pitchers": []
+    },
+    {
+      "team_id": "ole-miss",
+      "team": "Ole Miss Rebels",
+      "pitchers": [
+        {
+          "jersey": "10",
+          "name": "Cade Townsend",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 1''\t185\tSo.\t1L\tAliso Viejo, Calif. / Santa Margarita Catholic",
+          "hometown": "RHP\tR/R\t6' 1''\t185\tSo.\t1L\tAliso Viejo, Calif. / Santa Margarita Catholic",
+          "raw": "10\t\nCade Townsend\n\tRHP\tR/R\t6' 1''\t185\tSo.\t1L\tAliso Viejo, Calif. / Santa Margarita Catholic"
+        },
+        {
+          "jersey": "14",
+          "name": "Cooper Johnson",
+          "position": "LHP",
+          "year": "Cooper Johnson",
+          "hometown": "LHP\tL/L\t6' 4''\t220\tSo.\t1L\tJefferson, Ga. / Mountain View",
+          "raw": "14\t\nCooper Johnson\n\tLHP\tL/L\t6' 4''\t220\tSo.\t1L\tJefferson, Ga. / Mountain View"
+        },
+        {
+          "jersey": "17",
+          "name": "Marko Sipila",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 4''\t215\tSr.\tTR\tIndependence, Minn. / Orono Senior\tSan Diego State",
+          "hometown": "RHP\tR/R\t6' 4''\t215\tSr.\tTR\tIndependence, Minn. / Orono Senior\tSan Diego State",
+          "raw": "17\t\nMarko Sipila\n\tRHP\tR/R\t6' 4''\t215\tSr.\tTR\tIndependence, Minn. / Orono Senior\tSan Diego State"
+        },
+        {
+          "jersey": "18",
+          "name": "Luke Romine",
+          "position": "LHP",
+          "year": "1B/LHP\tL/L\t6' 1''\t215\tFr.\tHS\tHernando, Miss. / Hernando",
+          "hometown": "1B/LHP\tL/L\t6' 1''\t215\tFr.\tHS\tHernando, Miss. / Hernando",
+          "raw": "18\t\nLuke Romine\n\t1B/LHP\tL/L\t6' 1''\t215\tFr.\tHS\tHernando, Miss. / Hernando"
+        },
+        {
+          "jersey": "19",
+          "name": "Walker Hooks",
+          "position": "LHP",
+          "year": "LHP\tL/L\t6' 4''\t265\tSo.\t1L\tBrandon, Miss. / Brandon",
+          "hometown": "LHP\tL/L\t6' 4''\t265\tSo.\t1L\tBrandon, Miss. / Brandon",
+          "raw": "19\t\nWalker Hooks\n\tLHP\tL/L\t6' 4''\t265\tSo.\t1L\tBrandon, Miss. / Brandon"
+        },
+        {
+          "jersey": "21",
+          "name": "Owen Kelly",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 3''\t205\tJr.\tTR\tBelleville, Ill. / Belleville East\tSaint Louis",
+          "hometown": "RHP\tR/R\t6' 3''\t205\tJr.\tTR\tBelleville, Ill. / Belleville East\tSaint Louis",
+          "raw": "21\t\nOwen Kelly\n\tRHP\tR/R\t6' 3''\t205\tJr.\tTR\tBelleville, Ill. / Belleville East\tSaint Louis"
+        },
+        {
+          "jersey": "22",
+          "name": "Patrick Collopy",
+          "position": "LHP",
+          "year": "LHP\tL/L\t6' 6''\t215\tJr.\tJC\tAustin, Tex. / Bowie\tTemple College",
+          "hometown": "LHP\tL/L\t6' 6''\t215\tJr.\tJC\tAustin, Tex. / Bowie\tTemple College",
+          "raw": "22\t\nPatrick Collopy\n\tLHP\tL/L\t6' 6''\t215\tJr.\tJC\tAustin, Tex. / Bowie\tTemple College"
+        },
+        {
+          "jersey": "23",
+          "name": "Hudson Calhoun",
+          "position": "RHP",
+          "year": "Hudson Calhoun",
+          "hometown": "RHP\tR/R\t6' 4''\t210\tJr.\t2L\tTupelo, Miss. / McCallie School",
+          "raw": "23\t\nHudson Calhoun\n\tRHP\tR/R\t6' 4''\t210\tJr.\t2L\tTupelo, Miss. / McCallie School"
+        },
+        {
+          "jersey": "26",
+          "name": "Hunter Elliott",
+          "position": "LHP",
+          "year": "LHP\tL/L\t6' 3''\t215\tSr.\t3L\tTupelo, Miss. / Tupelo",
+          "hometown": "LHP\tL/L\t6' 3''\t215\tSr.\t3L\tTupelo, Miss. / Tupelo",
+          "raw": "26\t\nHunter Elliott\n\tLHP\tL/L\t6' 3''\t215\tSr.\t3L\tTupelo, Miss. / Tupelo"
+        },
+        {
+          "jersey": "28",
+          "name": "Noah Allen",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 7''\t200\tFr.\tHS\tWatkinsville, Ga. / North Oconee",
+          "hometown": "RHP\tR/R\t6' 7''\t200\tFr.\tHS\tWatkinsville, Ga. / North Oconee",
+          "raw": "28\t\nNoah Allen\n\tRHP\tR/R\t6' 7''\t200\tFr.\tHS\tWatkinsville, Ga. / North Oconee"
+        },
+        {
+          "jersey": "29",
+          "name": "Grayson Gibson",
+          "position": "LHP",
+          "year": "Grayson Gibson",
+          "hometown": "LHP\tL/L\t6' 1''\t200\tFr.\tHS\tTampa, Fla. / Calvary Christian",
+          "raw": "29\t\nGrayson Gibson\n\tLHP\tL/L\t6' 1''\t200\tFr.\tHS\tTampa, Fla. / Calvary Christian"
+        },
+        {
+          "jersey": "33",
+          "name": "Landon Koenig",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 6''\t220\tJr.\tTR\tPortland, N.D. / May-Port CG\tNorth Dakota State",
+          "hometown": "RHP\tR/R\t6' 6''\t220\tJr.\tTR\tPortland, N.D. / May-Port CG\tNorth Dakota State",
+          "raw": "33\t\nLandon Koenig\n\tRHP\tR/R\t6' 6''\t220\tJr.\tTR\tPortland, N.D. / May-Port CG\tNorth Dakota State"
+        },
+        {
+          "jersey": "34",
+          "name": "Landon Waters",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 1''\t210\tSr.\t1L\tGrenada, Miss. / Grenada\tMeridian CC",
+          "hometown": "RHP\tR/R\t6' 1''\t210\tSr.\t1L\tGrenada, Miss. / Grenada\tMeridian CC",
+          "raw": "34\t\nLandon Waters\n\tRHP\tR/R\t6' 1''\t210\tSr.\t1L\tGrenada, Miss. / Grenada\tMeridian CC"
+        },
+        {
+          "jersey": "35",
+          "name": "Owen Hancock",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 5''\t205\tSo.\t1L\tSylvester, Ga. / Worth County",
+          "hometown": "RHP\tR/R\t6' 5''\t205\tSo.\t1L\tSylvester, Ga. / Worth County",
+          "raw": "35\t\nOwen Hancock\n\tRHP\tR/R\t6' 5''\t205\tSo.\t1L\tSylvester, Ga. / Worth County"
+        },
+        {
+          "jersey": "38",
+          "name": "Terry Hayes",
+          "position": "RHP",
+          "year": "RHP\tL/R\t6' 4''\t225\tSo.\tJC\tRenton, Wa. / Liberty\tBellevue College",
+          "hometown": "RHP\tL/R\t6' 4''\t225\tSo.\tJC\tRenton, Wa. / Liberty\tBellevue College",
+          "raw": "38\t\nTerry Hayes\n\tRHP\tL/R\t6' 4''\t225\tSo.\tJC\tRenton, Wa. / Liberty\tBellevue College"
+        },
+        {
+          "jersey": "39",
+          "name": "Blake Ilitch",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 4''\t210\tFr.\tHS\tDetroit, Mich. / Brother Rice",
+          "hometown": "RHP\tR/R\t6' 4''\t210\tFr.\tHS\tDetroit, Mich. / Brother Rice",
+          "raw": "39\t\nBlake Ilitch\n\tRHP\tR/R\t6' 4''\t210\tFr.\tHS\tDetroit, Mich. / Brother Rice"
+        },
+        {
+          "jersey": "40",
+          "name": "JP Robertson",
+          "position": "RHP",
+          "year": "JP Robertson",
+          "hometown": "RHP\tR/R\t6' 0''\t190\tR-So.\tJC\tMadison, Miss. / Germantown\tPearl River CC",
+          "raw": "40\t\nJP Robertson\n\tRHP\tR/R\t6' 0''\t190\tR-So.\tJC\tMadison, Miss. / Germantown\tPearl River CC"
+        },
+        {
+          "jersey": "43",
+          "name": "Evan Farrow",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 5''\t185\tFr.\tHS\tAustin, Tex. / Vandegrift",
+          "hometown": "RHP\tR/R\t6' 5''\t185\tFr.\tHS\tAustin, Tex. / Vandegrift",
+          "raw": "43\t\nEvan Farrow\n\tRHP\tR/R\t6' 5''\t185\tFr.\tHS\tAustin, Tex. / Vandegrift"
+        },
+        {
+          "jersey": "44",
+          "name": "Jake Reigert",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 6''\t238\tR-Fr.\tRS\tCottage Grove, Minn. / East Ridge",
+          "hometown": "RHP\tR/R\t6' 6''\t238\tR-Fr.\tRS\tCottage Grove, Minn. / East Ridge",
+          "raw": "44\t\nJake Reigert\n\tRHP\tR/R\t6' 6''\t238\tR-Fr.\tRS\tCottage Grove, Minn. / East Ridge"
+        },
+        {
+          "jersey": "45",
+          "name": "Wil Libbert",
+          "position": "LHP",
+          "year": "LHP\tL/L\t6' 1''\t205\tSo.\tTR\tSt. Thomas, Mo. / Blair Oaks\tMissouri",
+          "hometown": "LHP\tL/L\t6' 1''\t205\tSo.\tTR\tSt. Thomas, Mo. / Blair Oaks\tMissouri",
+          "raw": "45\t\nWil Libbert\n\tLHP\tL/L\t6' 1''\t205\tSo.\tTR\tSt. Thomas, Mo. / Blair Oaks\tMissouri"
+        },
+        {
+          "jersey": "50",
+          "name": "Taylor Rabe",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 5''\t200\tSo.\t1L\tGreenville, S.C. / Greenville Senior",
+          "hometown": "RHP\tR/R\t6' 5''\t200\tSo.\t1L\tGreenville, S.C. / Greenville Senior",
+          "raw": "50\t\nTaylor Rabe\n\tRHP\tR/R\t6' 5''\t200\tSo.\t1L\tGreenville, S.C. / Greenville Senior"
+        },
+        {
+          "jersey": "55",
+          "name": "Leo Odom",
+          "position": "RHP",
+          "year": "RHP\tR/R\t6' 2''\t200\tFr.\tHS\tSumrall, Miss. / Sumrall",
+          "hometown": "RHP\tR/R\t6' 2''\t200\tFr.\tHS\tSumrall, Miss. / Sumrall",
+          "raw": "55\t\nLeo Odom\n\tRHP\tR/R\t6' 2''\t200\tFr.\tHS\tSumrall, Miss. / Sumrall"
+        }
+      ]
+    },
+    {
+      "team_id": "south-carolina",
+      "team": "South Carolina Gamecocks",
+      "pitchers": []
+    },
+    {
+      "team_id": "tennessee",
+      "team": "Tennessee Volunteers",
+      "pitchers": [
+        {
+          "jersey": "21",
+          "name": "Tegan Kuhns",
+          "position": "RHP",
+          "year": "So.\tRHP\tS/R\t6' 3''\t189\tGettysburg, Pa. / Gettysburg Area HS",
+          "hometown": "So.\tRHP\tS/R\t6' 3''\t189\tGettysburg, Pa. / Gettysburg Area HS",
+          "raw": "21\t\nTegan Kuhns\n\tSo.\tRHP\tS/R\t6' 3''\t189\tGettysburg, Pa. / Gettysburg Area HS"
+        },
+        {
+          "jersey": "25",
+          "name": "Brandon Arvidson",
+          "position": "LHP",
+          "year": "Brandon Arvidson",
+          "hometown": "R-Jr.\tLHP\tR/L\t6' 5''\t215\tDripping Springs, Texas / Dripping Springs HS\tTexas A&M / San Jacinto College (TX)",
+          "raw": "25\t\nBrandon Arvidson\n\tR-Jr.\tLHP\tR/L\t6' 5''\t215\tDripping Springs, Texas / Dripping Springs HS\tTexas A&M / San Jacinto College (TX)"
+        },
+        {
+          "jersey": "34",
+          "name": "Brayden Krenzel",
+          "position": "RHP",
+          "year": "So.\tRHP\tR/R\t6' 3''\t214\tDublin, Ohio / Dublin Jerome HS",
+          "hometown": "So.\tRHP\tR/R\t6' 3''\t214\tDublin, Ohio / Dublin Jerome HS",
+          "raw": "34\t\nBrayden Krenzel\n\tSo.\tRHP\tR/R\t6' 3''\t214\tDublin, Ohio / Dublin Jerome HS"
+        },
+        {
+          "jersey": "40",
+          "name": "Anson Seibert",
+          "position": "RHP",
+          "year": "Anson Seibert",
+          "hometown": "R-Fr.\tRHP\tL/R\t6' 8''\t235\tOverland Park, Kan. / Blue Valley Southwest HS",
+          "raw": "40\t\nAnson Seibert\n\tR-Fr.\tRHP\tL/R\t6' 8''\t235\tOverland Park, Kan. / Blue Valley Southwest HS"
+        },
+        {
+          "jersey": "44",
+          "name": "Nic Abraham",
+          "position": "RHP",
+          "year": "So.\tRHP\tL/R\t6' 5''\t209\tElk Grove, Calif. / Franklin HS",
+          "hometown": "So.\tRHP\tL/R\t6' 5''\t209\tElk Grove, Calif. / Franklin HS",
+          "raw": "44\t\nNic Abraham\n\tSo.\tRHP\tL/R\t6' 5''\t209\tElk Grove, Calif. / Franklin HS"
+        },
+        {
+          "jersey": "",
+          "name": "Sr.\tLHP\tL/L\t6' 0''\t205\tWoburn, Mass. / Austin Preparatory School\tVirginia",
+          "position": "LHP",
+          "year": "Sr.\tLHP\tL/L\t6' 0''\t205\tWoburn, Mass. / Austin Preparatory School\tVirginia",
+          "hometown": "Sr.\tLHP\tL/L\t6' 0''\t205\tWoburn, Mass. / Austin Preparatory School\tVirginia",
+          "raw": "Evan Blanco\n\tSr.\tLHP\tL/L\t6' 0''\t205\tWoburn, Mass. / Austin Preparatory School\tVirginia"
+        },
+        {
+          "jersey": "",
+          "name": "So.\tOF/LHP\tL/L\t6' 3''\t180\tPearland, Texas / Shadow Creek HS\tRice",
+          "position": "LHP",
+          "year": "So.\tOF/LHP\tL/L\t6' 3''\t180\tPearland, Texas / Shadow Creek HS\tRice",
+          "hometown": "So.\tOF/LHP\tL/L\t6' 3''\t180\tPearland, Texas / Shadow Creek HS\tRice",
+          "raw": "Blaine Brown\n\tSo.\tOF/LHP\tL/L\t6' 3''\t180\tPearland, Texas / Shadow Creek HS\tRice"
+        },
+        {
+          "jersey": "",
+          "name": "Jr.\tRHP\tR/R\t5' 11''\t190\tKnoxville, Tenn. / Bearden HS\tETSU",
+          "position": "RHP",
+          "year": "Brady Frederick",
+          "hometown": "Jr.\tRHP\tR/R\t5' 11''\t190\tKnoxville, Tenn. / Bearden HS\tETSU",
+          "raw": "Brady Frederick\n\tJr.\tRHP\tR/R\t5' 11''\t190\tKnoxville, Tenn. / Bearden HS\tETSU"
+        },
+        {
+          "jersey": "",
+          "name": "Gr.\tLHP\tL/L\t6' 4''\t220\tEssex Fells, N.J. / Seton Hall Prep\tWilliam & Mary / Duke",
+          "position": "LHP",
+          "year": "",
+          "hometown": "Gr.\tLHP\tL/L\t6' 4''\t220\tEssex Fells, N.J. / Seton Hall Prep\tWilliam & Mary / Duke",
+          "raw": "Mark Hindy\n\tGr.\tLHP\tL/L\t6' 4''\t220\tEssex Fells, N.J. / Seton Hall Prep\tWilliam & Mary / Duke"
+        },
+        {
+          "jersey": "",
+          "name": "So.\tRHP\tS/R\t6' 1''\t200\tColumbus, N.J. / Bishop Eustace HS\tRutgers",
+          "position": "RHP",
+          "year": "So.\tRHP\tS/R\t6' 1''\t200\tColumbus, N.J. / Bishop Eustace HS\tRutgers",
+          "hometown": "So.\tRHP\tS/R\t6' 1''\t200\tColumbus, N.J. / Bishop Eustace HS\tRutgers",
+          "raw": "Landon Mack\n\tSo.\tRHP\tS/R\t6' 1''\t200\tColumbus, N.J. / Bishop Eustace HS\tRutgers"
+        },
+        {
+          "jersey": "",
+          "name": "Jr.\tRHP\tR/R\t6' 4''\t225\tChickamauga, Ga. / Gordon Lee HS\tKennesaw State",
+          "position": "RHP",
+          "year": "Jr.\tRHP\tR/R\t6' 4''\t225\tChickamauga, Ga. / Gordon Lee HS\tKennesaw State",
+          "hometown": "Jr.\tRHP\tR/R\t6' 4''\t225\tChickamauga, Ga. / Gordon Lee HS\tKennesaw State",
+          "raw": "Bo Rhudy\n\tJr.\tRHP\tR/R\t6' 4''\t225\tChickamauga, Ga. / Gordon Lee HS\tKennesaw State"
+        }
+      ]
+    },
+    {
+      "team_id": "vanderbilt",
+      "team": "Vanderbilt Commodores",
+      "pitchers": [
+        {
+          "jersey": "17\tRyan Ginther\tLHP\tSenior\t5'11\"\t198\tR/L\tHendersonville, Tennessee\tStation Camp",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "17\tRyan Ginther\tLHP\tSenior\t5'11\"\t198\tR/L\tHendersonville, Tennessee\tStation Camp",
+          "hometown": "Open nil",
+          "raw": "17\tRyan Ginther\tLHP\tSenior\t5'11\"\t198\tR/L\tHendersonville, Tennessee\tStation Camp\t\nOpen nil"
+        },
+        {
+          "jersey": "21\tHudson Barton\tRHP\tFreshman\t6'3\"\t199\tR/R\tFranklin, Tennessee\tGrace Christian Academy",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "21\tHudson Barton\tRHP\tFreshman\t6'3\"\t199\tR/R\tFranklin, Tennessee\tGrace Christian Academy",
+          "hometown": "Open nil",
+          "raw": "21\tHudson Barton\tRHP\tFreshman\t6'3\"\t199\tR/R\tFranklin, Tennessee\tGrace Christian Academy\t\nOpen nil"
+        },
+        {
+          "jersey": "22\tJD Thompson\tLHP\tJunior\t6'0\"\t199\tR/L\tRusk, Texas\tRusk",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "22\tJD Thompson\tLHP\tJunior\t6'0\"\t199\tR/L\tRusk, Texas\tRusk",
+          "hometown": "Open nil",
+          "raw": "22\tJD Thompson\tLHP\tJunior\t6'0\"\t199\tR/L\tRusk, Texas\tRusk\t\nOpen nil"
+        },
+        {
+          "jersey": "30\tEthan Robinson\tRHP\tSophomore\t6'5\"\t223\tR/R\tMurfreesboro, Tennessee\tDonelson Christian Academy",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "30\tEthan Robinson\tRHP\tSophomore\t6'5\"\t223\tR/R\tMurfreesboro, Tennessee\tDonelson Christian Academy",
+          "hometown": "Open nil",
+          "raw": "30\tEthan Robinson\tRHP\tSophomore\t6'5\"\t223\tR/R\tMurfreesboro, Tennessee\tDonelson Christian Academy\t\nOpen nil"
+        },
+        {
+          "jersey": "33\tLuke Guth\tRHP\tSophomore\t6'1\"\t182\tR/R\tFranklin, Pennsylvania\tFranklin Area",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "33\tLuke Guth\tRHP\tSophomore\t6'1\"\t182\tR/R\tFranklin, Pennsylvania\tFranklin Area",
+          "hometown": "Open nil",
+          "raw": "33\tLuke Guth\tRHP\tSophomore\t6'1\"\t182\tR/R\tFranklin, Pennsylvania\tFranklin Area\t\nOpen nil"
+        },
+        {
+          "jersey": "34\tBrennan Seiber\tRHP\tSophomore\t6'6\"\t240\tR/R\tNewport Beach, California\tMater Dei",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "34\tBrennan Seiber\tRHP\tSophomore\t6'6\"\t240\tR/R\tNewport Beach, California\tMater Dei",
+          "hometown": "Open nil",
+          "raw": "34\tBrennan Seiber\tRHP\tSophomore\t6'6\"\t240\tR/R\tNewport Beach, California\tMater Dei\t\nOpen nil"
+        },
+        {
+          "jersey": "36\tLevi Huesman\tLHP\tJunior\t6'0\"\t186\tR/L\tHanover, Virginia\tHanover",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "",
+          "hometown": "Open nil",
+          "raw": "36\tLevi Huesman\tLHP\tJunior\t6'0\"\t186\tR/L\tHanover, Virginia\tHanover\t\nOpen nil"
+        },
+        {
+          "jersey": "37\tJakob Schulz\tLHP\tSophomore\t6'2\"\t206\tR/L\tHouston, Texas\tMemorial",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "37\tJakob Schulz\tLHP\tSophomore\t6'2\"\t206\tR/L\tHouston, Texas\tMemorial",
+          "hometown": "Open nil",
+          "raw": "37\tJakob Schulz\tLHP\tSophomore\t6'2\"\t206\tR/L\tHouston, Texas\tMemorial\t\nOpen nil"
+        },
+        {
+          "jersey": "39\tConnor Fennell\tRHP\tSophomore\t6'1\"\t168\tR/R\tLondonderry, New Hampshire\tLondonderry",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "39\tConnor Fennell\tRHP\tSophomore\t6'1\"\t168\tR/R\tLondonderry, New Hampshire\tLondonderry",
+          "hometown": "Open nil",
+          "raw": "39\tConnor Fennell\tRHP\tSophomore\t6'1\"\t168\tR/R\tLondonderry, New Hampshire\tLondonderry\t\nOpen nil"
+        },
+        {
+          "jersey": "40\tAustin Nye\tRHP\tFreshman\t6'2\"\t205\tR/R\tRoseville, California\tWoodcreek",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "40\tAustin Nye\tRHP\tFreshman\t6'2\"\t205\tR/R\tRoseville, California\tWoodcreek",
+          "hometown": "Open nil",
+          "raw": "40\tAustin Nye\tRHP\tFreshman\t6'2\"\t205\tR/R\tRoseville, California\tWoodcreek\t\nOpen nil"
+        },
+        {
+          "jersey": "43\tMatthew Shorey\tLHP\tFreshman\t6'2\"\t176\tL/L\tNashville, Tennessee\tFather Ryan",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "43\tMatthew Shorey\tLHP\tFreshman\t6'2\"\t176\tL/L\tNashville, Tennessee\tFather Ryan",
+          "hometown": "Open nil",
+          "raw": "43\tMatthew Shorey\tLHP\tFreshman\t6'2\"\t176\tL/L\tNashville, Tennessee\tFather Ryan\t\nOpen nil"
+        },
+        {
+          "jersey": "45\tAiden O'Connell\tLHP\tFreshman\t6'2\"\t191\tL/L\tBedford, New Hampshire\tBedford",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "45\tAiden O'Connell\tLHP\tFreshman\t6'2\"\t191\tL/L\tBedford, New Hampshire\tBedford",
+          "hometown": "Open nil",
+          "raw": "45\tAiden O'Connell\tLHP\tFreshman\t6'2\"\t191\tL/L\tBedford, New Hampshire\tBedford\t\nOpen nil"
+        },
+        {
+          "jersey": "46\tRoman Petricca\tLHP\tFreshman\t6'2\"\t175\tR/L\tMt. Juliet, Tennessee\tMt. Juliet",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "46\tRoman Petricca\tLHP\tFreshman\t6'2\"\t175\tR/L\tMt. Juliet, Tennessee\tMt. Juliet",
+          "hometown": "Open nil",
+          "raw": "46\tRoman Petricca\tLHP\tFreshman\t6'2\"\t175\tR/L\tMt. Juliet, Tennessee\tMt. Juliet\t\nOpen nil"
+        },
+        {
+          "jersey": "55\tCody Bowker\tRHP\tJunior\t6'1\"\t212\tR/R\tBowdoinham, Maine\tThornton Academy",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "",
+          "hometown": "Open nil",
+          "raw": "55\tCody Bowker\tRHP\tJunior\t6'1\"\t212\tR/R\tBowdoinham, Maine\tThornton Academy\t\nOpen nil"
+        },
+        {
+          "jersey": "66\tDeegan Cordova\tRHP\tSophomore\t6'2\"\t188\tR/R\tLake Havasu City, Arizona\tLake Havasu",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "66\tDeegan Cordova\tRHP\tSophomore\t6'2\"\t188\tR/R\tLake Havasu City, Arizona\tLake Havasu",
+          "hometown": "Open nil",
+          "raw": "66\tDeegan Cordova\tRHP\tSophomore\t6'2\"\t188\tR/R\tLake Havasu City, Arizona\tLake Havasu\t\nOpen nil"
+        },
+        {
+          "jersey": "70\tTristan Bristow\tRHP\tFreshman\t6'3\"\t189\tR/R\tHelotes, Texas\tHarlan",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "70\tTristan Bristow\tRHP\tFreshman\t6'3\"\t189\tR/R\tHelotes, Texas\tHarlan",
+          "hometown": "Open nil",
+          "raw": "70\tTristan Bristow\tRHP\tFreshman\t6'3\"\t189\tR/R\tHelotes, Texas\tHarlan\t\nOpen nil"
+        },
+        {
+          "jersey": "73\tTommy O'Rourke\tRHP\tGraduate\t6'2\"\t211\tR/R\tMorristown, New Jersey\tSeton Hall Prep",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "",
+          "hometown": "Open nil",
+          "raw": "73\tTommy O'Rourke\tRHP\tGraduate\t6'2\"\t211\tR/R\tMorristown, New Jersey\tSeton Hall Prep\t\nOpen nil"
+        },
+        {
+          "jersey": "77\tAlex Kranzler\tRHP\tSophomore\t6'3\"\t222\tR/R\tNorwood, New Jersey\tNorthern Valley Regional",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "77\tAlex Kranzler\tRHP\tSophomore\t6'3\"\t222\tR/R\tNorwood, New Jersey\tNorthern Valley Regional",
+          "hometown": "Open nil",
+          "raw": "77\tAlex Kranzler\tRHP\tSophomore\t6'3\"\t222\tR/R\tNorwood, New Jersey\tNorthern Valley Regional\t\nOpen nil"
+        },
+        {
+          "jersey": "88\tSawyer Hawks\tRHP\tSenior\t6'4\"\t215\tR/R\tLakeland, Florida\tMcKeel Academy",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "",
+          "hometown": "Open nil",
+          "raw": "88\tSawyer Hawks\tRHP\tSenior\t6'4\"\t215\tR/R\tLakeland, Florida\tMcKeel Academy\t\nOpen nil"
+        },
+        {
+          "jersey": "89\tEthan McElvain\tLHP\tSophomore\t6'4\"\t238\tS/L\tThompson's Station, Tennessee\tNolensville",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "89\tEthan McElvain\tLHP\tSophomore\t6'4\"\t238\tS/L\tThompson's Station, Tennessee\tNolensville",
+          "hometown": "Open nil",
+          "raw": "89\tEthan McElvain\tLHP\tSophomore\t6'4\"\t238\tS/L\tThompson's Station, Tennessee\tNolensville\t\nOpen nil"
+        },
+        {
+          "jersey": "90\tMiller Green\tLHP\tSophomore\t6'5\"\t230\tL/L\tNashville, Tennessee\tLipscomb Academy",
+          "name": "Open nil",
+          "position": "LHP",
+          "year": "90\tMiller Green\tLHP\tSophomore\t6'5\"\t230\tL/L\tNashville, Tennessee\tLipscomb Academy",
+          "hometown": "Open nil",
+          "raw": "90\tMiller Green\tLHP\tSophomore\t6'5\"\t230\tL/L\tNashville, Tennessee\tLipscomb Academy\t\nOpen nil"
+        },
+        {
+          "jersey": "96\tNate Teague\tRHP\tSophomore\t6'7\"\t232\tR/R\tSnow Camp, North Carolina\tSouthern Alamance",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "96\tNate Teague\tRHP\tSophomore\t6'7\"\t232\tR/R\tSnow Camp, North Carolina\tSouthern Alamance",
+          "hometown": "Open nil",
+          "raw": "96\tNate Teague\tRHP\tSophomore\t6'7\"\t232\tR/R\tSnow Camp, North Carolina\tSouthern Alamance\t\nOpen nil"
+        },
+        {
+          "jersey": "99\tEngland Bryan\tRHP\tFreshman\t6'1\"\t231\tR/R\tHillsboro, Tennessee\tMiddle Tennessee Christian",
+          "name": "Open nil",
+          "position": "RHP",
+          "year": "99\tEngland Bryan\tRHP\tFreshman\t6'1\"\t231\tR/R\tHillsboro, Tennessee\tMiddle Tennessee Christian",
+          "hometown": "Open nil",
+          "raw": "99\tEngland Bryan\tRHP\tFreshman\t6'1\"\t231\tR/R\tHillsboro, Tennessee\tMiddle Tennessee Christian\t\nOpen nil"
+        }
+      ]
+    },
+    {
+      "team_id": "texas-a&m",
+      "team": "Texas A&M Aggies",
+      "pitchers": []
+    },
+    {
+      "team_id": "missouri",
+      "team": "Missouri Tigers",
+      "pitchers": []
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "team": "Texas",
+    "teamKey": "texas",
+    "espnId": "251",
+    "abbrev": "TEX",
+    "conference": "SEC",
+    "scrapedAt": "2025-11-26T20:09:13.401Z",
+    "playerCount": 36,
+    "pitcherCount": 22,
+    "players": [
+      {
+        "name": "Temo Becerra",
+        "position": "INF",
+        "isPitcher": false
+      },
+      {
+        "name": "Jason Flores",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Ethan Mendoza",
+        "position": "INF",
+        "isPitcher": false
+      },
+      {
+        "name": "Anthony Pack Jr.",
+        "position": "OF",
+        "isPitcher": false
+      },
+      {
+        "name": "Andrew Ermis",
+        "position": "C",
+        "isPitcher": false
+      },
+      {
+        "name": "Carson Tinney",
+        "position": "C",
+        "isPitcher": false
+      },
+      {
+        "name": "Jonah Williams",
+        "position": "OF",
+        "isPitcher": false
+      },
+      {
+        "name": "Kade Bing",
+        "position": "LHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Haiden Leffew",
+        "position": "LHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Ruger Riojas",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Josh Livingston",
+        "position": "INF",
+        "isPitcher": false
+      },
+      {
+        "name": "Will Hill",
+        "position": "OF",
+        "isPitcher": false
+      },
+      {
+        "name": "Jack McKernan",
+        "position": "LHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Adrian Rodriguez",
+        "position": "INF",
+        "isPitcher": false
+      },
+      {
+        "name": "Cal Higgins",
+        "position": "LHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Grady Westphal",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Blake Peterson",
+        "position": "OF",
+        "isPitcher": false
+      },
+      {
+        "name": "Kaleb Rogers",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Casey Borba",
+        "position": "INF",
+        "isPitcher": false
+      },
+      {
+        "name": "Connor McCreery",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Michael Winter",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Sam Cozart",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Callum Early",
+        "position": "INF",
+        "isPitcher": false
+      },
+      {
+        "name": "Max Grubbs",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Cody Howard",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Aiden Robbins",
+        "position": "OF",
+        "isPitcher": false
+      },
+      {
+        "name": "Ashton Larson",
+        "position": "OF",
+        "isPitcher": false
+      },
+      {
+        "name": "Thomas Burns",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Ethan Walker",
+        "position": "LHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Hudson Hamilton",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Luke Harrison",
+        "position": "LHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Jack Paris",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Cooper Rummel",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Brett Crossland",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Jadyn Furgason",
+        "position": "RHP",
+        "isPitcher": true
+      },
+      {
+        "name": "Dylan Volantis",
+        "position": "LHP",
+        "isPitcher": true
+      }
+    ]
+  }
+]

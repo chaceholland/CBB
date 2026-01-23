@@ -1,0 +1,100 @@
+[
+  {
+    "date": "May 1",
+    "opponent": "Friday, May LSU",
+    "location": "away",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 2",
+    "opponent": "Saturday, May LSU",
+    "location": "away",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 3",
+    "opponent": "Sunday, May LSU",
+    "location": "away",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 8",
+    "opponent": "Friday, May Alabama",
+    "location": "home",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 9",
+    "opponent": "Saturday, May Alabama",
+    "location": "home",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 10",
+    "opponent": "Sunday, May Alabama",
+    "location": "home",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 12",
+    "opponent": "Tuesday, May Winthrop",
+    "location": "home",
+    "time": "6:30 pm",
+    "isConference": false
+  },
+  {
+    "date": "May 14",
+    "opponent": "Thursday, May Vanderbilt",
+    "location": "away",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 15",
+    "opponent": "Friday, May Vanderbilt",
+    "location": "away",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 16",
+    "opponent": "Saturday, May Vanderbilt",
+    "location": "away",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 19",
+    "opponent": "Tue May Sun",
+    "location": "home",
+    "time": "",
+    "isConference": true
+  },
+  {
+    "date": "May 29",
+    "opponent": "Fri May Mon",
+    "location": "home",
+    "time": "",
+    "isConference": false
+  },
+  {
+    "date": "Jun 5",
+    "opponent": "Fri Jun Mon",
+    "location": "home",
+    "time": "",
+    "isConference": false
+  },
+  {
+    "date": "Jun 12",
+    "opponent": "Fri Jun Mon",
+    "location": "home",
+    "time": "",
+    "isConference": false
+  }
+]

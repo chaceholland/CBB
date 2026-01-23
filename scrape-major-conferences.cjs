@@ -1,0 +1,247 @@
+/**
+ * All Major Conference D1 Baseball Pitcher Scraper with Progress Bar
+ * 
+ * Scrapes ACC, Big 12, Big Ten, Pac-12, and SEC teams
+ * Real-time progress bar with auto-save
+ */
+
+const puppeteer = require('puppeteer');
+const fs = require('fs');
+const path = require('path');
+const KNOWN_WEBSITES = require('./known-athletic-websites.cjs');
+
+const DATA_DIR = path.join(__dirname, 'data');
+const TEAMS_FILE = path.join(DATA_DIR, 'teams.json');
+const OUTPUT_FILE = path.join(DATA_DIR, 'pitchers.json');
+
+const delay = ms => new Promise(r => setTimeout(r, ms));
+
+// Progress bar
+function drawProgressBar(current, total, teamName, pitchers, failed) {
+  const barWidth = 50;
+  const percentage = Math.floor((current / total) * 100);
+  const filled = Math.floor((current / total) * barWidth);
+  const empty = barWidth - filled;
+  
+  const bar = '█'.repeat(filled) + '░'.repeat(empty);
+  const stats = `⚾${pitchers} ✗${failed}`;
+  
+  process.stdout.write(`\r[${bar}] ${percentage}% (${current}/${total}) ${stats} | ${teamName.padEnd(30).substring(0, 30)}`);
+}
+
+// Check if position is pitcher
+function isPitcher(position) {
+  if (!position) return false;
+  const pos = position.trim().toUpperCase();
+  const codes = ['P', 'RHP', 'LHP', 'SP', 'RP', 'CL'];
+  return codes.some(code => 
+    pos === code || pos.startsWith(code + '/') || pos.endsWith('/' + code) ||
+    pos.includes('PITCHER')
+  );
+}
+
+// Scrape team roster
+async function scrapeTeam(browser, team, websiteInfo) {
+  const page = await browser.newPage();
+  await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36');
+  
+  try {
+    const url = websiteInfo.base + websiteInfo.roster;
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await delay(2000);
+    
+    const roster = await page.evaluate((baseUrl) => {
+      const players = [];
+      const getText = (el, selectors) => {
+        if (!el) return '';
+        for (const sel of selectors) {
+          const found = el.querySelector(sel);
+          if (found) return found.textContent?.trim() || '';
+        }
+        return '';
+      };
+      
+      const getAttr = (el, selectors, attr) => {
+        if (!el) return '';
+        for (const sel of selectors) {
+          const found = el.querySelector(sel);
+          if (found) {
+            const val = found.getAttribute(attr);
+            if (val) return val;
+          }
+        }
+        return '';
+      };
+      
+      // SIDEARM roster cards
+      const sidearmPlayers = document.querySelectorAll('.sidearm-roster-player');
+      sidearmPlayers.forEach(player => {
+        let headshot = getAttr(player, ['.sidearm-roster-player-image img'], 'srcset') || 
+                      getAttr(player, ['.sidearm-roster-player-image img'], 'src') || '';
+        
+        // Extract first URL from srcset
+        if (headshot.includes(' ')) {
+          const match = headshot.match(/(https?:\/\/[^\s,]+)/);
+          if (match) headshot = match[1];
+        }
+        
+        if (headshot.startsWith('/')) headshot = baseUrl + headshot;
+        
+        let bioUrl = getAttr(player, ['.sidearm-roster-player-name a'], 'href') || '';
+        if (bioUrl && bioUrl.startsWith('/')) bioUrl = baseUrl + bioUrl;
+        
+        const name = getText(player, ['.sidearm-roster-player-name']);
+        const number = getText(player, ['.sidearm-roster-player-jersey-number']);
+        const position = getText(player, ['.sidearm-roster-player-position']);
+        const year = getText(player, ['.sidearm-roster-player-academic-year']);
+        
+        if (name) {
+          players.push({ name, number, position, year, headshot, bioUrl });
+        }
+      });
+      
+      // Vue/Nuxt roster cards (Auburn style)
+      if (players.length === 0) {
+        const vueCards = document.querySelectorAll('.roster-card-item');
+        vueCards.forEach(card => {
+          const name = card.querySelector('.roster-card-item__title-link')?.textContent?.trim() || '';
+          if (!name) return;
+          
+          const number = card.querySelector('.roster-card-item__jersey-number')?.textContent?.replace('#', '')?.trim() || '';
+          const position = card.querySelector('.roster-card-item__position')?.textContent?.trim() || '';
+          
+          let bioUrl = card.querySelector('.roster-card-item__title-link')?.getAttribute('href') || '';
+          if (bioUrl && bioUrl.startsWith('/')) bioUrl = baseUrl + bioUrl;
+          
+          const basicValues = card.querySelectorAll('.roster-player-card-profile-field__value--basic');
+          const year = basicValues[2]?.textContent?.trim() || '';
+          
+          let headshot = '';
+          const img = card.querySelector('.roster-card-item__image');
+          if (img) {
+            const src = img.getAttribute('src') || '';
+            if (!src.startsWith('data:')) {
+              headshot = src.startsWith('/') ? baseUrl + src : src;
+            }
+          }
+          
+          players.push({ name, number, position, year, headshot, bioUrl });
+        });
+      }
+      
+      return players;
+    }, websiteInfo.base);
+    
+    await page.close();
+    return roster.filter(p => isPitcher(p.position));
+    
+  } catch (err) {
+    await page.close().catch(() => {});
+    return null;
+  }
+}
+
+// Generate bio URL
+function generateBioUrl(team, playerName) {
+  const websiteInfo = KNOWN_WEBSITES[team.id];
+  if (!websiteInfo) return '';
+  
+  const nameSlug = playerName
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  
+  return `${websiteInfo.base}${websiteInfo.roster}/${nameSlug}`;
+}
+
+// Main
+async function main() {
+  console.log('⚾ Major Conference D1 Baseball Pitcher Scraper');
+  console.log('===============================================\n');
+  
+  // Get teams with known websites
+  const teamsData = JSON.parse(fs.readFileSync(TEAMS_FILE, 'utf8'));
+  const teamsToScrape = teamsData.teams.filter(t => KNOWN_WEBSITES[t.id]);
+  
+  console.log(`📊 Teams to scrape: ${teamsToScrape.length}`);
+  console.log(`   Conferences: ACC, Big 12, Big Ten, Pac-12, SEC\n`);
+  
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+  
+  const pitchersData = {};
+  let totalPitchers = 0;
+  let failedCount = 0;
+  
+  try {
+    for (let i = 0; i < teamsToScrape.length; i++) {
+      const team = teamsToScrape[i];
+      const websiteInfo = KNOWN_WEBSITES[team.id];
+      
+      drawProgressBar(i + 1, teamsToScrape.length, team.name, totalPitchers, failedCount);
+      
+      try {
+        const pitchers = await scrapeTeam(browser, team, websiteInfo);
+        
+        if (pitchers && pitchers.length > 0) {
+          const enrichedPitchers = pitchers.map((p, idx) => ({
+            id: `${team.id}-P${idx + 1}`,
+            name: p.name,
+            number: p.number || '',
+            position: p.position || '',
+            year: p.year || '',
+            height: '',
+            weight: '',
+            batsThrows: '',
+            hometown: '',
+            headshot: p.headshot || '',
+            bioUrl: p.bioUrl || generateBioUrl(team, p.name)
+          }));
+          
+          pitchersData[team.id] = {
+            team: team.name,
+            teamId: team.id,
+            slug: team.slug,
+            pitchers: enrichedPitchers
+          };
+          
+          totalPitchers += pitchers.length;
+        } else {
+          failedCount++;
+        }
+        
+        // Save progress every 10 teams
+        if ((i + 1) % 10 === 0) {
+          fs.writeFileSync(OUTPUT_FILE, JSON.stringify(pitchersData, null, 2));
+        }
+        
+      } catch (err) {
+        failedCount++;
+      }
+      
+      await delay(1500);
+    }
+    
+    // Save final output
+    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(pitchersData, null, 2));
+    
+    console.log('\n\n' + '='.repeat(60));
+    console.log('📊 Final Summary:');
+    console.log(`   Teams scraped: ${teamsToScrape.length}`);
+    console.log(`   ✓ Successful: ${teamsToScrape.length - failedCount}`);
+    console.log(`   ✗ Failed: ${failedCount}`);
+    console.log(`   ⚾ Total pitchers: ${totalPitchers}`);
+    console.log(`\n💾 Saved to: ${OUTPUT_FILE}`);
+    console.log('✅ Done!\n');
+    
+  } finally {
+    await browser.close();
+  }
+}
+
+main().catch(err => {
+  console.error('\n❌ Fatal error:', err);
+  process.exit(1);
+});

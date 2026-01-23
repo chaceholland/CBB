@@ -1,0 +1,2457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<title>College Baseball Weekly Matchups & Pitcher Participation</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  :root{
+    --navy:#002f66; --navy-2:#003080;
+    --card:#ffffff; --muted:#e9eef7; --muted-2:#f0f4f8;
+    --ink:#111827; --ink-2:#374151; --link:#0b69c7;
+    --chip:#e9eef7; --chip-text:#21304a; --gold:#f5c542;
+    --border:#d6dbe7; --outline:#cdd3e0;
+    --prio-priority:#7c3aed;
+    --prio-high:#ef4444;
+    --prio-medium:#10b981;
+    --prio-low:#f59e0b;
+    --prio-priority-soft:#ede9fe;
+    --prio-high-soft:#fee2e2;
+    --prio-medium-soft:#d1fae5;
+    --prio-low-soft:#fef3c7;
+  }
+  html,body{height:100%}
+  body{margin:0;background:var(--navy);color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  #top-bar{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;padding:.8rem 1rem;background:var(--navy-2);position:sticky;top:0;z-index:50}
+  #top-bar h1{margin:0;font-size:1.2rem;flex:1}
+  #top-bar input,#top-bar select{background:#fff;color:#111;border:1px solid var(--outline);border-radius:.5rem;padding:.45rem .6rem;font-size:.95rem}
+  #top-bar button{border:1px solid var(--outline);background:#fff;color:#0f356b;border-radius:.6rem;padding:.45rem .7rem;cursor:pointer;transition:opacity .15s ease}
+  #top-bar button:hover{opacity:.85}
+  #top-bar button.active-filter{background:#f59e0b;color:#fff;border-color:#d97706}
+  #counters{display:flex;gap:.5rem;padding:.35rem 1rem 0 1rem;flex-wrap:wrap}
+  .badge{background:#003a8a;padding:.35rem .6rem;border-radius:1rem;font-size:.85rem}
+  #notice{margin:.6rem 1rem 0;background:#ffeaa7;color:#1f2937;border-radius:.5rem;padding:.5rem .75rem;font-size:.9rem;display:none}
+  #games-wrap{padding:1rem;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .game{background:var(--card);color:var(--ink);border-radius:16px;border:1px solid var(--border);box-shadow:0 2px 10px rgba(14,22,48,.15);overflow:visible; position:relative;}
+  .game.prio-Priority{border-left:10px solid var(--prio-priority)}
+  .game.prio-High{border-left:10px solid var(--prio-high)}
+  .game.prio-Medium{border-left:10px solid var(--prio-medium)}
+  .game.prio-Low{border-left:10px solid var(--prio-low)}
+  .game.prio-Priority .game-head{background:var(--prio-priority-soft)}
+  .game.prio-High .game-head{background:var(--prio-high-soft)}
+  .game.prio-Medium .game-head{background:var(--prio-medium-soft)}
+  .game.prio-Low .game-head{background:var(--prio-low-soft)}
+  .game.watched{border-left:10px solid #d1d5db; opacity:.95;}
+  .game.watched{border-color:#d1d5db;border-left:10px solid #cbd5e1 !important;}
+  .game.watched .game-head{background:#f3f4f6;color:#6b7280;}
+  .game-head{display:flex;align-items:center;justify-content:space-between;background:var(--muted);padding:.6rem .9rem;color:var(--ink-2);gap:.75rem}
+  .gh-left{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+  .gh-right{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+  .wk-tag{color:var(--link);text-transform:uppercase;font-weight:800;font-size:1.0rem;letter-spacing:.02em}
+  .gh-links{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+  .gh-links a{background:var(--chip);color:var(--chip-text);border-radius:999px;padding:.24rem .6rem;font-weight:700;text-decoration:none;text-transform:uppercase;font-size:.78rem;border:1px solid #d8e1f3;transition:opacity .15s ease}
+  .gh-links a:hover{opacity:.85}
+  .fav-btn{border:1px solid var(--outline);background:#fff;color:#0f356b;border-radius:.5rem;padding:.3rem .6rem;cursor:pointer;font-size:1rem;transition:opacity .15s ease}
+  .fav-btn:hover{opacity:.85}
+  .fav-btn.active{color:#b58900;border-color:#e3c76a;background:#fff7db}
+  .prio{border:1px solid var(--outline);background:#fff;color:#0f356b;border-radius:.5rem;padding:.25rem .45rem;transition:background-color .15s ease, color .15s ease, border-color .15s ease;cursor:pointer}
+  .prio:hover{opacity:.85}
+  .prio.prio-swatch.wo-none{background:#fff !important;color:#111 !important;border-color:var(--outline) !important}
+  .prio.prio-swatch.wo-Priority{background:var(--prio-priority) !important;color:#fff !important;border-color:var(--prio-priority) !important}
+  .prio.prio-swatch.wo-High{background:var(--prio-high) !important;color:#fff !important;border-color:var(--prio-high) !important}
+  .prio.prio-swatch.wo-Medium{background:var(--prio-medium) !important;color:#fff !important;border-color:var(--prio-medium) !important}
+  .prio.prio-swatch.wo-Low{background:var(--prio-low) !important;color:#111 !important;border-color:var(--prio-low) !important}
+  .match{display:grid;grid-template-columns:1fr 28px 1fr;gap:12px;padding:.8rem .95rem .95rem .95rem;overflow:visible; position:relative;z-index:0}
+  .side{border:1px solid var(--border);border-radius:14px;padding:.6rem;background:#fff;position:relative;overflow:visible;z-index:0}
+  .team-h{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;gap:.4rem .6rem;align-items:center;margin-bottom:.35rem}
+  .team-logo-outer{grid-row:1/3;grid-column:1/2;display:flex;align-items:center}
+  .team-logo-img{width:90px;height:90px;border-radius:14px;object-fit:contain;background:#fff;border:1px solid #e8eef9}
+  .team-logo-fallback{width:90px;height:90px;border-radius:14px;background:#eaf2ff;color:#174b9f;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .team-name{grid-column:2/3;grid-row:1/2;font-weight:800;font-size:1.12rem}
+  .team-conf{grid-column:2/3;grid-row:2/2}
+  .team-conf .pill{background:#eef3fb;font-weight:800;font-size:.72rem;border-radius:999px;padding:.18rem .5rem;color:#123b7a}
+  .team-links .pill{background:#eef3fb;color:#123b7a;border:1px solid #d8e1f3;font-weight:800;font-size:.80rem;padding:.28rem .70rem;text-decoration:none;display:inline-flex;align-items:center;border-radius:999px;}
+  .team-links .pill:hover{opacity:.85;}
+  .team-links{grid-column:3/4;grid-row:1/3;display:flex;gap:.35rem;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+  .vs{font-weight:900;font-size:1.8rem;align-self:center;text-align:center;color:var(--ink-2)}
+  .pitcher-section{margin-top:.5rem;padding-top:.5rem;border-top:1px solid var(--border)}
+  .pitcher-section-title{font-weight:700;font-size:.85rem;color:var(--ink-2);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.02em}
+  .pitcher-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem;overflow:visible}
+  .pitcher-row{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:start;padding:.6rem;border-radius:8px;background:#fafbfc;border:1px solid #e9eef7;overflow:visible}
+  .headshot-wrap{width:64px;height:64px;overflow:visible;border-radius:8px;background:#eaf2ff;position:relative}
+  .headshot{width:100%;height:100%;object-fit:cover;transition:all .3s ease;position:relative;z-index:1;border-radius:8px}
+  .headshot-wrap:hover .headshot{transform:scale(2.2);z-index:100;box-shadow:0 8px 24px rgba(0,0,0,0.4)}
+  .pitcher-main{display:flex;flex-direction:column;gap:.35rem;overflow:visible;min-width:0}
+  .pitcher-name{font-weight:700;font-size:.95rem;color:var(--ink);overflow:visible;white-space:normal;word-wrap:break-word;line-height:1.3}
+  .pitcher-num{color:var(--ink-2);font-size:.85rem;margin-right:.3rem}
+  .sub{font-size:.75rem;color:var(--ink-2);display:flex;align-items:center;gap:.3rem;white-space:nowrap;overflow:visible;line-height:1.4}
+  .sub a{color:var(--link);text-decoration:none}
+  .sub a:hover{text-decoration:underline}
+  .pitcher-right{display:flex;align-items:flex-start;gap:.4rem;flex-wrap:wrap;min-width:0;row-gap:.3rem}
+  .pill{border-radius:999px;padding:.28rem .6rem;font-size:.72rem;font-weight:800;text-transform:uppercase;white-space:nowrap}
+  .pill-played{background:#10b981;color:#fff}
+  .pill-dnp{background:#6b7280;color:#fff}
+  .pill-unknown{background:#d1d5db;color:#6b7280}
+  .pill-starter{background:#3b82f6;color:#fff;font-size:.7rem}
+  .pill-reliever{background:#8b5cf6;color:#fff;font-size:.7rem}
+  .pitch-stats{font-size:.7rem;color:var(--ink-2);font-weight:600;display:flex;gap:.35rem;flex-wrap:nowrap;align-items:center;overflow:visible;margin-top:.15rem;line-height:1.4}
+  .pitch-stat{background:#e9eef7;padding:.15rem .35rem;border-radius:4px;font-size:.7rem}
+  .expand-toggle{cursor:pointer;font-size:.85rem;color:var(--link);user-select:none;transition:transform .2s ease;display:inline-block;margin-left:.4rem;font-weight:bold}
+  .expand-toggle.expanded{transform:rotate(90deg)}
+  .pitcher-details{display:none;margin-top:.5rem;padding:.6rem;background:#f8f9fa;border-radius:6px;font-size:.82rem;color:var(--ink-2);grid-column:1 / -1}
+  .pitcher-details.expanded{display:block}
+  .pitcher-details-line{margin:.25rem 0}
+  .pitcher-details-line strong{color:var(--ink);margin-right:.4rem}
+  .pitcher-details-line a{color:var(--link);text-decoration:none;font-weight:600}
+  .pitcher-details-line a:hover{text-decoration:underline}
+  .star{cursor:pointer;font-size:1.2rem;color:#d1d5db;transition:color .15s ease;user-select:none}
+  .star:hover{color:#f59e0b}
+  .star.active{color:#f59e0b}
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:100;padding:1rem}
+  .modal-overlay.open{display:flex}
+  .modal{background:white;color:#111;border-radius:12px;max-width:900px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+  .modal header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid #e5e7eb;position:sticky;top:0;background:#fff;z-index:10}
+  .modal h3{margin:0;font-size:1.3rem}
+  .modal .body{padding:1.25rem}
+  .modal .row{display:flex;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap}
+  .modal label{display:flex;flex-direction:column;gap:.3rem;font-weight:600;font-size:.9rem}
+  .modal input,.modal select,.modal textarea{padding:.5rem;border:1px solid #d1d5db;border-radius:.5rem;font-size:.95rem}
+  .modal button{border:1px solid #d1d5db;background:#f3f4f6;color:#111;padding:.5rem 1rem;border-radius:.5rem;cursor:pointer;font-weight:600;transition:background .15s ease}
+  .modal button:hover{background:#e5e7eb}
+  .weeks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:.5rem;margin-bottom:.75rem}
+  .weeks-grid label{display:flex;align-items:center;gap:.35rem;padding:.4rem;border:1px solid #d1d5db;border-radius:.5rem;cursor:pointer;font-weight:600;font-size:.9rem;transition:background .15s ease}
+  .weeks-grid label:hover{background:#f3f4f6}
+  .weeks-grid input:checked+span{color:#0b69c7}
+  .weeks-grid input{margin:0}
+  #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:.75rem 1.25rem;border-radius:.75rem;font-weight:600;opacity:0;transition:opacity .2s ease;pointer-events:none;z-index:200}
+  #toast.show{opacity:.95}
+  .view-toggle{display:flex;gap:.5rem;align-items:center}
+  .view-toggle button{padding:.35rem .7rem;border:1px solid var(--outline);background:#fff;color:#0f356b;border-radius:.5rem;cursor:pointer;transition:all .15s ease;font-size:.9rem}
+  .view-toggle button.active{background:#0b69c7;color:#fff;border-color:#0b69c7}
+  .series-badge{background:#7c3aed;color:#fff;padding:.2rem .5rem;border-radius:4px;font-size:.75rem;font-weight:700;margin-left:.5rem}
+</style>
+</head>
+<body>
+
+<div id="top-bar">
+  <h1>⚾ College Baseball Weekly Matchups</h1>
+  <input type="text" id="search" placeholder="Search teams or pitchers..." />
+  <select id="divFilter"><option value="">All divisions</option></select>
+  <select id="watchOrder" title="Watch Order">
+    <option value="all">All games</option>
+    <option value="unwatched">Unwatched</option>
+    <option value="favorites">Favorites Only</option>
+    <option value="Priority">Priority Only</option>
+    <option value="High">High Only</option>
+    <option value="Medium">Medium Only</option>
+    <option value="Low">Low Only</option>
+    <option value="PriorityHigh">Priority + High</option>
+    <option value="MediumLow">Medium + Low</option>
+    <option value="watched">Watched only</option>
+  </select>
+  <div class="view-toggle">
+    <button id="viewGames" class="active">Games</button>
+    <button id="viewSeries">Series</button>
+  </div>
+    <button id="expandAllBtn">Expand All Details</button>
+  <button id="toggleVirtualScrollBtn" style="background:#6c757d; color:#fff; border-color:#6c757d;">Virtual Scroll: ON</button>
+  <button id="loadParticipationBtn" style="background:#28a745; color:#fff; border-color:#28a745;">Load Participation</button>
+  <button id="loadDetailedInningsBtn" style="background:#fd7e14; color:#fff; border-color:#fd7e14;">Load Innings</button>
+  <button id="filtersBtn">Filters</button>
+  <button id="commandsBtn">Data Tools</button>
+</div>
+
+<div id="counters"></div>
+<div id="notice">No games match your filters</div>
+<div id="games-wrap"></div>
+
+<div class="modal-overlay" id="filtersModal" aria-hidden="true" inert>
+  <div class="modal">
+    <header>
+      <h3>Filters & Display Options</h3>
+      <button class="btn" data-close="#filtersModal">Close</button>
+    </header>
+    <div class="body">
+      
+      <!-- WATCH ORDER -->
+      <div class="row">
+        <label style="flex: 1;">
+          <strong>Watch Order</strong>
+          <select id="watchOrderModal" style="width:100%;">
+            <option value="all">All games</option>
+            <option value="unwatched">Unwatched</option>
+            <option value="watched">Watched only</option>
+            <option value="favorites">Favorites Only</option>
+            <option value="Priority">Priority Only</option>
+            <option value="High">High Only</option>
+            <option value="Medium">Medium Only</option>
+            <option value="Low">Low Only</option>
+            <option value="PriorityHigh">Priority + High</option>
+            <option value="MediumLow">Medium + Low</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- PITCHERS -->
+      <div class="row">
+        <label style="flex: 1;">
+          <strong>Pitchers</strong>
+          <select id="pitcherFilterModal" style="width:100%;">
+            <option value="fav_or_played">Favorites or Played (Default)</option>
+            <option value="all">All Pitchers</option>
+            <option value="favorites">Favorites only</option>
+            <option value="played">Played only</option>
+            <option value="fav_played">Favorites and Played</option>
+            <option value="starters">Starters only</option>
+            <option value="relievers">Relievers only</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- PITCHER SEARCH -->
+      <div class="row">
+        <label style="flex: 1;">
+          <strong>Search Pitcher Name</strong>
+          <input type="text" id="pitcherSearchModal" placeholder="Search by pitcher name..." style="width:100%;" />
+        </label>
+      </div>
+
+      <!-- CONFERENCE/DIVISION -->
+      <div class="row">
+        <label style="flex: 1;">
+          <strong>Conference/Division</strong>
+          <select id="divFilterModal" style="width:100%;">
+            <option value="">All divisions</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- SORT BY -->
+      <div class="row">
+        <label style="flex: 1;">
+          <strong>Sort By</strong>
+          <select id="sortByModal" style="width:100%;">
+            <option value="date">Date</option>
+            <option value="priority">Watch Priority</option>
+            <option value="division">Conference/Division</option>
+            <option value="favorites">Favorites</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- WEEKS SELECTION -->
+      <div class="row" style="margin-top:1rem;">
+        <div style="width:100%;">
+          <strong>Weeks (multi-select)</strong>
+          <div id="weeksGrid" class="weeks-grid" style="margin-top:.5rem;"></div>
+          <div class="row" id="weeksActions" style="margin-top:.5rem; gap:.5rem;">
+            <button class="btn" id="weeksAll">Select All</button>
+            <button class="btn" id="weeksClear">Clear</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="commandsModal" aria-hidden="true" inert>
+  <div class="modal" style="max-width: 1000px;">
+    <header>
+      <h3>College Baseball Pitcher Tracker - Data Tools</h3>
+      <button class="btn" data-close="#commandsModal">Close</button>
+    </header>
+    <div class="body" style="max-height: 70vh; overflow-y: auto;">
+      
+      <!-- BACKUP SECTION -->
+      <div style="margin-bottom:1.5rem; padding:1rem; background:#fff3cd; border-left:4px solid #ffc107; border-radius:.5rem;">
+        <h4 style="margin:0 0 .5rem 0;">💾 BACKUP & RESTORE</h4>
+        <div style="background:#fff; padding:.75rem; border-radius:.5rem; margin-bottom:.75rem; font-size:.9rem;">
+          <strong>⚠️ ALWAYS CREATE A BACKUP BEFORE RUNNING DESTRUCTIVE SCRIPTS</strong>
+        </div>
+        <textarea readonly spellcheck="false" style="width:100%; height:80px; font-family:monospace; font-size:.85rem; background:#f8f9fa; border:1px solid #d0d0d0; border-radius:.35rem; padding:.5rem;">cd ~/Desktop/CBB
+tar -czf "backups/cbb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/ schedule.html</textarea>
+        <button class="btn" id="copyBackupCmd" style="margin-top:.5rem;">📋 Copy Backup Command</button>
+      </div>
+
+      <!-- EASIEST UPDATE SECTION -->
+      <div style="margin-bottom:1.5rem; padding:1rem; background:#d4edda; border-left:4px solid #28a745; border-radius:.5rem;">
+        <h4 style="margin:0 0 .5rem 0;">⚡ EASIEST: UPDATE SPECIFIC WEEK</h4>
+        <div style="background:#fff; padding:.75rem; border-radius:.5rem; margin-bottom:.75rem; font-size:.9rem;">
+          <strong>🎯 RECOMMENDED</strong> - Update any week after games complete<br>
+          <strong>📊 DATA BEHAVIOR: ✅ COMPLETELY SAFE</strong>
+        </div>
+        <div class="row">
+          <label>Year <input id="cmdYear" type="number" value="2025" min="2000" max="2100" style="width:80px;"/></label>
+          <label>Week <input id="cmdWeek" type="text" value="1" placeholder="6" style="width:60px;"/></label>
+        </div>
+        <textarea readonly spellcheck="false" style="width:100%; height:120px; margin-top:.5rem; font-family:monospace; font-size:.85rem; background:#f8f9fa; border:1px solid #d0d0d0; border-radius:.35rem; padding:.5rem;">cd ~/Desktop/CBB
+node tools/fetch_schedule.js --year=2025 --weeks=6
+node tools/fetch_all_pitcher_participation.cjs --week=6  
+node rebuild_played_index.js
+echo "✅ Done! Refresh browser: Cmd+Shift+R"</textarea>
+        <button class="btn" id="copyWeekUpdate" style="margin-top:.5rem;">📋 Copy Update Week</button>
+      </div>
+
+      <!-- PITCHER PARTICIPATION -->
+      <div style="margin-bottom:1.5rem; padding:1rem; background:#cfe2ff; border-left:4px solid #0d6efd; border-radius:.5rem;">
+        <h4 style="margin:0 0 .5rem 0;">🎯 PITCHER PARTICIPATION</h4>
+        <div style="background:#fff; padding:.75rem; border-radius:.5rem; margin-bottom:.75rem; font-size:.9rem;">
+          <strong>⚡ MOST IMPORTANT</strong> - Run after games complete<br>
+          <strong>📊 DATA BEHAVIOR: ✅ SAFE - MERGES DATA</strong><br>
+          ⏱ Takes ~5-10 minutes
+        </div>
+        <textarea readonly spellcheck="false" style="width:100%; height:100px; font-family:monospace; font-size:.85rem; background:#f8f9fa; border:1px solid #d0d0d0; border-radius:.35rem; padding:.5rem;">cd ~/Desktop/CBB
+node tools/fetch_all_pitcher_participation.cjs
+echo "✅ Done! Refresh: Cmd+Shift+R"</textarea>
+        <button class="btn" id="copyPitcherUpdate" style="margin-top:.5rem;">📋 Copy Pitcher Update</button>
+      </div>
+
+      <!-- COMPLETE SEASON -->
+      <div style="margin-bottom:1.5rem; padding:1rem; background:#f8d7da; border-left:4px solid #dc3545; border-radius:.5rem;">
+        <h4 style="margin:0 0 .5rem 0;">📅 COMPLETE SEASON UPDATE</h4>
+        <div style="background:#fff; padding:.75rem; border-radius:.5rem; margin-bottom:.75rem; font-size:.9rem;">
+          <strong>📊 DATA BEHAVIOR: ⚠️ OVERWRITES + MERGES</strong><br>
+          ⏱ Takes ~10-15 minutes
+        </div>
+        <textarea readonly spellcheck="false" style="width:100%; height:140px; font-family:monospace; font-size:.85rem; background:#f8f9fa; border:1px solid #d0d0d0; border-radius:.35rem; padding:.5rem;">cd ~/Desktop/CBB
+tar -czf "backups/cbb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/
+node tools/fetch_schedule.js --year=2025 --weeks=1-26
+node tools/fetch_all_pitcher_participation.cjs
+node rebuild_played_index.js
+echo "✅ Complete! Refresh browser."</textarea>
+        <button class="btn" id="copyCompleteUpdate" style="margin-top:.5rem;">📋 Copy Complete Update</button>
+      </div>
+
+      <!-- STARTUP SCRIPTS -->
+      <div style="margin-bottom:1.5rem; padding:1rem; background:#e7f3ff; border-left:4px solid #17a2b8; border-radius:.5rem;">
+        <h4 style="margin:0 0 .5rem 0;">🚀 STARTUP SCRIPTS</h4>
+        <textarea readonly spellcheck="false" style="width:100%; height:80px; font-family:monospace; font-size:.85rem; background:#f8f9fa; border:1px solid #d0d0d0; border-radius:.35rem; padding:.5rem;">cd ~/Desktop/CBB
+./launch.command</textarea>
+        <button class="btn" id="copyLaunchCmd" style="margin-top:.5rem;">📋 Copy Launch</button>
+        <button class="btn" id="copyStopCmd" style="margin-top:.5rem; margin-left:.5rem;">📋 Copy Stop</button>
+      </div>
+
+      <!-- TROUBLESHOOTING -->
+      <div style="padding:1rem; background:#f8f9fa; border-left:4px solid #6c757d; border-radius:.5rem;">
+        <h4 style="margin:0 0 .5rem 0;">🔧 TROUBLESHOOTING</h4>
+        <div style="margin-bottom:.75rem;">
+          <strong>Clear Cache:</strong> Press <kbd>Cmd+Shift+R</kbd>
+        </div>
+        <div style="margin-bottom:.75rem;">
+          <strong>Fix Missing Data:</strong>
+          <textarea readonly spellcheck="false" style="width:100%; height:60px; font-family:monospace; font-size:.85rem; background:#fff; border:1px solid #d0d0d0; border-radius:.35rem; padding:.5rem;">cd ~/Desktop/CBB
+cp "data/pitchers_played_index 3.json" data/pitchers_played_index.json</textarea>
+          <button class="btn" id="copyFixCmd" style="margin-top:.5rem;">📋 Copy Fix</button>
+        </div>
+        <div>
+          <strong>Check Server:</strong>
+          <textarea readonly spellcheck="false" style="width:100%; height:40px; font-family:monospace; font-size:.85rem; background:#fff; border:1px solid #d0d0d0; border-radius:.35rem; padding:.5rem;">lsof -i :8072</textarea>
+          <button class="btn" id="copyStatusCmd" style="margin-top:.5rem;">📋 Copy Status Check</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<script id="playedIndexEmbed" type="application/json">{}</script>
+<div id="toast">Copied</div>
+<script>
+/* ---------- Utility functions ---------- */
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const toast = (m='Copied') => { const t=$("#toast"); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1100); };
+
+function getParams(){ 
+  const u=new URL(location.href); 
+  return { year: u.searchParams.get('year')||'2025', week: u.searchParams.get('week')||'' }; 
+}
+
+function setParam(k,v){ 
+  const u=new URL(location.href); 
+  if(!v) u.searchParams.delete(k); 
+  else u.searchParams.set(k,v); 
+  history.replaceState(null,'',u.toString()); 
+}
+
+async function getJSON(path){ 
+  const r=await fetch(path,{cache:'no-store'}); 
+  if(!r.ok) throw new Error('HTTP '+r.status+' '+path); 
+  return r.json(); 
+}
+
+async function tryMany(paths){ 
+  for(const p of paths){ 
+    try{ return await getJSON(p); }
+    catch{} 
+  } 
+  return null; 
+}
+
+/* ---------- Global state ---------- */
+let TEAMS = null;
+let PITCHERS = null;
+let DIV_MAP = null;
+let DIV_META = null;
+let SCHED = null;
+let PLAYED_IDX = {};
+let weeksSelected = new Set();
+let currentViewMode = 'games'; // 'games' or 'series'
+
+const teamsById = {};
+const pitchersById = {};
+
+/* ---------- Favorites storage ---------- */
+const Fav = (()=>{ 
+  const OLD_KEY='cbb:favs:v1';
+  let cache = {teams: [], pitchers: [], games: []};
+  let loaded = false;
+  
+  async function init(){
+    if(loaded) return;
+    // Try to migrate from localStorage first
+    try {
+      const old = localStorage.getItem(OLD_KEY);
+      if(old){
+        const oldData = JSON.parse(old);
+        await fetch('/api/favorites', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(oldData)
+        });
+        console.log('✓ Migrated favorites from localStorage to file');
+        localStorage.removeItem(OLD_KEY);
+      }
+    } catch(e) {}
+    
+    // Load from server
+    try {
+      const resp = await fetch('/api/favorites');
+      cache = await resp.json();
+      cache.teams = cache.teams || [];
+      cache.pitchers = cache.pitchers || [];
+      cache.games = cache.games || [];
+    } catch(e) {
+      console.error('Failed to load favorites:', e);
+    }
+    loaded = true;
+  }
+  
+  function save(){
+    fetch('/api/favorites', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(cache)
+    }).catch(e => console.error('Failed to save favorites:', e));
+  }
+  
+  function has(k,v){
+    return (cache[k]||[]).includes(String(v));
+  }
+  
+  function add(k,v){
+    if(!has(k,v)){
+      cache[k].push(String(v));
+      save();
+    }
+  }
+  
+  function rm(k,v){
+    cache[k]=(cache[k]||[]).filter(x=>x!==String(v));
+    save();
+  }
+  
+  function toggle(k,v){
+    has(k,v) ? rm(k,v) : add(k,v);
+  }
+  
+  return {init,has,add,rm,toggle};
+})();
+
+/* ---------- Priority storage ---------- */
+const Prio = (()=>{
+  const OLD_KEY='cbb:prio:v1';
+  const LEVELS = ['Priority','High','Medium','Low'];
+  let cache = {};
+  let loaded = false;
+  
+  async function init(){
+    if(loaded) return;
+    // Try to migrate from localStorage first
+    try {
+      const old = localStorage.getItem(OLD_KEY);
+      if(old){
+        const oldData = JSON.parse(old);
+        await fetch('/api/watch-priority', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(oldData)
+        });
+        console.log('✓ Migrated watch priority from localStorage to file');
+        localStorage.removeItem(OLD_KEY);
+      }
+    } catch(e) {}
+    
+    // Load from server
+    try {
+      const resp = await fetch('/api/watch-priority');
+      cache = await resp.json();
+    } catch(e) {
+      console.error('Failed to load priority:', e);
+    }
+    loaded = true;
+  }
+  
+  function save(){
+    fetch('/api/watch-priority', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(cache)
+    }).catch(e => console.error('Failed to save priority:', e));
+  }
+  
+  function get(gid){
+    return cache[String(gid)]||'';
+  }
+  
+  function set(gid,val){
+    cache[String(gid)]=val;
+    save();
+  }
+  
+  function cycle(gid){
+    const c = get(gid);
+    const i = LEVELS.indexOf(c);
+    const n = (i+1)%LEVELS.length;
+    set(gid, LEVELS[n]);
+    return LEVELS[n];
+  }
+  
+  return {init,get,set,cycle,LEVELS};
+})();
+
+/* ---------- Watched games storage ---------- */
+const Watched = (()=>{
+  const OLD_KEY='cbb:watched:v1';
+  let cache = [];
+  let loaded = false;
+  
+  async function init(){
+    if(loaded) return;
+    // Try to migrate from localStorage first
+    try {
+      const old = localStorage.getItem(OLD_KEY);
+      if(old){
+        const oldData = JSON.parse(old);
+        await fetch('/api/watch-history', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(oldData)
+        });
+        console.log('[watched] ✓ Migrated watch history from localStorage to file');
+        localStorage.removeItem(OLD_KEY);
+      }
+    } catch(e) {
+      console.error('[watched] Migration error:', e);
+    }
+    
+    // Load from server
+    try {
+      const resp = await fetch('/api/watch-history');
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      cache = await resp.json();
+      console.log('[watched] Loaded', cache.length, 'watched games from file');
+    } catch(e) {
+      console.error('[watched] Failed to load watch history:', e);
+      cache = [];
+    }
+    loaded = true;
+  }
+  
+  function save(){
+    console.log('[watched] Saving', cache.length, 'watched games to file');
+    fetch('/api/watch-history', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(cache)
+    })
+    .then(resp => {
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      return resp.json();
+    })
+    .then(data => {
+      console.log('[watched] ✓ Saved successfully');
+    })
+    .catch(e => console.error('[watched] Failed to save watch history:', e));
+  }
+  
+  function has(gid){
+    return cache.includes(String(gid));
+  }
+  
+  function add(gid){
+    if(!has(gid)){
+      cache.push(String(gid));
+      save();
+    }
+  }
+  
+  function rm(gid){
+    cache = cache.filter(x=>x!==String(gid));
+    save();
+  }
+  
+  function toggle(gid){
+    has(gid) ? rm(gid) : add(gid);
+  }
+  
+  return {init,has,add,rm,toggle};
+})();
+
+/* ---------- Pitcher helper functions ---------- */
+function pitcherNumber(pitcher){
+  if (!pitcher) return null;
+  const fields = ['jerseyNumber','number','jersey','uniform','num','no','jersey_num','jerseyNo','jersey_number'];
+  for (const k of fields){
+    const v = pitcher?.[k];
+    if (v!=null && String(v).trim()!=='') return v;
+  }
+  const n = pitcher?.athlete?.jersey || pitcher?.player?.jersey || null;
+  return n ?? null;
+}
+
+function pickPitcherId(pitcher){
+  if(!pitcher) return '';
+  const cands = [
+    pitcher.espn_id,
+    pitcher.espnId,
+    pitcher.athleteId,
+    pitcher.athlete_id,
+    pitcher.playerId,
+    pitcher.player_id,
+    pitcher.id,
+    pitcher.pid,
+    pitcher.aid
+  ];
+  for(const c of cands){ if(c!=null && String(c).trim()!=='') return String(c).trim(); }
+  return '';
+}
+
+function normId(x){ return String(x||'').replace(/\D+/g,''); }
+
+function inferDivision(teamId){
+  var c1 = (typeof DIV_MAP !== 'undefined') ? DIV_MAP[teamId] : undefined;
+  if (c1 && c1 !== 'Unknown') return c1;
+  var t = teamsById[teamId];
+  if (t && t.division && t.division !== 'Unknown') return t.division;
+  var p = pitchersById[teamId];
+  if (p && p.division && p.division !== 'Unknown') return p.division;
+  return 'Unknown';
+}
+
+function teamMeta(tid){
+  var t = teamsById[tid] || {};
+  var n = t.displayName || t.team || tid;
+  var logo = t.logo || "";
+  var abbr = t.abbr || "";
+  var confFull = inferDivision(tid);
+  var confLbl  = (typeof DIV_META !== 'undefined' && DIV_META[tid] && DIV_META[tid].abbr) ? DIV_META[tid].abbr : confFull;
+  return { id:String(tid), name:n, conf:confLbl, confFull:confFull, logo:logo, abbr:abbr };
+}
+
+function teamPitchers(tid){
+  return (pitchersById[tid] && pitchersById[tid].pitchers) ? pitchersById[tid].pitchers : [];
+}
+
+function espnTeamLinks(tid){
+  const base = `https://www.espn.com/college-baseball/team`;
+  return {
+    roster: `${base}/roster/_/id/${tid}`,
+    schedule: `${base}/schedule/_/id/${tid}`,
+    stats: `${base}/stats/_/id/${tid}`
+  };
+}
+
+function espnGameLink(gid){
+  return `https://www.espn.com/college-baseball/game/_/gameId/${gid}`;
+}
+
+/* ---------- Pitcher participation tracking ---------- */
+function getTeamPlayedSet(gameId, teamId){
+  const norm = x => String(x||'').replace(/\D+/g,'');
+  let arr = [];
+  const g = window.PLAYED_IDX?.[norm(gameId)];
+  if (g){
+    // Check if we have the generic 'played' array (from pitcher-first conversion)
+    if (g.played && Array.isArray(g.played)) {
+      arr = g.played;
+    } else {
+      // Find which team is home vs away from the schedule
+      const game = SCHED?.games?.find(gm => norm(gm.id) === norm(gameId));
+      if (game) {
+        const normTeam = norm(teamId);
+        const isHome = norm(game.home) === normTeam;
+        const isAway = norm(game.away) === normTeam;
+        
+        if (isHome && g.home) {
+          arr = g.home;
+        } else if (isAway && g.away) {
+          arr = g.away;
+        }
+      }
+    }
+  }
+  const list = Array.isArray(arr) ? arr : (Array.isArray(arr?.played) ? arr.played : []);
+  return new Set(list.map(norm));
+}
+
+function getPitcherStats(gameId, teamId, pitcherId){
+  // New format: pitcher-first structure from rescrape
+  const norm = x => String(x||'').replace(/\D+/g,'');
+  
+  // Check if we have the new pitcher-first format
+  const pitcherData = window.PLAYED_IDX?.pitchers?.[norm(pitcherId)];
+  if (!pitcherData || !pitcherData.games) return null;
+  
+  // Find this specific game in the pitcher's games
+  const gameRecord = pitcherData.games.find(g => norm(g.gameId) === norm(gameId));
+  if (!gameRecord || !gameRecord.stats) return null;
+  
+  // Convert ESPN stats format to expected format
+  const stats = gameRecord.stats;
+  
+  // Process innings_list - ONLY show if detailed data is loaded
+  let inningsList = null;
+  
+  // Only check detailed innings data if it's been explicitly loaded
+  if (detailedInningsData && detailedInningsData.pitchers) {
+    const detailedPitcher = detailedInningsData.pitchers[norm(pitcherId)];
+    if (detailedPitcher && detailedPitcher.games) {
+      const detailedGame = detailedPitcher.games.find(g => norm(g.gameId) === norm(gameId));
+      if (detailedGame && detailedGame.innings_list && Array.isArray(detailedGame.innings_list)) {
+        const uniqueInnings = new Set();
+        detailedGame.innings_list.forEach(inning => {
+          if (inning && inning.number) {
+            uniqueInnings.add(inning.number);
+          }
+        });
+        if (uniqueInnings.size > 0) {
+          inningsList = Array.from(uniqueInnings).sort((a, b) => a - b);
+        }
+      }
+    }
+  }
+  
+  // Don't show innings count fallback - only show specific innings after Load Innings is clicked
+  
+  return {
+    innings_pitched: stats.IP || null,
+    pitch_count: stats.PC || null,
+    innings_list: inningsList
+  };
+}
+
+// Convert pitcher-first format to game-first format for played pills
+function convertPitcherFirstToGameFirst(pitcherData){
+  const gameFirst = {};
+  
+  if (!pitcherData || !pitcherData.pitchers) return gameFirst;
+  
+  // Iterate through all pitchers
+  for (const [pitcherId, pitcher] of Object.entries(pitcherData.pitchers)){
+    if (!pitcher.games || !Array.isArray(pitcher.games)) continue;
+    
+    // For each game this pitcher played in
+    for (const game of pitcher.games){
+      const gameId = String(game.gameId || '').replace(/\D+/g, '');
+      if (!gameId) continue;
+      
+      // We don't know home/away from this data, so store in both
+      if (!gameFirst[gameId]) {
+        gameFirst[gameId] = {};
+      }
+      
+      // Add pitcher ID to a generic 'played' array
+      if (!gameFirst[gameId].played) {
+        gameFirst[gameId].played = [];
+      }
+      
+      if (!gameFirst[gameId].played.includes(pitcherId)) {
+        gameFirst[gameId].played.push(pitcherId);
+      }
+    }
+  }
+  
+  return gameFirst;
+}
+
+async function reloadPlayedIndex(initial=false){
+  const bust   = `?t=${Date.now()}`;
+  const merged = {};
+  
+  // PERFORMANCE: Load optimized consolidated file (9MB, ~2-3s load time)
+  console.log('[played] Loading participation data...');
+  const url = `./data/pitchers_played_index.json${bust}`;
+  
+  try {
+    const j = await getJSON(url);
+    if (j && typeof j === 'object'){
+      // Check if this is the pitcher-first format
+      if (j.pitchers && typeof j.pitchers === 'object') {
+        // Convert for game-first lookups (pills)
+        const converted = convertPitcherFirstToGameFirst(j);
+        mergePlayedIndex(merged, converted);
+        
+        // ALSO preserve original pitcher data for stats
+        merged.pitchers = j.pitchers;
+        
+        console.log('[played] loaded', url, 'pitchers=', Object.keys(j.pitchers).length);
+      } else {
+        mergePlayedIndex(merged, j);
+        console.log('[played] loaded', url, 'entries=', Object.keys(j).length);
+      }
+    }
+  } catch (e) {
+    console.error('[played] Failed to load:', e);
+  }
+  
+  try {
+    const em = document.getElementById('playedIndexEmbed');
+    if (em && em.textContent.trim()){
+      mergePlayedIndex(merged, JSON.parse(em.textContent));
+      console.log('[played] merged inline override');
+    }
+  } catch {}
+  
+  PLAYED_IDX = merged;
+  window.PLAYED_IDX = merged;
+  
+  let gamesWithIds = 0, totalIds = 0;
+  for (const game of Object.values(merged)){
+    let thisGame = 0;
+    for (const v of Object.values(game)){
+      const n = _asIds(v).length;
+      thisGame += n; totalIds += n;
+    }
+    if (thisGame) gamesWithIds++;
+  }
+  console.log('[played] games with ids:', gamesWithIds, 'total ids:', totalIds);
+  
+  if (!initial){
+    refreshPlayedPills();
+    if (typeof toast === 'function'){
+      toast(gamesWithIds ? 'Played/DNP refreshed' : 'No played data found');
+    }
+  }
+}
+
+// PERFORMANCE: Lazy load detailed innings data (165MB)
+let detailedInningsData = null;
+let isLoadingDetailed = false;
+
+async function loadDetailedInnings() {
+  if (detailedInningsData) {
+    console.log('[innings] Detailed data already loaded');
+    toast('✅ Detailed innings data already loaded!');
+    return detailedInningsData;
+  }
+  
+  if (isLoadingDetailed) {
+    console.log('[innings] Already loading...');
+    return null;
+  }
+  
+  isLoadingDetailed = true;
+  console.log('[innings] Loading detailed innings data (165MB)...');
+  console.log('[innings] This may take 20-30 seconds...');
+  
+  const start = Date.now();
+  const bust = `?t=${Date.now()}`;
+  const url = `./data/pitchers_played_index_detailed.json${bust}`;
+  
+  try {
+    showLoadingIndicator();
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    
+    const data = await response.json();
+    detailedInningsData = data;
+    
+    const elapsed = ((Date.now() - start) / 1000).toFixed(1);
+    console.log(`[innings] Loaded in ${elapsed}s`);
+    console.log('[innings] Pitchers with detailed innings:', Object.keys(data.pitchers || {}).length);
+    
+    toast(`✅ Detailed innings loaded! (${elapsed}s)`);
+    return data;
+    
+  } catch (e) {
+    console.error('[innings] Failed to load detailed data:', e);
+    toast('❌ Failed to load detailed innings data');
+    return null;
+  } finally {
+    hideLoadingIndicator();
+    isLoadingDetailed = false;
+  }
+}
+
+// Get detailed innings for a specific pitcher/game
+function getInningsForGame(pitcherId, gameId) {
+  if (!detailedInningsData || !detailedInningsData.pitchers) {
+    console.warn('[innings] Detailed data not loaded. Call loadDetailedInnings() first.');
+    return null;
+  }
+  
+  const pitcher = detailedInningsData.pitchers[pitcherId];
+  if (!pitcher) return null;
+  
+  const game = pitcher.games.find(g => g.gameId === gameId);
+  return game?.innings_list || null;
+}
+
+function _asIds(v){
+  if (Array.isArray(v)) {
+    if (v.length && typeof v[0] === 'object' && v[0] !== null) {
+      return v.map(x => String(x.id ?? x.athleteId ?? x.aid ?? x.pid ?? x.espnId ?? '')).filter(Boolean);
+    }
+    return v.map(x => String(x)).filter(Boolean);
+  }
+  if (v && typeof v === 'object') {
+    const cand = v.played || v.players || v.ids || [];
+    return _asIds(cand);
+  }
+  return [];
+}
+
+function _mapHasAnyPlayers(map){
+  for (const g of Object.values(map || {})){
+    for (const v of Object.values(g || {})){
+      if (_asIds(v).length) return true;
+    }
+  }
+  return false;
+}
+
+function mergePlayedIndex(into, add){
+  if(!add) return;
+  for (const [gidRaw, game] of Object.entries(add)){
+    const gid = String(gidRaw).replace(/\D+/g,'');
+    if (!gid) continue;
+    const tgt = (into[gid] = into[gid] || {});
+    for (const [tidRaw, v] of Object.entries(game || {})){
+      // Don't normalize - keys are "home"/"away", not team IDs
+      const tid = String(tidRaw);
+      const prev = tgt[tid] || [];
+      const next = Array.from(new Set([ ..._asIds(prev), ..._asIds(v) ]));
+      if (next.length) tgt[tid] = next;
+    }
+  }
+}
+
+function refreshPlayedPills(){
+  // Batch read all pill data first (read phase)
+  const pills = document.querySelectorAll('.pill[data-pitcherid]');
+  if (pills.length === 0) {
+    console.log('[pills] No pills found in DOM');
+    return;
+  }
+  
+  const updates = [];
+  
+  pills.forEach(pill => {
+    const pitcherId = pill.dataset.pitcherid;
+    if (!pitcherId || pitcherId.trim() === '') return;
+    
+    const card = pill.closest('.game');
+    if (!card) return;
+    const gameId = card.dataset.gameId;
+    if (!gameId) return;
+    
+    const side = pill.closest('.side');
+    if (!side) return;
+    const teamId = side.dataset.teamId;
+    if (!teamId) return;
+    
+    const gameHasData = !!(window.PLAYED_IDX && window.PLAYED_IDX[String(gameId)]);
+    if (!gameHasData) {
+      updates.push({ pill, className: 'pill pill-unknown', text: '—' });
+      return;
+    }
+    
+    const playedSet = getTeamPlayedSet(gameId, teamId);
+    const played = playedSet.has(pitcherId);
+    updates.push({ 
+      pill, 
+      className: 'pill ' + (played ? 'pill-played' : 'pill-dnp'),
+      text: played ? 'Played' : 'DNP',
+      played
+    });
+  });
+  
+  // Batch write all updates (write phase - prevents layout thrashing)
+  let matched = 0, mismatched = 0;
+  updates.forEach(update => {
+    update.pill.className = update.className;
+    update.pill.textContent = update.text;
+    if (update.played === true) matched++;
+    else if (update.played === false) mismatched++;
+  });
+  
+  console.log('[pills] refreshed:', pills.length, 'matched:', matched, 'dnp:', mismatched);
+}
+
+function isFavPitcher(pitcher){
+  const idStr = String(pitcher?.id ?? '');
+  const pitcherId  = (pickPitcherId(pitcher) || '');
+  return Fav.has('pitchers', idStr) || (pitcherId && Fav.has('pitchers', pitcherId));
+}
+
+function pitcherName(pitcher){
+  return String(pitcher?.name || pitcher?.displayName || pitcher?.last || pitcher?.id || '').toLowerCase();
+}
+
+function setPrioSwatch(sel){
+  if (!sel) return;
+  sel.classList.forEach(c => { if (c.startsWith('wo-')) sel.classList.remove(c); });
+  const v   = (sel.value || '').trim();
+  const key = v === '' ? 'none' : v.replace(/\s+/g,'');
+  sel.classList.add('wo-' + key);
+}
+
+function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
+  const li = document.createElement('li');
+  li.className='pitcher-row';
+  
+  const wrap = document.createElement('div'); 
+  wrap.className='headshot-wrap';
+  const img  = document.createElement('img'); 
+  img.className='headshot'; 
+  img.loading='lazy';
+  img.alt = pitcher?.name || 'Pitcher';
+  const primary  = pitcher?.headshot || '';
+  const fallback = teamLogo || '';
+  img.src = primary || fallback || '';
+  img.onerror = ()=>{ if (img.src !== fallback && fallback){ img.src = fallback; } };
+  wrap.append(img);
+  
+  const main = document.createElement('div'); 
+  main.className='pitcher-main';
+  const name = document.createElement('div'); 
+  name.className='pitcher-name';
+  const num = pitcherNumber(pitcher);
+  if(num!=null){
+    const span=document.createElement('span'); 
+    span.className='pitcher-num';
+    span.textContent = '#'+String(num);
+    name.append(span);
+  }
+  name.append(document.createTextNode(pitcher?.name || pitcher?.id || 'Pitcher'));
+  
+  // Add expand toggle chevron only if participation loaded
+  let toggleChevron = null;
+  if (participationLoaded) {
+    toggleChevron = document.createElement('span');
+    toggleChevron.className = 'expand-toggle';
+    toggleChevron.textContent = '▶';
+    toggleChevron.title = 'Show/hide details';
+    name.append(toggleChevron);
+  }
+  
+  // Create sub line with inning stats + Pitcher + ESPN link
+  const sub = document.createElement('div'); 
+  sub.className='sub';
+  
+  // Add inning stats inline if available with styled boxes
+  if(gameHasData && playedSet.has(normId(pickPitcherId(pitcher)))){
+    const stats = getPitcherStats(gameId, teamId, normId(pickPitcherId(pitcher)));
+    if(stats && (stats.innings_pitched || stats.pitch_count)){
+      
+      if(stats.innings_pitched){
+        const ipSpan = document.createElement('span');
+        ipSpan.className = 'pitch-stat';
+        ipSpan.textContent = `IP: ${stats.innings_pitched}`;
+        sub.append(ipSpan);
+        
+        // Add pipe separator if there are more stats
+        if(stats.pitch_count || (stats.innings_list && stats.innings_list.length)){
+          const pipe = document.createTextNode(' | ');
+          sub.append(pipe);
+        }
+      }
+      
+      if(stats.pitch_count){
+        const pcSpan = document.createElement('span');
+        pcSpan.className = 'pitch-stat';
+        pcSpan.textContent = `${stats.pitch_count} pitches`;
+        sub.append(pcSpan);
+        
+        // Add pipe separator if there are innings
+        if(stats.innings_list && stats.innings_list.length){
+          const pipe = document.createTextNode(' | ');
+          sub.append(pipe);
+        }
+      }
+      
+      if(stats.innings_list && stats.innings_list.length){
+        const innSpan = document.createElement('span');
+        innSpan.className = 'pitch-stat';
+        innSpan.textContent = `Inn: ${stats.innings_list.join(',')}`;
+        sub.append(innSpan);
+      }
+      
+      // Add space before ESPN link
+      const separator = document.createTextNode(' ');
+      sub.append(separator);
+    }
+  }
+  
+  // Add pipe before ESPN link if there were stats
+  if(sub.childNodes.length > 0){
+    const pipe = document.createTextNode('| ');
+    sub.append(pipe);
+  }
+  
+  // Add ESPN link
+  const link = document.createElement('a'); 
+  link.href = pitcher?.espn || '#'; 
+  link.target='_blank'; 
+  link.textContent='ESPN Profile →';
+  sub.append(link);
+  
+  // Create collapsible details section only if participation loaded
+  let detailsDiv = null;
+  if (participationLoaded) {
+    detailsDiv = document.createElement('div');
+    detailsDiv.className = 'pitcher-details';
+    
+    // Combine Age, Height, Weight on one line (Age first)
+    const bioStats = [];
+    if(pitcher?.age) bioStats.push(`Age: ${pitcher.age}`);
+    if(pitcher?.height) bioStats.push(`Height: ${pitcher.height}`);
+    if(pitcher?.weight) bioStats.push(`Weight: ${pitcher.weight}`);
+    
+    if(bioStats.length > 0){
+      const line = document.createElement('div');
+      line.className = 'pitcher-details-line';
+      line.textContent = bioStats.join(' • ');
+      detailsDiv.append(line);
+    }
+    
+    if(pitcher?.espn){
+      const line = document.createElement('div');
+      line.className = 'pitcher-details-line';
+      const espnLink = document.createElement('a');
+      espnLink.href = pitcher.espn;
+      espnLink.target = '_blank';
+      espnLink.textContent = 'View on ESPN';
+      line.innerHTML = '<strong>Profile:</strong> ';
+      line.append(espnLink);
+      detailsDiv.append(line);
+    }
+  }
+  
+  main.append(name, sub);
+  
+  const right = document.createElement('div'); 
+  right.className='pitcher-right';
+  
+  const pitcherIdDigits = normId(pickPitcherId(pitcher));
+  const favKey = pitcher?.id || pitcherIdDigits || '';
+  
+  const star  = document.createElement('span'); 
+  star.className='star';
+  favoriteStar(star, 'pitchers', favKey);
+  const prev = star.onclick;
+  star.onclick = () => {
+    prev && prev();
+    // Check if we need to re-render based on current filter
+    const pitcherFilter = ($("#pitcherFilterModal")?.value || 'fav_or_played');
+    if (pitcherFilter === 'favorites' || pitcherFilter === 'fav_or_played' || pitcherFilter === 'fav_played') {
+      // Use debounced render for better performance
+      debouncedRender(100);
+    }
+  };
+  
+  const pillEl = document.createElement('span');
+  pillEl.dataset.pitcherid = pitcherIdDigits;
+  if (!gameHasData) {
+    pillEl.className = 'pill pill-unknown';
+    pillEl.textContent = '—';
+  } else {
+    const played = playedSet.has(pitcherIdDigits);
+    pillEl.className = 'pill ' + (played ? 'pill-played' : 'pill-dnp');
+    pillEl.textContent = played ? 'Played' : 'DNP';
+  }
+  
+  // Append star and pill badges
+  right.append(star, pillEl);
+  
+  // Add position/role badges if available
+  if(pitcher?.position?.abbreviation){
+    const posPill = document.createElement('span');
+    posPill.className = 'pill pill-' + (pitcher.position.abbreviation === 'SP' ? 'starter' : 'reliever');
+    posPill.textContent = pitcher.position.abbreviation === 'SP' ? 'Starter' : 'Reliever';
+    right.append(posPill);
+  }
+  
+  li.append(wrap, main, right);
+  if (detailsDiv) {
+    li.append(detailsDiv);  // Add the details div to the row only if it exists
+  }
+  
+  // Toggle details on chevron click (only if participation loaded)
+  if (toggleChevron && detailsDiv) {
+    toggleChevron.onclick = (e) => {
+      e.stopPropagation();
+      const isExpanded = detailsDiv.classList.toggle('expanded');
+      toggleChevron.classList.toggle('expanded', isExpanded);
+    };
+  }
+  
+  return li;
+}
+
+function fallbackLogo(meta){
+  const d = document.createElement('div');
+  d.className = 'team-logo-fallback';
+  const txt = meta?.abbr || (meta?.name || '').slice(0, 2).toUpperCase() || '??';
+  d.textContent = txt;
+  return d;
+}
+
+function logoNode(meta){
+  const hasLogo = meta?.logo && typeof meta.logo === 'string' && meta.logo.trim() !== '';
+  if (hasLogo){
+    const img = document.createElement('img');
+    img.className = 'team-logo-img';
+    img.alt = meta?.name || 'Team';
+    img.src = meta.logo;
+    img.onerror = () => { img.replaceWith(fallbackLogo(meta)); };
+    return img;
+  }
+  return fallbackLogo(meta);
+}
+
+function sideBlock(tid, gameId){
+  const gameHasData = !!(window.PLAYED_IDX && window.PLAYED_IDX[String(gameId)]);
+  const meta = teamMeta(tid);
+  const box  = document.createElement('div');
+  box.className = 'side';
+  box.dataset.teamId = String(tid);
+  
+  const th = document.createElement('div');
+  th.className = 'team-h';
+  
+  const logoWrap = document.createElement('div');
+  logoWrap.className = 'team-logo-outer';
+  logoWrap.append(logoNode(meta));
+  
+  const nameEl = document.createElement('div');
+  nameEl.className = 'team-name';
+  nameEl.textContent = meta.name || tid;
+  
+  const confEl = document.createElement('div');
+  confEl.className = 'team-conf';
+  const confPill = document.createElement('span');
+  confPill.className = 'pill';
+  confPill.textContent = meta.conf || meta.confFull || 'Unknown';
+  confEl.append(confPill);
+  
+  const linksEl = document.createElement('div');
+  linksEl.className = 'team-links';
+  const tl = espnTeamLinks(tid);
+  const aRos = document.createElement('a'); 
+  aRos.className='pill pill-link'; 
+  aRos.href=tl.roster; 
+  aRos.target='_blank'; 
+  aRos.textContent='Roster';
+  const aSch = document.createElement('a'); 
+  aSch.className='pill pill-link'; 
+  aSch.href=tl.schedule; 
+  aSch.target='_blank'; 
+  aSch.textContent='Schedule';
+  linksEl.append(aRos, aSch);
+  
+  th.append(logoWrap, nameEl, confEl, linksEl);
+  box.append(th);
+  
+  const playedSet = getTeamPlayedSet(String(gameId), String(tid));
+  const pitcherFilter  = ($("#pitcherFilterModal")?.value || 'fav_or_played');
+  const pitcherSearchTerm = ($("#pitcherSearchModal")?.value || '').toLowerCase().trim();
+  const listRaw = Array.from(teamPitchers(String(tid)) || []);
+  
+  const listFiltered = listRaw.filter(pitcher => {
+    const pitcherId = (pickPitcherId(pitcher) || '').replace(/\D+/g,'');
+    const played = playedSet.has(pitcherId);
+    const fav    = isFavPitcher(pitcher);
+    const role = (pitcher?.role || pitcher?.position || '').toLowerCase();
+    
+    // Apply pitcher type filter
+    let passesTypeFilter = true;
+    if (pitcherFilter === 'fav_or_played') passesTypeFilter = fav || played;
+    else if (pitcherFilter === 'played') passesTypeFilter = played;
+    else if (pitcherFilter === 'favorites') passesTypeFilter = fav;
+    else if (pitcherFilter === 'fav_played') passesTypeFilter = fav && played;
+    else if (pitcherFilter === 'starters') passesTypeFilter = role === 'starter';
+    else if (pitcherFilter === 'relievers') passesTypeFilter = role === 'reliever';
+    
+    // Apply name search filter
+    let passesNameFilter = true;
+    if (pitcherSearchTerm) {
+      const pitcherNameLower = pitcherName(pitcher);
+      passesNameFilter = pitcherNameLower.includes(pitcherSearchTerm);
+    }
+    
+    return passesTypeFilter && passesNameFilter;
+  });
+  
+  listFiltered.sort((a,b)=>{
+    const aq = (pickPitcherId(a)||'').replace(/\D+/g,'');
+    const bq = (pickPitcherId(b)||'').replace(/\D+/g,'');
+    const ap = playedSet.has(aq) ? 1 : 0;
+    const bp = playedSet.has(bq) ? 1 : 0;
+    if (ap !== bp) return bp - ap;
+    const af = isFavPitcher(a) ? 1 : 0;
+    const bf = isFavPitcher(b) ? 1 : 0;
+    if (af !== bf) return bf - af;
+    return pitcherName(a).localeCompare(pitcherName(b));
+  });
+  
+  const starters = listFiltered.filter(p => (p?.role || p?.position || '').toLowerCase() === 'starter');
+  const relievers = listFiltered.filter(p => (p?.role || p?.position || '').toLowerCase() === 'reliever');
+  const others = listFiltered.filter(p => {
+    const role = (p?.role || p?.position || '').toLowerCase();
+    return role !== 'starter' && role !== 'reliever';
+  });
+  
+  if(starters.length > 0){
+    const section = document.createElement('div');
+    section.className = 'pitcher-section';
+    const title = document.createElement('div');
+    title.className = 'pitcher-section-title';
+    title.textContent = 'Starters';
+    section.append(title);
+    const ul = document.createElement('ul');
+    ul.className = 'pitcher-list';
+    for (const p of starters){
+      ul.append(pitcherRow(p, playedSet, meta.logo, gameHasData, gameId, tid));
+    }
+    section.append(ul);
+    box.append(section);
+  }
+  
+  if(relievers.length > 0){
+    const section = document.createElement('div');
+    section.className = 'pitcher-section';
+    const title = document.createElement('div');
+    title.className = 'pitcher-section-title';
+    title.textContent = 'Relievers';
+    section.append(title);
+    const ul = document.createElement('ul');
+    ul.className = 'pitcher-list';
+    for (const p of relievers){
+      ul.append(pitcherRow(p, playedSet, meta.logo, gameHasData, gameId, tid));
+    }
+    section.append(ul);
+    box.append(section);
+  }
+  
+  if(others.length > 0){
+    const ul = document.createElement('ul');
+    ul.className = 'pitcher-list';
+    for (const p of others){
+      ul.append(pitcherRow(p, playedSet, meta.logo, gameHasData, gameId, tid));
+    }
+    box.append(ul);
+  }
+  
+  if(!listFiltered.length){
+    const ul = document.createElement('ul');
+    ul.className='pitcher-list';
+    const li = document.createElement('li');
+    li.className='pitcher-row';
+    li.style.justifyContent='center';
+    li.style.color='#9aa6b2';
+    li.textContent='No pitchers found.';
+    ul.append(li);
+    box.append(ul);
+  }
+  
+  return box;
+}
+
+function favoriteStar(el, key, val){
+  const active = Fav.has(key, val);
+  el.classList.toggle('active', active);
+  el.textContent = active ? '★' : '☆';
+  el.onclick = () => {
+    Fav.toggle(key, val);
+    favoriteStar(el, key, val);
+  };
+}
+
+function fmtDate(iso){
+  try{ 
+    const d=new Date(iso); 
+    const opts={weekday:'short', month:'short', day:'numeric', hour:'numeric', minute:'2-digit'}; 
+    return d.toLocaleString(undefined, opts); 
+  }
+  catch{ return iso||''; }
+}
+
+function gameCard(g){
+  const card = document.createElement('div');
+  card.className = 'game';
+  card.dataset.gameId = String(g.id || '');
+  
+  const prio = Prio.get(g.id);
+  if(prio) card.classList.add('prio-'+prio);
+  if(Watched.has(g.id)) card.classList.add('watched');
+  
+  const head = document.createElement('div');
+  head.className = 'game-head';
+  
+  const ghLeft = document.createElement('div');
+  ghLeft.className = 'gh-left';
+  
+  const wkTag = document.createElement('div');
+  wkTag.className = 'wk-tag';
+  wkTag.textContent = 'Week ' + (g.week || '?');
+  
+  const dateDiv = document.createElement('div');
+  dateDiv.style.fontSize = '.9rem';
+  dateDiv.style.color = 'var(--ink-2)';
+  dateDiv.textContent = fmtDate(g.date);
+  
+  ghLeft.append(wkTag, dateDiv);
+  
+  const ghRight = document.createElement('div');
+  ghRight.className = 'gh-right';
+  
+  const watchedToggle = document.createElement('label');
+  watchedToggle.className = 'watched-toggle';
+  const watchedCb = document.createElement('input');
+  watchedCb.type = 'checkbox';
+  watchedCb.checked = Watched.has(g.id);
+  watchedCb.onchange = () => {
+    Watched.toggle(g.id);
+    // Instant visual feedback - update card classes directly
+    card.classList.toggle('watched', Watched.has(g.id));
+    // Only re-render if filtering by watched/unwatched
+    const watchOrder = ($("#watchOrder")?.value || 'all');
+    if (watchOrder === 'watched' || watchOrder === 'unwatched') {
+      debouncedRender(100);
+    }
+  };
+  watchedToggle.append(watchedCb, 'Watched');
+  
+  const prioSel = document.createElement('select');
+  prioSel.className = 'prio prio-swatch';
+  const blankOpt = document.createElement('option');
+  blankOpt.value = '';
+  blankOpt.textContent = '—';
+  prioSel.append(blankOpt);
+  ['Priority','High','Medium','Low'].forEach(v => {
+    const opt = document.createElement('option');
+    opt.value = v;
+    opt.textContent = v;
+    prioSel.append(opt);
+  });
+  prioSel.value = prio;
+  setPrioSwatch(prioSel);
+  prioSel.onchange = () => {
+    const oldPrio = prio;
+    const newPrio = prioSel.value;
+    
+    Prio.set(g.id, newPrio);
+    setPrioSwatch(prioSel);
+    
+    // Instant visual feedback - update card classes directly
+    if (oldPrio) card.classList.remove('prio-' + oldPrio);
+    if (newPrio) card.classList.add('prio-' + newPrio);
+    
+    // Update card header background
+    const gameHead = card.querySelector('.game-head');
+    if (gameHead) {
+      // Remove old priority backgrounds
+      ['prio-Priority', 'prio-High', 'prio-Medium', 'prio-Low'].forEach(c => {
+        gameHead.classList.remove(c);
+      });
+      // Add new priority background if set
+      if (newPrio) {
+        gameHead.classList.add('prio-' + newPrio);
+      }
+    }
+    
+    // Only re-render if filtering by priority
+    const watchOrder = ($("#watchOrder")?.value || 'all');
+    if (watchOrder.includes('Priority') || watchOrder.includes('High') || 
+        watchOrder.includes('Medium') || watchOrder.includes('Low')) {
+      debouncedRender(100);
+    }
+  };
+  
+  const favBtn = document.createElement('button');
+  favBtn.className = 'fav-btn';
+  favoriteStar(favBtn, 'games', g.id);
+  
+  const ghLinks = document.createElement('div');
+  ghLinks.className = 'gh-links';
+  
+  // Game Recap link
+  const recapLink = document.createElement('a');
+  recapLink.href = `https://www.espn.com/college-baseball/recap/_/gameId/${g.id}`;
+  recapLink.target = '_blank';
+  recapLink.textContent = 'RECAP';
+  ghLinks.append(recapLink);
+  
+  // Box Score link
+  const boxLink = document.createElement('a');
+  boxLink.href = espnGameLink(g.id);
+  boxLink.target = '_blank';
+  boxLink.textContent = 'BOX SCORE';
+  ghLinks.append(boxLink);
+  
+  // Game Replay link
+  const replayLink = document.createElement('a');
+  replayLink.href = `https://www.espn.com/college-baseball/video?q=gameId=${g.id}`;
+  replayLink.target = '_blank';
+  replayLink.textContent = 'REPLAY';
+  ghLinks.append(replayLink);
+  
+  ghRight.append(watchedToggle, prioSel, favBtn, ghLinks);
+  head.append(ghLeft, ghRight);
+  
+  const match = document.createElement('div');
+  match.className = 'match';
+  
+  match.append(sideBlock(g.away, g.id));
+  
+  const vs = document.createElement('div');
+  vs.className = 'vs';
+  vs.textContent = '@';
+  match.append(vs);
+  
+  match.append(sideBlock(g.home, g.id));
+  
+  card.append(head, match);
+  return card;
+}
+
+function filterGames(games){
+  const search = ($("#search")?.value || '').toLowerCase();
+  const conf = $("#divFilter")?.value || '';
+  const watchOrder = $("#watchOrder")?.value || 'all';
+  
+  return games.filter(g => {
+    if(weeksSelected.size > 0 && !weeksSelected.has(String(g.week))) return false;
+    
+    if(conf){
+      const homeConf = teamMeta(g.home).confFull;
+      const awayConf = teamMeta(g.away).confFull;
+      if(homeConf !== conf && awayConf !== conf) return false;
+    }
+    
+    if(search){
+      const homeName = teamMeta(g.home).name.toLowerCase();
+      const awayName = teamMeta(g.away).name.toLowerCase();
+      const homePitchers = teamPitchers(g.home).map(p => pitcherName(p)).join(' ');
+      const awayPitchers = teamPitchers(g.away).map(p => pitcherName(p)).join(' ');
+      const searchIn = [homeName, awayName, homePitchers, awayPitchers].join(' ');
+      if(!searchIn.includes(search)) return false;
+    }
+    
+    if(watchOrder === 'unwatched' && Watched.has(g.id)) return false;
+    if(watchOrder === 'watched' && !Watched.has(g.id)) return false;
+    if(watchOrder === 'favorites'){
+      const homeFav = Fav.has('teams', g.home);
+      const awayFav = Fav.has('teams', g.away);
+      const gameFav = Fav.has('games', g.id);
+      if(!homeFav && !awayFav && !gameFav) return false;
+    }
+    if(Prio.LEVELS.includes(watchOrder)){
+      if(Prio.get(g.id) !== watchOrder) return false;
+    }
+    if(watchOrder === 'PriorityHigh'){
+      const p = Prio.get(g.id);
+      if(p !== 'Priority' && p !== 'High') return false;
+    }
+    if(watchOrder === 'MediumLow'){
+      const p = Prio.get(g.id);
+      if(p !== 'Medium' && p !== 'Low') return false;
+    }
+    
+    return true;
+  });
+}
+
+function sortGames(games){
+  const sortBy = $("#sortBy")?.value || 'date';
+  return games.slice().sort((a,b) => {
+    if(sortBy === 'priority'){
+      const ap = Prio.LEVELS.indexOf(Prio.get(a.id));
+      const bp = Prio.LEVELS.indexOf(Prio.get(b.id));
+      if(ap !== bp) return (ap === -1 ? 99 : ap) - (bp === -1 ? 99 : bp);
+    }
+    if(sortBy === 'division'){
+      const ac = teamMeta(a.home).confFull;
+      const bc = teamMeta(b.home).confFull;
+      const cmp = ac.localeCompare(bc);
+      if(cmp !== 0) return cmp;
+    }
+    if(sortBy === 'favorites'){
+      const af = Fav.has('games', a.id) || Fav.has('teams', a.home) || Fav.has('teams', a.away);
+      const bf = Fav.has('games', b.id) || Fav.has('teams', b.home) || Fav.has('teams', b.away);
+      if(af !== bf) return bf ? 1 : -1;
+    }
+    return new Date(a.date) - new Date(b.date);
+  });
+}
+
+function groupIntoSeries(games){
+  const series = [];
+  const used = new Set();
+  
+  for(const g of games){
+    if(used.has(g.id)) continue;
+    
+    const matchingSeries = games.filter(other => {
+      if(used.has(other.id)) return false;
+      if(other.home !== g.home || other.away !== g.away) return false;
+      const daysDiff = Math.abs((new Date(other.date) - new Date(g.date)) / (1000*60*60*24));
+      return daysDiff <= 3;
+    });
+    
+    matchingSeries.sort((a,b) => new Date(a.date) - new Date(b.date));
+    matchingSeries.forEach(sg => used.add(sg.id));
+    
+    series.push({
+      games: matchingSeries,
+      home: g.home,
+      away: g.away,
+      startDate: matchingSeries[0].date,
+      week: matchingSeries[0].week
+    });
+  }
+  
+  return series;
+}
+
+function renderCounters(filtered){
+  const wrap = $("#counters");
+  if(!wrap) return;
+  
+  const totalGames = SCHED?.games?.length || 0;
+  const totalTeams = TEAMS?.teams?.length || 0;
+  const totalPitchers = Object.values(pitchersById).reduce((sum, team) => sum + (team.pitchers?.length || 0), 0);
+  
+  wrap.innerHTML = `
+    <div class="badge">📊 ${filtered.length} / ${totalGames} games</div>
+    <div class="badge">⚾ ${totalTeams} teams</div>
+    <div class="badge">⚾ ${totalPitchers} pitchers</div>
+  `;
+}
+
+// Virtual scrolling state
+let virtualScrollEnabled = true;
+let visibleRange = { start: 0, end: 100 }; // Show first 100 games (50 rows x 2 columns)
+const CARD_HEIGHT = 600; // Approximate height of each game card
+const CARDS_PER_ROW = 2; // Two column layout
+const BUFFER_SIZE = 40; // Increased buffer to reduce render frequency (20 rows x 2 columns)
+let lastRenderedRange = null; // Track last rendered range to avoid unnecessary DOM updates
+
+// Debounce render calls to prevent rapid re-renders
+let renderTimeout = null;
+function debouncedRender(delay = 50, preserveScroll = false) {
+  if (renderTimeout) clearTimeout(renderTimeout);
+  renderTimeout = setTimeout(() => render(preserveScroll), delay);
+}
+
+function render(preserveScroll = false){
+  // Prevent overlapping renders
+  if (isRendering) {
+    console.log('[render] Skipping - render already in progress');
+    return;
+  }
+  
+  isRendering = true;
+  const startTime = performance.now();
+  
+  const allGames = SCHED?.games || [];
+  const filtered = filterGames(allGames);
+  const sorted = sortGames(filtered);
+  
+  renderCounters(filtered);
+  
+  const notice = $("#notice");
+  if(notice){
+    notice.style.display = filtered.length === 0 ? 'block' : 'none';
+  }
+  
+  const wrap = $("#games-wrap");
+  if(!wrap) {
+    isRendering = false;
+    return;
+  }
+  
+  // Save scroll position before render
+  const savedScrollY = preserveScroll ? window.scrollY : 0;
+  
+  wrap.innerHTML = '';
+  
+  // VIRTUAL SCROLLING IMPLEMENTATION
+  // CRITICAL: Always use virtual scrolling for more than 100 games to prevent performance issues
+  if (virtualScrollEnabled && sorted.length > 100) {
+    renderVirtualized(wrap, sorted);
+  } else {
+    renderAll(wrap, sorted);
+  }
+  
+  // Restore scroll position after render if needed
+  if (preserveScroll && savedScrollY > 0) {
+    requestAnimationFrame(() => {
+      window.scrollTo(0, savedScrollY);
+    });
+  }
+  
+  updateFiltersBtnHighlight();
+  
+  const elapsed = (performance.now() - startTime).toFixed(0);
+  console.log(`[render] Completed in ${elapsed}ms | ${sorted.length} games | virtualScroll: ${virtualScrollEnabled}`);
+  
+  isRendering = false;
+}
+
+// Render all games (no virtual scrolling)
+function renderAll(wrap, sorted) {
+  const fragment = document.createDocumentFragment();
+  
+  if(currentViewMode === 'series'){
+    const series = groupIntoSeries(sorted);
+    for(const s of series){
+      if(s.games.length === 1){
+        fragment.append(gameCard(s.games[0]));
+      } else {
+        const seriesContainer = document.createElement('div');
+        seriesContainer.style.display = 'contents';
+        
+        for(const game of s.games){
+          const card = gameCard(game);
+          const badge = document.createElement('span');
+          badge.className = 'series-badge';
+          badge.textContent = `Game ${s.games.indexOf(game) + 1} of ${s.games.length}`;
+          card.querySelector('.game-head .gh-left').append(badge);
+          seriesContainer.append(card);
+        }
+        fragment.append(seriesContainer);
+      }
+    }
+  } else {
+    for(const g of sorted){
+      fragment.append(gameCard(g));
+    }
+  }
+  
+  wrap.append(fragment);
+}
+
+// Virtual scrolling render
+function renderVirtualized(wrap, sorted) {
+  const totalGames = sorted.length;
+  const totalRows = Math.ceil(totalGames / CARDS_PER_ROW);
+  const { start, end } = visibleRange;
+  
+  // Calculate row-based positions
+  const startRow = Math.floor(start / CARDS_PER_ROW);
+  const endRow = Math.ceil(end / CARDS_PER_ROW);
+  
+  // Create container with proper height (based on rows, not individual cards)
+  const container = document.createElement('div');
+  container.style.position = 'relative';
+  container.style.minHeight = `${totalRows * CARD_HEIGHT}px`;
+  
+  // Create spacer for rows above viewport
+  const topSpacer = document.createElement('div');
+  topSpacer.style.height = `${startRow * CARD_HEIGHT}px`;
+  container.append(topSpacer);
+  
+  // Render visible games in a grid wrapper
+  const gridWrapper = document.createElement('div');
+  gridWrapper.style.display = 'grid';
+  gridWrapper.style.gridTemplateColumns = 'repeat(2, 1fr)';
+  gridWrapper.style.gap = '16px';
+  
+  const visibleGames = sorted.slice(start, end);
+  const fragment = document.createDocumentFragment();
+  
+  for(const g of visibleGames){
+    fragment.append(gameCard(g));
+  }
+  
+  gridWrapper.append(fragment);
+  container.append(gridWrapper);
+  
+  // Create spacer for rows below viewport
+  const bottomSpacer = document.createElement('div');
+  bottomSpacer.style.height = `${(totalRows - endRow) * CARD_HEIGHT}px`;
+  container.append(bottomSpacer);
+  
+  wrap.append(container);
+  
+  console.log(`[virtual] Rendered ${visibleGames.length} of ${totalGames} games (${start}-${end}) | Rows: ${startRow}-${endRow} of ${totalRows}`);
+}
+
+function isAnyFilterActive(){
+  const confOn   = ($("#divFilter")?.value || '') !== '';
+  const weeksOn  = weeksSelected && weeksSelected.size > 0;
+  const pitcherOn = ($("#pitcherFilterModal")?.value || 'fav_or_played') !== 'fav_or_played';
+  const pitcherSearchOn = ($("#pitcherSearchModal")?.value || '').trim() !== '';
+  const watchOn  = ($("#watchOrder")?.value || 'all') !== 'all';
+  return confOn || weeksOn || pitcherOn || pitcherSearchOn || watchOn;
+}
+
+function updateFiltersBtnHighlight(){
+  const btn = document.getElementById('filtersBtn');
+  if (!btn) return;
+  btn.classList.toggle('active-filter', isAnyFilterActive());
+}
+
+function _normTeamId(x){ return String(x??'').trim(); }
+function _normIdDigits(x){ return String(x??'').match(/\d+/g)?.join('') || ''; }
+function _pitcherKeyByIdOrName(pitcher){
+  const fromPick = (typeof pickPitcherId==='function') ? pickPitcherId(pitcher) : '';
+  const idDigits = _normIdDigits(fromPick || pitcher?.athleteId || pitcher?.espnId || pitcher?.playerId || pitcher?.id);
+  if (idDigits) return 'id:'+idDigits;
+  const nm = String(pitcher?.name || pitcher?.displayName || pitcher?.last || '').trim().toLowerCase();
+  return nm ? 'name:'+nm : '';
+}
+
+function _dedupePitchers(list){
+  const out=[], seen=new Set();
+  for(const pitcher of (list||[])){
+    const k=_pitcherKeyByIdOrName(pitcher);
+    if(!k) continue;
+    if(!seen.has(k)){ seen.add(k); out.push(pitcher); }
+  }
+  return out;
+}
+
+function mergePitcherData(base, extra){
+  const B = base && Array.isArray(base.teams) ? base.teams.slice() : [];
+  const E = extra && Array.isArray(extra.teams) ? extra.teams.slice() : [];
+  if (!E.length) return {teams: B};
+  const byId = new Map();
+  
+  for(const t of B){
+    const tid=_normTeamId(t.team_id||t.id||'');
+    if(!tid) continue;
+    byId.set(tid, { ...(t||{}), pitchers: Array.isArray(t.pitchers)? t.pitchers.slice(): [] });
+  }
+  
+  for(const t of E){
+    const tid=_normTeamId(t.team_id||t.id||'');
+    if(!tid) continue;
+    const cur = byId.get(tid) || {team_id:tid, pitchers:[]};
+    const p1  = Array.isArray(cur.pitchers)? cur.pitchers: [];
+    const p2  = Array.isArray(t.pitchers)?   t.pitchers  : [];
+    cur.pitchers = _dedupePitchers(p1.concat(p2));
+    cur.team  = cur.team || t.team || t.displayName;
+    cur.displayName = cur.displayName || t.displayName || t.team;
+    cur.logo  = cur.logo || t.logo || '';
+    byId.set(tid, cur);
+  }
+  
+  return {teams: Array.from(byId.values())};
+}
+
+function normalizeSchedule(raw){
+  var arr = Array.isArray(raw) ? raw : (raw && raw.games ? raw.games : []);
+  var norm = arr.map(function(e){
+    var comp = (e && Array.isArray(e.competitions)) ? e.competitions[0] : null;
+    var homeFromComp = null;
+    if (comp && comp.competitors) {
+      var h = comp.competitors.find(function(c){ return c && c.homeAway === 'home'; });
+      homeFromComp = h && h.team ? h.team.id : null;
+    }
+    var awayFromComp = null;
+    if (comp && comp.competitors) {
+      var a = comp.competitors.find(function(c){ return c && c.homeAway === 'away'; });
+      awayFromComp = a && a.team ? a.team.id : null;
+    }
+    return {
+      id: String((e && e.id != null) ? e.id : (e && e.gameId != null) ? e.gameId : (comp && comp.id != null) ? comp.id : ''),
+      date: ((e && e.date != null) ? e.date : (comp && comp.date != null) ? comp.date : (e && e.startDate != null) ? e.startDate : ''),
+      week: ((e && e.week && e.week.number != null) ? e.week.number : (e && e.weekNumber != null) ? e.weekNumber : (e && e.week != null) ? e.week : (comp && comp.week && comp.week.number != null) ? comp.week.number : ''),
+      home: String((e && e.home != null) ? e.home : (e && e.homeTeamId != null) ? e.homeTeamId : (homeFromComp != null) ? homeFromComp : ''),
+      away: String((e && e.away != null) ? e.away : (e && e.awayTeamId != null) ? e.awayTeamId : (awayFromComp != null) ? awayFromComp : '')
+    };
+  }).filter(function(g){ return g.id && g.home && g.away; });
+  return { games: norm };
+}
+
+function openModal(id){
+  const m = document.getElementById(id);
+  if (!m) return;
+  m.classList.add('open');
+  m.setAttribute('aria-hidden','false');
+  m.removeAttribute('inert');
+  document.body.style.overflow = 'hidden';
+  const focusable = m.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  (focusable || m).focus({ preventScroll:true });
+}
+
+function closeModal(target){
+  const m = (typeof target === 'string') ? document.getElementById(target.replace(/^#/,'')) : target;
+  if (!m) return;
+  if (m.contains(document.activeElement)) document.activeElement.blur();
+  m.setAttribute('aria-hidden','true');
+  m.setAttribute('inert','');
+  m.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('click', (e)=>{
+  const btn = e.target.closest('[data-close]');
+  if (!btn) return;
+  const sel = btn.getAttribute('data-close') || '';
+  const id  = sel.replace(/^#/, '');
+  if (id) closeModal(id);
+});
+
+['filtersModal','commandsModal'].forEach(id=>{
+  const m = document.getElementById(id);
+  if (!m) return;
+  m.addEventListener('click', (ev)=>{ if (ev.target === m) closeModal(m); });
+});
+
+function fillWeekSelect(){
+  const sel = $("#weekSelect");
+  if(!sel) return;
+  for(let w=1; w<=26; w++){
+    const opt = document.createElement('option');
+    opt.value = w;
+    opt.textContent = 'Week '+w;
+    sel.append(opt);
+  }
+}
+
+function fillWeeksGrid(){
+  const grid = $("#weeksGrid");
+  if(!grid) return;
+  grid.innerHTML = '';
+  for(let w=1; w<=26; w++){
+    const lab = document.createElement('label');
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.value = String(w);
+    // Sync checkbox state with weeksSelected Set
+    cb.checked = weeksSelected.has(String(w));
+    cb.onchange = () => { 
+      if(cb.checked) {
+        weeksSelected.add(cb.value);
+      } else {
+        weeksSelected.delete(cb.value);
+      }
+      render(); // Update the display when weeks change
+    };
+    const t=document.createElement('span'); 
+    t.textContent=String(w);
+    lab.append(cb,t); 
+    grid.append(lab);
+  }
+}
+
+function loadWeeksFromParam(){
+  const params = getParams();
+  if(!params.week) return;
+  const parts = params.week.split(',');
+  for(const p of parts){
+    weeksSelected.add(p.trim());
+  }
+}
+
+function populateDivisionDropdowns(){
+  const confs = new Set();
+  if(DIV_MAP){
+    for(const c of Object.values(DIV_MAP)){
+      if(c && c !== 'Unknown') confs.add(c);
+    }
+  }
+  const sorted = Array.from(confs).sort();
+  
+  const sel1 = $("#divFilter");
+  const sel2 = $("#divFilterModal");
+  
+  for(const conf of sorted){
+    const opt1 = document.createElement('option');
+    opt1.value = conf;
+    opt1.textContent = conf;
+    if(sel1) sel1.append(opt1);
+    
+    const opt2 = document.createElement('option');
+    opt2.value = conf;
+    opt2.textContent = conf;
+    if(sel2) sel2.append(opt2);
+  }
+}
+
+async function boot(){
+  // Initialize storage modules (load from files, migrate from localStorage if needed)
+  await Promise.all([
+    Fav.init(),
+    Prio.init(),
+    Watched.init()
+  ]);
+  
+  fillWeekSelect();
+  loadWeeksFromParam(); // Load URL params FIRST
+  fillWeeksGrid(); // Then fill the grid (checkboxes will now sync correctly)
+  
+  console.log('[boot] weeksSelected size:', weeksSelected.size, 'weeks:', Array.from(weeksSelected));
+  
+  TEAMS = await tryMany(['./data/teams.json']);
+  
+  let basePitchers = await tryMany([
+    './data/pitchers_enhanced.json',
+    './data/pitchers.json'
+  ]);
+  
+  let addPitchers = await tryMany([
+    './data/pitcher_enhance.json',
+    './data/pitcher_rosters_enhanced.json'
+  ]);
+  
+  PITCHERS = addPitchers ? mergePitcherData(basePitchers, addPitchers) : basePitchers;
+  
+  DIV_MAP = await tryMany(['./data/conferences_map.json']);
+  DIV_META = await tryMany(['./data/conferences_meta.json']);
+  
+  const params = getParams();
+  const rawSched = await tryMany(
+    params.week
+      ? ['./data/schedule_week.json', './data/schedule.json']
+      : ['./data/schedule.json', './data/schedule_week.json']
+  );
+  SCHED = normalizeSchedule(rawSched);
+  
+  if(TEAMS && TEAMS.teams){
+    for(const t of TEAMS.teams){
+      const tid = String(t.id || t.team_id || '');
+      if(tid) teamsById[tid] = t;
+    }
+  }
+  
+  if(PITCHERS && PITCHERS.teams){
+    for(const t of PITCHERS.teams){
+      const tid = String(t.team_id || t.id || '');
+      if(tid) pitchersById[tid] = t;
+    }
+  }
+  
+  populateDivisionDropdowns();
+  
+  // Set default pitcher filter - SHOW FAVORITES OR PLAYED by default
+  const pitcherFilterEl = $("#pitcherFilterModal");
+  if(pitcherFilterEl && !pitcherFilterEl.value) {
+    pitcherFilterEl.value = 'fav_or_played';
+  }
+  
+  // PERFORMANCE: Skip initial load - lazy load after render
+  // await reloadPlayedIndex(true);
+  
+  render();
+  
+  console.log('🎉 College Baseball Pitcher Tracker loaded!');
+  console.log('Teams:', Object.keys(teamsById).length);
+  console.log('Teams with pitchers:', Object.keys(pitchersById).length);
+  console.log('Games:', SCHED?.games?.length || 0);
+}
+
+
+
+// PERFORMANCE: Loading indicator functions
+function showLoadingIndicator() {
+  const notice = document.getElementById('notice');
+  if (notice) {
+    notice.style.display = 'block';
+    notice.textContent = '⏳ Loading participation data...';
+    notice.style.background = '#cfe2ff';
+    notice.style.color = '#111';
+  }
+}
+
+function hideLoadingIndicator() {
+  const notice = document.getElementById('notice');
+  if (notice) {
+    notice.style.display = 'none';
+  }
+}
+
+// PERFORMANCE: Lazy load participation data with indicator
+let participationLoaded = false;
+let isLoadingParticipation = false;
+
+async function lazyLoadParticipation() {
+  if (participationLoaded) {
+    toast('Participation data already loaded!');
+    return;
+  }
+  
+  if (isLoadingParticipation) {
+    toast('Already loading...');
+    return;
+  }
+  
+  isLoadingParticipation = true;
+  showLoadingIndicator();
+  console.log('[perf] Loading participation data...');
+  const start = Date.now();
+  
+  try {
+    await reloadPlayedIndex(true);
+    participationLoaded = true;
+    console.log(`[perf] Participation loaded in ${Date.now() - start}ms`);
+    
+    // Re-render to show dropdowns/participation data
+    render();
+    
+    // Wait for DOM to paint before refreshing pills
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        refreshPlayedPills();
+        console.log('[perf] Pills refreshed after render');
+      });
+    });
+    
+    toast('✅ Participation data loaded!');
+  } catch (e) {
+    console.error('[perf] Failed to load participation:', e);
+    toast('❌ Failed to load participation data');
+  } finally {
+    hideLoadingIndicator();
+    isLoadingParticipation = false;
+  }
+}
+
+// Auto-load after initial render
+setTimeout(() => {
+  if (!participationLoaded) {
+    lazyLoadParticipation();
+  }
+}, 1500);
+
+// Manual trigger button
+const triggerLoad = () => {
+  if (!participationLoaded) {
+    lazyLoadParticipation();
+  } else {
+    toast('Participation data already loaded!');
+  }
+};
+
+document.addEventListener('DOMContentLoaded', boot);
+
+// Virtual scrolling: Update visible range on scroll
+let scrollTimeout = null;
+let isRendering = false; // Prevent overlapping renders
+window.addEventListener('scroll', () => {
+  if (!virtualScrollEnabled || isRendering) return;
+  
+  if (scrollTimeout) clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    updateVisibleRange();
+  }, 200); // Increased debounce to 200ms for smoother scrolling
+});
+
+function updateVisibleRange() {
+  if (isRendering) return; // Don't update while rendering
+  
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const viewportHeight = window.innerHeight;
+  
+  // Calculate which rows should be visible (2 cards per row)
+  const startRow = Math.max(0, Math.floor(scrollTop / CARD_HEIGHT) - (BUFFER_SIZE / CARDS_PER_ROW));
+  const endRow = Math.ceil((scrollTop + viewportHeight) / CARD_HEIGHT) + (BUFFER_SIZE / CARDS_PER_ROW);
+  
+  // Convert rows to card indices
+  const startIndex = startRow * CARDS_PER_ROW;
+  const endIndex = Math.min(
+    (SCHED?.games || []).length,
+    endRow * CARDS_PER_ROW
+  );
+  
+  // Only re-render if range changed significantly (by at least 20 cards)
+  const startDiff = Math.abs(startIndex - visibleRange.start);
+  const endDiff = Math.abs(endIndex - visibleRange.end);
+  
+  if (startDiff > 20 || endDiff > 20) {
+    visibleRange = { start: startIndex, end: endIndex };
+    debouncedRender(100, true); // Preserve scroll position during virtual scroll updates
+  }
+}
+
+$("#search")?.addEventListener('input', () => {
+  visibleRange = { start: 0, end: 100 }; // Reset range on filter change (50 rows x 2 columns)
+  debouncedRender(200);
+});
+$("#divFilter")?.addEventListener('change', () => {
+  visibleRange = { start: 0, end: 100 }; // Reset range on filter change
+  render();
+});
+$("#watchOrder")?.addEventListener('change', () => {
+  visibleRange = { start: 0, end: 100 }; // Reset range on filter change
+  render();
+});
+$("#divFilterModal")?.addEventListener('change', () => {
+  const val = $("#divFilterModal")?.value;
+  const main = $("#divFilter");
+  if(main) main.value = val;
+  render();
+});
+$("#sortBy")?.addEventListener('change', render);
+
+$("#filtersBtn")?.addEventListener('click', () => openModal('filtersModal'));
+$("#commandsBtn")?.addEventListener('click', () => openModal('commandsModal'));
+
+$("#weeksAll")?.addEventListener('click', () => {
+  $$('#weeksGrid input[type="checkbox"]').forEach(cb => {
+    cb.checked = true;
+    weeksSelected.add(cb.value);
+  });
+  render();
+});
+
+$("#weeksClear")?.addEventListener('click', () => {
+  $$('#weeksGrid input[type="checkbox"]').forEach(cb => {
+    cb.checked = false;
+    weeksSelected.delete(cb.value);
+  });
+  render();
+});
+
+$("#viewGames")?.addEventListener('click', () => {
+  currentViewMode = 'games';
+  $("#viewGames")?.classList.add('active');
+  $("#viewSeries")?.classList.remove('active');
+  render();
+});
+
+$("#viewSeries")?.addEventListener('click', () => {
+  currentViewMode = 'series';
+  $("#viewSeries")?.classList.add('active');
+  $("#viewGames")?.classList.remove('active');
+  render();
+});
+
+// Expand All Details button
+const expandAllBtn = document.getElementById('expandAllBtn');
+let allExpanded = false;
+if(expandAllBtn){
+  expandAllBtn.addEventListener('click', () => {
+    allExpanded = !allExpanded;
+    document.querySelectorAll('.pitcher-details').forEach(det => {
+      det.classList.toggle('expanded', allExpanded);
+    });
+    document.querySelectorAll('.expand-toggle').forEach(chev => {
+      chev.classList.toggle('expanded', allExpanded);
+    });
+    expandAllBtn.textContent = allExpanded ? 'Collapse All Details' : 'Expand All Details';
+  });
+}
+
+$("#copyCmdDaily")?.addEventListener('click', () => {
+  const year = $("#cmdYear")?.value || '2025';
+  const week = $("#cmdWeeks")?.value || '1';
+  const text = `cd ~/Desktop/CBB\nnode tools/fetch_schedule.js --year=${year} --weeks=${week}\nnode rebuild_played_index.js`;
+  navigator.clipboard.writeText(text);
+  toast('Daily script copied!');
+});
+
+$("#copyCmdWeek")?.addEventListener('click', () => {
+  const year = $("#cmdYear")?.value || '2025';
+  const text = `cd ~/Desktop/CBB\nnode tools/fetch_schedule.js --year=${year} --weeks=1-20\nnode rebuild_played_index.js`;
+  navigator.clipboard.writeText(text);
+  toast('Week script copied!');
+});
+
+$("#copyServer")?.addEventListener('click', () => {
+  const text = `cd ~/Desktop/CBB\nnode server.mjs`;
+  navigator.clipboard.writeText(text);
+  toast('Server script copied!');
+});
+
+// New data collection button handlers
+$("#copyScheduleCmd")?.addEventListener('click', () => {
+  const text = `cd ~/Desktop/CBB\nnode tools/fetch_schedule.js --year=2025 --weeks=1-26`;
+  navigator.clipboard.writeText(text);
+  toast('Schedule command copied!');
+});
+
+$("#copyPitcherCmd")?.addEventListener('click', () => {
+  const text = `cd ~/Desktop/CBB\nnode tools/fetch_all_pitcher_participation.cjs`;
+  navigator.clipboard.writeText(text);
+  toast('Pitcher command copied!');
+});
+
+$("#copyRebuildCmd")?.addEventListener('click', () => {
+  const text = `cd ~/Desktop/CBB\nnode rebuild_played_index.js`;
+  navigator.clipboard.writeText(text);
+  toast('Rebuild command copied!');
+});
+
+$("#copyLaunchScript")?.addEventListener('click', () => {
+  const text = `cd ~/Desktop/CBB\n./launch.command`;
+  navigator.clipboard.writeText(text);
+  toast('Launch command copied!');
+});
+
+$("#copyStopScript")?.addEventListener('click', () => {
+  const text = `cd ~/Desktop/CBB\n./stop_server.command`;
+  navigator.clipboard.writeText(text);
+  toast('Stop command copied!');
+});
+
+
+// Enhanced Data Tools button handlers
+$("#copyBackupCmd")?.addEventListener('click', () => {
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\ntar -czf "backups/cbb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/ schedule.html');
+  toast('Backup command copied!');
+});
+
+$("#copyWeekUpdate")?.addEventListener('click', () => {
+  const week = $("#cmdWeek")?.value || '1';
+  navigator.clipboard.writeText(`cd ~/Desktop/CBB\nnode tools/fetch_schedule.js --year=2025 --weeks=${week}\nnode tools/fetch_all_pitcher_participation.cjs --week=${week}\nnode rebuild_played_index.js\necho "✅ Done! Refresh browser: Cmd+Shift+R"`);
+  toast('Week update copied!');
+});
+
+$("#copyPitcherUpdate")?.addEventListener('click', () => {
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\nnode tools/fetch_all_pitcher_participation.cjs\necho "✅ Done! Refresh: Cmd+Shift+R"');
+  toast('Pitcher update copied!');
+});
+
+$("#copyCompleteUpdate")?.addEventListener('click', () => {
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\ntar -czf "backups/cbb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/\nnode tools/fetch_schedule.js --year=2025 --weeks=1-26\nnode tools/fetch_all_pitcher_participation.cjs\nnode rebuild_played_index.js\necho "✅ Complete! Refresh browser."');
+  toast('Complete update copied!');
+});
+
+$("#copyLaunchCmd")?.addEventListener('click', () => {
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\n./launch.command');
+  toast('Launch command copied!');
+});
+
+$("#copyStopCmd")?.addEventListener('click', () => {
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\n./stop_server.command');
+  toast('Stop command copied!');
+});
+
+$("#copyFixCmd")?.addEventListener('click', () => {
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\ncp "data/pitchers_played_index 3.json" data/pitchers_played_index.json');
+  toast('Fix command copied!');
+});
+
+$("#copyStatusCmd")?.addEventListener('click', () => {
+  navigator.clipboard.writeText('lsof -i :8072');
+  toast('Status check copied!');
+});
+
+
+// Sync modal filters with top bar
+$("#watchOrderModal")?.addEventListener('change', () => {
+  const val = $("#watchOrderModal")?.value;
+  const main = $("#watchOrder");
+  if(main) main.value = val;
+  render();
+});
+
+$("#pitcherFilterModal")?.addEventListener('change', () => {
+  visibleRange = { start: 0, end: 100 }; // Reset range on filter change
+  render();
+});
+
+$("#pitcherSearchModal")?.addEventListener('input', () => {
+  visibleRange = { start: 0, end: 100 }; // Reset range on filter change
+  debouncedRender(400); // Longer debounce for search to reduce re-renders
+});
+
+$("#sortByModal")?.addEventListener('change', () => {
+  const val = $("#sortByModal")?.value;
+  // Apply sort logic
+  render();
+});
+
+
+$("#loadParticipationBtn")?.addEventListener('click', () => {
+  lazyLoadParticipation();
+});
+
+$("#loadDetailedInningsBtn")?.addEventListener('click', async () => {
+  const btn = $("#loadDetailedInningsBtn");
+  if (!btn) return;
+  
+  // Disable button while loading
+  btn.disabled = true;
+  btn.textContent = 'Loading... (20-30s)';
+  
+  const data = await loadDetailedInnings();
+  
+  if (data) {
+    btn.textContent = '✅ Innings Loaded';
+    btn.style.background = '#198754';
+    btn.disabled = false;
+    
+    // Re-render to show detailed innings in the UI
+    render();
+    toast('✅ Detailed innings now visible!');
+  } else {
+    btn.textContent = 'Load Innings';
+    btn.disabled = false;
+  }
+});
+
+// Toggle virtual scrolling
+$("#toggleVirtualScrollBtn")?.addEventListener('click', () => {
+  const btn = $("#toggleVirtualScrollBtn");
+  if (!btn) return;
+  
+  const totalGames = SCHED?.games?.length || 0;
+  
+  // Warn if disabling with lots of games
+  if (virtualScrollEnabled && totalGames > 200) {
+    const confirm = window.confirm(
+      `⚠️ WARNING: You have ${totalGames} games!\n\n` +
+      `Disabling virtual scrolling will render ALL games at once and may cause:\n` +
+      `• Page freezing for 10-30 seconds\n` +
+      `• Slow scrolling\n` +
+      `• Browser lag\n\n` +
+      `Are you sure you want to disable virtual scrolling?`
+    );
+    if (!confirm) return;
+  }
+  
+  virtualScrollEnabled = !virtualScrollEnabled;
+  btn.textContent = `Virtual Scroll: ${virtualScrollEnabled ? 'ON' : 'OFF'}`;
+  btn.style.background = virtualScrollEnabled ? '#6c757d' : '#dc3545';
+  
+  // Reset visible range when toggling
+  visibleRange = { start: 0, end: 100 }; // 50 rows x 2 columns
+  
+  render();
+  
+  if (!virtualScrollEnabled && totalGames > 200) {
+    toast('⚠️ Rendering all games... this may take a moment');
+  } else {
+    toast(virtualScrollEnabled ? '✅ Virtual scrolling enabled' : '⚠️ Virtual scrolling disabled');
+  }
+});
+
+</script>
+</body>
+</html>

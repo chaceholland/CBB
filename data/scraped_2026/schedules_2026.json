@@ -1,0 +1,346 @@
+{
+  "south-carolina": {
+    "team": "South Carolina",
+    "abbrev": "SC",
+    "espnId": "2579",
+    "games": [
+      {
+        "date": "Fri Feb 13",
+        "time": "4:00 pm",
+        "opponent": "SC",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Fri Feb 13",
+        "time": "4:00 pm",
+        "opponent": "Northern",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Feb 14",
+        "time": "2:00 pm",
+        "opponent": "Feb",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Sun Feb 15",
+        "time": "1:30 pm",
+        "opponent": "Northern",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Tue Feb 17",
+        "time": "5:30 pm",
+        "opponent": "Wofford",
+        "location": "Spartanburg, S.C. (Fifth Third Park) away",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Wed Feb 18",
+        "time": "4:00 pm",
+        "opponent": "Gardner-Webb",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Fri Feb 20",
+        "time": "2:00 pm",
+        "opponent": "Army",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Feb 21",
+        "time": "1:00 pm",
+        "opponent": "Feb",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Sun Feb 22",
+        "time": "4:00 pm",
+        "opponent": "Air",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Wed Feb 25",
+        "time": "6:30 pm",
+        "opponent": "Queens",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Fri Feb 27",
+        "time": "7:00 pm",
+        "opponent": "Clemson",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Feb 28",
+        "time": "3:00 pm",
+        "opponent": "Feb",
+        "location": "Segra Park neutral",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Sun Mar 1",
+        "time": "3:00 pm",
+        "opponent": "Clemson",
+        "location": "Clemson, S.C. away",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue Mar 3",
+        "time": "6:30 pm",
+        "opponent": "USC",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Wed Mar 4",
+        "time": "6:30 pm",
+        "opponent": "Charleston",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Mar 7",
+        "time": "1:00 pm",
+        "opponent": "Mar",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Sun Mar 8",
+        "time": "1:30 pm",
+        "opponent": "Princeton",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Tue Mar 10",
+        "time": "7:00 pm",
+        "opponent": "The",
+        "location": "Charleston, S.C. away",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Sat Mar 14",
+        "time": "",
+        "opponent": "Mar",
+        "location": "Gainesville, Fla. away",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue Mar 17",
+        "time": "6:30 pm",
+        "opponent": "Charlotte",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Mar 21",
+        "time": "",
+        "opponent": "Mar",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue Mar 24",
+        "time": "7:00 pm",
+        "opponent": "North",
+        "location": "Charlotte, N.C. neutral",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Mar 28",
+        "time": "",
+        "opponent": "Mar",
+        "location": "Athens, Ga. away",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue Mar 31",
+        "time": "6:30 pm",
+        "opponent": "Wofford",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Apr 4",
+        "time": "",
+        "opponent": "Apr",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue Apr 7",
+        "time": "6:30 pm",
+        "opponent": "College of",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Apr 11",
+        "time": "",
+        "opponent": "Apr",
+        "location": "Columbia, Mo. away",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue Apr 14",
+        "time": "6:30 pm",
+        "opponent": "Davidson",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Fri Apr 17",
+        "time": "",
+        "opponent": "Mississippi",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Apr 18",
+        "time": "",
+        "opponent": "Apr",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Sun Apr 19",
+        "time": "",
+        "opponent": "Mississippi",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Tue Apr 21",
+        "time": "6:30 pm",
+        "opponent": "Presbyterian",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat Apr 25",
+        "time": "",
+        "opponent": "Apr",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue Apr 28",
+        "time": "6:30 pm",
+        "opponent": "The",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat May 2",
+        "time": "",
+        "opponent": "May",
+        "location": "Baton Rouge, La. away",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Sat May 9",
+        "time": "",
+        "opponent": "May",
+        "location": "Founders Park home",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue May 12",
+        "time": "6:30 pm",
+        "opponent": "Winthrop",
+        "location": "Founders Park home",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Sat May 16",
+        "time": "",
+        "opponent": "May",
+        "location": "Nashville, Tenn. away",
+        "isHome": false,
+        "isAway": true
+      },
+      {
+        "date": "Tue May 19",
+        "time": "",
+        "opponent": "SEC",
+        "location": "Hoover, Ala. neutral",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Fri May 29",
+        "time": "",
+        "opponent": "NCAA",
+        "location": "Campus Sites neutral",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Fri Jun 5",
+        "time": "",
+        "opponent": "NCAA",
+        "location": "Campus Sites neutral",
+        "isHome": true,
+        "isAway": false
+      },
+      {
+        "date": "Fri Jun 12",
+        "time": "",
+        "opponent": "NCAA",
+        "location": "Omaha, Neb. neutral",
+        "isHome": true,
+        "isAway": false
+      }
+    ],
+    "scrapedAt": "2025-11-26T19:15:24.218Z"
+  }
+}

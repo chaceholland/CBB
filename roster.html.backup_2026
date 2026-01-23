@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CBB Pitcher Rosters</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  :root{
+    --navy:#002f66; --navy-2:#003080;
+    --card:#ffffff; --muted:#e9eef7;
+    --ink:#111827; --ink-2:#374151; --link:#0b69c7;
+    --chip:#e9eef7; --chip-text:#21304a;
+    --border:#d6dbe7; --outline:#cdd3e0;
+  }
+  html,body{height:100%}
+  body{margin:0;background:var(--navy);color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  #top-bar{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;padding:.8rem 1rem;background:var(--navy-2);position:sticky;top:0;z-index:50}
+  #top-bar h1{margin:0;font-size:1.2rem;flex:1}
+  #top-bar input,#top-bar select{background:#fff;color:#111;border:1px solid var(--outline);border-radius:.5rem;padding:.45rem .6rem;font-size:.95rem}
+  #top-bar button{border:1px solid var(--outline);background:#fff;color:#0f356b;border-radius:.6rem;padding:.45rem .7rem;cursor:pointer;transition:opacity .15s ease}
+  #top-bar button:hover{opacity:.85}
+  #top-bar a{color:#fff;text-decoration:none;padding:.45rem .7rem;background:rgba(255,255,255,.1);border-radius:.5rem;transition:background .15s ease}
+  #top-bar a:hover{background:rgba(255,255,255,.2)}
+  #counters{display:flex;gap:.5rem;padding:.35rem 1rem 0 1rem;flex-wrap:wrap}
+  .badge{background:#003a8a;padding:.35rem .6rem;border-radius:1rem;font-size:.85rem}
+  #teams-wrap{padding:1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(750px,1fr));gap:16px}
+  .team-card{background:var(--card);color:var(--ink);border-radius:16px;border:1px solid var(--border);box-shadow:0 2px 10px rgba(14,22,48,.15);overflow:hidden}
+  .team-card.favorited{border:2px solid #f59e0b;box-shadow:0 4px 15px rgba(245,158,11,.3)}
+  .team-header{display:flex;align-items:center;gap:.75rem;background:var(--muted);padding:.8rem 1rem;border-bottom:1px solid var(--border)}
+  .team-logo-big{width:80px;height:80px;border-radius:12px;object-fit:contain;background:#fff;border:1px solid #e8eef9}
+  .team-info{flex:1}
+  .team-name{font-weight:800;font-size:1.2rem;margin-bottom:.25rem}
+  .team-conf{font-size:.85rem;color:var(--ink-2);margin-bottom:.35rem}
+  .team-links{display:flex;gap:.35rem;align-items:center;flex-wrap:wrap}
+  .team-links a{background:#eef3fb;color:#123b7a;border:1px solid #d8e1f3;font-weight:700;font-size:.75rem;padding:.25rem .55rem;text-decoration:none;border-radius:999px;transition:opacity .15s ease}
+  .team-links a:hover{opacity:.85}
+  .team-actions{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
+  .pitcher-count{background:#eef3fb;color:#123b7a;padding:.25rem .6rem;border-radius:999px;font-size:.85rem;font-weight:700}
+  .pitchers-list{padding:.75rem;display:flex;flex-direction:column;gap:.6rem;max-height:600px;overflow-y:auto}
+  .pitcher-item{display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;padding:.6rem;border-radius:10px;background:#fafbfc;border:1px solid #e9eef7;transition:all .15s ease}
+  .pitcher-item:hover{background:#f0f4f8;border-color:#d6dbe7}
+  .pitcher-item.favorited{background:#fff7db;border-color:#e3c76a}
+  .headshot-wrap{width:110px;height:110px;overflow:visible;border-radius:10px;background:#eaf2ff;border:1px solid #d8e1f3;position:relative}
+  .headshot{width:100%;height:100%;object-fit:cover;transition:all .3s ease;position:relative;z-index:1;border-radius:10px}
+  .headshot-wrap:hover .headshot{transform:scale(2.2);z-index:100;box-shadow:0 8px 24px rgba(0,0,0,0.4)}
+  .team-logo-fallback{width:100%;height:100%;object-fit:contain;padding:10px;transition:all .3s ease;position:relative;z-index:1;border-radius:10px}
+  .headshot-wrap:hover .team-logo-fallback{transform:scale(2.2);z-index:100;box-shadow:0 8px 24px rgba(0,0,0,0.4)}
+  .pitcher-info{display:flex;flex-direction:column;gap:.2rem}
+  .pitcher-name{font-weight:700;font-size:1rem;color:var(--ink)}
+  .pitcher-num{color:var(--ink-2);font-size:.9rem;margin-right:.4rem}
+  .pitcher-details{font-size:.85rem;color:var(--ink-2);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+  .pitcher-details a{color:var(--link);text-decoration:none}
+  .pitcher-details a:hover{text-decoration:underline}
+  .role-badge{background:#e9eef7;color:#123b7a;padding:.15rem .4rem;border-radius:4px;font-size:.75rem;font-weight:700}
+  .role-starter{background:#3b82f6;color:#fff}
+  .role-reliever{background:#8b5cf6;color:#fff}
+  .star{cursor:pointer;font-size:1.4rem;color:#d1d5db;transition:color .15s ease;user-select:none}
+  .star:hover{color:#f59e0b}
+  .star.active{color:#f59e0b}
+  .team-star{cursor:pointer;font-size:1.3rem;color:#d1d5db;transition:color .15s ease;user-select:none}
+  .team-star:hover{color:#f59e0b}
+  .team-star.active{color:#f59e0b}
+  #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:.75rem 1.25rem;border-radius:.75rem;font-weight:600;opacity:0;transition:opacity .2s ease;pointer-events:none;z-index:200}
+  #toast.show{opacity:.95}
+</style>
+</head>
+<body>
+
+<div id="top-bar">
+  <h1>⚾ CBB Pitcher Rosters</h1>
+  <input type="text" id="search" placeholder="Search pitchers or teams..." />
+  <select id="divFilter">
+    <option value="">All Divisions</option>
+  </select>
+  <select id="sortBy">
+    <option value="team">Team Name</option>
+    <option value="division">Division</option>
+    <option value="favorites">Favorites First</option>
+  </select>
+  <a href="schedule.html">→ Schedule</a>
+</div>
+
+<div id="counters"></div>
+<div id="teams-wrap"></div>
+<div id="toast">Saved</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+
+let TEAMS = null;
+let PITCHERS = null;
+let DIV_MAP = null;
+let FAVORITES = { pitchers: [], teams: [], games: [] };
+
+const teamsById = {};
+const pitchersById = {};
+
+// Toast notification
+const toast = (m='Saved') => {
+  const t = $("#toast");
+  t.textContent = m;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1100);
+};
+
+// Fetch JSON
+async function getJSON(path){
+  const r = await fetch(path, {cache: 'no-store'});
+  if(!r.ok) throw new Error('HTTP '+r.status+' '+path);
+  return r.json();
+}
+
+// Save favorites to server
+async function saveFavorites(){
+  try {
+    const r = await fetch('/api/favorites', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(FAVORITES)
+    });
+    if(r.ok) toast('Favorites saved');
+  } catch(e) {
+    console.error('Failed to save favorites:', e);
+    toast('Save failed');
+  }
+}
+
+// Load favorites from server
+async function loadFavorites(){
+  try {
+    const r = await fetch('/api/favorites');
+    if(r.ok) FAVORITES = await r.json();
+    // Ensure arrays exist
+    FAVORITES.pitchers = FAVORITES.pitchers || [];
+    FAVORITES.teams = FAVORITES.teams || [];
+    FAVORITES.games = FAVORITES.games || [];
+  } catch(e) {
+    console.error('Failed to load favorites:', e);
+  }
+}
+
+// Toggle pitcher favorite
+function toggleFavorite(pitcherId){
+  const idx = FAVORITES.pitchers.indexOf(pitcherId);
+  if(idx > -1){
+    FAVORITES.pitchers.splice(idx, 1);
+  } else {
+    FAVORITES.pitchers.push(pitcherId);
+  }
+  saveFavorites();
+  render();
+}
+
+// Toggle team favorite
+function toggleTeamFavorite(teamId){
+  const idx = FAVORITES.teams.indexOf(teamId);
+  if(idx > -1){
+    FAVORITES.teams.splice(idx, 1);
+  } else {
+    FAVORITES.teams.push(teamId);
+  }
+  saveFavorites();
+  render();
+}
+
+// Check if pitcher is favorited
+function isFavorited(pitcherId){
+  return FAVORITES.pitchers.includes(pitcherId);
+}
+
+// Check if team is favorited
+function isTeamFavorited(teamId){
+  return FAVORITES.teams.includes(teamId);
+}
+
+// Get team data
+function getTeam(tid){
+  return teamsById[String(tid)] || {};
+}
+
+// Get team logo
+function getTeamLogo(tid){
+  const team = getTeam(tid);
+  return team.logo || '';
+}
+
+// ESPN links
+function espnTeamLinks(tid){
+  const base = 'https://www.espn.com/mlb/team';
+  return {
+    roster: `${base}/roster/_/id/${tid}`,
+    schedule: `${base}/schedule/_/id/${tid}`
+  };
+}
+
+function espnPlayerLink(pid){
+  return `https://www.espn.com/mlb/player/_/id/${pid}`;
+}
+
+// Filter teams
+function filterTeams(teams){
+  const search = ($("#search")?.value || '').toLowerCase();
+  const div = $("#divFilter")?.value || '';
+  
+  return teams.filter(t => {
+    if(div && teamDiv(t.team_id) !== div) return false;
+    
+    if(search){
+      const teamName = (t.team || t.displayName || '').toLowerCase();
+      const pitcherNames = (t.pitchers || []).map(p => 
+        (p.name || p.displayName || '').toLowerCase()
+      ).join(' ');
+      if(!teamName.includes(search) && !pitcherNames.includes(search)) return false;
+    }
+    
+    return true;
+  });
+}
+
+// Sort teams
+function sortTeams(teams){
+  const sortBy = $("#sortBy")?.value || 'team';
+  return teams.slice().sort((a,b) => {
+    if(sortBy === 'division'){
+      const aDiv = teamDiv(a.team_id);
+      const bDiv = teamDiv(b.team_id);
+      if(aDiv !== bDiv) return aDiv.localeCompare(bDiv);
+    }
+    if(sortBy === 'favorites'){
+      const aFav = isTeamFavorited(a.team_id) || (a.pitchers || []).some(p => isFavorited(p.id));
+      const bFav = isTeamFavorited(b.team_id) || (b.pitchers || []).some(p => isFavorited(p.id));
+      if(aFav !== bFav) return bFav ? 1 : -1;
+    }
+    const aName = a.team || a.displayName || '';
+    const bName = b.team || b.displayName || '';
+    return aName.localeCompare(bName);
+  });
+}
+
+// Get team division - now just return the value from DIV_MAP
+function teamDiv(tid){
+  return DIV_MAP?.[String(tid)] || 'Unknown';
+}
+
+// Determine pitcher role (starter vs reliever)
+function getPitcherRole(pitcher){
+  return pitcher.role || 'Pitcher';
+}
+
+// Render teams
+function render(){
+  const wrap = $("#teams-wrap");
+  if(!wrap) return;
+  
+  if(!PITCHERS || !PITCHERS.teams){
+    wrap.innerHTML = '<div style="padding:2rem;text-align:center;color:#fff">Loading rosters...</div>';
+    return;
+  }
+  
+  const filtered = filterTeams(PITCHERS.teams);
+  const sorted = sortTeams(filtered);
+  
+  wrap.innerHTML = '';
+  
+  for(const team of sorted){
+    const card = document.createElement('div');
+    card.className = 'team-card' + (isTeamFavorited(team.team_id) ? ' favorited' : '');
+    
+    const header = document.createElement('div');
+    header.className = 'team-header';
+    
+    const teamLogo = getTeamLogo(team.team_id);
+    const logo = teamLogo ? 
+      `<img class="team-logo-big" src="${teamLogo}" alt="${team.team || team.displayName}">` :
+      `<div style="width:80px;height:80px;border-radius:12px;background:#eaf2ff;color:#174b9f;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.5rem">${team.team_abbr || 'MLB'}</div>`;
+    
+    const favCount = (team.pitchers || []).filter(p => isFavorited(p.id)).length;
+    const favBadge = favCount > 0 ? `<span class="pitcher-count">${favCount} ⭐</span>` : '';
+    
+    const teamLinks = espnTeamLinks(team.team_id);
+    const divisionName = teamDiv(team.team_id);
+    
+    const teamStar = document.createElement('span');
+    teamStar.className = 'team-star' + (isTeamFavorited(team.team_id) ? ' active' : '');
+    teamStar.textContent = isTeamFavorited(team.team_id) ? '⭐' : '☆';
+    teamStar.title = 'Favorite this team';
+    teamStar.onclick = () => toggleTeamFavorite(team.team_id);
+    
+    header.innerHTML = `
+      ${logo}
+      <div class="team-info">
+        <div class="team-name">${team.team || team.displayName}</div>
+        <div class="team-conf">${divisionName}</div>
+        <div class="team-links">
+          <a href="${teamLinks.roster}" target="_blank">Roster</a>
+          <a href="${teamLinks.schedule}" target="_blank">Schedule</a>
+        </div>
+      </div>
+      <div class="team-actions">
+        <span class="pitcher-count">${(team.pitchers || []).length} P</span>
+        ${favBadge}
+      </div>
+    `;
+    header.appendChild(teamStar);
+    
+    const list = document.createElement('div');
+    list.className = 'pitchers-list';
+    
+    const pitchers = (team.pitchers || []).slice().sort((a,b) => {
+      // Sort by favorite status first
+      const aFav = isFavorited(a.id);
+      const bFav = isFavorited(b.id);
+      if(aFav !== bFav) return bFav ? 1 : -1;
+      // Then by name
+      return (a.lastName || a.name || '').localeCompare(b.lastName || b.name || '');
+    });
+    
+    for(const pitcher of pitchers){
+      const item = document.createElement('div');
+      item.className = 'pitcher-item' + (isFavorited(pitcher.id) ? ' favorited' : '');
+      
+      // Get team logo for fallback
+      const team_logo_url = getTeamLogo(team.team_id) || '';
+      
+      // Build headshot HTML with error handling
+      let headshot;
+      if(pitcher.headshot){
+        // Use pitcher's headshot with fallback to team logo on error
+        headshot = `<img class="headshot" src="${pitcher.headshot}" alt="${pitcher.name}" onerror="this.onerror=null; this.src='${team_logo_url}'; this.className='team-logo-fallback'; this.style.padding='10px';">`;
+      } else if(team_logo_url){
+        // Use team logo directly if no headshot URL
+        headshot = `<img class="team-logo-fallback" src="${team_logo_url}" alt="${team.team || team.displayName}">`;
+      } else {
+        // Use initials as last resort
+        headshot = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#174b9f;font-size:1.5rem">${(pitcher.firstName || '')[0] || 'P'}</div>`;
+      }
+      
+      const star = document.createElement('span');
+      star.className = 'star' + (isFavorited(pitcher.id) ? ' active' : '');
+      star.textContent = isFavorited(pitcher.id) ? '⭐' : '☆';
+      star.onclick = () => toggleFavorite(pitcher.id);
+      
+      const espnLink = espnPlayerLink(pitcher.id);
+      const role = getPitcherRole(pitcher);
+      
+      item.innerHTML = `
+        <div class="headshot-wrap">${headshot}</div>
+        <div class="pitcher-info">
+          <div class="pitcher-name">
+            <span class="pitcher-num">#${pitcher.number || '–'}</span>
+            ${pitcher.name || pitcher.displayName}
+          </div>
+          <div class="pitcher-details">
+            <span>${pitcher.height || ''} ${pitcher.weight || ''}</span>
+            <span>Age ${pitcher.age || '–'}</span>
+            <span class="role-badge">${role}</span>
+            <a href="${espnLink}" target="_blank">ESPN Profile →</a>
+          </div>
+        </div>
+      `;
+      item.appendChild(star);
+      
+      list.appendChild(item);
+    }
+    
+    card.appendChild(header);
+    card.appendChild(list);
+    wrap.appendChild(card);
+  }
+  
+  updateCounters(sorted);
+}
+
+// Update counters
+function updateCounters(teams){
+  const counters = $("#counters");
+  if(!counters) return;
+  
+  const totalPitchers = teams.reduce((sum, t) => sum + (t.pitchers || []).length, 0);
+  const favPitchers = FAVORITES.pitchers.length;
+  const favTeams = FAVORITES.teams.length;
+  
+  counters.innerHTML = `
+    <span class="badge">Teams: ${teams.length}</span>
+    <span class="badge">Pitchers: ${totalPitchers}</span>
+    <span class="badge">⭐ Favorite Teams: ${favTeams}</span>
+    <span class="badge">⭐ Favorite Pitchers: ${favPitchers}</span>
+  `;
+}
+
+// Populate division dropdown
+function populateDivisionDropdown(){
+  const sel = $("#divFilter");
+  if(!sel || !DIV_MAP) return;
+  
+  const divs = new Set(Object.values(DIV_MAP).filter(d => d && d !== 'Unknown'));
+  const sorted = Array.from(divs).sort();
+  
+  for(const div of sorted){
+    const opt = document.createElement('option');
+    opt.value = div;
+    opt.textContent = div;
+    sel.appendChild(opt);
+  }
+}
+
+// Boot
+async function boot(){
+  await loadFavorites();
+  
+  TEAMS = await getJSON('./data/teams.json');
+  PITCHERS = await getJSON('./data/pitchers_enhanced.json');
+  DIV_MAP = await getJSON('./data/divisions_map.json');
+  
+  if(TEAMS && TEAMS.teams){
+    for(const t of TEAMS.teams){
+      const tid = String(t.id || t.team_id || '');
+      if(tid) teamsById[tid] = t;
+    }
+  }
+  
+  if(PITCHERS && PITCHERS.teams){
+    for(const t of PITCHERS.teams){
+      const tid = String(t.team_id || t.id || '');
+      if(tid) pitchersById[tid] = t;
+    }
+  }
+  
+  populateDivisionDropdown();
+  render();
+  
+  console.log('⚾ Roster page loaded!');
+  console.log('Teams:', PITCHERS?.teams?.length || 0);
+  console.log('Total Pitchers:', PITCHERS?.totalPitchers || 0);
+  console.log('Divisions loaded:', Object.keys(DIV_MAP || {}).length);
+  console.log('Favorite Teams:', FAVORITES.teams.length);
+  console.log('Favorite Pitchers:', FAVORITES.pitchers.length);
+}
+
+// Event listeners
+$("#search")?.addEventListener('input', render);
+$("#divFilter")?.addEventListener('change', render);
+$("#sortBy")?.addEventListener('change', render);
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+</body>
+</html>

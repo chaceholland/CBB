@@ -1,0 +1,26 @@
+{
+  "name": "cbb-pitcher-tracker",
+  "version": "1.0.0",
+  "description": "College Baseball Weekly Matchups & Pitcher Participation Tracker",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs"
+  },
+  "keywords": [
+    "college-baseball",
+    "pitcher",
+    "tracker",
+    "espn"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.87.1",
+    "puppeteer": "^24.27.0"
+  },
+  "devDependencies": {
+    "vercel": "^49.2.0"
+  }
+}

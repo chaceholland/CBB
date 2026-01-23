@@ -1,0 +1,22 @@
+# MCP configuration (contains secrets)
+.mcp.json
+
+# Node modules
+node_modules/
+
+# Debug files
+debug_*.html
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*
+
+# OS files
+.DS_Store
+
+# Backup files
+*.bak
+*.backup
+.vercel

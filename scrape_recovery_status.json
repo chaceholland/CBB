@@ -1,0 +1,71 @@
+{
+  "status": "complete",
+  "startTime": "2025-12-11T08:55:07.451Z",
+  "phase": "Complete",
+  "totalTasks": 18,
+  "completed": 18,
+  "missingTeamsTotal": 15,
+  "missingTeamsCompleted": 15,
+  "noHeadshotTeamsTotal": 3,
+  "noHeadshotTeamsCompleted": 3,
+  "newPitchers": 86,
+  "newHeadshots": 98,
+  "errors": [
+    {
+      "team": "SMU",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Stanford",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Arizona",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Arizona State",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Colorado",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "UCF",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Iowa",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Nebraska",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Penn State",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Purdue",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Wisconsin",
+      "issue": "No pitchers found"
+    },
+    {
+      "team": "Clemson",
+      "issue": "No headshots recovered"
+    },
+    {
+      "team": "Washington State",
+      "issue": "No headshots recovered"
+    }
+  ],
+  "lastUpdate": "2025-12-11T09:09:53.785Z",
+  "currentTeam": "Washington State",
+  "progress": "100%",
+  "endTime": "2025-12-11T09:09:53.785Z"
+}

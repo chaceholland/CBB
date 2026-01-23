@@ -1,0 +1,190 @@
+{
+  "scraped_at": "2025-12-01T17:29:39.455Z",
+  "season": 2026,
+  "teams": {
+    "south-carolina": {
+      "name": "South Carolina",
+      "abbrev": "SC",
+      "espnId": "2579",
+      "roster": [],
+      "schedule": [
+        {
+          "date": "FEB 13",
+          "opponent": "Founders Park",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Northern Kentucky",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Presented By",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Salute the Troops Weekend",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Air Force",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Segra Park",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Charleston Southern",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Princeton (DH)",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "The Citadel",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "North Carolina",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "College of Charleston",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Mississippi State",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Baton Rouge, La.",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Campus Sites",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "NCAA College World Series",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Team Store",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Start Shopping",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Fanatics Black 2024 NCAA College World Series 64 T",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Unisex GameDay Greats White Carolina NIL Pick-A-Pl",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Privacy Policy",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Terms of Use",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Powered by",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Have a Question?",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Use the “Accept” button to consent. Use the “Rejec",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        },
+        {
+          "date": "FEB 13",
+          "opponent": "Learn more and customize",
+          "time": "TBA",
+          "isHome": false,
+          "isConference": false
+        }
+      ],
+      "pitchers": []
+    }
+  }
+}

@@ -1,0 +1,551 @@
+[
+  {
+    "team": "South Carolina",
+    "teamKey": "south-carolina",
+    "espnId": "2579",
+    "scrapedAt": "2025-11-26T18:44:09.319Z",
+    "gameCount": 60,
+    "games": [
+      {
+        "date": "Friday, February 13",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Northern Kentucky",
+        "location": "Founders Park",
+        "time": "4:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Saturday, February 14",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Northern Kentucky",
+        "location": "Founders Park",
+        "time": "2:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Sunday, February 15",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Northern Kentucky",
+        "location": "Founders Park",
+        "time": "1:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Tuesday, February 17",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Wofford",
+        "location": "Spartanburg, S.C. (Fifth Third Park)",
+        "time": "5:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Wednesday, February 18",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Gardner-Webb",
+        "location": "Founders Park",
+        "time": "4:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Friday, February 20",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Army",
+        "location": "Founders Park",
+        "time": "2:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Saturday, February 21",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Navy",
+        "location": "Founders Park",
+        "time": "1:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Sunday, February 22",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Air Force",
+        "location": "Founders Park",
+        "time": "4:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Wednesday, February 25",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Queens",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Friday, February 27",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Clemson",
+        "location": "Founders Park",
+        "time": "7:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Saturday, February 28",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Clemson",
+        "location": "Segra Park",
+        "time": "3:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Sunday, March 1",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Clemson",
+        "location": "Clemson, S.C.",
+        "time": "3:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Tuesday, March 3",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "USC Upstate",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Wednesday, March 4",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Charleston Southern",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Saturday, March 7",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Princeton (DH)",
+        "location": "Founders Park",
+        "time": "1:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Saturday, March 7",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Princeton (DH)",
+        "location": "Founders Park",
+        "time": "4:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Sunday, March 8",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Princeton",
+        "location": "Founders Park",
+        "time": "1:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Tuesday, March 10",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "The Citadel",
+        "location": "Charleston, S.C.",
+        "time": "7:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Friday, March 13",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Florida\n                    (SEC)",
+        "location": "Gainesville, Fla.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, March 14",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Florida\n                    (SEC)",
+        "location": "Gainesville, Fla.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Sunday, March 15",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Florida\n                    (SEC)",
+        "location": "Gainesville, Fla.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tuesday, March 17",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Charlotte",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Friday, March 20",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Arkansas\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, March 21",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Arkansas\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Sunday, March 22",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Arkansas\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tuesday, March 24",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "North Carolina",
+        "location": "Charlotte, N.C.",
+        "time": "7:00 pm",
+        "isConference": false
+      },
+      {
+        "date": "Friday, March 27",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Georgia\n                    (SEC)",
+        "location": "Athens, Ga.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, March 28",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Georgia\n                    (SEC)",
+        "location": "Athens, Ga.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Sunday, March 29",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Georgia\n                    (SEC)",
+        "location": "Athens, Ga.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tuesday, March 31",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Wofford",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Thursday, April 2",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Texas\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Friday, April 3",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Texas\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, April 4",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Texas\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tuesday, April 7",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "College of Charleston",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Thursday, April 9",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Missouri\n                    (SEC)",
+        "location": "Columbia, Mo.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Friday, April 10",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Missouri\n                    (SEC)",
+        "location": "Columbia, Mo.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, April 11",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Missouri\n                    (SEC)",
+        "location": "Columbia, Mo.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tuesday, April 14",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Davidson",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Friday, April 17",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Mississippi State\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, April 18",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Mississippi State\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Sunday, April 19",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Mississippi State\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tuesday, April 21",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Presbyterian",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Friday, April 24",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Kentucky\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, April 25",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Kentucky\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Sunday, April 26",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Kentucky\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tuesday, April 28",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "The Citadel",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Friday, May 1",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "LSU\n                    (SEC)",
+        "location": "Baton Rouge, La.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, May 2",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "LSU\n                    (SEC)",
+        "location": "Baton Rouge, La.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Sunday, May 3",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "LSU\n                    (SEC)",
+        "location": "Baton Rouge, La.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Friday, May 8",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Alabama\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, May 9",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Alabama\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Sunday, May 10",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Alabama\n                    (SEC)",
+        "location": "Founders Park",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tuesday, May 12",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "Winthrop",
+        "location": "Founders Park",
+        "time": "6:30 pm",
+        "isConference": false
+      },
+      {
+        "date": "Thursday, May 14",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Vanderbilt\n                    (SEC)",
+        "location": "Nashville, Tenn.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Friday, May 15",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Vanderbilt\n                    (SEC)",
+        "location": "Nashville, Tenn.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Saturday, May 16",
+        "isHome": false,
+        "isAway": true,
+        "opponent": "Vanderbilt\n                    (SEC)",
+        "location": "Nashville, Tenn.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Tue May 19 - Sun May 24",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "SEC Tournament",
+        "location": "Hoover, Ala.",
+        "time": "TBA",
+        "isConference": true
+      },
+      {
+        "date": "Fri May 29 - Mon Jun 1",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "NCAA Regionals",
+        "location": "Campus Sites",
+        "time": "TBA",
+        "isConference": false
+      },
+      {
+        "date": "Fri Jun 5 - Mon Jun 8",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "NCAA Super Regionals",
+        "location": "Campus Sites",
+        "time": "TBA",
+        "isConference": false
+      },
+      {
+        "date": "Fri Jun 12 - Mon Jun 22",
+        "isHome": true,
+        "isAway": false,
+        "opponent": "NCAA College World Series",
+        "location": "Omaha, Neb.",
+        "time": "TBA",
+        "isConference": false
+      }
+    ]
+  }
+]
