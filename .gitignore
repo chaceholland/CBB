@@ -25,3 +25,6 @@ debug_*.html
 data/roster_verification_report_*.json
 data/failed_teams.json
 backups/full_snapshot_*/
+
+# Git worktrees
+.worktrees/
