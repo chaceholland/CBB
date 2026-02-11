@@ -6,7 +6,8 @@
   "main": "server.mjs",
   "scripts": {
     "start": "node server.mjs",
-    "dev": "node server.mjs"
+    "dev": "node server.mjs",
+    "verify": "node verify-data-quality.mjs"
   },
   "keywords": [
     "college-baseball",
