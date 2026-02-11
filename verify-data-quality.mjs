@@ -234,6 +234,66 @@ function checkCrossReferences(pitchers, teams) {
   return { issues, teamsVerified: pitchers.teams.length };
 }
 
+// Participation Setup Checker
+function checkParticipationSetup(pitchers, schedule) {
+  const issues = [];
+
+  // Build pitcher team ID lookup
+  const pitcherTeamIds = new Set();
+  for (const team of pitchers.teams) {
+    const teamId = team.teamId || team.team_id;
+    if (teamId) pitcherTeamIds.add(teamId);
+  }
+
+  // Check week 1 games for team coverage
+  const week1Games = schedule.games.filter(g => g.week === 1);
+  const week1Teams = new Set();
+
+  for (const game of week1Games) {
+    week1Teams.add(game.home_team_id);
+    week1Teams.add(game.away_team_id);
+  }
+
+  // Find week 1 teams without pitcher rosters
+  const missingRosters = [];
+  for (const teamId of week1Teams) {
+    if (!pitcherTeamIds.has(teamId)) {
+      missingRosters.push(teamId);
+    }
+  }
+
+  if (missingRosters.length > 0) {
+    issues.push({
+      severity: SEVERITY.INFO,
+      category: 'participation_setup',
+      message: `${missingRosters.length} teams in week 1 games lack pitcher rosters`,
+      suggestion: 'These teams will not have participation tracking available',
+      details: missingRosters.join(', ')
+    });
+  }
+
+  // Verify game ID format
+  const invalidGameIds = schedule.games
+    .filter(g => !g.id || !g.espn_game_id)
+    .slice(0, 10); // Limit to first 10 to avoid spam
+
+  if (invalidGameIds.length > 0) {
+    issues.push({
+      severity: SEVERITY.CRITICAL,
+      category: 'participation_setup',
+      message: `Found ${invalidGameIds.length} games with missing/invalid IDs`,
+      suggestion: 'Game IDs required for participation tracking'
+    });
+  }
+
+  return {
+    issues,
+    week1Games: week1Games.length,
+    teamsWithRosters: pitcherTeamIds.size,
+    week1Coverage: week1Teams.size - missingRosters.length
+  };
+}
+
 // Main execution
 async function main() {
   console.log('='.repeat(50));
@@ -280,6 +340,14 @@ async function main() {
   const crossRefResult = checkCrossReferences(pitchers, teams);
   issues.push(...crossRefResult.issues);
   console.log(`✓ Verified ${crossRefResult.teamsVerified} team references`);
+  console.log('');
+
+  // Check 4: Participation Setup
+  console.log('Checking participation tracking setup...');
+  const participationResult = checkParticipationSetup(pitchers, schedule);
+  issues.push(...participationResult.issues);
+  console.log(`✓ Week 1 has ${participationResult.week1Games} scheduled games`);
+  console.log(`✓ ${participationResult.week1Coverage} teams ready for tracking`);
   console.log('');
 
   console.log('\nVerification complete!');
