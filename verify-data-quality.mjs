@@ -189,6 +189,51 @@ function checkHeadshotCoverage(pitchers) {
   return { issues, totalHeadshots, missingHeadshots, brokenHeadshots };
 }
 
+// Cross-Reference Validator
+function checkCrossReferences(pitchers, teams) {
+  const issues = [];
+
+  // Build team ID lookup
+  const teamIds = new Set();
+  const teamByName = new Map();
+
+  for (const team of teams.teams) {
+    teamIds.add(team.id);
+    teamByName.set(team.name.toLowerCase(), team);
+  }
+
+  // Check pitcher team references
+  for (const pitcherTeam of pitchers.teams) {
+    const teamId = pitcherTeam.teamId || pitcherTeam.team_id;
+    const teamName = pitcherTeam.team;
+
+    // Verify team ID exists in teams.json
+    if (teamId && !teamIds.has(teamId)) {
+      issues.push({
+        severity: SEVERITY.CRITICAL,
+        category: 'cross_reference',
+        team: teamName,
+        message: `Team ID ${teamId} not found in teams.json`,
+        suggestion: 'Add team to teams.json or fix team_id reference'
+      });
+    }
+
+    // Check if team name exists in teams.json
+    const matchingTeam = teamByName.get(teamName.toLowerCase());
+    if (!matchingTeam) {
+      issues.push({
+        severity: SEVERITY.WARNING,
+        category: 'cross_reference',
+        team: teamName,
+        message: 'Team name not found in teams.json',
+        suggestion: 'Verify team name spelling matches teams.json'
+      });
+    }
+  }
+
+  return { issues, teamsVerified: pitchers.teams.length };
+}
+
 // Main execution
 async function main() {
   console.log('='.repeat(50));
@@ -228,6 +273,13 @@ async function main() {
   if (headshotResult.brokenHeadshots > 0) {
     console.log(`⚠ ${headshotResult.brokenHeadshots} broken headshot files`);
   }
+  console.log('');
+
+  // Check 3: Cross-References
+  console.log('Checking cross-references...');
+  const crossRefResult = checkCrossReferences(pitchers, teams);
+  issues.push(...crossRefResult.issues);
+  console.log(`✓ Verified ${crossRefResult.teamsVerified} team references`);
   console.log('');
 
   console.log('\nVerification complete!');
