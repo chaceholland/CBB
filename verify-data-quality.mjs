@@ -294,6 +294,116 @@ function checkParticipationSetup(pitchers, schedule) {
   };
 }
 
+// Report Generation
+function generateJSONReport(issues, timestamp) {
+  const report = {
+    generated_at: timestamp,
+    summary: {
+      total_issues: issues.length,
+      critical: issues.filter(i => i.severity === SEVERITY.CRITICAL).length,
+      warnings: issues.filter(i => i.severity === SEVERITY.WARNING).length,
+      info: issues.filter(i => i.severity === SEVERITY.INFO).length
+    },
+    issues_by_category: {},
+    all_issues: issues
+  };
+
+  // Group by category
+  for (const issue of issues) {
+    const category = issue.category || 'uncategorized';
+    if (!report.issues_by_category[category]) {
+      report.issues_by_category[category] = [];
+    }
+    report.issues_by_category[category].push(issue);
+  }
+
+  return report;
+}
+
+function generateSummaryReport(issues, stats) {
+  const lines = [];
+
+  lines.push('='.repeat(70));
+  lines.push('DATA VERIFICATION REPORT');
+  lines.push('='.repeat(70));
+  lines.push('');
+
+  // Summary statistics
+  lines.push('SUMMARY');
+  lines.push('-'.repeat(70));
+  lines.push(`Total Issues Found: ${issues.length}`);
+  lines.push(`  Critical: ${issues.filter(i => i.severity === SEVERITY.CRITICAL).length}`);
+  lines.push(`  Warnings: ${issues.filter(i => i.severity === SEVERITY.WARNING).length}`);
+  lines.push(`  Info:     ${issues.filter(i => i.severity === SEVERITY.INFO).length}`);
+  lines.push('');
+
+  // Group by category
+  const byCategory = {};
+  for (const issue of issues) {
+    const cat = issue.category || 'uncategorized';
+    if (!byCategory[cat]) byCategory[cat] = [];
+    byCategory[cat].push(issue);
+  }
+
+  // Report by category
+  for (const [category, categoryIssues] of Object.entries(byCategory)) {
+    lines.push('');
+    lines.push(`${category.toUpperCase().replace(/_/g, ' ')}`);
+    lines.push('-'.repeat(70));
+
+    // Group by severity within category
+    const critical = categoryIssues.filter(i => i.severity === SEVERITY.CRITICAL);
+    const warnings = categoryIssues.filter(i => i.severity === SEVERITY.WARNING);
+    const info = categoryIssues.filter(i => i.severity === SEVERITY.INFO);
+
+    if (critical.length > 0) {
+      lines.push('');
+      lines.push('CRITICAL:');
+      for (const issue of critical) {
+        lines.push(`  ${issue.message}`);
+        if (issue.team) lines.push(`    Team: ${issue.team}`);
+        if (issue.pitcher_name) lines.push(`    Pitcher: ${issue.pitcher_name}`);
+        if (issue.suggestion) lines.push(`    → ${issue.suggestion}`);
+        if (issue.details) lines.push(`    Details: ${issue.details}`);
+        lines.push('');
+      }
+    }
+
+    if (warnings.length > 0) {
+      lines.push('');
+      lines.push('WARNINGS:');
+      // Limit warnings display to avoid overwhelming output
+      const displayWarnings = warnings.slice(0, 20);
+      for (const issue of displayWarnings) {
+        lines.push(`  ${issue.message}`);
+        if (issue.team) lines.push(`    Team: ${issue.team}`);
+        if (issue.pitcher_name) lines.push(`    Pitcher: ${issue.pitcher_name}`);
+        if (issue.suggestion) lines.push(`    → ${issue.suggestion}`);
+        lines.push('');
+      }
+      if (warnings.length > 20) {
+        lines.push(`  ... and ${warnings.length - 20} more warnings`);
+        lines.push('  (See JSON report for complete list)');
+        lines.push('');
+      }
+    }
+
+    if (info.length > 0) {
+      lines.push('');
+      lines.push(`INFO: ${info.length} informational items`);
+      lines.push('  (See JSON report for details)');
+      lines.push('');
+    }
+  }
+
+  lines.push('');
+  lines.push('='.repeat(70));
+  lines.push('END REPORT');
+  lines.push('='.repeat(70));
+
+  return lines.join('\n');
+}
+
 // Main execution
 async function main() {
   console.log('='.repeat(50));
@@ -350,8 +460,37 @@ async function main() {
   console.log(`✓ ${participationResult.week1Coverage} teams ready for tracking`);
   console.log('');
 
-  console.log('\nVerification complete!');
-  process.exit(0);
+  // Generate reports
+  console.log('Generating reports...');
+
+  // Ensure reports directory exists
+  const reportsDir = path.join(__dirname, 'reports');
+  if (!fs.existsSync(reportsDir)) {
+    fs.mkdirSync(reportsDir, { recursive: true });
+  }
+
+  // Generate JSON report
+  const jsonReport = generateJSONReport(issues, timestamp);
+  const jsonPath = path.join(reportsDir, `verification-${timestamp.replace(/:/g, '-')}.json`);
+  fs.writeFileSync(jsonPath, JSON.stringify(jsonReport, null, 2));
+  console.log(`✓ JSON report: ${path.relative(__dirname, jsonPath)}`);
+
+  // Generate summary report
+  const stats = {
+    totalPitchers: rosterResult.totalPitchers,
+    totalHeadshots: headshotResult.totalHeadshots,
+    teamsVerified: crossRefResult.teamsVerified,
+    week1Games: participationResult.week1Games
+  };
+  const summaryReport = generateSummaryReport(issues, stats);
+  const summaryPath = path.join(reportsDir, `summary-${timestamp.replace(/:/g, '-')}.txt`);
+  fs.writeFileSync(summaryPath, summaryReport);
+  console.log(`✓ Summary report: ${path.relative(__dirname, summaryPath)}`);
+
+  console.log('');
+  console.log('='.repeat(50));
+  console.log(`Verification complete! Found ${issues.length} issues.`);
+  console.log('='.repeat(50));
 }
 
 main().catch(err => {
