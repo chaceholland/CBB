@@ -28,3 +28,7 @@ backups/full_snapshot_*/
 
 # Git worktrees
 .worktrees/
+
+# Verification reports
+reports/*.json
+reports/*.txt
