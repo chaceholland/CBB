@@ -4,12 +4,42 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Issue severity levels
 const SEVERITY = {
   CRITICAL: 'critical',
   WARNING: 'warning',
   INFO: 'info'
 };
+
+// Data loading utilities
+function loadJSON(filepath) {
+  try {
+    const fullPath = path.join(__dirname, filepath);
+    const content = fs.readFileSync(fullPath, 'utf-8');
+    return JSON.parse(content);
+  } catch (error) {
+    console.error(`Failed to load ${filepath}:`, error.message);
+    process.exit(1);
+  }
+}
+
+function fileExists(filepath) {
+  const fullPath = path.join(__dirname, filepath);
+  return fs.existsSync(fullPath);
+}
+
+function getFileSize(filepath) {
+  try {
+    const fullPath = path.join(__dirname, filepath);
+    const stats = fs.statSync(fullPath);
+    return stats.size;
+  } catch {
+    return 0;
+  }
+}
 
 // Main execution
 async function main() {
@@ -21,7 +51,16 @@ async function main() {
   const timestamp = new Date().toISOString();
   const issues = [];
 
-  // TODO: Add verification modules
+  // Load data files
+  console.log('Loading data files...');
+  const pitchers = loadJSON('data/pitchers.json');
+  const teams = loadJSON('data/teams.json');
+  const schedule = loadJSON('data/schedule.json');
+
+  console.log(`✓ Loaded ${pitchers.teams.length} teams with pitchers`);
+  console.log(`✓ Loaded ${teams.teams.length} total teams`);
+  console.log(`✓ Loaded ${schedule.games.length} scheduled games`);
+  console.log('');
 
   console.log('\nVerification complete!');
   process.exit(0);
