@@ -127,6 +127,68 @@ function checkRosterQuality(pitchers) {
   return { issues, totalPitchers };
 }
 
+// Headshot Validator
+function checkHeadshotCoverage(pitchers) {
+  const issues = [];
+  let totalHeadshots = 0;
+  let missingHeadshots = 0;
+  let brokenHeadshots = 0;
+
+  for (const team of pitchers.teams) {
+    const teamName = team.team;
+
+    if (!team.pitchers) continue;
+
+    for (const pitcher of team.pitchers) {
+      // Check if headshot field exists
+      if (!pitcher.headshot || pitcher.headshot === '') {
+        missingHeadshots++;
+        issues.push({
+          severity: SEVERITY.WARNING,
+          category: 'headshot_coverage',
+          team: teamName,
+          pitcher_id: pitcher.id,
+          pitcher_name: pitcher.name,
+          message: 'Missing headshot field'
+        });
+        continue;
+      }
+
+      // Check if file exists
+      if (!fileExists(pitcher.headshot)) {
+        brokenHeadshots++;
+        issues.push({
+          severity: SEVERITY.WARNING,
+          category: 'headshot_coverage',
+          team: teamName,
+          pitcher_id: pitcher.id,
+          pitcher_name: pitcher.name,
+          message: `Headshot file not found: ${pitcher.headshot}`
+        });
+        continue;
+      }
+
+      // Check file size (detect placeholder/corrupted images)
+      const fileSize = getFileSize(pitcher.headshot);
+      if (fileSize < 1024) { // Less than 1KB
+        issues.push({
+          severity: SEVERITY.INFO,
+          category: 'headshot_coverage',
+          team: teamName,
+          pitcher_id: pitcher.id,
+          pitcher_name: pitcher.name,
+          message: `Headshot file too small (${fileSize} bytes), may be placeholder`,
+          suggestion: 'Verify image is valid'
+        });
+      }
+
+      totalHeadshots++;
+    }
+  }
+
+  return { issues, totalHeadshots, missingHeadshots, brokenHeadshots };
+}
+
 // Main execution
 async function main() {
   console.log('='.repeat(50));
@@ -153,6 +215,19 @@ async function main() {
   const rosterResult = checkRosterQuality(pitchers);
   issues.push(...rosterResult.issues);
   console.log(`✓ Verified ${rosterResult.totalPitchers} pitchers`);
+  console.log('');
+
+  // Check 2: Headshot Coverage
+  console.log('Checking headshot coverage...');
+  const headshotResult = checkHeadshotCoverage(pitchers);
+  issues.push(...headshotResult.issues);
+  console.log(`✓ Found ${headshotResult.totalHeadshots} valid headshots`);
+  if (headshotResult.missingHeadshots > 0) {
+    console.log(`⚠ ${headshotResult.missingHeadshots} missing headshot fields`);
+  }
+  if (headshotResult.brokenHeadshots > 0) {
+    console.log(`⚠ ${headshotResult.brokenHeadshots} broken headshot files`);
+  }
   console.log('');
 
   console.log('\nVerification complete!');
