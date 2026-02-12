@@ -1,0 +1,681 @@
+/*
+ * VINTAGE BASEBALL CARD THEME
+ * A bold redesign combining classic baseball aesthetics with modern data viz
+ *
+ * Design Direction: Retro-modern fusion with:
+ * - Warm baseball field greens & cream tones
+ * - Bold condensed display typography (Bebas Neue)
+ * - Classic serif body text (Crimson Pro)
+ * - Card-like game presentations with subtle textures
+ * - Animated reveals and hover effects
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:wght@400;600;700;800&display=swap');
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.92) rotateX(8deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotateX(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== ROOT VARIABLES ========== */
+:root {
+  /* Vintage Baseball Palette */
+  --forest-green: #1B5E20;
+  --grass-green: #388E3C;
+  --deep-green: #0D4D12;
+  --cream: #FFF8E1;
+  --warm-cream: #FFFBF5;
+  --burnt-orange: #FF6F00;
+  --leather-brown: #8D6E63;
+  --vintage-red: #C62828;
+  --card-bg: #FFFBF5;
+  --card-border: #E4D5B7;
+  --text-dark: #2E2E2E;
+  --text-muted: #6D4C41;
+  --accent-gold: #FFD54F;
+  --shadow-warm: rgba(141, 110, 99, 0.15);
+
+  /* Updated priority colors - vintage palette */
+  --prio-priority: #6A1B9A !important;
+  --prio-high: #D84315 !important;
+  --prio-medium: #2E7D32 !important;
+  --prio-low: #F57C00 !important;
+  --prio-priority-soft: #F3E5F5 !important;
+  --prio-high-soft: #FFE0B2 !important;
+  --prio-medium-soft: #E8F5E9 !important;
+  --prio-low-soft: #FFF3E0 !important;
+}
+
+/* ========== BODY & BACKGROUND ========== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Crimson Pro', Georgia, serif !important;
+}
+
+body {
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 50%, #388E3C 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--text-dark) !important;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,.02) 2px, rgba(255,255,255,.02) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,.02) 2px, rgba(255,255,255,.02) 4px);
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(56, 142, 60, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(27, 94, 32, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ========== TOP BAR ========== */
+#top-bar {
+  background: linear-gradient(180deg, #0D4D12 0%, #1B5E20 100%) !important;
+  border-bottom: 4px solid var(--accent-gold);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  padding: 1rem 1.5rem !important;
+  position: relative;
+  z-index: 50;
+  animation: slideDown 0.4s ease-out;
+}
+
+#top-bar::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-gold) 0%,
+    var(--burnt-orange) 50%,
+    var(--accent-gold) 100%);
+  box-shadow: 0 2px 8px rgba(255, 213, 79, 0.5);
+}
+
+#top-bar h1 {
+  font-family: 'Bebas Neue', Arial, sans-serif !important;
+  font-size: 2rem !important;
+  letter-spacing: 2px !important;
+  color: var(--cream) !important;
+  text-shadow:
+    2px 2px 0 rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 213, 79, 0.3);
+  margin: 0 !important;
+  flex: 1 !important;
+}
+
+#top-bar input,
+#top-bar select {
+  background: var(--cream) !important;
+  color: var(--text-dark) !important;
+  border: 2px solid var(--leather-brown) !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 0.8rem !important;
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#top-bar input:focus,
+#top-bar select:focus {
+  outline: none;
+  border-color: var(--burnt-orange) !important;
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.2);
+}
+
+#top-bar button {
+  background: var(--cream) !important;
+  color: var(--text-dark) !important;
+  border: 2px solid var(--leather-brown) !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 1rem !important;
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#top-bar button:hover {
+  background: var(--burnt-orange) !important;
+  color: var(--cream) !important;
+  border-color: var(--burnt-orange) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 111, 0, 0.3);
+}
+
+#top-bar button.active-filter,
+.view-toggle button.active {
+  background: var(--burnt-orange) !important;
+  color: var(--cream) !important;
+  border-color: var(--burnt-orange) !important;
+  box-shadow: 0 4px 12px rgba(255, 111, 0, 0.4);
+}
+
+/* ========== COUNTERS & BADGES ========== */
+#counters {
+  padding: 0.75rem 1.5rem !important;
+  background: rgba(13, 77, 18, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+
+.badge {
+  background: linear-gradient(135deg, var(--forest-green) 0%, var(--grass-green) 100%) !important;
+  color: var(--cream) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 1rem !important;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 213, 79, 0.3);
+}
+
+/* ========== GAMES WRAPPER ========== */
+#games-wrap {
+  padding: 2rem 1.5rem !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)) !important;
+  gap: 2rem !important;
+  position: relative;
+  z-index: 10;
+}
+
+/* ========== GAME CARDS ========== */
+.game {
+  background: var(--card-bg) !important;
+  color: var(--text-dark) !important;
+  border-radius: 20px !important;
+  border: 3px solid var(--card-border) !important;
+  box-shadow:
+    0 10px 30px var(--shadow-warm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  overflow: visible !important;
+  position: relative !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cardReveal 0.5s ease-out backwards;
+}
+
+.game:nth-child(1) { animation-delay: 0.05s; }
+.game:nth-child(2) { animation-delay: 0.1s; }
+.game:nth-child(3) { animation-delay: 0.15s; }
+.game:nth-child(4) { animation-delay: 0.2s; }
+.game:nth-child(5) { animation-delay: 0.25s; }
+.game:nth-child(6) { animation-delay: 0.3s; }
+
+.game:hover {
+  transform: translateY(-6px) rotate(0.5deg);
+  box-shadow:
+    0 20px 50px rgba(141, 110, 99, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  border-color: var(--burnt-orange) !important;
+}
+
+/* Priority border accents */
+.game.prio-Priority {
+  border-left: 8px solid var(--prio-priority) !important;
+}
+
+.game.prio-High {
+  border-left: 8px solid var(--prio-high) !important;
+}
+
+.game.prio-Medium {
+  border-left: 8px solid var(--prio-medium) !important;
+}
+
+.game.prio-Low {
+  border-left: 8px solid var(--prio-low) !important;
+}
+
+/* ========== GAME HEADER ========== */
+.game-head {
+  background: linear-gradient(180deg, rgba(228, 213, 183, 0.4) 0%, rgba(228, 213, 183, 0.2) 100%) !important;
+  padding: 0.8rem 1.2rem !important;
+  border-bottom: 2px solid var(--card-border) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.wk-tag {
+  font-family: 'Bebas Neue', sans-serif !important;
+  color: var(--burnt-orange) !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 2px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gh-links a {
+  background: var(--cream) !important;
+  color: var(--text-dark) !important;
+  border: 2px solid var(--leather-brown) !important;
+  border-radius: 20px !important;
+  padding: 0.3rem 0.8rem !important;
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.gh-links a:hover {
+  background: var(--burnt-orange) !important;
+  color: var(--cream) !important;
+  border-color: var(--burnt-orange) !important;
+  transform: translateY(-2px);
+}
+
+/* ========== PRIORITY & FAV BUTTONS ========== */
+.fav-btn {
+  background: transparent !important;
+  border: 2px solid var(--accent-gold) !important;
+  color: var(--accent-gold) !important;
+  border-radius: 12px !important;
+  padding: 0.4rem 0.7rem !important;
+  font-size: 1.2rem !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.fav-btn:hover,
+.fav-btn.active {
+  background: var(--accent-gold) !important;
+  color: var(--text-dark) !important;
+  transform: scale(1.1) rotate(-10deg);
+  box-shadow: 0 4px 12px rgba(255, 213, 79, 0.4);
+}
+
+.prio {
+  background: var(--cream) !important;
+  border: 2px solid var(--leather-brown) !important;
+  color: var(--text-dark) !important;
+  border-radius: 8px !important;
+  padding: 0.3rem 0.6rem !important;
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+/* ========== MATCH SECTION ========== */
+.match {
+  padding: 1.2rem !important;
+}
+
+.side {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 2px solid rgba(228, 213, 183, 0.6) !important;
+  border-radius: 16px !important;
+  padding: 1rem !important;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+}
+
+.side:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: var(--card-border) !important;
+}
+
+/* ========== TEAM HEADER ========== */
+.team-name {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 1px !important;
+  color: var(--text-dark) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.team-conf .pill {
+  background: linear-gradient(135deg, var(--forest-green), var(--grass-green)) !important;
+  color: var(--cream) !important;
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0.7rem !important;
+  border-radius: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none !important;
+}
+
+.team-logo-img,
+.team-logo-fallback {
+  border-radius: 16px !important;
+  border: 3px solid var(--card-border) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.team-logo-img:hover,
+.team-logo-fallback:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.vs {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 2.5rem !important;
+  color: var(--burnt-orange) !important;
+  text-shadow:
+    2px 2px 0 rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(255, 111, 0, 0.2);
+}
+
+/* ========== PITCHER SECTIONS ========== */
+.pitcher-section {
+  margin-top: 1rem !important;
+  padding-top: 1rem !important;
+  border-top: 2px dashed var(--card-border) !important;
+}
+
+.pitcher-section-title {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 1.1rem !important;
+  color: var(--text-muted) !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.pitcher-row {
+  background: rgba(255, 251, 245, 0.8) !important;
+  border: 2px solid rgba(228, 213, 183, 0.5) !important;
+  border-radius: 12px !important;
+  padding: 0.8rem !important;
+  transition: all 0.2s ease;
+}
+
+.pitcher-row:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: var(--burnt-orange) !important;
+  transform: translateX(4px);
+  box-shadow: -4px 0 0 var(--burnt-orange);
+}
+
+.headshot-wrap {
+  border-radius: 12px !important;
+  border: 3px solid var(--card-border) !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: var(--cream) !important;
+}
+
+.headshot {
+  border-radius: 12px !important;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.headshot-wrap:hover .headshot {
+  transform: scale(2.5) !important;
+  z-index: 1000 !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 8px !important;
+}
+
+.pitcher-name {
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 800 !important;
+  font-size: 1.1rem !important;
+  color: var(--text-dark) !important;
+}
+
+.pitcher-num {
+  font-family: 'Bebas Neue', sans-serif !important;
+  color: var(--burnt-orange) !important;
+  font-size: 1rem !important;
+}
+
+/* ========== PILLS & STATS ========== */
+.pill {
+  border-radius: 16px !important;
+  padding: 0.35rem 0.75rem !important;
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent !important;
+}
+
+.pill-played {
+  background: linear-gradient(135deg, #2E7D32, #388E3C) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+}
+
+.pill-dnp {
+  background: #8D6E63 !important;
+  color: white !important;
+}
+
+.pill-unknown {
+  background: var(--cream) !important;
+  color: var(--text-muted) !important;
+  border-color: var(--card-border) !important;
+}
+
+.pill-starter {
+  background: linear-gradient(135deg, #D84315, #FF6F00) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(216, 67, 21, 0.3);
+}
+
+.pill-reliever {
+  background: linear-gradient(135deg, #6A1B9A, #8E24AA) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(106, 27, 154, 0.3);
+}
+
+.pitch-stat {
+  background: rgba(255, 213, 79, 0.2) !important;
+  color: var(--text-dark) !important;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 8px !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 213, 79, 0.4);
+}
+
+/* ========== STAR FAVORITE ========== */
+.star {
+  font-size: 1.4rem !important;
+  color: rgba(255, 213, 79, 0.3) !important;
+  transition: all 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.star:hover {
+  color: var(--accent-gold) !important;
+  transform: scale(1.2) rotate(-15deg);
+}
+
+.star.active {
+  color: var(--accent-gold) !important;
+  filter: drop-shadow(0 4px 8px rgba(255, 213, 79, 0.5));
+  animation: starPulse 0.5s ease-out;
+}
+
+@keyframes starPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+/* ========== MODALS ========== */
+.modal-overlay {
+  backdrop-filter: blur(8px);
+  background: rgba(13, 77, 18, 0.8) !important;
+}
+
+.modal {
+  background: var(--card-bg) !important;
+  border-radius: 24px !important;
+  border: 4px solid var(--card-border) !important;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4) !important;
+}
+
+.modal header {
+  background: linear-gradient(180deg, rgba(228, 213, 183, 0.3) 0%, transparent 100%) !important;
+  border-bottom: 2px solid var(--card-border) !important;
+  padding: 1.5rem !important;
+}
+
+.modal h3 {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 2rem !important;
+  letter-spacing: 2px !important;
+  color: var(--text-dark) !important;
+}
+
+.modal button {
+  background: var(--cream) !important;
+  color: var(--text-dark) !important;
+  border: 2px solid var(--leather-brown) !important;
+  border-radius: 10px !important;
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.modal button:hover {
+  background: var(--burnt-orange) !important;
+  color: var(--cream) !important;
+  border-color: var(--burnt-orange) !important;
+  transform: translateY(-2px);
+}
+
+/* ========== TOAST ========== */
+#toast {
+  background: linear-gradient(135deg, var(--forest-green), var(--grass-green)) !important;
+  color: var(--cream) !important;
+  border-radius: 16px !important;
+  padding: 1rem 1.5rem !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 213, 79, 0.5);
+}
+
+/* ========== SERIES BADGE ========== */
+.series-badge {
+  background: linear-gradient(135deg, var(--vintage-red), #D84315) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  padding: 0.3rem 0.7rem !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(198, 40, 40, 0.3);
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 1200px) {
+  #games-wrap {
+    grid-template-columns: 1fr !important;
+  }
+
+  #top-bar h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .match {
+    grid-template-columns: 1fr !important;
+  }
+
+  .vs {
+    font-size: 2rem !important;
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+
+  #top-bar {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  #top-bar h1 {
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* ========== NOTICE ========== */
+#notice {
+  background: linear-gradient(135deg, #FFD54F, #FF6F00) !important;
+  color: var(--text-dark) !important;
+  border-radius: 16px !important;
+  padding: 1rem 1.5rem !important;
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  border: 2px solid var(--burnt-orange);
+  box-shadow: 0 4px 16px rgba(255, 111, 0, 0.3);
+  margin: 1rem 1.5rem !important;
+}
