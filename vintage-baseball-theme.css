@@ -457,14 +457,16 @@ body::after {
 .headshot-wrap {
   border-radius: 12px !important;
   border: 3px solid var(--card-border) !important;
-  overflow: hidden !important;
+  overflow: visible !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: var(--cream) !important;
+  position: relative !important;
 }
 
 .headshot {
   border-radius: 12px !important;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  position: relative !important;
 }
 
 .headshot-wrap:hover .headshot {
@@ -472,6 +474,7 @@ body::after {
   z-index: 1000 !important;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
   border-radius: 8px !important;
+  position: relative !important;
 }
 
 .pitcher-name {
