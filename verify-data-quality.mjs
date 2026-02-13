@@ -57,6 +57,105 @@ function getFileSize(filepath) {
 }
 
 /**
+ * Check roster quality
+ * @param {Object} pitchers - Pitchers data with teams array
+ * @returns {Object} { issues: Array, totalPitchers: number }
+ */
+function checkRosterQuality(pitchers) {
+  const issues = [];
+  const requiredFields = ['id', 'name', 'number', 'position', 'year'];
+  const validPositions = ['RHP', 'LHP', 'P'];
+  const validYears = [
+    'Freshman',
+    'Sophomore',
+    'Junior',
+    'Senior',
+    'Graduate',
+    'Redshirt Freshman',
+    'Redshirt Sophomore',
+    'Redshirt Junior',
+    'Redshirt Senior'
+  ];
+
+  let totalPitchers = 0;
+  const seenIds = new Map(); // Track pitcher IDs across all teams
+
+  // Process each team
+  for (const team of pitchers.teams) {
+    const teamName = team.team;
+    const teamId = team.teamId || team.team_id;
+
+    if (!team.pitchers || !Array.isArray(team.pitchers)) {
+      issues.push({
+        severity: SEVERITY.CRITICAL,
+        category: 'roster_quality',
+        team: teamName,
+        message: 'Team has no pitchers array'
+      });
+      continue;
+    }
+
+    // Process each pitcher
+    for (const pitcher of team.pitchers) {
+      totalPitchers++;
+
+      // Check for duplicate pitcher IDs across all teams
+      if (pitcher.id) {
+        if (seenIds.has(pitcher.id)) {
+          const previousTeam = seenIds.get(pitcher.id);
+          issues.push({
+            severity: SEVERITY.CRITICAL,
+            category: 'roster_quality',
+            team: teamName,
+            pitcher: pitcher.name || pitcher.id,
+            message: `Duplicate pitcher ID: ${pitcher.id} (also in ${previousTeam})`
+          });
+        } else {
+          seenIds.set(pitcher.id, teamName);
+        }
+      }
+
+      // Check for missing required fields
+      for (const field of requiredFields) {
+        if (!pitcher[field] || pitcher[field] === '') {
+          issues.push({
+            severity: SEVERITY.WARNING,
+            category: 'roster_quality',
+            team: teamName,
+            pitcher: pitcher.name || pitcher.id || 'Unknown',
+            message: `Missing required field: ${field}`
+          });
+        }
+      }
+
+      // Check invalid position format
+      if (pitcher.position && !validPositions.includes(pitcher.position)) {
+        issues.push({
+          severity: SEVERITY.INFO,
+          category: 'roster_quality',
+          team: teamName,
+          pitcher: pitcher.name || pitcher.id,
+          message: `Invalid position: ${pitcher.position} (expected: ${validPositions.join(', ')})`
+        });
+      }
+
+      // Check invalid year classification
+      if (pitcher.year && !validYears.includes(pitcher.year)) {
+        issues.push({
+          severity: SEVERITY.INFO,
+          category: 'roster_quality',
+          team: teamName,
+          pitcher: pitcher.name || pitcher.id,
+          message: `Invalid year classification: ${pitcher.year}`
+        });
+      }
+    }
+  }
+
+  return { issues, totalPitchers };
+}
+
+/**
  * Main verification function
  */
 async function main() {
@@ -82,7 +181,12 @@ async function main() {
     console.log(`Loaded ${schedule.games.length} games`);
     console.log('');
 
-    // TODO: Add verification modules
+    // Check roster quality
+    console.log('Checking roster quality...');
+    const rosterCheck = checkRosterQuality(pitchers);
+    issues.push(...rosterCheck.issues);
+    console.log(`✓ Verified ${rosterCheck.totalPitchers} pitchers`);
+    console.log('');
 
     // Print completion message
     console.log('');
