@@ -271,6 +271,76 @@ function checkCrossReferences(pitchers, teams) {
 }
 
 /**
+ * Check participation setup - verify week 1 coverage
+ * @param {Object} pitchers - Pitchers data with teams array
+ * @param {Object} schedule - Schedule data with games array
+ * @returns {Object} { issues: Array, week1Games: number, teamsWithRosters: number, week1Coverage: string }
+ */
+function checkParticipationSetup(pitchers, schedule) {
+  const issues = [];
+
+  // Build set of team IDs with pitcher rosters
+  const teamsWithRosters = new Set(
+    pitchers.teams.map(t => t.teamId || t.team_id)
+  );
+
+  // Filter for week 1 games
+  const week1Games = schedule.games.filter(g => g.week === 1);
+
+  // Collect all team IDs from week 1 games
+  const week1TeamIds = new Set();
+  for (const game of week1Games) {
+    week1TeamIds.add(game.home);
+    week1TeamIds.add(game.away);
+  }
+
+  // Find teams without pitcher rosters
+  const teamsWithoutRosters = Array.from(week1TeamIds).filter(
+    teamId => !teamsWithRosters.has(teamId)
+  );
+
+  // Report teams without rosters
+  if (teamsWithoutRosters.length > 0) {
+    issues.push({
+      severity: SEVERITY.INFO,
+      category: 'participation_setup',
+      message: `${teamsWithoutRosters.length} week 1 teams have no pitcher roster: ${teamsWithoutRosters.join(', ')}`
+    });
+  }
+
+  // Check for invalid game IDs (limit to first 10)
+  let invalidGameCount = 0;
+  for (const game of week1Games) {
+    if (!game.id || !game.espn_game_id) {
+      if (invalidGameCount < 10) {
+        issues.push({
+          severity: SEVERITY.CRITICAL,
+          category: 'participation_setup',
+          message: `Week 1 game missing ID fields: home=${game.home} vs away=${game.away}`
+        });
+      }
+      invalidGameCount++;
+    }
+  }
+
+  // Calculate coverage percentage
+  const teamsWithRostersInWeek1 = Array.from(week1TeamIds).filter(
+    teamId => teamsWithRosters.has(teamId)
+  ).length;
+
+  const coveragePercent = week1TeamIds.size > 0
+    ? Math.round((teamsWithRostersInWeek1 / week1TeamIds.size) * 100)
+    : 0;
+
+  return {
+    issues,
+    week1Games: week1Games.length,
+    teamsWithRosters: teamsWithRostersInWeek1,
+    week1Coverage: `${teamsWithRostersInWeek1}/${week1TeamIds.size} (${coveragePercent}%)`
+  };
+}
+
+/**
  * Main verification function
  */
 async function main() {
@@ -321,6 +391,14 @@ async function main() {
     const crossRefCheck = checkCrossReferences(pitchers, teams);
     issues.push(...crossRefCheck.issues);
     console.log(`✓ Verified ${crossRefCheck.teamsVerified} team references`);
+    console.log('');
+
+    // Check participation setup
+    console.log('Checking participation setup...');
+    const participationCheck = checkParticipationSetup(pitchers, schedule);
+    issues.push(...participationCheck.issues);
+    console.log(`✓ Week 1 has ${participationCheck.week1Games} scheduled games`);
+    console.log(`✓ ${participationCheck.week1Coverage} teams ready for tracking`);
     console.log('');
 
     // Print completion message
