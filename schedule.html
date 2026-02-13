@@ -79,7 +79,8 @@
   .pitcher-section{margin-top:.5rem;padding-top:.5rem;border-top:1px solid var(--border)}
   .pitcher-section-title{font-weight:700;font-size:.85rem;color:var(--ink-2);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.02em}
   .pitcher-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem;overflow:visible}
-  .pitcher-row{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:start;padding:.6rem;border-radius:8px;background:#fafbfc;border:1px solid #e9eef7;overflow:visible}
+  .pitcher-row{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:start;padding:.6rem;border-radius:8px;background:#fafbfc;border:1px solid #e9eef7;overflow:visible;transition:all .3s ease}
+  .pitcher-row.favorited{background:#fffbeb;border-color:#f59e0b;box-shadow:0 2px 8px rgba(245,158,11,.1)}
   .headshot-wrap{width:64px;height:64px;overflow:visible;border-radius:8px;background:#eaf2ff;position:relative;cursor:pointer}
   .headshot{width:100%;height:100%;object-fit:cover;transition:all .3s ease;position:relative;z-index:1;border-radius:8px;pointer-events:none}
   .headshot-wrap:hover .headshot{transform:scale(2.2);z-index:100;box-shadow:0 8px 24px rgba(0,0,0,0.4)}
@@ -1049,11 +1050,19 @@ function setPrioSwatch(sel){
 function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   const li = document.createElement('li');
   li.className='pitcher-row';
-  
-  const wrap = document.createElement('div'); 
+
+  const pitcherIdDigits = normId(pickPitcherId(pitcher));
+  const favKey = pitcher?.id || pitcherIdDigits || '';
+
+  // Add favorited class if pitcher is already favorited
+  if(Fav.has('pitchers', favKey)){
+    li.classList.add('favorited');
+  }
+
+  const wrap = document.createElement('div');
   wrap.className='headshot-wrap';
-  const img  = document.createElement('img'); 
-  img.className='headshot'; 
+  const img  = document.createElement('img');
+  img.className='headshot';
   img.loading='lazy';
   img.alt = pitcher?.name || 'Pitcher';
   const primary  = pitcher?.headshot || '';
@@ -1061,14 +1070,14 @@ function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   img.src = primary || fallback || '';
   img.onerror = ()=>{ if (img.src !== fallback && fallback){ img.src = fallback; } };
   wrap.append(img);
-  
-  const main = document.createElement('div'); 
+
+  const main = document.createElement('div');
   main.className='pitcher-main';
-  const name = document.createElement('div'); 
+  const name = document.createElement('div');
   name.className='pitcher-name';
   const num = pitcherNumber(pitcher);
   if(num!=null){
-    const span=document.createElement('span'); 
+    const span=document.createElement('span');
     span.className='pitcher-num';
     span.textContent = '#'+String(num);
     name.append(span);
@@ -1180,18 +1189,17 @@ function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   
   main.append(name, sub);
   
-  const right = document.createElement('div'); 
+  const right = document.createElement('div');
   right.className='pitcher-right';
-  
-  const pitcherIdDigits = normId(pickPitcherId(pitcher));
-  const favKey = pitcher?.id || pitcherIdDigits || '';
-  
-  const star  = document.createElement('span'); 
+
+  const star  = document.createElement('span');
   star.className='star';
   favoriteStar(star, 'pitchers', favKey);
   const prev = star.onclick;
   star.onclick = () => {
     prev && prev();
+    // Toggle favorited class on the row immediately
+    li.classList.toggle('favorited');
     // Check if we need to re-render based on current filter
     const pitcherFilter = ($("#pitcherFilterModal")?.value || 'fav_or_played');
     if (pitcherFilter === 'favorites' || pitcherFilter === 'fav_or_played' || pitcherFilter === 'fav_played') {
