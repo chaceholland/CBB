@@ -677,7 +677,11 @@ function teamMeta(tid){
 }
 
 function teamPitchers(tid){
-  return (pitchersById[tid] && pitchersById[tid].pitchers) ? pitchersById[tid].pitchers : [];
+  const result = (pitchersById[tid] && pitchersById[tid].pitchers) ? pitchersById[tid].pitchers : [];
+  if(!result || result.length === 0){
+    console.log('[DEBUG] No pitchers found for team ID:', tid, '| Available IDs:', Object.keys(pitchersById).slice(0, 10));
+  }
+  return result;
 }
 
 function espnTeamLinks(tid){
@@ -2075,10 +2079,15 @@ async function boot(){
   }
   
   if(PITCHERS && PITCHERS.teams){
+    console.log('[DEBUG] Loading pitchers data:', PITCHERS.teams.length, 'teams');
     for(const t of PITCHERS.teams){
       const tid = String(t.team_id || t.id || '');
       if(tid) pitchersById[tid] = t;
     }
+    console.log('[DEBUG] pitchersById populated with', Object.keys(pitchersById).length, 'teams');
+    console.log('[DEBUG] Sample team IDs:', Object.keys(pitchersById).slice(0, 5));
+  } else {
+    console.error('[DEBUG] PITCHERS data not loaded or invalid structure');
   }
   
   populateDivisionDropdowns();
