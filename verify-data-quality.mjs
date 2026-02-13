@@ -341,6 +341,132 @@ function checkParticipationSetup(pitchers, schedule) {
 }
 
 /**
+ * Generate JSON report with full issue details
+ * @param {Array} issues - Array of all issues found
+ * @param {Object} summary - Summary statistics
+ * @param {string} timestamp - ISO timestamp string
+ * @returns {Object} JSON report object
+ */
+function generateJSONReport(issues, summary, timestamp) {
+  // Count issues by severity
+  const critical = issues.filter(i => i.severity === SEVERITY.CRITICAL).length;
+  const warnings = issues.filter(i => i.severity === SEVERITY.WARNING).length;
+  const info = issues.filter(i => i.severity === SEVERITY.INFO).length;
+
+  // Group checks by category and result
+  const checksPassed = [];
+  const checksFailed = [];
+
+  // Build unique categories
+  const categories = [...new Set(issues.map(i => i.category))];
+
+  for (const category of categories) {
+    const categoryIssues = issues.filter(i => i.category === category);
+    const criticalCount = categoryIssues.filter(i => i.severity === SEVERITY.CRITICAL).length;
+
+    if (criticalCount > 0) {
+      checksFailed.push({
+        category,
+        total_issues: categoryIssues.length,
+        critical_issues: criticalCount
+      });
+    } else if (categoryIssues.length > 0) {
+      checksFailed.push({
+        category,
+        total_issues: categoryIssues.length,
+        critical_issues: 0
+      });
+    } else {
+      checksPassed.push(category);
+    }
+  }
+
+  return {
+    timestamp,
+    summary: {
+      critical_issues: critical,
+      warnings: warnings,
+      info: info,
+      ...summary
+    },
+    issues,
+    checks_passed: checksPassed,
+    checks_failed: checksFailed
+  };
+}
+
+/**
+ * Generate human-readable summary report
+ * @param {Array} issues - Array of all issues found
+ * @param {Object} summary - Summary statistics
+ * @returns {string} Formatted text report
+ */
+function generateSummaryReport(issues, summary) {
+  const lines = [];
+
+  lines.push('='.repeat(80));
+  lines.push('College Baseball Tracker - Data Quality Report');
+  lines.push('='.repeat(80));
+  lines.push('');
+
+  // Overview section
+  lines.push('OVERVIEW');
+  lines.push('-'.repeat(80));
+  lines.push(`Total Teams: ${summary.total_teams}`);
+  lines.push(`Total Pitchers: ${summary.total_pitchers}`);
+  lines.push(`Headshots Found: ${summary.headshots_found}`);
+  lines.push(`Total Issues: ${issues.length}`);
+  lines.push('');
+
+  // Count by severity
+  const critical = issues.filter(i => i.severity === SEVERITY.CRITICAL);
+  const warnings = issues.filter(i => i.severity === SEVERITY.WARNING);
+  const info = issues.filter(i => i.severity === SEVERITY.INFO);
+
+  lines.push('ISSUES BY SEVERITY');
+  lines.push('-'.repeat(80));
+  lines.push(`Critical: ${critical.length}`);
+  lines.push(`Warnings: ${warnings.length}`);
+  lines.push(`Info: ${info.length}`);
+  lines.push('');
+
+  // Group by category
+  const categories = [...new Set(issues.map(i => i.category))];
+
+  lines.push('ISSUES BY CATEGORY');
+  lines.push('-'.repeat(80));
+  for (const category of categories) {
+    const categoryIssues = issues.filter(i => i.category === category);
+    lines.push(`${category}: ${categoryIssues.length} issues`);
+  }
+  lines.push('');
+
+  // Detail sections by category (limit 20 per category)
+  lines.push('DETAILED ISSUES');
+  lines.push('-'.repeat(80));
+
+  for (const category of categories) {
+    const categoryIssues = issues.filter(i => i.category === category);
+    const displayIssues = categoryIssues.slice(0, 20);
+
+    lines.push('');
+    lines.push(`${category.toUpperCase()} (showing ${displayIssues.length} of ${categoryIssues.length})`);
+    lines.push('-'.repeat(40));
+
+    for (const issue of displayIssues) {
+      lines.push(`[${issue.severity}] ${issue.message}`);
+      if (issue.team) lines.push(`  Team: ${issue.team}`);
+      if (issue.pitcher) lines.push(`  Pitcher: ${issue.pitcher}`);
+    }
+  }
+
+  lines.push('');
+  lines.push('='.repeat(80));
+
+  return lines.join('\n');
+}
+
+/**
  * Main verification function
  */
 async function main() {
@@ -401,12 +527,55 @@ async function main() {
     console.log(`✓ ${participationCheck.week1Coverage} teams ready for tracking`);
     console.log('');
 
-    // Print completion message
+    // Generate reports
+    console.log('Generating reports...');
+
+    // Create summary object
+    const summary = {
+      total_teams: pitchers.teams.length,
+      total_pitchers: rosterCheck.totalPitchers,
+      headshots_found: headshotCheck.totalHeadshots
+    };
+
+    // Create timestamp for filenames
+    const timestamp = new Date().toISOString();
+    const dateStr = timestamp.split('T')[0];
+
+    // Generate JSON report
+    const jsonReport = generateJSONReport(issues, summary, timestamp);
+
+    // Generate text summary
+    const textReport = generateSummaryReport(issues, summary);
+
+    // Ensure reports directory exists
+    const reportsDir = path.join(__dirname, 'reports');
+    if (!fs.existsSync(reportsDir)) {
+      fs.mkdirSync(reportsDir, { recursive: true });
+    }
+
+    // Save JSON report
+    const jsonPath = path.join(reportsDir, `verification-${dateStr}.json`);
+    fs.writeFileSync(jsonPath, JSON.stringify(jsonReport, null, 2));
+    console.log(`✓ JSON report saved: ${jsonPath}`);
+
+    // Save text summary
+    const textPath = path.join(reportsDir, `verification-${dateStr}-summary.txt`);
+    fs.writeFileSync(textPath, textReport);
+    console.log(`✓ Text summary saved: ${textPath}`);
     console.log('');
-    console.log('='.repeat(80));
-    console.log('Verification Complete');
-    console.log(`Completed at: ${new Date().toISOString()}`);
-    console.log('='.repeat(80));
+
+    // Print summary to console
+    console.log(textReport);
+
+    // Exit with appropriate code
+    const criticalCount = issues.filter(i => i.severity === SEVERITY.CRITICAL).length;
+    if (criticalCount > 0) {
+      console.log(`\nERROR: ${criticalCount} critical issues found. Exiting with code 1.`);
+      process.exit(1);
+    } else {
+      console.log('\nSUCCESS: No critical issues found. Exiting with code 0.');
+      process.exit(0);
+    }
 
   } catch (error) {
     console.error('Error during verification:', error);
