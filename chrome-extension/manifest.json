@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "College Baseball Headshot Scraper",
+  "version": "1.0",
+  "description": "Extract and download college baseball pitcher headshots from roster pages",
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://12thman.com/*",
+    "https://texassports.com/*",
+    "https://texaslonghorns.com/*",
+    "https://scarletknights.com/*",
+    "https://*.sidearmdev.com/*",
+    "https://*.sidearmsports.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://12thman.com/sports/baseball/roster*",
+        "https://texassports.com/sports/baseball/roster*",
+        "https://texaslonghorns.com/sports/baseball/roster*",
+        "https://scarletknights.com/sports/baseball/roster*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

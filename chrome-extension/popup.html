@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin: 0 0 16px 0;
+      color: #1f2937;
+    }
+
+    .status {
+      padding: 12px;
+      background: #f3f4f6;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      color: #4b5563;
+    }
+
+    .status.error {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .status.success {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #10b981;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+
+    button:hover {
+      background: #059669;
+    }
+
+    button:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+
+    .info {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .pitcher-list {
+      max-height: 300px;
+      overflow-y: auto;
+      margin: 12px 0;
+      font-size: 12px;
+    }
+
+    .pitcher-item {
+      padding: 6px;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pitcher-item:last-child {
+      border-bottom: none;
+    }
+
+    .pitcher-name {
+      font-weight: 500;
+      color: #1f2937;
+    }
+
+    .pitcher-meta {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .has-headshot {
+      color: #10b981;
+      font-size: 16px;
+    }
+
+    .no-headshot {
+      color: #ef4444;
+      font-size: 16px;
+    }
+
+    .progress {
+      margin-top: 12px;
+      padding: 8px;
+      background: #f3f4f6;
+      border-radius: 4px;
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚾ Headshot Scraper</h1>
+
+  <div id="status" class="status">
+    Ready to extract pitcher data...
+  </div>
+
+  <button id="extractBtn">1. Extract Pitcher Data</button>
+  <button id="downloadBtn" disabled>2. Download Headshots</button>
+  <button id="exportBtn" disabled>3. Export Manifest</button>
+
+  <div id="pitcherList" class="pitcher-list"></div>
+
+  <div id="progress" class="progress" style="display: none;"></div>
+
+  <div class="info">
+    <strong>Instructions:</strong><br>
+    1. Navigate to a roster page<br>
+    2. Click "Extract Pitcher Data"<br>
+    3. Click "Download Headshots"<br>
+    4. Click "Export Manifest" to save data
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

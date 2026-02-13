@@ -19,7 +19,9 @@
   "license": "MIT",
   "dependencies": {
     "@supabase/supabase-js": "^2.87.1",
-    "puppeteer": "^24.27.0"
+    "puppeteer": "^24.27.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "vercel": "^49.2.0"

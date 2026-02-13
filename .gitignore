@@ -6,6 +6,7 @@ node_modules/
 
 # Debug files
 debug_*.html
+debug_html/
 *.log
 
 # Environment variables
@@ -20,11 +21,25 @@ debug_*.html
 *.bak
 *.backup
 .vercel
+data/pitchers_backup_*.json
+pitchers-*.bak.json
 
 # Roster update outputs
 data/roster_verification_report_*.json
 data/failed_teams.json
 backups/full_snapshot_*/
+
+# Scraping scripts and temp files
+rescrape-*.mjs
+scrape-*.mjs
+debug-*.mjs
+*.enhanced.json
+*_enhanced.json
+data/missing_*.json
+data/remaining_*.json
+data/retry_*.json
+pitcher-index/
+.deploy_temp/
 
 # Git worktrees
 .worktrees/
