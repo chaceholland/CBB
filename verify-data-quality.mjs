@@ -156,6 +156,74 @@ function checkRosterQuality(pitchers) {
 }
 
 /**
+ * Check headshot coverage and file validity
+ * @param {Object} pitchers - Pitchers data with teams array
+ * @returns {Object} { issues: Array, totalHeadshots: number, missingHeadshots: number, brokenHeadshots: number }
+ */
+function checkHeadshotCoverage(pitchers) {
+  const issues = [];
+  let totalHeadshots = 0;
+  let missingHeadshots = 0;
+  let brokenHeadshots = 0;
+
+  // Process each team
+  for (const team of pitchers.teams) {
+    const teamName = team.team;
+
+    if (!team.pitchers || !Array.isArray(team.pitchers)) {
+      continue;
+    }
+
+    // Process each pitcher
+    for (const pitcher of team.pitchers) {
+      const pitcherName = pitcher.name || pitcher.id || 'Unknown';
+
+      // Check if headshot field exists and is not empty
+      if (!pitcher.headshot || pitcher.headshot === '') {
+        missingHeadshots++;
+        issues.push({
+          severity: SEVERITY.WARNING,
+          category: 'headshot_coverage',
+          team: teamName,
+          pitcher: pitcherName,
+          message: 'Missing headshot field'
+        });
+        continue;
+      }
+
+      // Check if headshot file exists
+      if (!fileExists(pitcher.headshot)) {
+        brokenHeadshots++;
+        issues.push({
+          severity: SEVERITY.WARNING,
+          category: 'headshot_coverage',
+          team: teamName,
+          pitcher: pitcherName,
+          message: `Headshot file not found: ${pitcher.headshot}`
+        });
+        continue;
+      }
+
+      // Check file size (must be >1KB)
+      const fileSize = getFileSize(pitcher.headshot);
+      if (fileSize < 1024) {
+        issues.push({
+          severity: SEVERITY.INFO,
+          category: 'headshot_coverage',
+          team: teamName,
+          pitcher: pitcherName,
+          message: `Headshot file too small: ${fileSize} bytes (${pitcher.headshot})`
+        });
+      }
+
+      totalHeadshots++;
+    }
+  }
+
+  return { issues, totalHeadshots, missingHeadshots, brokenHeadshots };
+}
+
+/**
  * Main verification function
  */
 async function main() {
@@ -186,6 +254,19 @@ async function main() {
     const rosterCheck = checkRosterQuality(pitchers);
     issues.push(...rosterCheck.issues);
     console.log(`✓ Verified ${rosterCheck.totalPitchers} pitchers`);
+    console.log('');
+
+    // Check headshot coverage
+    console.log('Checking headshot coverage...');
+    const headshotCheck = checkHeadshotCoverage(pitchers);
+    issues.push(...headshotCheck.issues);
+    console.log(`✓ Found ${headshotCheck.totalHeadshots} valid headshots`);
+    if (headshotCheck.missingHeadshots > 0) {
+      console.log(`  WARNING: ${headshotCheck.missingHeadshots} pitchers missing headshot field`);
+    }
+    if (headshotCheck.brokenHeadshots > 0) {
+      console.log(`  WARNING: ${headshotCheck.brokenHeadshots} headshot files not found`);
+    }
     console.log('');
 
     // Print completion message
