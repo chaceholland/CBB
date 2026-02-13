@@ -199,8 +199,8 @@
         <label style="flex: 1;">
           <strong>Pitchers</strong>
           <select id="pitcherFilterModal" style="width:100%;">
-            <option value="all" selected>All Pitchers (Default)</option>
-            <option value="fav_or_played">Favorites or Played</option>
+            <option value="fav_or_played" selected>Favorites or Played (Default)</option>
+            <option value="all">All Pitchers</option>
             <option value="favorites">Favorites only</option>
             <option value="played">Played only</option>
             <option value="fav_played">Favorites and Played</option>
@@ -1190,7 +1190,7 @@ function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   star.onclick = () => {
     prev && prev();
     // Check if we need to re-render based on current filter
-    const pitcherFilter = ($("#pitcherFilterModal")?.value || 'all');
+    const pitcherFilter = ($("#pitcherFilterModal")?.value || 'fav_or_played');
     if (pitcherFilter === 'favorites' || pitcherFilter === 'fav_or_played' || pitcherFilter === 'fav_played') {
       // Use debounced render for better performance
       debouncedRender(100);
@@ -1302,7 +1302,7 @@ function sideBlock(tid, gameId){
   box.append(th);
   
   const playedSet = getTeamPlayedSet(String(gameId), String(tid));
-  const pitcherFilter  = ($("#pitcherFilterModal")?.value || 'all');
+  const pitcherFilter  = ($("#pitcherFilterModal")?.value || 'fav_or_played');
   const pitcherSearchTerm = ($("#pitcherSearchModal")?.value || '').toLowerCase().trim();
   const listRaw = Array.from(teamPitchers(String(tid)) || []);
   
@@ -1830,7 +1830,7 @@ function renderVirtualized(wrap, sorted) {
 function isAnyFilterActive(){
   const confOn   = ($("#divFilter")?.value || '') !== '';
   const weeksOn  = weeksSelected && weeksSelected.size > 0;
-  const pitcherOn = ($("#pitcherFilterModal")?.value || 'all') !== 'all';
+  const pitcherOn = ($("#pitcherFilterModal")?.value || 'fav_or_played') !== 'fav_or_played';
   const pitcherSearchOn = ($("#pitcherSearchModal")?.value || '').trim() !== '';
   const watchOn  = ($("#watchOrder")?.value || 'all') !== 'all';
   return confOn || weeksOn || pitcherOn || pitcherSearchOn || watchOn;
@@ -2033,7 +2033,7 @@ async function boot(){
   // Apply saved filter settings
   const savedDiv = Settings.get('divFilter', '');
   const savedWatchOrder = Settings.get('watchOrder', 'priority');
-  const savedPitcherFilter = Settings.get('pitcherFilter', 'all');
+  const savedPitcherFilter = Settings.get('pitcherFilter', 'fav_or_played');
   const savedSortBy = Settings.get('sortBy', 'time');
   
   if($("#divFilter")) $("#divFilter").value = savedDiv;
@@ -2422,7 +2422,7 @@ $("#watchOrderModal")?.addEventListener('change', () => {
 
 $("#pitcherFilterModal")?.addEventListener('change', () => {
   visibleRange = { start: 0, end: 100 }; // Reset range on filter change
-  Settings.set('pitcherFilter', $("#pitcherFilterModal")?.value || 'all');
+  Settings.set('pitcherFilter', $("#pitcherFilterModal")?.value || 'fav_or_played');
   render();
 });
 
