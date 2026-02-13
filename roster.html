@@ -336,11 +336,7 @@ function render(){
     list.className = 'pitchers-list';
     
     const pitchers = (team.pitchers || []).slice().sort((a,b) => {
-      // Sort by favorite status first
-      const aFav = isFavorited(a.id);
-      const bFav = isFavorited(b.id);
-      if(aFav !== bFav) return bFav ? 1 : -1;
-      // Then by name
+      // Sort by name only (maintain original roster order)
       return (a.lastName || a.name || '').localeCompare(b.lastName || b.name || '');
     });
     
