@@ -3115,8 +3115,8 @@
       "slug": "texas-am",
       "pitchers": [
         {
-          "id": "123-P25",
-          "name": "Isaac Morton",
+          "id": "123-P1",
+          "name": "Nico Partida",
           "number": "",
           "position": "RHP",
           "year": "",
@@ -3124,154 +3124,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P1.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FPartida_-Nico.jpg"
         },
         {
-          "id": "123-P26",
-          "name": "Ryan Prager",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P2.jpg"
-        },
-        {
-          "id": "123-P27",
-          "name": "Troy Wansing",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P3.jpg"
-        },
-        {
-          "id": "123-P28",
-          "name": "Aiden Sims",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P4.jpg"
-        },
-        {
-          "id": "123-P29",
-          "name": "Weston Moss",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P5.jpg"
-        },
-        {
-          "id": "123-P30",
-          "name": "Myles Patton",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P6.jpg"
-        },
-        {
-          "id": "123-P31",
-          "name": "Clayton Freshcorn",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P7.jpg"
-        },
-        {
-          "id": "123-P32",
-          "name": "Gavin Lyons",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P8.jpg"
-        },
-        {
-          "id": "123-P33",
-          "name": "Caden McCoy",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P9.jpg"
-        },
-        {
-          "id": "123-P34",
-          "name": "Kaiden Wilson",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P10.jpg"
-        },
-        {
-          "id": "123-P35",
-          "name": "Grant Cunningham",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P11.jpg"
-        },
-        {
-          "id": "123-P36",
-          "name": "Brad Rudis",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P12.jpg"
-        },
-        {
-          "id": "123-P37",
-          "name": "Justin Lamkin",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P13.jpg"
-        },
-        {
-          "id": "123-P38",
+          "id": "123-P2",
           "name": "Josh Stewart",
           "number": "",
           "position": "RHP",
@@ -3280,11 +3136,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P14.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FStewart_-Josh.jpg"
         },
         {
-          "id": "123-P39",
-          "name": "Ty Baker",
+          "id": "123-P3",
+          "name": "Luke Billings",
           "number": "",
           "position": "RHP",
           "year": "",
@@ -3292,10 +3148,142 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P15.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FBillings_-Luke.jpg"
         },
         {
-          "id": "123-P40",
+          "id": "123-P4",
+          "name": "David Ramirez",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FRamirez_-David.jpg"
+        },
+        {
+          "id": "123-P5",
+          "name": "Juan Vargas",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FVargas_-Juan.jpg"
+        },
+        {
+          "id": "123-P6",
+          "name": "Aiden Sims",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FSims_-Aiden.jpg"
+        },
+        {
+          "id": "123-P7",
+          "name": "Weston Moss",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FMoss_-Weston.jpg"
+        },
+        {
+          "id": "123-P8",
+          "name": "Clayton Freshcorn",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FFreshcorn_-Clayton.jpg"
+        },
+        {
+          "id": "123-P9",
+          "name": "Gavin Lyons",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FLyons_-Gavin.jpg"
+        },
+        {
+          "id": "123-P10",
+          "name": "Caden McCoy",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FMcCoy_-Caden.jpg"
+        },
+        {
+          "id": "123-P11",
+          "name": "Hunter Vincent",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FVincent_-Hunter.jpg"
+        },
+        {
+          "id": "123-P12",
+          "name": "Grant Cunningham",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FCunningham_-Grant.jpg"
+        },
+        {
+          "id": "123-P13",
+          "name": "Hunter Bond",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FBond_-Hunter.jpg"
+        },
+        {
+          "id": "123-P14",
+          "name": "Cole Hubert",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FHubert_-Cole.jpg"
+        },
+        {
+          "id": "123-P15",
           "name": "Shane Sdao",
           "number": "",
           "position": "LHP",
@@ -3304,35 +3292,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P16.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FSdao_-Shane.jpg"
         },
         {
-          "id": "123-P41",
-          "name": "Houston Tomlinson",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P17.jpg"
-        },
-        {
-          "id": "123-P42",
-          "name": "Blayne Lyne",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P18.jpg"
-        },
-        {
-          "id": "123-P43",
-          "name": "Jackson Brasseux",
+          "id": "123-P16",
+          "name": "Ethan Darden",
           "number": "",
           "position": "LHP",
           "year": "",
@@ -3340,23 +3304,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P19.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FDarden_-Ethan.jpg"
         },
         {
-          "id": "123-P44",
-          "name": "Luke Jackson",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P20.jpg"
-        },
-        {
-          "id": "123-P45",
-          "name": "Austin Vargas",
+          "id": "123-P17",
+          "name": "Cooper Powell",
           "number": "",
           "position": "LHP",
           "year": "",
@@ -3364,23 +3316,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P21.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FPowell_-Cooper.jpg"
         },
         {
-          "id": "123-P46",
-          "name": "Rylan Hill",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P22.jpg"
-        },
-        {
-          "id": "123-P47",
-          "name": "Peyton Smith",
+          "id": "123-P18",
+          "name": "Cooper Fulbright",
           "number": "",
           "position": "RHP",
           "year": "",
@@ -3388,11 +3328,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P23.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FFulbright_-Cooper.jpg"
         },
         {
-          "id": "123-P48",
-          "name": "Kyrin LeBlanc",
+          "id": "123-P19",
+          "name": "MJ Bollinger",
           "number": "",
           "position": "RHP",
           "year": "",
@@ -3400,7 +3340,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas-am_123-P24.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FBollinger_-MJ.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
@@ -3413,7 +3353,7 @@
       "slug": "texas",
       "pitchers": [
         {
-          "id": "126-P24",
+          "id": "126-P1",
           "name": "Jason Flores",
           "number": "",
           "position": "RHP",
@@ -3422,10 +3362,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P1.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FFlores_Jason_Cropped-2026_INR2o.jpg"
         },
         {
-          "id": "126-P25",
+          "id": "126-P2",
           "name": "Kade Bing",
           "number": "",
           "position": "LHP",
@@ -3434,10 +3374,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P2.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FBing_Kade_cropped-2026_nwRnr.jpg"
         },
         {
-          "id": "126-P26",
+          "id": "126-P3",
           "name": "Haiden Leffew",
           "number": "",
           "position": "LHP",
@@ -3446,10 +3386,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P3.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FLeffew_Haiden_Cropped-2026_8xX8i.jpg"
         },
         {
-          "id": "126-P27",
+          "id": "126-P4",
           "name": "Ruger Riojas",
           "number": "",
           "position": "RHP",
@@ -3458,10 +3398,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P4.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FRiojas_Ruger_Cropped-2026_KRG8D.jpg"
         },
         {
-          "id": "126-P28",
+          "id": "126-P5",
           "name": "Jack McKernan",
           "number": "",
           "position": "LHP",
@@ -3470,10 +3410,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P5.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2026%2F2%2F10%2FMcKernan_Jack_Cropped-2026.jpg"
         },
         {
-          "id": "126-P29",
+          "id": "126-P6",
           "name": "Cal Higgins",
           "number": "",
           "position": "LHP",
@@ -3482,10 +3422,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P6.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FHiggins_Cal_Cropped-2026_NDNYu.jpg"
         },
         {
-          "id": "126-P30",
+          "id": "126-P7",
           "name": "Grady Westphal",
           "number": "",
           "position": "RHP",
@@ -3494,10 +3434,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P7.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FWestphal_Grady_Cropped-2026_5fAtF.jpg"
         },
         {
-          "id": "126-P31",
+          "id": "126-P8",
           "name": "Kaleb Rogers",
           "number": "",
           "position": "RHP",
@@ -3506,10 +3446,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P8.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FRogers_Kaleb_Cropped-2026_tO92U.jpg"
         },
         {
-          "id": "126-P32",
+          "id": "126-P9",
           "name": "Connor McCreery",
           "number": "",
           "position": "RHP",
@@ -3518,10 +3458,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P9.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2026%2F1%2F28%2FMcCreery_Connor_Cropped-2026.jpg"
         },
         {
-          "id": "126-P33",
+          "id": "126-P10",
           "name": "Michael Winter",
           "number": "",
           "position": "RHP",
@@ -3530,10 +3470,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P10.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FWinter_Michael_Cropped-2026_Vq4VN.jpg"
         },
         {
-          "id": "126-P34",
+          "id": "126-P11",
           "name": "Sam Cozart",
           "number": "",
           "position": "RHP",
@@ -3542,10 +3482,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P11.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FCozart_Sam_Cropped-2026_OA7nW.jpg"
         },
         {
-          "id": "126-P35",
+          "id": "126-P12",
           "name": "Max Grubbs",
           "number": "",
           "position": "RHP",
@@ -3554,10 +3494,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P12.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FGrubbs_Max_Cropped-2026_NTsar.jpg"
         },
         {
-          "id": "126-P36",
+          "id": "126-P13",
           "name": "Cody Howard",
           "number": "",
           "position": "RHP",
@@ -3566,10 +3506,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P13.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FHoward_Cody_Cropped-2026_GMY2F.jpg"
         },
         {
-          "id": "126-P37",
+          "id": "126-P14",
           "name": "Thomas Burns",
           "number": "",
           "position": "RHP",
@@ -3578,10 +3518,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P14.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FBurns_Thomas_cropped-2026_tR45x.jpg"
         },
         {
-          "id": "126-P38",
+          "id": "126-P15",
           "name": "Ethan Walker",
           "number": "",
           "position": "LHP",
@@ -3590,10 +3530,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P15.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FWalker_Ethan_Cropped-2026_CWQVf.jpg"
         },
         {
-          "id": "126-P39",
+          "id": "126-P16",
           "name": "Hudson Hamilton",
           "number": "",
           "position": "RHP",
@@ -3602,10 +3542,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P16.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FHamilton_Hudson_Cropped-2026_amaSg.jpg"
         },
         {
-          "id": "126-P40",
+          "id": "126-P17",
           "name": "Luke Harrison",
           "number": "",
           "position": "LHP",
@@ -3614,10 +3554,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P17.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FHarrison_Luke_Cropped-2026_YmPUQ.jpg"
         },
         {
-          "id": "126-P41",
+          "id": "126-P18",
           "name": "Jack Paris",
           "number": "",
           "position": "RHP",
@@ -3626,58 +3566,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P18.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FParis_Jack_Cropped-2026_5uBIi.jpg"
         },
         {
-          "id": "126-P43",
-          "name": "Cooper Rummel",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas_126-P20.jpg"
-        },
-        {
-          "id": "126-P44",
-          "name": "Brett Crossland",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas_126-P21.png"
-        },
-        {
-          "id": "126-P45",
-          "name": "Jadyn Furgason",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas_126-P22.jpg"
-        },
-        {
-          "id": "126-P46",
-          "name": "Dylan Volantis",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/texas_126-P23.jpg"
-        },
-        {
-          "id": "126-P42",
+          "id": "126-P19",
           "name": "Brody Walls",
           "number": "",
           "position": "RHP",
@@ -3686,7 +3578,55 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/texas_126-P19.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FWalls_Brody_Cropped-2026_O4Tja.jpg"
+        },
+        {
+          "id": "126-P20",
+          "name": "Cooper Rummel",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FRummel_Cooper_Cropped-2026_zbxxM.jpg"
+        },
+        {
+          "id": "126-P21",
+          "name": "Brett Crossland",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FCrossland_Brett_Cropped-2026_KqmEy.png"
+        },
+        {
+          "id": "126-P22",
+          "name": "Jadyn Furgason",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FFurgason_Jadyn_Cropped-2026_QTQ2a.jpg"
+        },
+        {
+          "id": "126-P23",
+          "name": "Dylan Volantis",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FVolantis_Dylan_Cropped-2026_pwLpD.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
@@ -11074,8 +11014,8 @@
       "conference": "Big Ten",
       "pitchers": [
         {
-          "id": "108-P23",
-          "name": "Zach Weber",
+          "id": "108-P1",
+          "name": "Justin Byrd",
           "number": "",
           "position": "RHP",
           "year": "",
@@ -11083,11 +11023,275 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P1.jpg"
+          "headshot": "data/headshots/georgia_108-P1.jpg"
+        },
+        {
+          "id": "108-P2",
+          "name": "Jordan Stephens",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P2.jpg"
+        },
+        {
+          "id": "108-P3",
+          "name": "Matt Scott",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P3.jpg"
+        },
+        {
+          "id": "108-P4",
+          "name": "Bryce Calloway",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P4.jpg"
+        },
+        {
+          "id": "108-P5",
+          "name": "Caden Aoki",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P5.jpg"
+        },
+        {
+          "id": "108-P6",
+          "name": "Kenny Ishikawa",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P6.jpg"
+        },
+        {
+          "id": "108-P7",
+          "name": "Zach Brown",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgeorgiadogs.com%2Fimages%2F2022%2F8%2F5%2FAdams_Zach_3.jpg"
+        },
+        {
+          "id": "108-P8",
+          "name": "Teddy Brennan",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P8.jpg"
+        },
+        {
+          "id": "108-P9",
+          "name": "Andrew Behnke",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgeorgiadogs.com%2Fimages%2F2025%2F9%2F5%2FBehnke__Andrew.jpg"
+        },
+        {
+          "id": "108-P10",
+          "name": "Joe Nottingham",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P10.jpg"
+        },
+        {
+          "id": "108-P11",
+          "name": "Cole Johnson",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgeorgiadogs.com%2Fimages%2F2025%2F8%2F19%2FKoniarsky__Cole.jpg"
+        },
+        {
+          "id": "108-P12",
+          "name": "Dylan Wood",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P12.jpg"
+        },
+        {
+          "id": "108-P13",
+          "name": "Dylan Vigue",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P13.jpg"
+        },
+        {
+          "id": "108-P14",
+          "name": "Grant Edwards",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P14.jpg"
+        },
+        {
+          "id": "108-P15",
+          "name": "Jackson Peavy",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P15.jpg"
+        },
+        {
+          "id": "108-P16",
+          "name": "Caleb Jameson",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P16.jpg"
+        },
+        {
+          "id": "108-P17",
+          "name": "Paul Farley",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P17.jpg"
+        },
+        {
+          "id": "108-P18",
+          "name": "Joey Volchko",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P18.jpg"
+        },
+        {
+          "id": "108-P19",
+          "name": "Brad Pruett",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P19.jpg"
+        },
+        {
+          "id": "108-P20",
+          "name": "Luke Wiltrakis",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P20.jpg"
+        },
+        {
+          "id": "108-P21",
+          "name": "Bradley Stewart",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P21.jpg"
+        },
+        {
+          "id": "108-P22",
+          "name": "Logan Spivey",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P22.jpg"
+        },
+        {
+          "id": "108-P23",
+          "name": "Thomas Ellisen",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/georgia_108-P23.jpg"
         },
         {
           "id": "108-P24",
-          "name": "Miles Vandenheuvel",
+          "name": "Lucas Morici",
           "number": "",
           "position": "RHP",
           "year": "",
@@ -11095,11 +11299,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P2.jpg"
+          "headshot": "data/headshots/georgia_108-P24.jpg"
         },
         {
           "id": "108-P25",
-          "name": "Andrew Edrington",
+          "name": "Mason Kosowick",
           "number": "",
           "position": "RHP",
           "year": "",
@@ -11107,235 +11311,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P3.jpg"
-        },
-        {
-          "id": "108-P26",
-          "name": "Sahil Patel",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P4.jpg"
-        },
-        {
-          "id": "108-P27",
-          "name": "Jack Cecil",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P5.jpg"
-        },
-        {
-          "id": "108-P28",
-          "name": "Chris Domke",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P6.jpg"
-        },
-        {
-          "id": "108-P29",
-          "name": "Jake Michalak",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P7.jpg"
-        },
-        {
-          "id": "108-P30",
-          "name": "Pierce Herrenbruck",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P8.jpg"
-        },
-        {
-          "id": "108-P31",
-          "name": "Luke Carrell",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P9.jpg"
-        },
-        {
-          "id": "108-P32",
-          "name": "Hunter Shaw",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P10.jpg"
-        },
-        {
-          "id": "108-P33",
-          "name": "Ryan Butler",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P11.jpg"
-        },
-        {
-          "id": "108-P34",
-          "name": "Nik Copenhaver",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P12.jpg"
-        },
-        {
-          "id": "108-P35",
-          "name": "Caden Marcum",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P13.jpg"
-        },
-        {
-          "id": "108-P36",
-          "name": "Lincoln McVicker",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P14.jpg"
-        },
-        {
-          "id": "108-P37",
-          "name": "Ryan Zamora",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P15.jpg"
-        },
-        {
-          "id": "108-P38",
-          "name": "Douglas Bauer",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P16.jpg"
-        },
-        {
-          "id": "108-P39",
-          "name": "Zak Sigman",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P17.jpg"
-        },
-        {
-          "id": "108-P40",
-          "name": "Gavin Kuzniewski",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P18.jpg"
-        },
-        {
-          "id": "108-P41",
-          "name": "Connor Fuhrer",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P19.jpg"
-        },
-        {
-          "id": "108-P42",
-          "name": "Jude Fisher",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P20.jpg"
-        },
-        {
-          "id": "108-P43",
-          "name": "Owen Graf",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P21.jpg"
-        },
-        {
-          "id": "108-P44",
-          "name": "Nick Sawyer",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/ohio-state_108-P22.jpg"
+          "headshot": "data/headshots/georgia_108-P25.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
@@ -11348,31 +11324,7 @@
       "conference": "Big Ten",
       "pitchers": [
         {
-          "id": "102-P22",
-          "name": "Charles Batista",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P1.jpg"
-        },
-        {
-          "id": "102-P23",
-          "name": "Vincent Borghese",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P2.jpg"
-        },
-        {
-          "id": "102-P24",
+          "id": "102-P1",
           "name": "Matthew Cruz",
           "number": "",
           "position": "RHP",
@@ -11381,214 +11333,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P3.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F1_Cruz.jpg"
         },
         {
-          "id": "102-P25",
-          "name": "Luke Fithian",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P4.jpg"
-        },
-        {
-          "id": "102-P26",
-          "name": "Luke Foulds",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P5.jpg"
-        },
-        {
-          "id": "102-P27",
-          "name": "Zach Gleason",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P6.jpg"
-        },
-        {
-          "id": "102-P28",
-          "name": "Finn Haines",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P7.jpg"
-        },
-        {
-          "id": "102-P29",
-          "name": "Dallin Harrison",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P8.jpg"
-        },
-        {
-          "id": "102-P30",
-          "name": "Tyler Kane",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P9.jpg"
-        },
-        {
-          "id": "102-P31",
-          "name": "Jack Kirchner",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P10.jpg"
-        },
-        {
-          "id": "102-P32",
-          "name": "Zack Konstantinovsky",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P11.jpg"
-        },
-        {
-          "id": "102-P33",
-          "name": "Justin MacCormack",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P12.jpg"
-        },
-        {
-          "id": "102-P34",
-          "name": "Jason Masick",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P13.jpg"
-        },
-        {
-          "id": "102-P35",
-          "name": "Joe Mazza",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P14.jpg"
-        },
-        {
-          "id": "102-P36",
-          "name": "Jacob Pedersen",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P15.jpg"
-        },
-        {
-          "id": "102-P37",
-          "name": "Nolan Peel",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P16.jpg"
-        },
-        {
-          "id": "102-P38",
-          "name": "Henry Radbill",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P17.jpg"
-        },
-        {
-          "id": "102-P39",
-          "name": "Andrew Rondini",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P18.jpg"
-        },
-        {
-          "id": "102-P40",
-          "name": "Chris Sand",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P19.jpg"
-        },
-        {
-          "id": "102-P41",
-          "name": "Pablo Santos",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P20.jpg"
-        },
-        {
-          "id": "102-P42",
+          "id": "102-P2",
           "name": "Jordan Saviñon",
           "number": "",
           "position": "LHP",
@@ -11597,7 +11345,235 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/rutgers_102-P21.jpg"
+          "headshot": "data/headshots/rutgers_102-P2.jpg"
+        },
+        {
+          "id": "102-P3",
+          "name": "Pablo Santos",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F6_Santos.jpg"
+        },
+        {
+          "id": "102-P4",
+          "name": "Henry Radbill",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F8_Radbill.jpg"
+        },
+        {
+          "id": "102-P5",
+          "name": "Nolan Peel",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F11_Peel.jpg"
+        },
+        {
+          "id": "102-P6",
+          "name": "Luke Fithian",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F15_Fithian.jpg"
+        },
+        {
+          "id": "102-P7",
+          "name": "Tyler Kane",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F16_Kane.jpg"
+        },
+        {
+          "id": "102-P8",
+          "name": "Dallin Harrison",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F17_Harrison.jpg"
+        },
+        {
+          "id": "102-P9",
+          "name": "Zack Konstantinovsky",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F19_Konstantinovsky.jpg"
+        },
+        {
+          "id": "102-P10",
+          "name": "Vincent Borghese",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F20_Borghese.jpg"
+        },
+        {
+          "id": "102-P11",
+          "name": "Andrew Rondini",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F22_Rondini.jpg"
+        },
+        {
+          "id": "102-P12",
+          "name": "Jason Masick",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F23_Masick.jpg"
+        },
+        {
+          "id": "102-P13",
+          "name": "Luke Foulds",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F29_Foulds.jpg"
+        },
+        {
+          "id": "102-P14",
+          "name": "Charles Batista",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F33_Batista.jpg"
+        },
+        {
+          "id": "102-P15",
+          "name": "Joe Mazza",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F37_Mazza.jpg"
+        },
+        {
+          "id": "102-P16",
+          "name": "Jacob Pedersen",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F38_Pedersen.jpg"
+        },
+        {
+          "id": "102-P17",
+          "name": "Zach Gleason",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F39_Gleason.jpg"
+        },
+        {
+          "id": "102-P18",
+          "name": "Justin MacCormack",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F41_MacCormack.jpg"
+        },
+        {
+          "id": "102-P19",
+          "name": "Finn Haines",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F43_Haines.jpg"
+        },
+        {
+          "id": "102-P20",
+          "name": "Chris Sand",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F44_Sand.jpg"
+        },
+        {
+          "id": "102-P21",
+          "name": "Jack Kirchner",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F45_Kirchner.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png"
@@ -11610,7 +11586,7 @@
       "conference": "Big Ten",
       "pitchers": [
         {
-          "id": "66-P22",
+          "id": "66-P1",
           "name": "Ian May",
           "number": "",
           "position": "LHP",
@@ -11619,10 +11595,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P22.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FMay.png"
         },
         {
-          "id": "66-P23",
+          "id": "66-P2",
           "name": "Zach Strickland",
           "number": "",
           "position": "RHP",
@@ -11631,10 +11607,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P23.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FStrickland.png"
         },
         {
-          "id": "66-P24",
+          "id": "66-P3",
           "name": "Landon Stump",
           "number": "",
           "position": "RHP",
@@ -11643,10 +11619,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P24.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FStump.png"
         },
         {
-          "id": "66-P25",
+          "id": "66-P4",
           "name": "Jake Swenson",
           "number": "",
           "position": "RHP",
@@ -11655,10 +11631,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P25.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FSwenson.png"
         },
         {
-          "id": "66-P26",
+          "id": "66-P5",
           "name": "Wylan Moss",
           "number": "",
           "position": "RHP",
@@ -11667,10 +11643,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P26.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FMoss.png"
         },
         {
-          "id": "66-P27",
+          "id": "66-P6",
           "name": "Justin Lee",
           "number": "",
           "position": "RHP",
@@ -11679,10 +11655,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P27.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FLee.png"
         },
         {
-          "id": "66-P28",
+          "id": "66-P7",
           "name": "Jack O'Connor",
           "number": "",
           "position": "RHP",
@@ -11691,10 +11667,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P28.jpg"
+          "headshot": "data/headshots/ucla_66-P7.jpg"
         },
         {
-          "id": "66-P29",
+          "id": "66-P8",
           "name": "Logan Reddemann",
           "number": "",
           "position": "RHP",
@@ -11703,10 +11679,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P29.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FReddemann.png"
         },
         {
-          "id": "66-P30",
+          "id": "66-P9",
           "name": "CJ Bott",
           "number": "",
           "position": "RHP",
@@ -11715,10 +11691,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P30.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FBott.png"
         },
         {
-          "id": "66-P31",
+          "id": "66-P10",
           "name": "Easton Hawk",
           "number": "",
           "position": "RHP",
@@ -11727,10 +11703,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P31.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FHawk.png"
         },
         {
-          "id": "66-P32",
+          "id": "66-P11",
           "name": "Finn McIlroy",
           "number": "",
           "position": "RHP",
@@ -11739,10 +11715,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P32.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FMcIlroy.png"
         },
         {
-          "id": "66-P33",
+          "id": "66-P12",
           "name": "Chris Aldrich",
           "number": "",
           "position": "RHP",
@@ -11751,10 +11727,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P33.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FAldrich.png"
         },
         {
-          "id": "66-P34",
+          "id": "66-P13",
           "name": "Mack Edwards",
           "number": "",
           "position": "LHP",
@@ -11763,10 +11739,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P34.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FEdwards.png"
         },
         {
-          "id": "66-P35",
+          "id": "66-P14",
           "name": "Hayden George",
           "number": "",
           "position": "RHP",
@@ -11775,10 +11751,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P35.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FGeorge.png"
         },
         {
-          "id": "66-P36",
+          "id": "66-P15",
           "name": "Will Crain",
           "number": "",
           "position": "RHP",
@@ -11787,10 +11763,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P36.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FCrain.png"
         },
         {
-          "id": "66-P37",
+          "id": "66-P16",
           "name": "Ian Fisher",
           "number": "",
           "position": "LHP",
@@ -11799,10 +11775,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P37.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FFisher.png"
         },
         {
-          "id": "66-P38",
+          "id": "66-P17",
           "name": "Chris Grothues",
           "number": "",
           "position": "LHP",
@@ -11811,10 +11787,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P38.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FGrothues.png"
         },
         {
-          "id": "66-P39",
+          "id": "66-P18",
           "name": "Elai Iwanaga",
           "number": "",
           "position": "RHP",
@@ -11823,10 +11799,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P39.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FIwanaga.png"
         },
         {
-          "id": "66-P40",
+          "id": "66-P19",
           "name": "Michael Barnett",
           "number": "",
           "position": "RHP",
@@ -11835,10 +11811,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P40.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FBarnett.png"
         },
         {
-          "id": "66-P41",
+          "id": "66-P20",
           "name": "Cal Randall",
           "number": "",
           "position": "RHP",
@@ -11847,10 +11823,10 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P41.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FRandall.png"
         },
         {
-          "id": "66-P42",
+          "id": "66-P21",
           "name": "Angel Cervantes",
           "number": "",
           "position": "RHP",
@@ -11859,7 +11835,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ucla_66-P42.jpg"
+          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FCervantes.png"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png"
