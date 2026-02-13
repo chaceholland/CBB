@@ -1901,8 +1901,8 @@ function normalizeSchedule(raw){
       id: String((e && e.id != null) ? e.id : (e && e.gameId != null) ? e.gameId : (comp && comp.id != null) ? comp.id : ''),
       date: ((e && e.date != null) ? e.date : (comp && comp.date != null) ? comp.date : (e && e.startDate != null) ? e.startDate : ''),
       week: ((e && e.week && e.week.number != null) ? e.week.number : (e && e.weekNumber != null) ? e.weekNumber : (e && e.week != null) ? e.week : (comp && comp.week && comp.week.number != null) ? comp.week.number : ''),
-      home: String((e && e.home != null) ? e.home : (e && e.homeTeamId != null) ? e.homeTeamId : (e && e.homeTeam && e.homeTeam.id != null) ? e.homeTeam.id : (homeFromComp != null) ? homeFromComp : ''),
-      away: String((e && e.away != null) ? e.away : (e && e.awayTeamId != null) ? e.awayTeamId : (e && e.awayTeam && e.awayTeam.id != null) ? e.awayTeam.id : (awayFromComp != null) ? awayFromComp : '')
+      home: String((e && e.home != null) ? e.home : (e && e.homeTeamId != null) ? e.homeTeamId : (e && e.home_team_id != null) ? e.home_team_id : (e && e.homeTeam && e.homeTeam.id != null) ? e.homeTeam.id : (homeFromComp != null) ? homeFromComp : ''),
+      away: String((e && e.away != null) ? e.away : (e && e.awayTeamId != null) ? e.awayTeamId : (e && e.away_team_id != null) ? e.away_team_id : (e && e.awayTeam && e.awayTeam.id != null) ? e.awayTeam.id : (awayFromComp != null) ? awayFromComp : '')
     };
   }).filter(function(g){ return g.id && g.home && g.away; });
   return { games: norm };
