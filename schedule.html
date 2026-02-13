@@ -80,9 +80,11 @@
   .pitcher-section-title{font-weight:700;font-size:.85rem;color:var(--ink-2);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.02em}
   .pitcher-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem;overflow:visible}
   .pitcher-row{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:start;padding:.6rem;border-radius:8px;background:#fafbfc;border:1px solid #e9eef7;overflow:visible}
-  .headshot-wrap{width:64px;height:64px;overflow:visible;border-radius:8px;background:#eaf2ff;position:relative}
-  .headshot{width:100%;height:100%;object-fit:cover;transition:all .3s ease;position:relative;z-index:1;border-radius:8px}
+  .headshot-wrap{width:64px;height:64px;overflow:visible;border-radius:8px;background:#eaf2ff;position:relative;cursor:pointer}
+  .headshot{width:100%;height:100%;object-fit:cover;transition:all .3s ease;position:relative;z-index:1;border-radius:8px;pointer-events:none}
   .headshot-wrap:hover .headshot{transform:scale(2.2);z-index:100;box-shadow:0 8px 24px rgba(0,0,0,0.4)}
+  .pitcher-details .headshot-wrap{width:64px;height:64px}
+  .pitcher-details .headshot-wrap:hover .headshot{transform:scale(2.2);z-index:100;box-shadow:0 8px 24px rgba(0,0,0,0.4)}
   .pitcher-main{display:flex;flex-direction:column;gap:.35rem;overflow:visible;min-width:0}
   .pitcher-name{font-weight:700;font-size:.95rem;color:var(--ink);overflow:visible;white-space:normal;word-wrap:break-word;line-height:1.3}
   .pitcher-num{color:var(--ink-2);font-size:.85rem;margin-right:.3rem}
@@ -488,6 +490,7 @@ const Fav = (()=>{
   
   function add(k,v){
     if(!has(k,v)){
+      if(!cache[k]) cache[k] = [];
       cache[k].push(String(v));
       save();
     }
