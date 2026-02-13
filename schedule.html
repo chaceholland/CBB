@@ -2049,8 +2049,8 @@ async function boot(){
   TEAMS = await tryMany(['./data/teams.json']);
   
   let basePitchers = await tryMany([
-    './data/pitchers_enhanced.json',
-    './data/pitchers.json'
+    './data/pitchers.json',
+    './data/pitchers_enhanced.json'
   ]);
   
   let addPitchers = await tryMany([
