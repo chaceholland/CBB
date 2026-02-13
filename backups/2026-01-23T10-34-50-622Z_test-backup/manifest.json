@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-01-23T10:34:50.625Z",
+  "reason": "test-backup",
+  "files": [
+    {
+      "path": "data/rosters_2026.json",
+      "checksum": "d37ca57feac3ccb07783a31df9da4027f93392875958347e7ce7bea5c0989979",
+      "size": 252121
+    },
+    {
+      "path": "data/pitchers_2026.json",
+      "checksum": "a879df8110694f0bdd58e49a796d574a5ec89cc03bcfa14a1278ec6fea84b715",
+      "size": 5732
+    },
+    {
+      "path": "data/teams.json",
+      "checksum": "1179f3a72bce873ed70d90ea0b2af84e62705f4a88ce6ab5303012d5d6eca5ee",
+      "size": 147187
+    },
+    {
+      "path": "data/schedules_2026.json",
+      "checksum": "ae599dc05ef62284cd5a7a7a1394c1dc352d1e495e2baa13f595302812765b0c",
+      "size": 160
+    },
+    {
+      "path": "data/pitchers_played_index.json",
+      "checksum": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+[
+  {
+    "teamId": "georgia-tech",
+    "team": "Georgia Tech Yellow Jackets",
+    "slug": "georgia-tech",
+    "conference": "ACC",
+    "pitchers": [
+      {
+        "id": "georgia-tech-P1",
+        "name": "Alex Hernandez",
+        "number": "4",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P2",
+        "name": "Cooper Underwood",
+        "number": "15",
+        "position": "LHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P3",
+        "name": "Charlie Willcox",
+        "number": "16",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P4",
+        "name": "Caden Gaudette",
+        "number": "18",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P5",
+        "name": "Caden Spivey",
+        "number": "20",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P6",
+        "name": "Tate McKee",
+        "number": "22",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P7",
+        "name": "Jackson Blakely",
+        "number": "24",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P8",
+        "name": "Jamie Vicens",
+        "number": "26",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P9",
+        "name": "Mason Patel",
+        "number": "29",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P10",
+        "name": "Justin Shadek",
+        "number": "31",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P11",
+        "name": "Brett Barfield",
+        "number": "32",
+        "position": "LHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P12",
+        "name": "Jake Lankie",
+        "number": "35",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P13",
+        "name": "Dylan Loy",
+        "number": "37",
+        "position": "LHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P14",
+        "name": "Carson Ballard",
+        "number": "38",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P15",
+        "name": "Dimitri Angelakos",
+        "number": "43",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P16",
+        "name": "Kayden Campbell",
+        "number": "49",
+        "position": "LHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P17",
+        "name": "Riley Hasenstab",
+        "number": "54",
+        "position": "RHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P18",
+        "name": "Adam McKelvey",
+        "number": "55",
+        "position": "LHP",
+        "headshot": ""
+      },
+      {
+        "id": "georgia-tech-P19",
+        "name": "Porter Buursema",
+        "number": "99",
+        "position": "RHP",
+        "headshot": ""
+      }
+    ]
+  },
+  {
+    "teamId": "smu",
+    "team": "SMU Mustangs",
+    "slug": "smu",
+    "conference": "ACC",
+    "pitchers": []
+  },
+  {
+    "teamId": "stanford",
+    "team": "Stanford Cardinal",
+    "slug": "stanford",
+    "conference": "ACC",
+    "pitchers": []
+  },
+  {
+    "teamId": "virginia-tech",
+    "team": "Virginia Tech Hokies",
+    "slug": "virginia-tech",
+    "conference": "ACC",
+    "pitchers": []
+  },
+  {
+    "teamId": "arizona-state",
+    "team": "Arizona State Sun Devils",
+    "slug": "arizona-state",
+    "conference": "Big 12",
+    "pitchers": []
+  },
+  {
+    "teamId": "colorado",
+    "team": "Colorado Buffaloes",
+    "slug": "colorado",
+    "conference": "Big 12",
+    "pitchers": []
+  },
+  {
+    "teamId": "ucf",
+    "team": "UCF Knights",
+    "slug": "ucf",
+    "conference": "Big 12",
+    "pitchers": []
+  },
+  {
+    "teamId": "oregon",
+    "team": "Oregon Ducks",
+    "slug": "oregon",
+    "conference": "Big Ten",
+    "pitchers": []
+  },
+  {
+    "teamId": "purdue",
+    "team": "Purdue Boilermakers",
+    "slug": "purdue",
+    "conference": "Big Ten",
+    "pitchers": [
+      {
+        "id": "purdue-P1",
+        "name": "Lucas Grant",
+        "number": "11",
+        "position": "LHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P2",
+        "name": "Trevor Kester-Johnson",
+        "number": "16",
+        "position": "LHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P3",
+        "name": "Joe Trenerry",
+        "number": "18",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P4",
+        "name": "Jacob Boland",
+        "number": "22",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P5",
+        "name": "Jarvis Evans",
+        "number": "23",
+        "position": "LHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P6",
+        "name": "Cole Van Assen",
+        "number": "26",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P7",
+        "name": "Nick Kolze",
+        "number": "27",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P8",
+        "name": "Tro Fellings",
+        "number": "28",
+        "position": "LHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P9",
+        "name": "Gavin Beuter",
+        "number": "29",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P10",
+        "name": "Graham Kollen",
+        "number": "30",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P11",
+        "name": "Zach Erdman",
+        "number": "31",
+        "position": "LHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P12",
+        "name": "Austin Klug",
+        "number": "33",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P13",
+        "name": "Noah Filer",
+        "number": "34",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P14",
+        "name": "Jackson Greer",
+        "number": "37",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P15",
+        "name": "Evan Schweizer",
+        "number": "38",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P16",
+        "name": "Barron Sawyer",
+        "number": "40",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P17",
+        "name": "Thomas Howard",
+        "number": "42",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": "purdue-P18",
+        "name": "Jake Kramer",
+        "number": "55",
+        "position": "RHP",
+        "headshot": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      }
+    ]
+  },
+  {
+    "teamId": "wisconsin",
+    "team": "Wisconsin Badgers",
+    "slug": "wisconsin",
+    "conference": "Big Ten",
+    "pitchers": []
+  }
+]

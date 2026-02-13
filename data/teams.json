@@ -1612,7 +1612,7 @@
       "id": "79",
       "name": "Hawai'i Rainbow Warriors",
       "abbrev": "HAW",
-      "shortName": "Hawai’i",
+      "shortName": "Hawai\u2019i",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
       "color": "004231",
       "conference": "Big West",
@@ -3746,14 +3746,14 @@
     },
     {
       "id": "63",
-      "name": "San José State Spartans",
+      "name": "San Jos\u00e9 State Spartans",
       "abbrev": "SJSU",
-      "shortName": "San José St",
+      "shortName": "San Jos\u00e9 St",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
       "color": "005A94",
       "conference": "Independent",
       "conferenceId": "",
-      "location": "San José State",
+      "location": "San Jos\u00e9 State",
       "slug": "san-jose-state-spartans"
     },
     {
@@ -5159,6 +5159,90 @@
       "conferenceId": "",
       "location": "Youngstown State",
       "slug": "youngstown-state-penguins"
+    },
+    {
+      "id": "129706",
+      "name": "New Haven Chargers",
+      "abbrev": "NEWHVN",
+      "shortName": "New Haven",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2441.png",
+      "color": "003399",
+      "conference": "",
+      "conferenceId": "",
+      "location": "New Haven",
+      "slug": "new-haven-chargers"
+    },
+    {
+      "id": "129756",
+      "name": "Wartburg Knights",
+      "abbrev": "WART",
+      "shortName": "Wartburg",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2685.png",
+      "color": "FF6600",
+      "conference": "",
+      "conferenceId": "",
+      "location": "Wartburg",
+      "slug": "wartburg-knights"
+    },
+    {
+      "id": "129755",
+      "name": "Waseda University",
+      "abbrev": "WASEDA",
+      "shortName": "Waseda",
+      "logo": "",
+      "color": "800000",
+      "conference": "",
+      "conferenceId": "",
+      "location": "Waseda University",
+      "slug": "waseda-university"
+    },
+    {
+      "id": "129704",
+      "name": "Westcliff",
+      "abbrev": "WCLF",
+      "shortName": "Westcliff",
+      "logo": "",
+      "color": "003366",
+      "conference": "",
+      "conferenceId": "",
+      "location": "Westcliff",
+      "slug": "westcliff"
+    },
+    {
+      "id": "129761",
+      "name": "Chaminade Silverswords",
+      "abbrev": "CHAM",
+      "shortName": "Chaminade",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2124.png",
+      "color": "003399",
+      "conference": "",
+      "conferenceId": "",
+      "location": "Chaminade",
+      "slug": "chaminade-silverswords"
+    },
+    {
+      "id": "129759",
+      "name": "Kentucky State Thorobreds",
+      "abbrev": "KYSU",
+      "shortName": "Kentucky State",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2310.png",
+      "color": "006600",
+      "conference": "",
+      "conferenceId": "",
+      "location": "Kentucky State",
+      "slug": "kentucky-state"
+    },
+    {
+      "id": "129760",
+      "name": "Cal State Los Angeles Golden Eagles",
+      "abbrev": "CSULA",
+      "shortName": "Cal State LA",
+      "logo": "",
+      "color": "FFD700",
+      "conference": "",
+      "conferenceId": "",
+      "location": "Cal State Los Angeles",
+      "slug": "cal-state-la-golden-eagles"
     }
   ]
 }

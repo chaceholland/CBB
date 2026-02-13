@@ -283,7 +283,8 @@
           "headshot": "data/headshots/auburn_2-2-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+      "conference": "SEC"
     },
     {
       "teamId": "58",
@@ -565,10 +566,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/arkansas_58-P22.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+      "conference": "SEC"
     },
     {
       "teamId": "65",
@@ -578,7 +580,7 @@
       "pitchers": [
         {
           "id": "65-P1",
-          "name": "5\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Austin Turkington",
+          "name": "Austin Turkington",
           "number": "5",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'1\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            210 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Sr.",
@@ -586,12 +588,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P1.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P2",
-          "name": "9\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Jordy Lopez",
+          "name": "Jordy Lopez",
           "number": "9",
           "position": "Left-handed Pitcher/Outfielder\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            LHP/OF\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            5'10\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            175 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            L/L",
           "year": "So.",
@@ -599,12 +601,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P2.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P3",
-          "name": "10\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Garrett Mackowiak",
+          "name": "Garrett Mackowiak",
           "number": "10",
           "position": "Left-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            LHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            5'9\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            175 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            L/L",
           "year": "Jr.",
@@ -612,12 +614,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P3.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P4",
-          "name": "18\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Take Kreis",
+          "name": "Take Kreis",
           "number": "18",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'3\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            185 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Fr.",
@@ -625,12 +627,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P4.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P5",
-          "name": "19\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Ryan Spalliero",
+          "name": "Ryan Spalliero",
           "number": "19",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'0\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            180 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Sr.",
@@ -638,12 +640,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P5.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P6",
-          "name": "22\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Cole Clark",
+          "name": "Cole Clark",
           "number": "22",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            5'10\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            185 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Sr.",
@@ -651,12 +653,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P6.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P7",
-          "name": "24\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    JJ Hollis",
+          "name": "JJ Hollis",
           "number": "24",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'4\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            225 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Jr.",
@@ -664,12 +666,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P7.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P8",
-          "name": "27\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Cade Colombara",
+          "name": "Cade Colombara",
           "number": "27",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'4\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            185 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Fr.",
@@ -677,12 +679,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P8.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P9",
-          "name": "28\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Otto Espinoza",
+          "name": "Otto Espinoza",
           "number": "28",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'2\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            180 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Fr.",
@@ -690,12 +692,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P9.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P10",
-          "name": "29\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Miles Tenscher",
+          "name": "Miles Tenscher",
           "number": "29",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'1\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            200 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "So.",
@@ -703,12 +705,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P10.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P11",
-          "name": "33\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    JM Harduvel",
+          "name": "JM Harduvel",
           "number": "33",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'6\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            235 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            L/R",
           "year": "R-So.",
@@ -716,12 +718,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P11.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P12",
-          "name": "34\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Aiden Pinn",
+          "name": "Aiden Pinn",
           "number": "34",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'4\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            175 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Fr.",
@@ -729,12 +731,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P12.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P13",
-          "name": "35\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Tanner Grove",
+          "name": "Tanner Grove",
           "number": "35",
           "position": "Left-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            LHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'1\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            190 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            L/L",
           "year": "Fr.",
@@ -742,12 +744,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P13.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P14",
-          "name": "38\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Jett Wright",
+          "name": "Jett Wright",
           "number": "38",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'7\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            195 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Fr.",
@@ -755,12 +757,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P14.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P15",
-          "name": "40\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Tre Golino",
+          "name": "Tre Golino",
           "number": "40",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'2\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            185 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Fr.",
@@ -768,12 +770,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P15.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P16",
-          "name": "41\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Trent Roach",
+          "name": "Trent Roach",
           "number": "41",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'4\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            225 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            S/R",
           "year": "Fr.",
@@ -781,12 +783,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P16.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P17",
-          "name": "43\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Rex Edwards",
+          "name": "Rex Edwards",
           "number": "43",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            5'11\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            170 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            L/R",
           "year": "Fr.",
@@ -794,12 +796,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P17.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P18",
-          "name": "44\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Sam Johnston",
+          "name": "Sam Johnston",
           "number": "44",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'1\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            170 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Fr.",
@@ -807,12 +809,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P18.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P19",
-          "name": "46\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Gavin Eddy",
+          "name": "Gavin Eddy",
           "number": "46",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'5\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            225 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "R-So.",
@@ -820,12 +822,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P19.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P20",
-          "name": "48\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Ethan Foley",
+          "name": "Ethan Foley",
           "number": "48",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'3\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            220 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Jr.",
@@ -833,12 +835,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P20.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P21",
-          "name": "52\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Quinn Larson",
+          "name": "Quinn Larson",
           "number": "52",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'5\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            225 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "R-So.",
@@ -846,12 +848,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P21.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P22",
-          "name": "87\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Oliver de la Torre",
+          "name": "Oliver de la Torre",
           "number": "87",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'4\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            225 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Jr.",
@@ -859,12 +861,12 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P22.jpg",
           "bioUrl": ""
         },
         {
           "id": "65-P23",
-          "name": "99\n                                                                                           \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        \n\t\t\t\t\t\t\t\t\t\t\t\t\t                                 \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n                                                                                \n                                                                                    \n                                                                                \n                                                                                    Duncan Russell",
+          "name": "Duncan Russell",
           "number": "99",
           "position": "Right-handed Pitcher\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            RHP\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            6'6\"\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            235 lbs\n\t\t\t\t\t\t\t\t\t\t\t\t                            \n\t\t\t\t\t\t\t\t\t\t\t\t\t                            R/R",
           "year": "Fr.",
@@ -872,7 +874,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "",
+          "headshot": "data/headshots/california_65-P23.jpg",
           "bioUrl": ""
         }
       ],
@@ -1137,7 +1139,8 @@
           "headshot": "data/headshots/florida_75-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "conference": "SEC"
     },
     {
       "teamId": "78",
@@ -1434,7 +1437,8 @@
           "headshot": "data/headshots/georgia_78-P24.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "conference": "SEC"
     },
     {
       "teamId": "82",
@@ -1492,7 +1496,7 @@
         },
         {
           "id": "82-P6",
-          "name": "Ira  Austin IV",
+          "name": "Ira Austin IV",
           "number": "16",
           "position": "RHP",
           "year": "",
@@ -1516,7 +1520,7 @@
         },
         {
           "id": "82-P8",
-          "name": "Jack  Sams",
+          "name": "Jack Sams",
           "number": "19",
           "position": "RHP",
           "year": "",
@@ -1672,7 +1676,7 @@
         },
         {
           "id": "82-P21",
-          "name": "Tristan  Hunter",
+          "name": "Tristan Hunter",
           "number": "49",
           "position": "RHP",
           "year": "",
@@ -1704,10 +1708,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/kentucky_82-P3.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+      "conference": "SEC"
     },
     {
       "teamId": "85",
@@ -1725,7 +1730,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/lsu_99-P1.jpg"
         },
         {
           "id": "99-P2",
@@ -1736,7 +1741,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P2.jpg"
         },
         {
           "id": "99-P3",
@@ -1748,7 +1754,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/lsu_99-P3.jpg"
         },
         {
           "id": "99-P4",
@@ -1760,7 +1766,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/lsu_99-P4.jpg"
         },
         {
           "id": "99-P5",
@@ -1771,7 +1777,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P5.jpg"
         },
         {
           "id": "99-P6",
@@ -1783,7 +1790,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/lsu_99-P6.jpg"
         },
         {
           "id": "99-P7",
@@ -1794,7 +1801,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P7.jpg"
         },
         {
           "id": "99-P8",
@@ -1805,7 +1813,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P8.jpg"
         },
         {
           "id": "99-P9",
@@ -1816,7 +1825,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P9.jpg"
         },
         {
           "id": "99-P10",
@@ -1827,7 +1837,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P10.jpg"
         },
         {
           "id": "99-P11",
@@ -1838,7 +1849,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P11.jpg"
         },
         {
           "id": "99-P12",
@@ -1849,7 +1861,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P12.jpg"
         },
         {
           "id": "99-P13",
@@ -1860,7 +1873,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P13.jpg"
         },
         {
           "id": "99-P14",
@@ -1871,7 +1885,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P14.jpg"
         },
         {
           "id": "99-P15",
@@ -1883,7 +1898,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/lsu_99-P15.jpg"
         },
         {
           "id": "99-P16",
@@ -1895,7 +1910,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/lsu_99-P16.jpg"
         },
         {
           "id": "99-P17",
@@ -1907,7 +1922,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/lsu_99-P17.jpg"
         },
         {
           "id": "99-P18",
@@ -1918,7 +1933,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P18.jpg"
         },
         {
           "id": "99-P19",
@@ -1929,7 +1945,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P19.jpg"
         },
         {
           "id": "99-P20",
@@ -1940,7 +1957,8 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P20.jpg"
         },
         {
           "id": "99-P21",
@@ -1951,10 +1969,12 @@
           "height": "",
           "weight": "",
           "batsThrows": "",
-          "hometown": ""
+          "hometown": "",
+          "headshot": "data/headshots/lsu_99-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+      "conference": "SEC"
     },
     {
       "teamId": "91",
@@ -2251,7 +2271,8 @@
           "headshot": "data/headshots/missouri_91-P3.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+      "conference": "SEC"
     },
     {
       "teamId": "92",
@@ -2293,7 +2314,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P3.jpg"
+          "headshot": "data/headshots/ole-miss_145-P3.jpg"
         },
         {
           "id": "145-P4",
@@ -2317,7 +2338,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P5.jpg"
+          "headshot": "data/headshots/ole-miss_145-P5.jpg"
         },
         {
           "id": "145-P6",
@@ -2329,7 +2350,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P6.jpg"
+          "headshot": "data/headshots/ole-miss_145-P6.jpg"
         },
         {
           "id": "145-P7",
@@ -2365,7 +2386,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P9.jpg"
+          "headshot": "data/headshots/ole-miss_145-P9.jpg"
         },
         {
           "id": "145-P10",
@@ -2377,7 +2398,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P10.jpg"
+          "headshot": "data/headshots/ole-miss_145-P10.jpg"
         },
         {
           "id": "145-P11",
@@ -2389,7 +2410,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P11.jpg"
+          "headshot": "data/headshots/ole-miss_145-P11.jpg"
         },
         {
           "id": "145-P12",
@@ -2425,7 +2446,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P14.jpg"
+          "headshot": "data/headshots/ole-miss_145-P14.jpg"
         },
         {
           "id": "145-P15",
@@ -2437,7 +2458,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P15.jpg"
+          "headshot": ""
         },
         {
           "id": "145-P16",
@@ -2461,7 +2482,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P17.jpg"
+          "headshot": ""
         },
         {
           "id": "145-P18",
@@ -2485,7 +2506,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P19.jpg"
+          "headshot": ""
         },
         {
           "id": "145-P20",
@@ -2509,10 +2530,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/ole-miss_145-145-P21.jpg"
+          "headshot": ""
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+      "conference": "SEC"
     },
     {
       "teamId": "112",
@@ -2797,7 +2819,8 @@
           "headshot": "data/headshots/oklahoma_201-201-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "conference": "SEC"
     },
     {
       "teamId": "120",
@@ -2815,7 +2838,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P1.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P1.jpg"
         },
         {
           "id": "120-P2",
@@ -2827,7 +2850,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P2.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P2.jpg"
         },
         {
           "id": "120-P3",
@@ -2839,7 +2862,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P3.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P3.jpg"
         },
         {
           "id": "120-P4",
@@ -2851,7 +2874,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P4.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P4.jpg"
         },
         {
           "id": "120-P5",
@@ -2863,7 +2886,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P5.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P5.jpg"
         },
         {
           "id": "120-P6",
@@ -2875,7 +2898,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P6.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P6.jpg"
         },
         {
           "id": "120-P7",
@@ -2887,7 +2910,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P7.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P7.jpg"
         },
         {
           "id": "120-P8",
@@ -2899,7 +2922,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P8.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P8.jpg"
         },
         {
           "id": "120-P9",
@@ -2911,7 +2934,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P9.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P9.jpg"
         },
         {
           "id": "120-P10",
@@ -2923,7 +2946,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P10.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P10.jpg"
         },
         {
           "id": "120-P11",
@@ -2935,7 +2958,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P11.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P11.jpg"
         },
         {
           "id": "120-P12",
@@ -2947,7 +2970,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P12.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P12.jpg"
         },
         {
           "id": "120-P13",
@@ -2959,7 +2982,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P13.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P13.jpg"
         },
         {
           "id": "120-P14",
@@ -2971,7 +2994,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P14.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P14.jpg"
         },
         {
           "id": "120-P15",
@@ -2983,7 +3006,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P15.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P15.jpg"
         },
         {
           "id": "120-P16",
@@ -2995,7 +3018,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P16.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P16.jpg"
         },
         {
           "id": "120-P17",
@@ -3007,7 +3030,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P17.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P17.jpg"
         },
         {
           "id": "120-P18",
@@ -3019,7 +3042,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P18.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P18.jpg"
         },
         {
           "id": "120-P19",
@@ -3031,7 +3054,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P19.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P19.jpg"
         },
         {
           "id": "120-P20",
@@ -3043,7 +3066,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P20.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P20.jpg"
         },
         {
           "id": "120-P21",
@@ -3055,7 +3078,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P21.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P21.jpg"
         },
         {
           "id": "120-P22",
@@ -3067,7 +3090,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P22.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P22.jpg"
         },
         {
           "id": "120-P23",
@@ -3079,10 +3102,11 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/vanderbilt_238-238-P23.jpg"
+          "headshot": "data/headshots/vanderbilt_120-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+      "conference": "SEC"
     },
     {
       "teamId": "123",
@@ -3379,7 +3403,8 @@
           "headshot": "data/headshots/texas-am_123-P24.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+      "conference": "SEC"
     },
     {
       "teamId": "126",
@@ -3664,7 +3689,8 @@
           "headshot": "data/headshots/texas_126-P19.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "conference": "SEC"
     },
     {
       "teamId": "148",
@@ -4045,7 +4071,8 @@
           "headshot": "data/headshots/alabama_148-P18.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+      "conference": "SEC"
     },
     {
       "teamId": "150",
@@ -4318,7 +4345,8 @@
           "headshot": "data/headshots/mississippi-state_150-P5.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+      "conference": "SEC"
     },
     {
       "teamId": "193",
@@ -4400,7 +4428,7 @@
         },
         {
           "id": "2579-P7",
-          "name": "Elijah  Foster",
+          "name": "Elijah Foster",
           "number": "20",
           "position": "Right Handed Pitcher",
           "year": "Junior",
@@ -4460,7 +4488,7 @@
         },
         {
           "id": "2579-P12",
-          "name": "Cullen  Horowicz",
+          "name": "Cullen Horowicz",
           "number": "29",
           "position": "Right Handed Pitcher",
           "year": "Senior",
@@ -4508,7 +4536,7 @@
         },
         {
           "id": "2579-P16",
-          "name": "Riley  Goodman",
+          "name": "Riley Goodman",
           "number": "39",
           "position": "Right Handed Pitcher",
           "year": "",
@@ -4544,7 +4572,7 @@
         },
         {
           "id": "2579-P19",
-          "name": "Connor  Chicoli",
+          "name": "Connor Chicoli",
           "number": "45",
           "position": "Right Handed Pitcher",
           "year": "Sophomore",
@@ -4567,7 +4595,8 @@
           "headshot": "data/headshots/south-carolina_2579-2579-P20.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+      "conference": "SEC"
     },
     {
       "teamId": "199",
@@ -4696,7 +4725,8 @@
           "headshot": "data/headshots/tennessee_2633-2633-P10.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png"
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+      "conference": "SEC"
     },
     {
       "teamId": "86",
@@ -5001,7 +5031,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P1.jpg"
         },
         {
           "id": "117-P2",
@@ -5013,7 +5043,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P2.jpg"
         },
         {
           "id": "117-P3",
@@ -5025,7 +5055,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P3.jpg"
         },
         {
           "id": "117-P4",
@@ -5037,7 +5067,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P4.jpg"
         },
         {
           "id": "117-P5",
@@ -5049,7 +5079,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P5.jpg"
         },
         {
           "id": "117-P6",
@@ -5061,7 +5091,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P6.jpg"
         },
         {
           "id": "117-P7",
@@ -5073,7 +5103,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P7.jpg"
         },
         {
           "id": "117-P8",
@@ -5085,7 +5115,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P8.jpg"
         },
         {
           "id": "117-P9",
@@ -5097,7 +5127,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P9.jpg"
         },
         {
           "id": "117-P10",
@@ -5109,7 +5139,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P10.jpg"
         },
         {
           "id": "117-P11",
@@ -5121,7 +5151,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P11.jpg"
         },
         {
           "id": "117-P12",
@@ -5133,7 +5163,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P12.jpg"
         },
         {
           "id": "117-P13",
@@ -5157,7 +5187,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P14.jpg"
         },
         {
           "id": "117-P15",
@@ -5169,7 +5199,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P15.jpg"
         },
         {
           "id": "117-P16",
@@ -5181,7 +5211,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P16.jpg"
         },
         {
           "id": "117-P17",
@@ -5193,7 +5223,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P17.jpg"
         },
         {
           "id": "117-P18",
@@ -5205,7 +5235,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P18.jpg"
         },
         {
           "id": "117-P19",
@@ -5217,7 +5247,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P19.jpg"
         },
         {
           "id": "117-P20",
@@ -5229,7 +5259,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P20.jpg"
         },
         {
           "id": "117-P21",
@@ -5241,7 +5271,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P21.jpg"
         },
         {
           "id": "117-P22",
@@ -5253,7 +5283,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P22.jpg"
         },
         {
           "id": "117-P23",
@@ -5265,7 +5295,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P23.jpg"
         },
         {
           "id": "117-P24",
@@ -5277,7 +5307,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P24.jpg"
         },
         {
           "id": "117-P25",
@@ -5289,7 +5319,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P25.jpg"
         },
         {
           "id": "117-P26",
@@ -5301,7 +5331,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/clemson_117-P26.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png"
@@ -6767,7 +6797,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/wake-forest_97-P21.jpg"
         },
         {
           "id": "97-P22",
@@ -6791,7 +6821,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/wake-forest_97-P23.jpg"
         },
         {
           "id": "97-P24",
@@ -6815,7 +6845,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/wake-forest_97-P25.jpg"
         },
         {
           "id": "97-P26",
@@ -6863,7 +6893,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/wake-forest_97-P29.jpg"
         },
         {
           "id": "97-P30",
@@ -6875,7 +6905,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/wake-forest_97-P30.jpg"
         },
         {
           "id": "97-P31",
@@ -6911,7 +6941,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/wake-forest_97-P33.jpg"
         },
         {
           "id": "97-P34",
@@ -6947,7 +6977,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/wake-forest_97-P36.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png"
@@ -7493,7 +7523,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/kansas_168-P25.jpg"
         },
         {
           "id": "168-P26",
@@ -8661,7 +8691,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/texas-tech_201-P38.jpg"
         },
         {
           "id": "201-P39",
@@ -9139,7 +9169,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/utah_128-P38.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png"
@@ -9471,7 +9501,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P1.jpg"
         },
         {
           "id": "153-P2",
@@ -9483,7 +9513,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P2.jpg"
         },
         {
           "id": "153-P3",
@@ -9495,7 +9525,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P3.jpg"
         },
         {
           "id": "153-P4",
@@ -9507,7 +9537,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P4.jpg"
         },
         {
           "id": "153-P5",
@@ -9519,7 +9549,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P5.jpg"
         },
         {
           "id": "153-P6",
@@ -9531,7 +9561,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P6.jpg"
         },
         {
           "id": "153-P7",
@@ -9543,7 +9573,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P7.jpg"
         },
         {
           "id": "153-P8",
@@ -9555,7 +9585,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P8.jpg"
         },
         {
           "id": "153-P9",
@@ -9567,7 +9597,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P9.jpg"
         },
         {
           "id": "153-P10",
@@ -9579,7 +9609,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P10.jpg"
         },
         {
           "id": "153-P11",
@@ -9591,7 +9621,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P11.jpg"
         },
         {
           "id": "153-P12",
@@ -9603,7 +9633,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P12.jpg"
         },
         {
           "id": "153-P13",
@@ -9615,7 +9645,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P13.jpg"
         },
         {
           "id": "153-P14",
@@ -9627,7 +9657,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P14.jpg"
         },
         {
           "id": "153-P15",
@@ -9639,7 +9669,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P15.jpg"
         },
         {
           "id": "153-P16",
@@ -9651,7 +9681,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P16.jpg"
         },
         {
           "id": "153-P17",
@@ -9663,7 +9693,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P17.jpg"
         },
         {
           "id": "153-P18",
@@ -9675,7 +9705,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P18.jpg"
         },
         {
           "id": "153-P19",
@@ -9687,7 +9717,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P19.jpg"
         },
         {
           "id": "153-P20",
@@ -9699,7 +9729,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P20.jpg"
         },
         {
           "id": "153-P21",
@@ -9711,7 +9741,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/illinois_153-P21.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
@@ -9733,7 +9763,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P11.jpg"
         },
         {
           "id": "294-P12",
@@ -9745,7 +9775,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P12.jpg"
         },
         {
           "id": "294-P13",
@@ -9757,7 +9787,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P13.jpg"
         },
         {
           "id": "294-P14",
@@ -9769,7 +9799,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P14.jpg"
         },
         {
           "id": "294-P15",
@@ -9781,7 +9811,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P15.jpg"
         },
         {
           "id": "294-P16",
@@ -9793,7 +9823,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P16.jpg"
         },
         {
           "id": "294-P17",
@@ -9805,7 +9835,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P17.jpg"
         },
         {
           "id": "294-P18",
@@ -9817,7 +9847,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P18.jpg"
         },
         {
           "id": "294-P19",
@@ -9829,7 +9859,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P19.jpg"
         },
         {
           "id": "294-P20",
@@ -9841,7 +9871,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/indiana_294-P20.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png"
@@ -9863,7 +9893,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P1.jpg"
         },
         {
           "id": "87-P2",
@@ -9875,7 +9905,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P2.jpg"
         },
         {
           "id": "87-P3",
@@ -9887,7 +9917,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P3.jpg"
         },
         {
           "id": "87-P4",
@@ -9899,7 +9929,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P4.jpg"
         },
         {
           "id": "87-P5",
@@ -9911,7 +9941,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P5.jpg"
         },
         {
           "id": "87-P6",
@@ -9923,7 +9953,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P6.jpg"
         },
         {
           "id": "87-P7",
@@ -9935,7 +9965,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P7.jpg"
         },
         {
           "id": "87-P8",
@@ -9947,7 +9977,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P8.jpg"
         },
         {
           "id": "87-P9",
@@ -9959,7 +9989,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P9.jpg"
         },
         {
           "id": "87-P10",
@@ -9971,7 +10001,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P10.jpg"
         },
         {
           "id": "87-P11",
@@ -9983,7 +10013,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P11.jpg"
         },
         {
           "id": "87-P12",
@@ -9995,7 +10025,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P12.jpg"
         },
         {
           "id": "87-P13",
@@ -10007,7 +10037,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P13.jpg"
         },
         {
           "id": "87-P14",
@@ -10019,7 +10049,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P14.jpg"
         },
         {
           "id": "87-P15",
@@ -10031,7 +10061,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P15.jpg"
         },
         {
           "id": "87-P16",
@@ -10043,7 +10073,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P16.jpg"
         },
         {
           "id": "87-P17",
@@ -10055,7 +10085,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P17.jpg"
         },
         {
           "id": "87-P18",
@@ -10067,7 +10097,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P18.jpg"
         },
         {
           "id": "87-P19",
@@ -10079,7 +10109,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P19.jpg"
         },
         {
           "id": "87-P20",
@@ -10091,7 +10121,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P20.jpg"
         },
         {
           "id": "87-P21",
@@ -10103,7 +10133,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/maryland_87-P21.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png"
@@ -10387,7 +10417,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P1.png"
+          "headshot": "data/headshots/michigan-state_88-P19.jpg"
         },
         {
           "id": "88-P20",
@@ -10399,7 +10429,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P2.png"
+          "headshot": "data/headshots/michigan-state_88-P20.jpg"
         },
         {
           "id": "88-P21",
@@ -10447,7 +10477,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P6.png"
+          "headshot": "data/headshots/michigan-state_88-P24.jpg"
         },
         {
           "id": "88-P25",
@@ -10471,7 +10501,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P8.png"
+          "headshot": "data/headshots/michigan-state_88-P26.jpg"
         },
         {
           "id": "88-P27",
@@ -10483,7 +10513,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P9.png"
+          "headshot": "data/headshots/michigan-state_88-P27.jpg"
         },
         {
           "id": "88-P28",
@@ -10507,7 +10537,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P11.png"
+          "headshot": "data/headshots/michigan-state_88-P29.jpg"
         },
         {
           "id": "88-P30",
@@ -10519,7 +10549,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P12.png"
+          "headshot": "data/headshots/michigan-state_88-P30.jpg"
         },
         {
           "id": "88-P31",
@@ -10531,7 +10561,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P13.png"
+          "headshot": "data/headshots/michigan-state_88-P31.jpg"
         },
         {
           "id": "88-P32",
@@ -10555,7 +10585,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P15.png"
+          "headshot": "data/headshots/michigan-state_88-P33.jpg"
         },
         {
           "id": "88-P34",
@@ -10579,7 +10609,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P17.png"
+          "headshot": "data/headshots/michigan-state_88-P35.jpg"
         },
         {
           "id": "88-P36",
@@ -10591,7 +10621,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "data/headshots/michigan-state_88-P18.png"
+          "headshot": "data/headshots/michigan-state_88-P36.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png"
@@ -11613,7 +11643,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P22.jpg"
         },
         {
           "id": "66-P23",
@@ -11625,7 +11655,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P23.jpg"
         },
         {
           "id": "66-P24",
@@ -11637,7 +11667,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P24.jpg"
         },
         {
           "id": "66-P25",
@@ -11649,7 +11679,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P25.jpg"
         },
         {
           "id": "66-P26",
@@ -11661,7 +11691,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P26.jpg"
         },
         {
           "id": "66-P27",
@@ -11673,7 +11703,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P27.jpg"
         },
         {
           "id": "66-P28",
@@ -11685,7 +11715,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P28.jpg"
         },
         {
           "id": "66-P29",
@@ -11697,7 +11727,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P29.jpg"
         },
         {
           "id": "66-P30",
@@ -11709,7 +11739,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P30.jpg"
         },
         {
           "id": "66-P31",
@@ -11721,7 +11751,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P31.jpg"
         },
         {
           "id": "66-P32",
@@ -11733,7 +11763,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P32.jpg"
         },
         {
           "id": "66-P33",
@@ -11745,7 +11775,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P33.jpg"
         },
         {
           "id": "66-P34",
@@ -11757,7 +11787,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P34.jpg"
         },
         {
           "id": "66-P35",
@@ -11769,7 +11799,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P35.jpg"
         },
         {
           "id": "66-P36",
@@ -11781,7 +11811,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P36.jpg"
         },
         {
           "id": "66-P37",
@@ -11793,7 +11823,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P37.jpg"
         },
         {
           "id": "66-P38",
@@ -11805,7 +11835,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P38.jpg"
         },
         {
           "id": "66-P39",
@@ -11817,7 +11847,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P39.jpg"
         },
         {
           "id": "66-P40",
@@ -11829,7 +11859,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P40.jpg"
         },
         {
           "id": "66-P41",
@@ -11841,7 +11871,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P41.jpg"
         },
         {
           "id": "66-P42",
@@ -11853,7 +11883,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/ucla_66-P42.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png"
@@ -11911,7 +11941,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P24.jpg"
         },
         {
           "id": "68-P25",
@@ -11923,7 +11953,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P25.jpg"
         },
         {
           "id": "68-P26",
@@ -11947,7 +11977,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P27.jpg"
         },
         {
           "id": "68-P28",
@@ -11959,7 +11989,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P28.jpg"
         },
         {
           "id": "68-P29",
@@ -11995,7 +12025,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P31.jpg"
         },
         {
           "id": "68-P32",
@@ -12007,7 +12037,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P32.jpg"
         },
         {
           "id": "68-P33",
@@ -12031,7 +12061,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P34.jpg"
         },
         {
           "id": "68-P35",
@@ -12043,7 +12073,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P35.jpg"
         },
         {
           "id": "68-P36",
@@ -12055,7 +12085,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P36.jpg"
         },
         {
           "id": "68-P37",
@@ -12079,7 +12109,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P38.jpg"
         },
         {
           "id": "68-P39",
@@ -12091,7 +12121,7 @@
           "weight": "",
           "batsThrows": "",
           "hometown": "",
-          "headshot": ""
+          "headshot": "data/headshots/usc_68-P39.jpg"
         },
         {
           "id": "68-P40",
@@ -12597,7 +12627,7 @@
           "number": "10",
           "position": "LHP",
           "year": "Sophomore",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P1.jpg"
         },
         {
           "id": "134-P2",
@@ -12605,7 +12635,7 @@
           "number": "11",
           "position": "RHP",
           "year": "Junior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P2.jpg"
         },
         {
           "id": "134-P3",
@@ -12613,7 +12643,7 @@
           "number": "13",
           "position": "LHP",
           "year": "Sophomore",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P3.jpg"
         },
         {
           "id": "134-P4",
@@ -12621,7 +12651,7 @@
           "number": "15",
           "position": "RHP",
           "year": "Sophomore",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P4.jpg"
         },
         {
           "id": "134-P5",
@@ -12629,7 +12659,7 @@
           "number": "20",
           "position": "RHP",
           "year": "Sophomore",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P5.jpg"
         },
         {
           "id": "134-P6",
@@ -12637,7 +12667,7 @@
           "number": "25",
           "position": "RHP",
           "year": "Senior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P6.jpg"
         },
         {
           "id": "134-P7",
@@ -12645,7 +12675,7 @@
           "number": "26",
           "position": "LHP",
           "year": "Junior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P7.jpg"
         },
         {
           "id": "134-P8",
@@ -12653,7 +12683,7 @@
           "number": "27",
           "position": "RHP",
           "year": "Sophomore",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P8.jpg"
         },
         {
           "id": "134-P9",
@@ -12661,7 +12691,7 @@
           "number": "28",
           "position": "RHP",
           "year": "Junior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P9.jpg"
         },
         {
           "id": "134-P10",
@@ -12669,7 +12699,7 @@
           "number": "29",
           "position": "LHP",
           "year": "Junior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P10.jpg"
         },
         {
           "id": "134-P11",
@@ -12677,7 +12707,7 @@
           "number": "31",
           "position": "RHP",
           "year": "Freshman",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P11.jpg"
         },
         {
           "id": "134-P12",
@@ -12685,7 +12715,7 @@
           "number": "32",
           "position": "RHP",
           "year": "Senior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P12.jpg"
         },
         {
           "id": "134-P13",
@@ -12693,7 +12723,7 @@
           "number": "34",
           "position": "RHP",
           "year": "Junior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P13.jpg"
         },
         {
           "id": "134-P14",
@@ -12701,7 +12731,7 @@
           "number": "35",
           "position": "RHP",
           "year": "Graduate",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P14.jpg"
         },
         {
           "id": "134-P15",
@@ -12709,7 +12739,7 @@
           "number": "36",
           "position": "RHP",
           "year": "Senior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P15.jpg"
         },
         {
           "id": "134-P16",
@@ -12717,7 +12747,7 @@
           "number": "41",
           "position": "RHP",
           "year": "Senior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P16.jpg"
         },
         {
           "id": "134-P17",
@@ -12725,7 +12755,7 @@
           "number": "42",
           "position": "RHP",
           "year": "Junior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P17.jpg"
         },
         {
           "id": "134-P18",
@@ -12733,7 +12763,7 @@
           "number": "43",
           "position": "LHP",
           "year": "Sophomore",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P18.jpg"
         },
         {
           "id": "134-P19",
@@ -12741,7 +12771,7 @@
           "number": "54",
           "position": "RHP",
           "year": "Junior",
-          "headshot": ""
+          "headshot": "data/headshots/washington-state_134-P19.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png"
@@ -12759,7 +12789,7 @@
           "number": "",
           "position": "RHP",
           "year": "Fr.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P23.jpg"
         },
         {
           "id": "93-P24",
@@ -12783,7 +12813,7 @@
           "number": "",
           "position": "RHP",
           "year": "Fr.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P26.jpg"
         },
         {
           "id": "93-P27",
@@ -12799,7 +12829,7 @@
           "number": "",
           "position": "RHP",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P28.jpg"
         },
         {
           "id": "93-P29",
@@ -12807,7 +12837,7 @@
           "number": "",
           "position": "RHP",
           "year": "Jr.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P29.jpg"
         },
         {
           "id": "93-P30",
@@ -12815,7 +12845,7 @@
           "number": "",
           "position": "LHP",
           "year": "Jr.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P30.jpg"
         },
         {
           "id": "93-P31",
@@ -12823,7 +12853,7 @@
           "number": "",
           "position": "RHP",
           "year": "Jr.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P31.jpg"
         },
         {
           "id": "93-P32",
@@ -12831,7 +12861,7 @@
           "number": "",
           "position": "LHP",
           "year": "So.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P32.jpg"
         },
         {
           "id": "93-P33",
@@ -12839,7 +12869,7 @@
           "number": "",
           "position": "RHP",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P33.jpg"
         },
         {
           "id": "93-P34",
@@ -12855,7 +12885,7 @@
           "number": "",
           "position": "RHP",
           "year": "So.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P35.jpg"
         },
         {
           "id": "93-P36",
@@ -12871,7 +12901,7 @@
           "number": "",
           "position": "RHP",
           "year": "Jr.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P37.jpg"
         },
         {
           "id": "93-P38",
@@ -12895,7 +12925,7 @@
           "number": "",
           "position": "RHP",
           "year": "So.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P40.jpg"
         },
         {
           "id": "93-P41",
@@ -12903,7 +12933,7 @@
           "number": "",
           "position": "RHP",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P41.jpg"
         },
         {
           "id": "93-P42",
@@ -12919,7 +12949,7 @@
           "number": "",
           "position": "RHP",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P43.jpg"
         },
         {
           "id": "93-P44",
@@ -12927,7 +12957,7 @@
           "number": "",
           "position": "RHP",
           "year": "Fr.",
-          "headshot": ""
+          "headshot": "data/headshots/duke_93-P44.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png"
@@ -12945,7 +12975,7 @@
           "number": "8",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P1.jpg"
         },
         {
           "id": "176-P2",
@@ -12961,7 +12991,7 @@
           "number": "18",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P3.jpg"
         },
         {
           "id": "176-P4",
@@ -12969,7 +12999,7 @@
           "number": "21",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P4.jpg"
         },
         {
           "id": "176-P5",
@@ -12977,7 +13007,7 @@
           "number": "22",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P5.jpg"
         },
         {
           "id": "176-P6",
@@ -12985,7 +13015,7 @@
           "number": "24",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P6.jpg"
         },
         {
           "id": "176-P7",
@@ -13001,7 +13031,7 @@
           "number": "31",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P8.jpg"
         },
         {
           "id": "176-P9",
@@ -13009,7 +13039,7 @@
           "number": "35",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P9.jpg"
         },
         {
           "id": "176-P10",
@@ -13025,7 +13055,7 @@
           "number": "38",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P11.jpg"
         },
         {
           "id": "176-P12",
@@ -13057,7 +13087,7 @@
           "number": "47",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P15.jpg"
         },
         {
           "id": "176-P16",
@@ -13065,7 +13095,7 @@
           "number": "51",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P16.jpg"
         },
         {
           "id": "176-P17",
@@ -13081,7 +13111,7 @@
           "number": "53",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P18.jpg"
         },
         {
           "id": "176-P19",
@@ -13089,7 +13119,7 @@
           "number": "55",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/miami_176-P19.jpg"
         },
         {
           "id": "176-P20",
@@ -13115,7 +13145,7 @@
           "number": "5",
           "position": "LHP",
           "year": "Freshman",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P1.jpg"
         },
         {
           "id": "81-P2",
@@ -13123,7 +13153,7 @@
           "number": "7",
           "position": "LHP",
           "year": "Freshman",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P2.jpg"
         },
         {
           "id": "81-P3",
@@ -13131,7 +13161,7 @@
           "number": "12",
           "position": "RHP",
           "year": "Freshman",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P3.jpg"
         },
         {
           "id": "81-P4",
@@ -13139,7 +13169,7 @@
           "number": "18",
           "position": "RHP",
           "year": "Freshman",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P4.jpg"
         },
         {
           "id": "81-P5",
@@ -13147,7 +13177,7 @@
           "number": "23",
           "position": "LHP",
           "year": "Freshman",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P5.jpg"
         },
         {
           "id": "81-P6",
@@ -13155,7 +13185,7 @@
           "number": "24",
           "position": "RHP",
           "year": "Graduate",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P6.jpg"
         },
         {
           "id": "81-P7",
@@ -13171,7 +13201,7 @@
           "number": "26",
           "position": "RHP",
           "year": "Freshman",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P8.jpg"
         },
         {
           "id": "81-P9",
@@ -13195,7 +13225,7 @@
           "number": "31",
           "position": "LHP",
           "year": "Graduate",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P11.jpg"
         },
         {
           "id": "81-P12",
@@ -13243,7 +13273,7 @@
           "number": "40",
           "position": "RHP",
           "year": "Graduate",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P17.jpg"
         },
         {
           "id": "81-P18",
@@ -13259,7 +13289,7 @@
           "number": "46",
           "position": "LHP",
           "year": "Senior",
-          "headshot": ""
+          "headshot": "data/headshots/notre-dame_81-P19.jpg"
         },
         {
           "id": "81-P20",
@@ -13293,10 +13323,2330 @@
           "number": "",
           "position": "P",
           "year": "",
-          "headshot": ""
+          "headshot": "data/headshots/byu_127-P1.jpg"
         }
       ],
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png"
+    },
+    {
+      "teamId": "iowa",
+      "team_id": "iowa",
+      "team": "Iowa",
+      "slug": "iowa",
+      "conference": "Big Ten",
+      "pitchers": [
+        {
+          "id": "iowa-P1",
+          "name": "Kyle Alivo",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P1.jpg"
+        },
+        {
+          "id": "iowa-P3",
+          "name": "Joe Husak",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P3.jpg"
+        },
+        {
+          "id": "iowa-P5",
+          "name": "Logan Runde",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P5.jpg"
+        },
+        {
+          "id": "iowa-P6",
+          "name": "Carter Wilcox",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P6.jpg"
+        },
+        {
+          "id": "iowa-P8",
+          "name": "Carter Geffre",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P8.jpg"
+        },
+        {
+          "id": "iowa-P10",
+          "name": "Brady Ferguson",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P10.jpg"
+        },
+        {
+          "id": "iowa-P12",
+          "name": "Brolan Frost",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P12.jpg"
+        },
+        {
+          "id": "iowa-P14",
+          "name": "Nick Terhaar",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P14.jpg"
+        },
+        {
+          "id": "iowa-P16",
+          "name": "John Henry Kohorst",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P16.jpg"
+        },
+        {
+          "id": "iowa-P18",
+          "name": "Brody Irlbeck",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P18.jpg"
+        },
+        {
+          "id": "iowa-P20",
+          "name": "Justin Hackett",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P20.jpg"
+        },
+        {
+          "id": "iowa-P22",
+          "name": "Tate Slagle",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P22.jpg"
+        },
+        {
+          "id": "iowa-P24",
+          "name": "Ty Mikkelsen",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P24.jpg"
+        },
+        {
+          "id": "iowa-P26",
+          "name": "Jaron Bleeker",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P26.jpg"
+        },
+        {
+          "id": "iowa-P28",
+          "name": "Maddux Frese",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P28.jpg"
+        },
+        {
+          "id": "iowa-P30",
+          "name": "Cole Moore",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P30.jpg"
+        },
+        {
+          "id": "iowa-P32",
+          "name": "Ganon Archer",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P32.jpg"
+        },
+        {
+          "id": "iowa-P34",
+          "name": "Tyler Guerin",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P34.jpg"
+        },
+        {
+          "id": "iowa-P36",
+          "name": "Beau Leisure",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P36.jpg"
+        },
+        {
+          "id": "iowa-P38",
+          "name": "Nick Heitman",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/iowa_iowa-P38.jpg"
+        }
+      ]
+    },
+    {
+      "teamId": "nebraska",
+      "team_id": "nebraska",
+      "team": "Nebraska",
+      "slug": "nebraska",
+      "conference": "Big Ten",
+      "pitchers": [
+        {
+          "id": "nebraska-P1",
+          "name": "Ty Horn",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P1.jpg"
+        },
+        {
+          "id": "nebraska-P4",
+          "name": "Pryce Bender",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P4.jpg"
+        },
+        {
+          "id": "nebraska-P6",
+          "name": "Cooper Katskee",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P6.jpg"
+        },
+        {
+          "id": "nebraska-P7",
+          "name": "Kevin Mannell",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P7.jpg"
+        },
+        {
+          "id": "nebraska-P8",
+          "name": "Blake Encarnacion",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P8.jpg"
+        },
+        {
+          "id": "nebraska-P10",
+          "name": "Caleb Clark",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P10.jpg"
+        },
+        {
+          "id": "nebraska-P13",
+          "name": "Braxton Stewart",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P13.jpg"
+        },
+        {
+          "id": "nebraska-P14",
+          "name": "Auden Pankonin",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P14.jpg"
+        },
+        {
+          "id": "nebraska-P15",
+          "name": "Tucker Timmerman",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P15.jpg"
+        },
+        {
+          "id": "nebraska-P18",
+          "name": "Jace Ziola",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P18.jpg"
+        },
+        {
+          "id": "nebraska-P19",
+          "name": "Carter Kutz",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P19.jpg"
+        },
+        {
+          "id": "nebraska-P20",
+          "name": "Ryan Harrahill",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P20.jpg"
+        },
+        {
+          "id": "nebraska-P23",
+          "name": "Grant Cleavinger",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P23.jpg"
+        },
+        {
+          "id": "nebraska-P26",
+          "name": "J'Shawn Unger",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P26.jpg"
+        },
+        {
+          "id": "nebraska-P28",
+          "name": "Lynden Bruegman",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P28.jpg"
+        },
+        {
+          "id": "nebraska-P29",
+          "name": "Carson Jasa",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P29.jpg"
+        },
+        {
+          "id": "nebraska-P32",
+          "name": "Chase Olson",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P32.jpg"
+        },
+        {
+          "id": "nebraska-P34",
+          "name": "Jalen Worthley",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P34.jpg"
+        },
+        {
+          "id": "nebraska-P37",
+          "name": "Cooper Grace",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P37.jpg"
+        },
+        {
+          "id": "nebraska-P38",
+          "name": "Blake Sebastian",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P38.jpg"
+        },
+        {
+          "id": "nebraska-P39",
+          "name": "Colin Nowaczyk",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P39.jpg"
+        },
+        {
+          "id": "nebraska-P41",
+          "name": "Gavin Blachowicz",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/nebraska_nebraska-P41.jpg"
+        }
+      ]
+    },
+    {
+      "teamId": "oregon",
+      "team_id": "oregon",
+      "team": "Oregon",
+      "slug": "oregon",
+      "conference": "Big Ten",
+      "pitchers": [
+        {
+          "id": "oregon-P1",
+          "name": "Tim Susnara",
+          "number": "",
+          "position": "Director of Player Development/Analytics",
+          "year": "",
+          "headshot": "data/headshots/oregon_oregon-P1.jpg"
+        },
+        {
+          "id": "oregon-P2",
+          "name": "Dan Straily",
+          "number": "",
+          "position": "Director of Pitching Development",
+          "year": "",
+          "headshot": "data/headshots/oregon_oregon-P2.jpg"
+        }
+      ]
+    },
+    {
+      "teamId": "cincinnati",
+      "team_id": "cincinnati",
+      "team": "Cincinnati Bearcats",
+      "slug": "cincinnati",
+      "conference": "Big 12",
+      "pitchers": [
+        {
+          "id": "cincinnati-P1",
+          "name": "Christian Mitchelle",
+          "position": "RHP",
+          "number": "3",
+          "headshot": "data/headshots/cincinnati_cincinnati-P1.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P2",
+          "name": "Brennan Eager",
+          "position": "LHP",
+          "number": "10",
+          "headshot": "data/headshots/cincinnati_cincinnati-P2.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P3",
+          "name": "Nathan Taylor",
+          "position": "RHP",
+          "number": "11",
+          "headshot": "data/headshots/cincinnati_cincinnati-P3.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P4",
+          "name": "Tucker King",
+          "position": "RHP",
+          "number": "15",
+          "headshot": "data/headshots/cincinnati_cincinnati-P4.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P5",
+          "name": "Adam Brouwer",
+          "position": "RHP",
+          "number": "16",
+          "headshot": "data/headshots/cincinnati_cincinnati-P5.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P6",
+          "name": "Brandon Menser",
+          "position": "RHP",
+          "number": "18",
+          "headshot": "data/headshots/cincinnati_cincinnati-P6.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P7",
+          "name": "Dominic Mauro",
+          "position": "RHP",
+          "number": "20",
+          "headshot": "data/headshots/cincinnati_cincinnati-P7.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P8",
+          "name": "Brendin Oliver",
+          "position": "RHP",
+          "number": "23",
+          "headshot": "data/headshots/cincinnati_cincinnati-P8.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P9",
+          "name": "Logan Knight",
+          "position": "RHP",
+          "number": "24",
+          "headshot": "data/headshots/cincinnati_cincinnati-P9.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P10",
+          "name": "Charlie Dieruf IV",
+          "position": "RHP",
+          "number": "26",
+          "headshot": "data/headshots/cincinnati_cincinnati-P10.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P11",
+          "name": "Carson Marsh",
+          "position": "RHP",
+          "number": "29",
+          "headshot": "data/headshots/cincinnati_cincinnati-P11.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P12",
+          "name": "Connor Blue",
+          "position": "RHP",
+          "number": "30",
+          "headshot": "data/headshots/cincinnati_cincinnati-P12.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P13",
+          "name": "Adam Buczkowski",
+          "position": "RHP",
+          "number": "31",
+          "headshot": "data/headshots/cincinnati_cincinnati-P13.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P14",
+          "name": "Tommy Boba",
+          "position": "RHP",
+          "number": "32",
+          "headshot": "data/headshots/cincinnati_cincinnati-P14.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P15",
+          "name": "Bradley Coulter",
+          "position": "RHP",
+          "number": "33",
+          "headshot": "data/headshots/cincinnati_cincinnati-P15.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P16",
+          "name": "Alex Gonzalez",
+          "position": "RHP",
+          "number": "35",
+          "headshot": "data/headshots/cincinnati_cincinnati-P16.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P17",
+          "name": "Joel Piñeiro",
+          "position": "RHP",
+          "number": "38",
+          "headshot": "data/headshots/cincinnati_cincinnati-P17.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P18",
+          "name": "Dillon Schueler",
+          "position": "RHP",
+          "number": "39",
+          "headshot": "data/headshots/cincinnati_cincinnati-P18.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P19",
+          "name": "Hudson Johnson",
+          "position": "LHP",
+          "number": "40",
+          "headshot": "data/headshots/cincinnati_cincinnati-P19.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P20",
+          "name": "Scott DiMarco",
+          "position": "RHP",
+          "number": "41",
+          "headshot": "data/headshots/cincinnati_cincinnati-P20.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P21",
+          "name": "Brenden Garula",
+          "position": "LHP",
+          "number": "45",
+          "headshot": "data/headshots/cincinnati_cincinnati-P21.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "cincinnati-P22",
+          "name": "Chad Brown",
+          "position": "RHP",
+          "number": "50",
+          "headshot": "data/headshots/cincinnati_cincinnati-P22.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        }
+      ]
+    },
+    {
+      "teamId": "penn-state",
+      "team_id": "penn-state",
+      "team": "Penn State Nittany Lions",
+      "slug": "penn-state",
+      "conference": "Big Ten",
+      "pitchers": [
+        {
+          "id": "penn-state-P1",
+          "name": "Ben DeMell",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P1.jpg"
+        },
+        {
+          "id": "penn-state-P3",
+          "name": "Mason Butash",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P3.jpg"
+        },
+        {
+          "id": "penn-state-P5",
+          "name": "Skip Shenosky",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P5.jpg"
+        },
+        {
+          "id": "penn-state-P6",
+          "name": "Ben Hudson",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P6.jpg"
+        },
+        {
+          "id": "penn-state-P7",
+          "name": "Dimond Loosli",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P7.jpg"
+        },
+        {
+          "id": "penn-state-P8",
+          "name": "Logan Olson",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P8.jpg"
+        },
+        {
+          "id": "penn-state-P9",
+          "name": "Frankie Sanchez",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P9.jpg"
+        },
+        {
+          "id": "penn-state-P11",
+          "name": "Ethan Bauerschmidt",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P11.jpg"
+        },
+        {
+          "id": "penn-state-P12",
+          "name": "Ren Devereux",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P12.jpg"
+        },
+        {
+          "id": "penn-state-P13",
+          "name": "Robert Brown III",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P13.jpg"
+        },
+        {
+          "id": "penn-state-P14",
+          "name": "Matt Morash",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P14.jpg"
+        },
+        {
+          "id": "penn-state-P16",
+          "name": "Mason Horwat",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P16.jpg"
+        },
+        {
+          "id": "penn-state-P18",
+          "name": "Carson Renner",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P18.jpg"
+        },
+        {
+          "id": "penn-state-P19",
+          "name": "Leo Boucher",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P19.jpg"
+        },
+        {
+          "id": "penn-state-P20",
+          "name": "Braden Leed",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P20.jpg"
+        },
+        {
+          "id": "penn-state-P21",
+          "name": "Peter Thompson",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P21.jpg"
+        },
+        {
+          "id": "penn-state-P22",
+          "name": "Colin Fitzgerald",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P22.jpg"
+        },
+        {
+          "id": "penn-state-P23",
+          "name": "Dylan Firmstone",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P23.jpg"
+        },
+        {
+          "id": "penn-state-P24",
+          "name": "Isaiah Shayter",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P24.jpg"
+        },
+        {
+          "id": "penn-state-P25",
+          "name": "Greg Minnick",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P25.jpg"
+        },
+        {
+          "id": "penn-state-P26",
+          "name": "Harrison Lollin",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P26.jpg"
+        },
+        {
+          "id": "penn-state-P27",
+          "name": "Matthew VanOstenbridge",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P27.jpg"
+        },
+        {
+          "id": "penn-state-P28",
+          "name": "Kyle Emmons",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/penn-state_penn-state-P28.jpg"
+        }
+      ]
+    },
+    {
+      "teamId": "georgia-tech",
+      "team_id": "georgia-tech",
+      "team": "Georgia Tech Yellow Jackets",
+      "slug": "georgia-tech",
+      "conference": "ACC",
+      "pitchers": [
+        {
+          "id": "georgia-tech-P1",
+          "name": "Alex Hernandez",
+          "number": "4",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P1.jpg"
+        },
+        {
+          "id": "georgia-tech-P2",
+          "name": "Cooper Underwood",
+          "number": "15",
+          "position": "LHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P2.jpg"
+        },
+        {
+          "id": "georgia-tech-P3",
+          "name": "Charlie Willcox",
+          "number": "16",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P3.jpg"
+        },
+        {
+          "id": "georgia-tech-P4",
+          "name": "Caden Gaudette",
+          "number": "18",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P4.jpg"
+        },
+        {
+          "id": "georgia-tech-P5",
+          "name": "Caden Spivey",
+          "number": "20",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P5.jpg"
+        },
+        {
+          "id": "georgia-tech-P6",
+          "name": "Tate McKee",
+          "number": "22",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P6.jpg"
+        },
+        {
+          "id": "georgia-tech-P7",
+          "name": "Jackson Blakely",
+          "number": "24",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P7.jpg"
+        },
+        {
+          "id": "georgia-tech-P8",
+          "name": "Jamie Vicens",
+          "number": "26",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P8.jpg"
+        },
+        {
+          "id": "georgia-tech-P9",
+          "name": "Mason Patel",
+          "number": "29",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P9.jpg"
+        },
+        {
+          "id": "georgia-tech-P10",
+          "name": "Justin Shadek",
+          "number": "31",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P10.jpg"
+        },
+        {
+          "id": "georgia-tech-P11",
+          "name": "Brett Barfield",
+          "number": "32",
+          "position": "LHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P11.jpg"
+        },
+        {
+          "id": "georgia-tech-P12",
+          "name": "Jake Lankie",
+          "number": "35",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P12.jpg"
+        },
+        {
+          "id": "georgia-tech-P13",
+          "name": "Dylan Loy",
+          "number": "37",
+          "position": "LHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P13.jpg"
+        },
+        {
+          "id": "georgia-tech-P14",
+          "name": "Carson Ballard",
+          "number": "38",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P14.jpg"
+        },
+        {
+          "id": "georgia-tech-P15",
+          "name": "Dimitri Angelakos",
+          "number": "43",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P15.jpg"
+        },
+        {
+          "id": "georgia-tech-P16",
+          "name": "Kayden Campbell",
+          "number": "49",
+          "position": "LHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P16.jpg"
+        },
+        {
+          "id": "georgia-tech-P17",
+          "name": "Riley Hasenstab",
+          "number": "54",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P17.jpg"
+        },
+        {
+          "id": "georgia-tech-P18",
+          "name": "Adam McKelvey",
+          "number": "55",
+          "position": "LHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P18.jpg"
+        },
+        {
+          "id": "georgia-tech-P19",
+          "name": "Porter Buursema",
+          "number": "99",
+          "position": "RHP",
+          "headshot": "data/headshots/georgia-tech_georgia-tech-P19.jpg"
+        }
+      ]
+    },
+    {
+      "teamId": "purdue",
+      "team_id": "purdue",
+      "team": "Purdue Boilermakers",
+      "slug": "purdue",
+      "conference": "Big Ten",
+      "pitchers": [
+        {
+          "id": "purdue-P1",
+          "name": "Lucas Grant",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P1.jpg"
+        },
+        {
+          "id": "purdue-P3",
+          "name": "Trevor Kester-Johnson",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P3.jpg"
+        },
+        {
+          "id": "purdue-P4",
+          "name": "Joe Trenerry",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P4.jpg"
+        },
+        {
+          "id": "purdue-P6",
+          "name": "Jacob Boland",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P6.jpg"
+        },
+        {
+          "id": "purdue-P8",
+          "name": "Jarvis Evans",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P8.jpg"
+        },
+        {
+          "id": "purdue-P9",
+          "name": "Cole Van Assen",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P9.jpg"
+        },
+        {
+          "id": "purdue-P12",
+          "name": "Nick Kolze",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P12.jpg"
+        },
+        {
+          "id": "purdue-P14",
+          "name": "Tro Fellings",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P14.jpg"
+        },
+        {
+          "id": "purdue-P16",
+          "name": "Gavin Beuter",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P16.jpg"
+        },
+        {
+          "id": "purdue-P18",
+          "name": "Graham Kollen",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P18.jpg"
+        },
+        {
+          "id": "purdue-P20",
+          "name": "Zach Erdman",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P20.jpg"
+        },
+        {
+          "id": "purdue-P22",
+          "name": "Austin Klug",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P22.jpg"
+        },
+        {
+          "id": "purdue-P24",
+          "name": "Noah Filer",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P24.jpg"
+        },
+        {
+          "id": "purdue-P26",
+          "name": "Jackson Greer",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P26.jpg"
+        },
+        {
+          "id": "purdue-P28",
+          "name": "Evan Schweizer",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P28.jpg"
+        },
+        {
+          "id": "purdue-P30",
+          "name": "Barron Sawyer",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P30.jpg"
+        },
+        {
+          "id": "purdue-P32",
+          "name": "Thomas Howard",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P32.jpg"
+        },
+        {
+          "id": "purdue-P34",
+          "name": "Jake Kramer",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": "",
+          "headshot": "data/headshots/purdue_purdue-P34.jpg"
+        }
+      ]
+    },
+    {
+      "teamId": "virginia-tech",
+      "team_id": "virginia-tech",
+      "team": "Virginia Tech",
+      "slug": "virginia-tech",
+      "conference": "ACC",
+      "pitchers": [
+        {
+          "id": "virginia-tech-P1",
+          "name": "Aiden Robertson",
+          "number": "5",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P1.jpg"
+        },
+        {
+          "id": "virginia-tech-P2",
+          "name": "Tyler Stone",
+          "number": "15",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P2.jpg"
+        },
+        {
+          "id": "virginia-tech-P3",
+          "name": "Brett Renfrow",
+          "number": "17",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P3.jpg"
+        },
+        {
+          "id": "virginia-tech-P4",
+          "name": "Luke Craytor",
+          "number": "19",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P4.jpg"
+        },
+        {
+          "id": "virginia-tech-P5",
+          "name": "Preston Crowl",
+          "number": "20",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P5.jpg"
+        },
+        {
+          "id": "virginia-tech-P6",
+          "name": "Ethan Grim",
+          "number": "21",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P6.jpg"
+        },
+        {
+          "id": "virginia-tech-P7",
+          "name": "Ben Weber",
+          "number": "23",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P7.jpg"
+        },
+        {
+          "id": "virginia-tech-P8",
+          "name": "Peyton Smith",
+          "number": "24",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P8.jpg"
+        },
+        {
+          "id": "virginia-tech-P9",
+          "name": "Griffin Stieg",
+          "number": "26",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P9.jpg"
+        },
+        {
+          "id": "virginia-tech-P10",
+          "name": "Austin Dean",
+          "number": "27",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P10.jpg"
+        },
+        {
+          "id": "virginia-tech-P11",
+          "name": "Danny Lazaro",
+          "number": "29",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P11.jpg"
+        },
+        {
+          "id": "virginia-tech-P12",
+          "name": "Madden Clement",
+          "number": "31",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P12.jpg"
+        },
+        {
+          "id": "virginia-tech-P13",
+          "name": "Chase Swift",
+          "number": "35",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P13.jpg"
+        },
+        {
+          "id": "virginia-tech-P14",
+          "name": "Jacob Exum",
+          "number": "37",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P14.jpg"
+        },
+        {
+          "id": "virginia-tech-P15",
+          "name": "Jake Wise",
+          "number": "38",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P15.jpg"
+        },
+        {
+          "id": "virginia-tech-P16",
+          "name": "Brody Roe",
+          "number": "40",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P16.jpg"
+        },
+        {
+          "id": "virginia-tech-P17",
+          "name": "Brendan Yagesh",
+          "number": "45",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P17.jpg"
+        },
+        {
+          "id": "virginia-tech-P18",
+          "name": "Josh Berzonski",
+          "number": "49",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P18.jpg"
+        },
+        {
+          "id": "virginia-tech-P19",
+          "name": "Logan Eisenreich",
+          "number": "51",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P19.jpg"
+        },
+        {
+          "id": "virginia-tech-P20",
+          "name": "Ryan Walsh",
+          "number": "",
+          "position": "Pitcher",
+          "year": "",
+          "headshot": "data/headshots/virginia-tech_virginia-tech-P20.jpg"
+        }
+      ]
+    },
+    {
+      "teamId": "arizona-state",
+      "team_id": "arizona-state",
+      "team": "Arizona State",
+      "slug": "arizona-state",
+      "conference": "Big 12",
+      "pitchers": [
+        {
+          "id": "arizona-state-P1",
+          "name": "Brenden Lewis",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P1.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P2",
+          "name": "Easton Barrett",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P2.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P3",
+          "name": "Jaden Alba",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P3.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P4",
+          "name": "Cole Carlon",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P4.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P5",
+          "name": "Alex Overbay",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P5.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P6",
+          "name": "Wyatt Halvorson",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P6.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P7",
+          "name": "Finn Edwards",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P7.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P8",
+          "name": "Derek Schaefer",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P8.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P9",
+          "name": "Austin Musso",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P9.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P10",
+          "name": "Eli Buxton",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P10.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P11",
+          "name": "Nick Anello",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P11.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P12",
+          "name": "Kole Klecker",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P12.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P13",
+          "name": "Colin Linder",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P13.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P14",
+          "name": "Josh Butler",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P14.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P15",
+          "name": "Brady Louck",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P15.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P16",
+          "name": "Colby Guy",
+          "number": "",
+          "position": "LHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P16.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P17",
+          "name": "Sean Fitzpatrick",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P17.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P18",
+          "name": "Ryan Caruso",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P18.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P19",
+          "name": "Marcelo Rodriguez",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P19.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P20",
+          "name": "Taylor Penn",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P20.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-state-P21",
+          "name": "Brandon Olivera",
+          "number": "",
+          "position": "RHP",
+          "year": "",
+          "headshot": "data/headshots/arizona-state_arizona-state-P21.jpg",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        }
+      ]
+    },
+    {
+      "teamId": "stanford",
+      "team_id": "stanford",
+      "team": "Stanford Cardinal",
+      "slug": "stanford",
+      "conference": "ACC",
+      "pitchers": [
+        {
+          "id": "stanford-P1",
+          "name": "Toran O'Harran",
+          "number": "12",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P1.jpg"
+        },
+        {
+          "id": "stanford-P2",
+          "name": "Kassius Thomas",
+          "number": "18",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P2.jpg"
+        },
+        {
+          "id": "stanford-P3",
+          "name": "Teddy Tokheim",
+          "number": "19",
+          "position": "Infield/Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P3.jpg"
+        },
+        {
+          "id": "stanford-P4",
+          "name": "Brock Ketelsen",
+          "number": "21",
+          "position": "Outfield/Left Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P4.jpg"
+        },
+        {
+          "id": "stanford-P5",
+          "name": "Parker Warner",
+          "number": "23",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P5.jpg"
+        },
+        {
+          "id": "stanford-P6",
+          "name": "Aidan Keenan",
+          "number": "24",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P6.jpg"
+        },
+        {
+          "id": "stanford-P7",
+          "name": "Nick Dugan",
+          "number": "25",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P7.jpg"
+        },
+        {
+          "id": "stanford-P8",
+          "name": "Sam Garewal",
+          "number": "26",
+          "position": "Left Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P8.jpg"
+        },
+        {
+          "id": "stanford-P9",
+          "name": "Ryan Speshyock",
+          "number": "30",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P9.jpg"
+        },
+        {
+          "id": "stanford-P10",
+          "name": "Trevor Moore",
+          "number": "34",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P10.jpg"
+        },
+        {
+          "id": "stanford-P11",
+          "name": "Braden Guentz",
+          "number": "36",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P11.jpg"
+        },
+        {
+          "id": "stanford-P12",
+          "name": "Dominic Panella",
+          "number": "37",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P12.jpg"
+        },
+        {
+          "id": "stanford-P13",
+          "name": "Jack Svinth",
+          "number": "38",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P13.jpg"
+        },
+        {
+          "id": "stanford-P14",
+          "name": "Ben Reimers",
+          "number": "40",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P14.jpg"
+        },
+        {
+          "id": "stanford-P15",
+          "name": "Liam Golden",
+          "number": "41",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P15.jpg"
+        },
+        {
+          "id": "stanford-P16",
+          "name": "Christian Lim",
+          "number": "42",
+          "position": "Left Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P16.jpg"
+        },
+        {
+          "id": "stanford-P17",
+          "name": "Mike Erspamer",
+          "number": "43",
+          "position": "Left Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P17.jpg"
+        },
+        {
+          "id": "stanford-P18",
+          "name": "Quinten Marsh",
+          "number": "44",
+          "position": "Outfield/Left Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P18.jpg"
+        },
+        {
+          "id": "stanford-P19",
+          "name": "Cohen Gomez",
+          "number": "45",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P19.jpg"
+        },
+        {
+          "id": "stanford-P20",
+          "name": "Andrew Shaw",
+          "number": "46",
+          "position": "Left Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P20.jpg"
+        },
+        {
+          "id": "stanford-P21",
+          "name": "Colt Peterson",
+          "number": "48",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P21.jpg"
+        },
+        {
+          "id": "stanford-P22",
+          "name": "Austin Steeves",
+          "number": "49",
+          "position": "Left Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P22.jpg"
+        },
+        {
+          "id": "stanford-P23",
+          "name": "David Wiser",
+          "number": "50",
+          "position": "Right Handed Pitcher",
+          "year": "",
+          "headshot": "data/headshots/stanford_stanford-P23.jpg"
+        }
+      ]
+    },
+    {
+      "teamId": "arizona",
+      "team_id": "arizona",
+      "team": "Arizona Wildcats",
+      "slug": "arizona",
+      "conference": "Big 12",
+      "pitchers": [
+        {
+          "id": "arizona-P1",
+          "name": "Andrew Jacobs Jr.",
+          "position": "RHP",
+          "number": "7",
+          "headshot": "data/headshots/arizona_arizona-P1.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P2",
+          "name": "Mason Russell",
+          "position": "LHP",
+          "number": "8",
+          "headshot": "data/headshots/arizona_arizona-P2.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P3",
+          "name": "Patrick Morris",
+          "position": "LHP",
+          "number": "10",
+          "headshot": "data/headshots/arizona_arizona-P3.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P4",
+          "name": "Benton Hickman",
+          "position": "RHP",
+          "number": "11",
+          "headshot": "data/headshots/arizona_arizona-P4.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P5",
+          "name": "Owen Kramkowski",
+          "position": "RHP",
+          "number": "17",
+          "headshot": "data/headshots/arizona_arizona-P5.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P6",
+          "name": "Evan Brandt",
+          "position": "RHP",
+          "number": "19",
+          "headshot": "data/headshots/arizona_arizona-P6.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P7",
+          "name": "Smith Bailey",
+          "position": "RHP",
+          "number": "22",
+          "headshot": "data/headshots/arizona_arizona-P7.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P8",
+          "name": "Luc Fladda",
+          "position": "LHP",
+          "number": "24",
+          "headshot": "data/headshots/arizona_arizona-P8.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P9",
+          "name": "Matthew Martinez",
+          "position": "RHP",
+          "number": "28",
+          "headshot": "data/headshots/arizona_arizona-P9.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P10",
+          "name": "Corey Kling",
+          "position": "RHP",
+          "number": "30",
+          "headshot": "data/headshots/arizona_arizona-P10.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P11",
+          "name": "Collin McKinney",
+          "position": "RHP",
+          "number": "34",
+          "headshot": "data/headshots/arizona_arizona-P11.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P12",
+          "name": "JT Drake",
+          "position": "RHP",
+          "number": "35",
+          "headshot": "data/headshots/arizona_arizona-P12.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P13",
+          "name": "Tony Pluta",
+          "position": "RHP",
+          "number": "37",
+          "headshot": "data/headshots/arizona_arizona-P13.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P14",
+          "name": "Nolan Straniero",
+          "position": "RHP",
+          "number": "39",
+          "headshot": "data/headshots/arizona_arizona-P14.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P15",
+          "name": "Jack Lafflam",
+          "position": "RHP",
+          "number": "40",
+          "headshot": "data/headshots/arizona_arizona-P15.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P16",
+          "name": "Maclain Roberts",
+          "position": "LHP",
+          "number": "49",
+          "headshot": "data/headshots/arizona_arizona-P16.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P17",
+          "name": "Samuel Round",
+          "position": "RHP",
+          "number": "51",
+          "headshot": "data/headshots/arizona_arizona-P17.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        },
+        {
+          "id": "arizona-P18",
+          "name": "Garrett Hicks",
+          "position": "RHP",
+          "number": "99",
+          "headshot": "data/headshots/arizona_arizona-P18.jpg",
+          "year": "",
+          "height": "",
+          "weight": "",
+          "batsThrows": "",
+          "hometown": ""
+        }
+      ]
     }
   ]
 }

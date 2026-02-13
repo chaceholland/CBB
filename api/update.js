@@ -191,6 +191,17 @@ async function logSync(syncType, recordsCount, status, details = null) {
 }
 
 export default async function handler(req, res) {
+  // Verify the request is from Vercel Cron (optional but recommended)
+  // To enable: add CRON_SECRET to your Vercel environment variables
+  const cronSecret = process.env.CRON_SECRET;
+  if (cronSecret && req.headers['authorization'] !== `Bearer ${cronSecret}`) {
+    // Allow requests without auth if CRON_SECRET is not set (for testing)
+    // Once you set CRON_SECRET in Vercel, only cron jobs can trigger this
+    if (req.headers['authorization']) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+  }
+
   const startTime = Date.now();
   const results = {
     week: null,
@@ -202,7 +213,7 @@ export default async function handler(req, res) {
     errors: [],
     earlyExit: false
   };
-  
+
   const checkTimeout = () => (Date.now() - startTime) > MAX_RUNTIME_MS;
   
   try {

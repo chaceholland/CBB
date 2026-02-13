@@ -678,8 +678,10 @@ function teamMeta(tid){
 
 function teamPitchers(tid){
   const result = (pitchersById[tid] && pitchersById[tid].pitchers) ? pitchersById[tid].pitchers : [];
-  if(!result || result.length === 0){
-    console.log('[DEBUG] No pitchers found for team ID:', tid, '| Available IDs:', Object.keys(pitchersById).slice(0, 10));
+  if(result && result.length > 0){
+    console.log('[DEBUG] ✓ Found', result.length, 'pitchers for team ID:', tid);
+  } else {
+    console.log('[DEBUG] ✗ No pitchers found for team ID:', tid, '| Available IDs:', Object.keys(pitchersById).slice(0, 10));
   }
   return result;
 }
@@ -1256,6 +1258,7 @@ function logoNode(meta){
 }
 
 function sideBlock(tid, gameId){
+  console.log('[DEBUG] sideBlock called with tid:', tid, 'gameId:', gameId);
   const gameHasData = !!(window.PLAYED_IDX && window.PLAYED_IDX[String(gameId)]);
   const meta = teamMeta(tid);
   const box  = document.createElement('div');
@@ -2070,7 +2073,12 @@ async function boot(){
       : ['./data/schedule.json', './data/schedule_week.json']
   );
   SCHED = normalizeSchedule(rawSched);
-  
+  console.log('[DEBUG] First 5 games team IDs:');
+  for(let i = 0; i < Math.min(5, SCHED.games.length); i++){
+    const g = SCHED.games[i];
+    console.log(`  Game ${i+1}: away=${g.away}, home=${g.home}`);
+  }
+
   if(TEAMS && TEAMS.teams){
     for(const t of TEAMS.teams){
       const tid = String(t.id || t.team_id || '');
