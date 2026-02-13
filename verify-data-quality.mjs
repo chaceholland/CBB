@@ -224,6 +224,53 @@ function checkHeadshotCoverage(pitchers) {
 }
 
 /**
+ * Check cross-references between pitchers and teams data
+ * @param {Object} pitchers - Pitchers data with teams array
+ * @param {Object} teams - Teams data with teams array
+ * @returns {Object} { issues: Array, teamsVerified: number }
+ */
+function checkCrossReferences(pitchers, teams) {
+  const issues = [];
+
+  // Build team ID lookup from teams.json
+  const teamIds = new Set(teams.teams.map(t => t.id));
+
+  // Build team name lookup (lowercase for case-insensitive matching)
+  const teamNames = new Map();
+  for (const team of teams.teams) {
+    teamNames.set(team.name.toLowerCase(), team.name);
+  }
+
+  // Verify pitcher team IDs and names
+  for (const team of pitchers.teams) {
+    const teamId = team.teamId || team.team_id;
+    const teamName = team.team;
+
+    // Verify team ID exists in teams.json
+    if (!teamIds.has(teamId)) {
+      issues.push({
+        severity: SEVERITY.CRITICAL,
+        category: 'cross_reference',
+        team: teamName,
+        message: `Team ID ${teamId} not found in teams.json`
+      });
+    }
+
+    // Verify team name matches teams.json
+    if (!teamNames.has(teamName.toLowerCase())) {
+      issues.push({
+        severity: SEVERITY.WARNING,
+        category: 'cross_reference',
+        team: teamName,
+        message: `Team name "${teamName}" not found in teams.json`
+      });
+    }
+  }
+
+  return { issues, teamsVerified: pitchers.teams.length };
+}
+
+/**
  * Main verification function
  */
 async function main() {
@@ -267,6 +314,13 @@ async function main() {
     if (headshotCheck.brokenHeadshots > 0) {
       console.log(`  WARNING: ${headshotCheck.brokenHeadshots} headshot files not found`);
     }
+    console.log('');
+
+    // Check cross-references
+    console.log('Checking cross-references...');
+    const crossRefCheck = checkCrossReferences(pitchers, teams);
+    issues.push(...crossRefCheck.issues);
+    console.log(`✓ Verified ${crossRefCheck.teamsVerified} team references`);
     console.log('');
 
     // Print completion message
