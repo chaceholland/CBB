@@ -12761,18 +12761,6 @@
       "pitchers": [
         {
           "id": "93-P1",
-          "name": "Jersey Number 7",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P1.jpg"
-        },
-        {
-          "id": "93-P2",
           "name": "Jordan Regulski",
           "number": "",
           "position": "RHP",
@@ -12784,19 +12772,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P3",
-          "name": "Jersey Number 10",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P3.jpg"
-        },
-        {
-          "id": "93-P4",
+          "id": "93-P2",
           "name": "Aidan Weaver",
           "number": "",
           "position": "RHP",
@@ -12808,19 +12784,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P5",
-          "name": "Jersey Number 11",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P5.jpg"
-        },
-        {
-          "id": "93-P6",
+          "id": "93-P3",
           "name": "Edward Hart",
           "number": "",
           "position": "LHP",
@@ -12832,19 +12796,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P7",
-          "name": "Jersey Number 14",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P7.jpg"
-        },
-        {
-          "id": "93-P8",
+          "id": "93-P4",
           "name": "Will Oschell",
           "number": "",
           "position": "RHP",
@@ -12856,19 +12808,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P9",
-          "name": "Jersey Number 21",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P9.jpg"
-        },
-        {
-          "id": "93-P10",
+          "id": "93-P5",
           "name": "David Boisvert",
           "number": "",
           "position": "RHP",
@@ -12880,19 +12820,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P11",
-          "name": "Jersey Number 24",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P11.jpg"
-        },
-        {
-          "id": "93-P12",
+          "id": "93-P6",
           "name": "Caleb Anderson",
           "number": "",
           "position": "RHP",
@@ -12904,19 +12832,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P13",
-          "name": "Jersey Number 25",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P13.jpg"
-        },
-        {
-          "id": "93-P14",
+          "id": "93-P7",
           "name": "Peter Lemke",
           "number": "",
           "position": "RHP",
@@ -12928,19 +12844,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P15",
-          "name": "Jersey Number 26",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P15.jpg"
-        },
-        {
-          "id": "93-P16",
+          "id": "93-P8",
           "name": "Bennett LaPalm",
           "number": "",
           "position": "LHP",
@@ -12952,19 +12856,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P17",
-          "name": "Jersey Number 27",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P17.jpg"
-        },
-        {
-          "id": "93-P18",
+          "id": "93-P9",
           "name": "Matt Nochowitz",
           "number": "",
           "position": "RHP",
@@ -12976,19 +12868,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P19",
-          "name": "Jersey Number 28",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P19.jpg"
-        },
-        {
-          "id": "93-P20",
+          "id": "93-P10",
           "name": "Aiden O'Connell",
           "number": "",
           "position": "LHP",
@@ -13000,19 +12880,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P21",
-          "name": "Jersey Number 29",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P21.jpg"
-        },
-        {
-          "id": "93-P22",
+          "id": "93-P11",
           "name": "Andy Leon",
           "number": "",
           "position": "RHP",
@@ -13024,19 +12892,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P23",
-          "name": "Jersey Number 33",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P23.jpg"
-        },
-        {
-          "id": "93-P24",
+          "id": "93-P12",
           "name": "Roman DiGiacomo",
           "number": "",
           "position": "RHP",
@@ -13048,19 +12904,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P25",
-          "name": "Jersey Number 34",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P25.jpg"
-        },
-        {
-          "id": "93-P26",
+          "id": "93-P13",
           "name": "Sammy Petrocelli",
           "number": "",
           "position": "RHP",
@@ -13072,19 +12916,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P27",
-          "name": "Jersey Number 37",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P27.jpg"
-        },
-        {
-          "id": "93-P28",
+          "id": "93-P14",
           "name": "Jack Feehery",
           "number": "",
           "position": "LHP",
@@ -13096,19 +12928,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P29",
-          "name": "Jersey Number 40",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P29.jpg"
-        },
-        {
-          "id": "93-P30",
+          "id": "93-P15",
           "name": "Nate Brittain",
           "number": "",
           "position": "RHP",
@@ -13120,19 +12940,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P31",
-          "name": "Jersey Number 43",
-          "number": "",
-          "position": "LHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P31.jpg"
-        },
-        {
-          "id": "93-P32",
+          "id": "93-P16",
           "name": "Marcello Mastroianni",
           "number": "",
           "position": "LHP",
@@ -13144,19 +12952,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P33",
-          "name": "Jersey Number 44",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P33.jpg"
-        },
-        {
-          "id": "93-P34",
+          "id": "93-P17",
           "name": "Jack Hedrick",
           "number": "",
           "position": "RHP",
@@ -13168,19 +12964,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P35",
-          "name": "Jersey Number 45",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P35.jpg"
-        },
-        {
-          "id": "93-P36",
+          "id": "93-P18",
           "name": "Ben Dean",
           "number": "",
           "position": "RHP",
@@ -13192,19 +12976,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P37",
-          "name": "Jersey Number 48",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P37.jpg"
-        },
-        {
-          "id": "93-P38",
+          "id": "93-P19",
           "name": "Drew Bryan",
           "number": "",
           "position": "RHP",
@@ -13216,19 +12988,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P39",
-          "name": "Jersey Number 50",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P39.jpg"
-        },
-        {
-          "id": "93-P40",
+          "id": "93-P20",
           "name": "Bryce Brannon",
           "number": "",
           "position": "RHP",
@@ -13240,19 +13000,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P41",
-          "name": "Jersey Number 51",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P41.jpg"
-        },
-        {
-          "id": "93-P42",
+          "id": "93-P21",
           "name": "Grayson Walker",
           "number": "",
           "position": "RHP",
@@ -13264,19 +13012,7 @@
           "headshot": ""
         },
         {
-          "id": "93-P43",
-          "name": "Jersey Number 99",
-          "number": "",
-          "position": "RHP",
-          "year": "",
-          "height": "",
-          "weight": "",
-          "batsThrows": "",
-          "hometown": "",
-          "headshot": "data/headshots/duke_93-P43.jpg"
-        },
-        {
-          "id": "93-P44",
+          "id": "93-P22",
           "name": "Eamon McDermott",
           "number": "",
           "position": "RHP",
