@@ -13575,7 +13575,8 @@
           "hometown": "",
           "headshot": "data/headshots/iowa_iowa-P38.jpg"
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png"
     },
     {
       "teamId": "nebraska",
@@ -13848,7 +13849,8 @@
           "hometown": "",
           "headshot": "data/headshots/nebraska_nebraska-P41.jpg"
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png"
     },
     {
       "teamId": "oregon",
@@ -13873,7 +13875,8 @@
           "year": "",
           "headshot": "data/headshots/oregon_oregon-P2.jpg"
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png"
     },
     {
       "teamId": "cincinnati",
@@ -14146,7 +14149,8 @@
           "batsThrows": "",
           "hometown": ""
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png"
     },
     {
       "teamId": "penn-state",
@@ -14431,7 +14435,8 @@
           "hometown": "",
           "headshot": "data/headshots/penn-state_penn-state-P28.jpg"
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png"
     },
     {
       "teamId": "georgia-tech",
@@ -14573,7 +14578,8 @@
           "position": "RHP",
           "headshot": "data/headshots/georgia-tech_georgia-tech-P19.jpg"
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
     },
     {
       "teamId": "purdue",
@@ -14798,7 +14804,8 @@
           "hometown": "",
           "headshot": "data/headshots/purdue_purdue-P34.jpg"
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png"
     },
     {
       "teamId": "virginia-tech",
@@ -14967,7 +14974,8 @@
           "year": "",
           "headshot": "data/headshots/virginia-tech_virginia-tech-P20.jpg"
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png"
     },
     {
       "teamId": "arizona-state",
@@ -15228,7 +15236,8 @@
           "batsThrows": "",
           "hometown": ""
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png"
     },
     {
       "teamId": "stanford",
@@ -15421,7 +15430,8 @@
           "year": "",
           "headshot": "data/headshots/stanford_stanford-P23.jpg"
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png"
     },
     {
       "teamId": "arizona",
@@ -15646,7 +15656,8 @@
           "batsThrows": "",
           "hometown": ""
         }
-      ]
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png"
     }
   ]
 }
