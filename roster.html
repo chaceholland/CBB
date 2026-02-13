@@ -4,112 +4,643 @@
 <meta charset="UTF-8" />
 <title>CBB Pitcher Rosters</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="stylesheet" href="/vintage-baseball-theme.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* Modern Premium Sports Analytics Theme */
   :root{
-    --navy:#002f66; --navy-2:#003080;
-    --card:#ffffff; --muted:#e9eef7;
-    --ink:#111827; --ink-2:#374151; --link:#0b69c7;
-    --chip:#e9eef7; --chip-text:#21304a;
-    --border:#d6dbe7; --outline:#cdd3e0;
+    --cream: #fafaf8;
+    --white: #ffffff;
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --emerald: #10b981;
+    --emerald-dark: #059669;
+    --emerald-light: #d1fae5;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
   }
-  html,body{height:100%}
-  body{margin:0;background:var(--navy);color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-  #top-bar{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;padding:.8rem 1rem;background:var(--navy-2);position:sticky;top:0;z-index:50}
-  #top-bar h1{margin:0;font-size:1.2rem;flex:1}
-  #top-bar input,#top-bar select{background:#fff;color:#111;border:1px solid var(--outline);border-radius:.5rem;padding:.45rem .6rem;font-size:.95rem}
-  #top-bar button{border:1px solid var(--outline);background:#fff;color:#0f356b;border-radius:.6rem;padding:.45rem .7rem;cursor:pointer;transition:opacity .15s ease}
-  #top-bar button:hover{opacity:.85}
-  #top-bar a{color:#fff;text-decoration:none;padding:.45rem .7rem;background:rgba(255,255,255,.1);border-radius:.5rem;transition:background .15s ease}
-  #top-bar a:hover{background:rgba(255,255,255,.2)}
-  #counters{display:flex;gap:.5rem;padding:.35rem 1rem 0 1rem;flex-wrap:wrap}
-  .badge{background:#003a8a;padding:.35rem .6rem;border-radius:1rem;font-size:.85rem}
-  #teams-wrap{padding:1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
-  .team-card{background:var(--card);color:var(--ink);border-radius:16px;border:1px solid var(--border);box-shadow:0 2px 10px rgba(14,22,48,.15);overflow:hidden;cursor:pointer;transition:all .2s ease}
-  .team-card:hover{transform:translateY(-4px);box-shadow:0 6px 20px rgba(14,22,48,.25)}
-  .team-card.favorited{border:2px solid #f59e0b;box-shadow:0 4px 15px rgba(245,158,11,.3)}
-  .team-header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem;background:var(--muted);padding:1.25rem 1rem}
-  .team-logo-big{width:140px;height:140px;border-radius:12px;object-fit:contain;background:#d8dde8;padding:12px;mix-blend-mode:darken}
-  .team-info{flex:1}
-  .team-name{font-weight:800;font-size:1.2rem;margin-bottom:.25rem}
-  .team-conf{font-size:.85rem;color:var(--ink-2);margin-bottom:.35rem}
-  .team-links{display:flex;gap:.35rem;align-items:center;flex-wrap:wrap}
-  .team-links a{background:#eef3fb;color:#123b7a;border:1px solid #d8e1f3;font-weight:700;font-size:.75rem;padding:.25rem .55rem;text-decoration:none;border-radius:999px;transition:opacity .15s ease}
-  .team-links a:hover{opacity:.85}
-  .team-actions{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
-  .pitcher-count{background:#eef3fb;color:#123b7a;padding:.25rem .6rem;border-radius:999px;font-size:.85rem;font-weight:700}
-  .pitchers-list{padding:.75rem;display:flex;flex-direction:column;gap:.6rem;max-height:600px;overflow-y:auto}
-  .pitcher-item{display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;padding:.6rem;border-radius:10px;background:#fafbfc;border:1px solid #e9eef7;transition:all .15s ease}
-  .pitcher-item:hover{background:#f0f4f8;border-color:#d6dbe7}
-  .pitcher-item.favorited{background:#fff7db;border-color:#e3c76a}
-  .headshot-wrap{width:160px;height:160px;overflow:visible;border-radius:12px;background:#eaf2ff;border:1px solid #d8e1f3;position:relative}
-  .headshot{width:100%;height:100%;object-fit:contain;transition:all .3s ease;position:relative;z-index:1;border-radius:12px;background:#eaf2ff}
-  .headshot-wrap:hover .headshot{transform:scale(2.5);z-index:100;box-shadow:0 12px 32px rgba(0,0,0,0.5)}
-  .team-logo-fallback{width:100%;height:100%;object-fit:contain;padding:14px;transition:all .3s ease;position:relative;z-index:1;border-radius:12px}
-  .headshot-wrap:hover .team-logo-fallback{transform:scale(2.5);z-index:100;box-shadow:0 12px 32px rgba(0,0,0,0.5)}
-  .pitcher-info{display:flex;flex-direction:column;gap:.2rem}
-  .pitcher-name{font-weight:700;font-size:1rem;color:var(--ink)}
-  .pitcher-num{color:var(--ink-2);font-size:.9rem;margin-right:.4rem}
-  .pitcher-details{font-size:.85rem;color:var(--ink-2);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
-  .pitcher-details a{color:var(--link);text-decoration:none}
-  .pitcher-details a:hover{text-decoration:underline}
-  .role-badge{background:#e9eef7;color:#123b7a;padding:.15rem .4rem;border-radius:4px;font-size:.75rem;font-weight:700}
-  .role-starter{background:#3b82f6;color:#fff}
-  .role-reliever{background:#8b5cf6;color:#fff}
-  .star{cursor:pointer;font-size:1.4rem;color:#d1d5db;transition:color .15s ease;user-select:none}
-  .star:hover{color:#f59e0b}
-  .star.active{color:#f59e0b}
-  .team-star{cursor:pointer;font-size:1.3rem;color:#d1d5db;transition:color .15s ease;user-select:none}
-  .team-star:hover{color:#f59e0b}
-  .team-star.active{color:#f59e0b}
-  #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:.75rem 1.25rem;border-radius:.75rem;font-weight:600;opacity:0;transition:opacity .2s ease;pointer-events:none;z-index:200}
-  #toast.show{opacity:.95}
 
-  /* Team Roster Modal */
-  .modal-overlay{position:fixed;inset:0;background:rgba(0,15,35,.92);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:1000;padding:1rem;animation:fadeIn .3s ease}
-  .modal-overlay.open{display:flex}
-  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-  .modal{background:var(--card);color:var(--ink);border-radius:20px;max-width:1400px;width:100%;max-height:90vh;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);animation:slideUp .3s ease}
-  @keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
-  .modal-header{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2rem;background:var(--muted);border-bottom:2px solid var(--border);position:sticky;top:0;z-index:10}
-  .modal-team-info{display:flex;align-items:center;gap:1rem}
-  .modal-team-logo{width:80px;height:80px;object-fit:contain;border-radius:12px;background:#d8dde8;padding:8px;mix-blend-mode:darken}
-  .modal-team-name{font-weight:800;font-size:1.5rem;color:var(--ink)}
-  .modal-team-conf{font-size:.95rem;color:var(--ink-2);margin-top:.25rem}
-  .modal-close{background:#fff;border:2px solid var(--border);color:var(--ink);font-size:1.5rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s ease;font-weight:700;padding:0}
-  .modal-close:hover{background:var(--border);transform:rotate(90deg)}
-  .modal-body{padding:2rem;overflow-y:auto;max-height:calc(90vh - 140px)}
-  .pitchers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
-  .modal-pitcher-card{background:#fafbfc;border:2px solid #e9eef7;border-radius:16px;padding:1.5rem;transition:all .2s ease;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
-  .modal-pitcher-card:hover{background:#f0f4f8;border-color:#d6dbe7;transform:translateY(-4px);box-shadow:0 4px 12px rgba(14,22,48,.15)}
-  .modal-pitcher-card.favorited{background:#fff7db;border-color:#e3c76a;box-shadow:0 2px 8px rgba(229,199,106,.3)}
-  .modal-headshot-wrap{width:200px;height:200px;border-radius:16px;background:#eaf2ff;border:2px solid #d8e1f3;overflow:hidden;margin-bottom:1rem;position:relative;cursor:pointer}
-  .modal-headshot{width:100%;height:100%;object-fit:contain;transition:transform .3s ease}
-  .modal-headshot-wrap:hover .modal-headshot{transform:scale(1.1)}
-  .modal-pitcher-star{position:absolute;top:12px;right:12px;font-size:2rem;cursor:pointer;color:#d1d5db;transition:all .2s ease;user-select:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
-  .modal-pitcher-star:hover{color:#f59e0b;transform:scale(1.15)}
-  .modal-pitcher-star.active{color:#f59e0b}
-  .modal-pitcher-name{font-weight:800;font-size:1.25rem;color:var(--ink);margin-bottom:.5rem}
-  .modal-pitcher-number{display:inline-block;background:var(--link);color:#fff;padding:.25rem .75rem;border-radius:999px;font-weight:800;font-size:.9rem;margin-bottom:.75rem}
-  .modal-pitcher-info{display:flex;flex-direction:column;gap:.4rem;font-size:.9rem;color:var(--ink-2);margin-bottom:.75rem}
-  .modal-pitcher-info div{display:flex;align-items:center;justify-content:center;gap:.35rem}
-  .modal-pitcher-badges{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
-  .modal-role-badge{background:#e9eef7;color:#123b7a;padding:.3rem .6rem;border-radius:6px;font-size:.8rem;font-weight:700;text-transform:uppercase}
-  .modal-role-starter{background:#3b82f6;color:#fff}
-  .modal-role-reliever{background:#8b5cf6;color:#fff}
+  *{box-sizing:border-box}
 
-  /* Image Lightbox */
-  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;align-items:center;justify-content:center;z-index:2000;padding:2rem;animation:fadeIn .2s ease}
-  .lightbox.open{display:flex}
-  .lightbox img{max-width:90%;max-height:90vh;object-fit:contain;border-radius:12px;box-shadow:0 20px 80px rgba(0,0,0,.8)}
-  .lightbox-close{position:absolute;top:2rem;right:2rem;background:#fff;color:#000;font-size:2rem;width:50px;height:50px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;border:none;transition:all .2s ease}
-  .lightbox-close:hover{background:#f59e0b;transform:rotate(90deg)}
+  html,body{
+    height:100%;
+    margin:0;
+    padding:0;
+  }
 
-  @media (max-width:900px){
-    #teams-wrap{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-    .pitchers-grid{grid-template-columns:1fr}
-    .modal{max-width:100%;margin:0;border-radius:20px 20px 0 0}
-    .modal-body{padding:1.5rem}
+  body{
+    background: linear-gradient(135deg, var(--cream) 0%, var(--slate-50) 100%);
+    color: var(--slate-900);
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Top Navigation */
+  #top-bar{
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--slate-200);
+    padding: 1.25rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 3px rgba(15,23,42,.05);
+  }
+
+  #top-bar h1{
+    margin: 0;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    letter-spacing: -0.02em;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  #top-bar input,
+  #top-bar select{
+    background: var(--white);
+    border: 1.5px solid var(--slate-300);
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--slate-700);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+  }
+
+  #top-bar input:focus,
+  #top-bar select:focus{
+    border-color: var(--emerald);
+    box-shadow: 0 0 0 3px var(--emerald-light);
+  }
+
+  #top-bar input::placeholder{
+    color: var(--slate-600);
+  }
+
+  #top-bar a{
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+    color: white;
+    text-decoration: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(16,185,129,.2);
+  }
+
+  #top-bar a:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16,185,129,.3);
+  }
+
+  /* Counters */
+  #counters{
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .badge{
+    background: var(--white);
+    color: var(--slate-700);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid var(--slate-200);
+    box-shadow: 0 1px 2px rgba(15,23,42,.05);
+  }
+
+  /* Teams Grid */
+  #teams-wrap{
+    padding: 1rem 2rem 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    animation: fadeIn 0.6s ease;
+  }
+
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  .team-card{
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--slate-200);
+    box-shadow: 0 2px 8px rgba(15,23,42,.04);
+    position: relative;
+  }
+
+  .team-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .team-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(15,23,42,.1);
+    border-color: var(--slate-300);
+  }
+
+  .team-card:hover::before{
+    opacity: 1;
+  }
+
+  .team-card.favorited{
+    border-color: var(--amber);
+    box-shadow: 0 4px 16px rgba(245,158,11,.15);
+  }
+
+  .team-card.favorited::before{
+    background: linear-gradient(90deg, var(--amber) 0%, #f97316 100%);
+    opacity: 1;
+  }
+
+  .team-header{
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background: linear-gradient(180deg, var(--slate-50) 0%, var(--white) 100%);
+    position: relative;
+  }
+
+  .team-logo-big{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(15,23,42,.08));
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .team-card:hover .team-logo-big{
+    transform: scale(1.05);
+  }
+
+  .team-name{
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    letter-spacing: -0.01em;
+    margin-top: 0.25rem;
+  }
+
+  .team-conf{
+    font-size: 0.875rem;
+    color: var(--slate-600);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .pitcher-count{
+    background: var(--emerald-light);
+    color: var(--emerald-dark);
+    padding: 0.375rem 0.875rem;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .team-star{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    filter: drop-shadow(0 2px 4px rgba(15,23,42,.1));
+  }
+
+  .team-star:hover{
+    transform: scale(1.2) rotate(12deg);
+  }
+
+  .team-star.active{
+    filter: drop-shadow(0 2px 8px rgba(245,158,11,.4));
+  }
+
+  /* Modal Overlay */
+  .modal-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(15,23,42,.6);
+    backdrop-filter: blur(12px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    animation: fadeIn 0.25s ease;
+  }
+
+  .modal-overlay.open{
+    display: flex;
+  }
+
+  .modal{
+    background: var(--white);
+    border-radius: 24px;
+    max-width: 1400px;
+    width: 100%;
+    max-height: 88vh;
+    overflow: hidden;
+    box-shadow: 0 24px 48px rgba(15,23,42,.2);
+    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slideUp{
+    from{transform:translateY(40px) scale(0.96);opacity:0}
+    to{transform:translateY(0) scale(1);opacity:1}
+  }
+
+  .modal-header{
+    padding: 2rem 2.5rem;
+    background: linear-gradient(135deg, var(--slate-50) 0%, var(--white) 100%);
+    border-bottom: 1px solid var(--slate-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .modal-team-info{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .modal-team-logo{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(15,23,42,.08));
+  }
+
+  .modal-team-name{
+    font-family: 'Crimson Pro', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+  }
+
+  .modal-team-conf{
+    font-size: 0.9375rem;
+    color: var(--slate-600);
+    font-weight: 500;
+  }
+
+  .modal-close{
+    background: var(--slate-100);
+    border: none;
+    color: var(--slate-700);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .modal-close:hover{
+    background: var(--slate-200);
+    transform: rotate(90deg);
+  }
+
+  .modal-body{
+    padding: 2.5rem;
+    overflow-y: auto;
+    max-height: calc(88vh - 140px);
+  }
+
+  /* Pitchers Grid */
+  .pitchers-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  .modal-pitcher-card{
+    background: var(--slate-50);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+  }
+
+  .modal-pitcher-card:hover{
+    background: var(--white);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(15,23,42,.08);
+    border-color: var(--slate-200);
+  }
+
+  .modal-pitcher-card.favorited{
+    background: var(--amber-light);
+    border-color: var(--amber);
+  }
+
+  .modal-headshot-wrap{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+    position: relative;
+    background: var(--white);
+    border: 3px solid var(--slate-200);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(15,23,42,.06);
+  }
+
+  .modal-headshot-wrap::before{
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+
+  .modal-headshot-wrap:hover::before{
+    opacity: 1;
+  }
+
+  .modal-headshot-wrap:hover{
+    transform: scale(1.08);
+    border-color: transparent;
+    box-shadow: 0 8px 24px rgba(16,185,129,.2);
+  }
+
+  .modal-headshot{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .modal-pitcher-star{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.75rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    filter: drop-shadow(0 2px 4px rgba(15,23,42,.15));
+    z-index: 10;
+  }
+
+  .modal-pitcher-star:hover{
+    transform: scale(1.2) rotate(12deg);
+  }
+
+  .modal-pitcher-star.active{
+    filter: drop-shadow(0 2px 8px rgba(245,158,11,.5));
+  }
+
+  .modal-pitcher-name{
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .modal-pitcher-number{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--slate-800) 0%, var(--slate-900) 100%);
+    color: white;
+    padding: 0.375rem 0.875rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 8px rgba(15,23,42,.15);
+  }
+
+  .modal-pitcher-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--slate-600);
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .modal-pitcher-info div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+  }
+
+  .modal-pitcher-badges{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .modal-role-badge{
+    background: var(--slate-200);
+    color: var(--slate-700);
+    padding: 0.375rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .modal-role-starter{
+    background: linear-gradient(135deg, var(--blue) 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(59,130,246,.2);
+  }
+
+  .modal-role-reliever{
+    background: linear-gradient(135deg, var(--purple) 0%, #7c3aed 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(139,92,246,.2);
+  }
+
+  /* Lightbox */
+  .lightbox{
+    position: fixed;
+    inset: 0;
+    background: rgba(15,23,42,.95);
+    backdrop-filter: blur(12px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 3rem;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .lightbox.open{
+    display: flex;
+  }
+
+  .lightbox img{
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 24px 64px rgba(0,0,0,.5);
+  }
+
+  .lightbox-close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: var(--white);
+    color: var(--slate-900);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  }
+
+  .lightbox-close:hover{
+    background: var(--amber);
+    transform: rotate(90deg);
+  }
+
+  /* Toast */
+  #toast{
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--slate-900);
+    color: white;
+    padding: 0.875rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 3000;
+    box-shadow: 0 8px 24px rgba(15,23,42,.3);
+  }
+
+  #toast.show{
+    opacity: 1;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px){
+    #top-bar{
+      padding: 1rem 1.5rem;
+    }
+
+    #top-bar h1{
+      font-size: 1.5rem;
+    }
+
+    #counters{
+      padding: 0.75rem 1.5rem;
+    }
+
+    #teams-wrap{
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      padding: 1rem 1.5rem 2rem 1.5rem;
+      gap: 1.25rem;
+    }
+
+    .pitchers-grid{
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .modal{
+      max-width: 100%;
+      margin: 0;
+      border-radius: 24px 24px 0 0;
+    }
+
+    .modal-header{
+      padding: 1.5rem;
+    }
+
+    .modal-body{
+      padding: 1.5rem;
+    }
+
+    .modal-team-name{
+      font-size: 1.5rem;
+    }
   }
 </style>
 </head>
@@ -117,7 +648,7 @@
 
 <div id="top-bar">
   <h1>⚾ CBB Pitcher Rosters</h1>
-  <input type="text" id="search" placeholder="Search pitchers or teams..." />
+  <input type="text" id="search" placeholder="Search teams or pitchers..." />
   <select id="divFilter">
     <option value="">All Divisions</option>
   </select>
@@ -283,35 +814,22 @@ function getTeamLogo(tid){
   return team.logo || '';
 }
 
-// ESPN links
-function espnTeamLinks(tid){
-  const base = 'https://www.espn.com/mlb/team';
-  return {
-    roster: `${base}/roster/_/id/${tid}`,
-    schedule: `${base}/schedule/_/id/${tid}`
-  };
-}
-
-function espnPlayerLink(pid){
-  return `https://www.espn.com/mlb/player/_/id/${pid}`;
-}
-
 // Filter teams
 function filterTeams(teams){
   const search = ($("#search")?.value || '').toLowerCase();
   const div = $("#divFilter")?.value || '';
-  
+
   return teams.filter(t => {
     if(div && teamDiv(t.team_id) !== div) return false;
-    
+
     if(search){
       const teamName = (t.team || t.displayName || '').toLowerCase();
-      const pitcherNames = (t.pitchers || []).map(p => 
+      const pitcherNames = (t.pitchers || []).map(p =>
         (p.name || p.displayName || '').toLowerCase()
       ).join(' ');
       if(!teamName.includes(search) && !pitcherNames.includes(search)) return false;
     }
-    
+
     return true;
   });
 }
@@ -336,14 +854,13 @@ function sortTeams(teams){
   });
 }
 
-// Get team division - now just return the value from DIV_MAP
+// Get team division
 function teamDiv(tid){
   return DIV_MAP?.[String(tid)] || 'Unknown';
 }
 
 // Get pitcher handedness from position
 function getPitcherRole(pitcher){
-  // Return position (RHP/LHP) if available, otherwise default
   return pitcher.position || pitcher.role || 'Pitcher';
 }
 
@@ -353,7 +870,7 @@ function render(){
   if(!wrap) return;
 
   if(!PITCHERS || !PITCHERS.teams){
-    wrap.innerHTML = '<div style="padding:2rem;text-align:center;color:#fff">Loading rosters...</div>';
+    wrap.innerHTML = '<div style="padding:2rem;text-align:center;color:var(--slate-600)">Loading rosters...</div>';
     return;
   }
 
@@ -368,7 +885,6 @@ function render(){
 
     // Click handler to open modal
     card.onclick = (e) => {
-      // Don't open modal if clicking on team star or links
       if(e.target.closest('.team-star') || e.target.closest('a')) return;
       openRosterModal(team);
     };
@@ -376,11 +892,10 @@ function render(){
     const header = document.createElement('div');
     header.className = 'team-header';
 
-    // Use logo directly from team object
     const teamLogo = team.logo || getTeamLogo(team.team_id);
     const logo = teamLogo ?
       `<img class="team-logo-big" src="${teamLogo}" alt="${team.team || team.displayName}">` :
-      `<div style="width:140px;height:140px;border-radius:12px;background:#d8dde8;color:#174b9f;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:2.5rem">${team.team_abbr || 'CBB'}</div>`;
+      `<div style="width:120px;height:120px;border-radius:16px;background:var(--slate-200);color:var(--slate-600);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:2.5rem;font-family:'Crimson Pro',serif">${team.team_abbr || 'CBB'}</div>`;
 
     const favCount = (team.pitchers || []).filter(p => isFavorited(p.id)).length;
     const divisionName = team.conference || teamDiv(team.team_id);
@@ -400,7 +915,7 @@ function render(){
       <div class="team-conf">${divisionName}</div>
       <div style="display:flex;gap:.5rem;align-items:center;justify-content:center;margin-top:.5rem">
         <span class="pitcher-count">${(team.pitchers || []).length} Pitchers</span>
-        ${favCount > 0 ? `<span class="pitcher-count" style="background:#fff7db;color:#b58900;border:1px solid #e3c76a">${favCount} ⭐</span>` : ''}
+        ${favCount > 0 ? `<span class="pitcher-count" style="background:var(--amber-light);color:#d97706">${favCount} ⭐</span>` : ''}
       </div>
     `;
     header.appendChild(teamStar);
@@ -438,14 +953,12 @@ function openRosterModal(team){
     const card = document.createElement('div');
     card.className = 'modal-pitcher-card' + (isFavorited(pitcher.id) ? ' favorited' : '');
 
-    // Get team logo for fallback
     const team_logo_url = team.logo || getTeamLogo(team.team_id) || '';
 
-    // Build headshot
     const headshotUrl = pitcher.headshot || team_logo_url;
     const headshot = headshotUrl ?
       `<img class="modal-headshot" src="${headshotUrl}" alt="${pitcher.name}" onerror="this.src='${team_logo_url}'">` :
-      `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#174b9f;font-size:2.5rem">${(pitcher.firstName || pitcher.name?.split(' ')[0] || '')[0] || 'P'}</div>`;
+      `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--slate-500);font-size:3rem;font-family:'Crimson Pro',serif;background:var(--slate-100)">${(pitcher.firstName || pitcher.name?.split(' ')[0] || '')[0] || 'P'}</div>`;
 
     const star = document.createElement('span');
     star.className = 'modal-pitcher-star' + (isFavorited(pitcher.id) ? ' active' : '');
@@ -519,11 +1032,11 @@ function closeLightbox(){
 function updateCounters(teams){
   const counters = $("#counters");
   if(!counters) return;
-  
+
   const totalPitchers = teams.reduce((sum, t) => sum + (t.pitchers || []).length, 0);
   const favPitchers = FAVORITES.pitchers.length;
   const favTeams = FAVORITES.teams.length;
-  
+
   counters.innerHTML = `
     <span class="badge">Teams: ${teams.length}</span>
     <span class="badge">Pitchers: ${totalPitchers}</span>
@@ -536,10 +1049,10 @@ function updateCounters(teams){
 function populateDivisionDropdown(){
   const sel = $("#divFilter");
   if(!sel || !DIV_MAP) return;
-  
+
   const divs = new Set(Object.values(DIV_MAP).filter(d => d && d !== 'Unknown'));
   const sorted = Array.from(divs).sort();
-  
+
   for(const div of sorted){
     const opt = document.createElement('option');
     opt.value = div;
@@ -559,58 +1072,51 @@ document.addEventListener('keydown', (e) => {
 // Boot
 async function boot(){
   await loadFavorites();
-  
+
   TEAMS = await getJSON('./data/teams.json');
   PITCHERS = await getJSON('./data/pitchers.json');
   DIV_MAP = await getJSON('./data/divisions_map.json');
-  
-  // Transform object structure to array of teams if needed
+
   if(PITCHERS && typeof PITCHERS === 'object'){
-    // If already has teams array, use it
     if(PITCHERS.teams && Array.isArray(PITCHERS.teams)){
-      // Already in correct format - do nothing
+      // Already in correct format
     }
-    // Otherwise convert from old format (teamId as keys)
     else if(!Array.isArray(PITCHERS)){
       const teamsArray = Object.values(PITCHERS).filter(t => t && t.pitchers);
       PITCHERS = { teams: teamsArray };
     }
   }
-  
+
   if(TEAMS && TEAMS.teams){
     for(const t of TEAMS.teams){
       const tid = String(t.id || t.team_id || '');
       if(tid) teamsById[tid] = t;
     }
   }
-  
-  // Enrich pitcher teams with logo and conference data from teams.json
+
   if(PITCHERS && PITCHERS.teams && TEAMS && TEAMS.teams){
     for(const pTeam of PITCHERS.teams){
-      // Get team ID from pitcher data
       const pitcherTeamId = String(pTeam.teamId || pTeam.team_id || '');
-      
-      // Find matching team by direct ID match
       const matchedTeam = TEAMS.teams.find(t => String(t.id) === pitcherTeamId);
-      
+
       if(matchedTeam){
         pTeam.logo = matchedTeam.logo;
         pTeam.conference = matchedTeam.conference;
-        pTeam.espn_team_id = matchedTeam.id;  // Store ESPN ID for lookups
+        pTeam.espn_team_id = matchedTeam.id;
       }
     }
   }
-  
+
   if(PITCHERS && PITCHERS.teams){
     for(const t of PITCHERS.teams){
       const tid = String(t.team_id || t.id || '');
       if(tid) pitchersById[tid] = t;
     }
   }
-  
+
   populateDivisionDropdown();
   render();
-  
+
   console.log('⚾ Roster page loaded!');
   console.log('Teams:', PITCHERS?.teams?.length || 0);
   console.log('Total Pitchers:', PITCHERS?.totalPitchers || 0);
