@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CBB Analytics Dashboard</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="College Baseball Analytics Dashboard - Visualize pitcher rosters, positions, class years, and conference data" />
+<meta name="theme-color" content="#10b981" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="CBB Tracker" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script defer src="analytics_charts.js"></script>
+<style>
+  :root{
+    --cream: #fafaf8;
+    --white: #ffffff;
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --emerald: #10b981;
+    --emerald-dark: #059669;
+    --emerald-light: #d1fae5;
+    --amber: #f59e0b;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --red: #ef4444;
+  }
+
+  *{box-sizing:border-box}
+
+  html,body{
+    height:100%;
+    margin:0;
+    padding:0;
+  }
+
+  body{
+    background: linear-gradient(135deg, var(--cream) 0%, var(--slate-50) 100%);
+    color: var(--slate-900);
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #top-bar{
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--slate-200);
+    padding: 1.25rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 1px 3px rgba(15,23,42,.05);
+  }
+
+  #top-bar h1{
+    margin: 0;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    flex: 1;
+  }
+
+  #top-bar nav{
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  #top-bar nav a{
+    color: var(--slate-700);
+    text-decoration: none;
+    padding: 0.65rem 1rem;
+    background: var(--white);
+    border: 1.5px solid var(--slate-300);
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  #top-bar nav a:hover,
+  #top-bar nav a.active{
+    border-color: var(--emerald);
+    color: var(--emerald-dark);
+  }
+
+  main{
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .page-header{
+    margin-bottom: 2rem;
+  }
+
+  .page-header h2{
+    font-family: 'Crimson Pro', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--slate-900);
+  }
+
+  .page-header p{
+    color: var(--slate-600);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  .analytics-filters{
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(15,23,42,.08);
+  }
+
+  .analytics-filters select{
+    background: var(--white);
+    border: 1.5px solid var(--slate-300);
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--slate-700);
+    transition: all 0.2s;
+  }
+
+  .analytics-filters select:focus{
+    border-color: var(--emerald);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--emerald-light);
+  }
+
+  .charts-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .chart-card{
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(15,23,42,.08);
+    transition: all 0.3s;
+  }
+
+  .chart-card:hover{
+    box-shadow: 0 8px 24px rgba(15,23,42,.12);
+    transform: translateY(-2px);
+  }
+
+  .chart-card h3{
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--slate-900);
+  }
+
+  .chart-wrapper{
+    position: relative;
+    height: 400px;
+  }
+
+  .chart-wrapper.tall{
+    height: 600px;
+  }
+
+  /* Loading Spinner */
+  .spinner{
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--slate-200);
+    border-top-color: var(--emerald);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin{
+    to{ transform: rotate(360deg); }
+  }
+
+  #loadingState{
+    animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes fadeIn{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+  }
+
+  /* ====================================== */
+  /* MOBILE & RESPONSIVE STYLES             */
+  /* ====================================== */
+
+  /* Tablet and below (< 1024px) */
+  @media (max-width: 1023px) {
+    #top-bar{
+      padding: 1rem 1.5rem;
+      gap: 0.75rem;
+    }
+
+    #top-bar h1{
+      font-size: 1.5rem;
+    }
+
+    .summary-grid{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .charts-grid{
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .chart-card{
+      padding: 1.5rem;
+    }
+  }
+
+  /* ---- Accessibility ---- */
+  .skip-link{
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background: var(--slate-900);
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 0 0 .5rem .5rem;
+    font-size: .875rem;
+    font-weight: 600;
+    z-index: 9999;
+    transition: top .15s;
+    text-decoration: none;
+  }
+  .skip-link:focus{
+    top: 0;
+  }
+
+  .sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  *:focus-visible{
+    outline: 3px solid var(--emerald);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  @media (prefers-contrast: high){
+    :root{
+      --slate-200: #888;
+      --slate-300: #666;
+    }
+    .chart-card{
+      border: 2px solid var(--slate-900);
+    }
+  }
+
+  /* Mobile (< 768px) */
+  @media (max-width: 767px) {
+    body{
+      font-size: 14px;
+    }
+
+    #top-bar{
+      padding: 0.875rem 1rem;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75rem;
+    }
+
+    #top-bar h1{
+      font-size: 1.35rem;
+      text-align: center;
+    }
+
+    .nav-links{
+      width: 100%;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links a{
+      padding: 0.65rem 1.25rem;
+      font-size: 0.85rem;
+      min-height: 40px;
+    }
+
+    #conference-filter{
+      width: 100%;
+      padding: 0.75rem 1rem;
+      min-height: 44px; /* Touch-friendly */
+      font-size: 0.9rem;
+    }
+
+    .export-csv{
+      width: 100%;
+      padding: 0.75rem 1rem;
+      min-height: 44px;
+      justify-content: center;
+    }
+
+    .container{
+      padding: 1.5rem 1rem;
+    }
+
+    /* Summary stats grid */
+    .summary-grid{
+      grid-template-columns: 1fr;
+      gap: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card{
+      padding: 1.25rem;
+    }
+
+    .stat-label{
+      font-size: 0.85rem;
+    }
+
+    .stat-value{
+      font-size: 2rem;
+    }
+
+    /* Charts grid */
+    .charts-grid{
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .chart-card{
+      padding: 1.25rem;
+    }
+
+    .chart-card h3{
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    .chart-wrapper{
+      height: 300px;
+    }
+
+    /* Adjust chart aspect ratio for mobile */
+    canvas{
+      max-height: 280px;
+    }
+
+    /* Loading state */
+    #loadingState p{
+      font-size: 1.1rem;
+    }
+
+    /* Toast notifications */
+    #toast{
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      transform: none;
+      padding: 0.875rem 1.25rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Small mobile (< 480px) */
+  @media (max-width: 479px) {
+    #top-bar h1{
+      font-size: 1.2rem;
+    }
+
+    .nav-links{
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .nav-links a{
+      width: 100%;
+      text-align: center;
+    }
+
+    .summary-grid{
+      gap: 0.75rem;
+    }
+
+    .stat-card{
+      padding: 1rem;
+    }
+
+    .stat-value{
+      font-size: 1.75rem;
+    }
+
+    .chart-card{
+      padding: 1rem;
+    }
+
+    .chart-card h3{
+      font-size: 1.05rem;
+    }
+
+    .chart-wrapper{
+      height: 250px;
+    }
+
+    canvas{
+      max-height: 230px;
+    }
+  }
+
+  /* Landscape mobile optimization */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .chart-wrapper{
+      height: 200px;
+    }
+
+    canvas{
+      max-height: 180px;
+    }
+
+    .modal-content{
+      max-height: 70vh;
+    }
+  }
+
+  /* ---- Game Log Modal ---- */
+  #gameLogModal .modal-box{ max-width: 700px; }
+
+  .game-log-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .game-log-table th{
+    background: var(--slate-50);
+    color: var(--slate-600);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 0.6rem 0.75rem;
+    text-align: right;
+    border-bottom: 2px solid var(--slate-200);
+    white-space: nowrap;
+  }
+
+  .game-log-table th:first-child,
+  .game-log-table td:first-child{ text-align: left; }
+
+  .game-log-table td{
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--slate-100);
+    text-align: right;
+    color: var(--slate-700);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .game-log-table tr:last-child td{ border-bottom: none; }
+
+  .game-log-table tr:hover td{ background: var(--slate-50); }
+
+  .game-log-totals td{
+    background: var(--emerald-light);
+    color: var(--emerald-dark);
+    font-weight: 700;
+    border-top: 2px solid rgba(16,185,129,.25);
+  }
+
+  .game-log-totals td:first-child{ border-radius: 0 0 0 8px; }
+  .game-log-totals td:last-child{ border-radius: 0 0 8px 0; }
+
+  /* Team summary table */
+  .team-summary-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  .team-summary-table th{
+    background: var(--slate-50);
+    color: var(--slate-500);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 0.65rem 0.75rem;
+    text-align: right;
+    border-bottom: 2px solid var(--slate-200);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  .team-summary-table th:first-child,
+  .team-summary-table th:nth-child(2){ text-align: left; }
+  .team-summary-table th:hover{ color: var(--emerald-dark); }
+  .team-summary-table th.sort-asc::after{ content: ' ↑'; }
+  .team-summary-table th.sort-desc::after{ content: ' ↓'; }
+  .team-summary-table td{
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--slate-100);
+    text-align: right;
+    color: var(--slate-700);
+    font-variant-numeric: tabular-nums;
+  }
+  .team-summary-table td:first-child{ text-align: left; font-weight: 600; color: var(--slate-900); }
+  .team-summary-table td:nth-child(2){ text-align: left; color: var(--slate-500); font-size: 0.8rem; }
+  .team-summary-table tr:hover td{ background: var(--slate-50); }
+  .team-era-good{ color: var(--emerald-dark); font-weight: 700; }
+  .team-era-bad{ color: #ef4444; font-weight: 700; }
+
+  /* Make leader rows clickable */
+  .leader-row{
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+  .leader-row:hover{ background: var(--slate-50); }
+  .leader-row:hover .leader-name{ color: var(--emerald-dark); text-decoration: underline; }
+
+  /* ---- Season Leaders ---- */
+  .leaders-section{
+    margin: 2rem 0;
+  }
+
+  .leaders-section h3{
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin: 0 0 1.25rem;
+  }
+
+  .leaders-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 1023px){
+    .leaders-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px){
+    .leaders-grid{ grid-template-columns: 1fr; }
+  }
+
+  .leaders-card{
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(15,23,42,.04);
+  }
+
+  .leaders-card-title{
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .leader-row{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--slate-100);
+  }
+  .leader-row:last-child{ border-bottom: none; }
+
+  .leader-rank{
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--slate-400);
+    width: 1.25rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .leader-rank.gold{ color: #d97706; }
+  .leader-rank.silver{ color: #64748b; }
+  .leader-rank.bronze{ color: #92400e; }
+
+  .leader-name{
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--slate-900);
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .leader-team{
+    font-size: 0.72rem;
+    color: var(--slate-400);
+    display: block;
+    font-weight: 400;
+  }
+
+  .leader-value{
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--emerald-dark);
+    flex-shrink: 0;
+    text-align: right;
+    min-width: 3rem;
+  }
+
+  .leaders-loading{
+    color: var(--slate-400);
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .leaders-error{
+    color: var(--red);
+    font-size: 0.85rem;
+    padding: 0.75rem;
+    background: var(--red-light, #fee2e2);
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+<div id="top-bar" role="banner">
+  <h1>🎯 CBB Analytics</h1>
+  <nav aria-label="Site navigation">
+    <a href="index.html">Rosters</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="analytics.html" class="active" aria-current="page">Analytics</a>
+  </nav>
+</div>
+
+<main id="main-content">
+  <!-- Loading State -->
+  <div id="loadingState" style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:60vh; padding:3rem;">
+    <div class="spinner"></div>
+    <p style="margin-top:1.5rem; font-size:1.1rem; color:var(--slate-600); font-weight:500;">Loading analytics...</p>
+    <p style="margin-top:0.5rem; font-size:0.9rem; color:var(--slate-400);">Analyzing roster data and generating charts</p>
+  </div>
+
+  <div id="analyticsContent" style="display:none;">
+    <div class="page-header">
+      <h2>Season Analytics</h2>
+      <p>Insights and trends across college baseball</p>
+    </div>
+
+  <div class="analytics-filters">
+    <select id="conference-filter" aria-label="Filter by conference" onchange="updateCharts()">
+      <option value="all">All Conferences</option>
+      <option value="SEC">SEC</option>
+      <option value="Big Ten">Big Ten</option>
+      <option value="ACC">ACC</option>
+      <option value="Big 12">Big 12</option>
+      <option value="Pac-12">Pac-12</option>
+    </select>
+  </div>
+
+  <!-- Summary Stats Cards -->
+  <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:1.5rem; margin-bottom:2rem;">
+    <div style="background:linear-gradient(135deg, var(--emerald-light) 0%, var(--white) 100%); border:2px solid var(--emerald); border-radius:16px; padding:1.5rem; box-shadow:0 2px 8px rgba(16,185,129,.1);">
+      <div style="font-size:0.85rem; color:var(--slate-600); font-weight:600; margin-bottom:0.5rem;">TOTAL TEAMS</div>
+      <div id="totalTeams" style="font-size:2.5rem; font-weight:700; color:var(--emerald-dark); font-family:'Crimson Pro', serif;">-</div>
+    </div>
+    <div style="background:linear-gradient(135deg, var(--slate-50) 0%, var(--white) 100%); border:2px solid var(--blue); border-radius:16px; padding:1.5rem; box-shadow:0 2px 8px rgba(59,130,246,.1);">
+      <div style="font-size:0.85rem; color:var(--slate-600); font-weight:600; margin-bottom:0.5rem;">TOTAL PITCHERS</div>
+      <div id="totalPitchers" style="font-size:2.5rem; font-weight:700; color:var(--blue); font-family:'Crimson Pro', serif;">-</div>
+    </div>
+    <div style="background:linear-gradient(135deg, #fef3c7 0%, var(--white) 100%); border:2px solid var(--amber); border-radius:16px; padding:1.5rem; box-shadow:0 2px 8px rgba(245,158,11,.1);">
+      <div style="font-size:0.85rem; color:var(--slate-600); font-weight:600; margin-bottom:0.5rem;">AVG ROSTER SIZE</div>
+      <div id="avgRosterSize" style="font-size:2.5rem; font-weight:700; color:var(--amber); font-family:'Crimson Pro', serif;">-</div>
+    </div>
+    <div style="background:linear-gradient(135deg, #f5f3ff 0%, var(--white) 100%); border:2px solid var(--purple); border-radius:16px; padding:1.5rem; box-shadow:0 2px 8px rgba(139,92,246,.1);">
+      <div style="font-size:0.85rem; color:var(--slate-600); font-weight:600; margin-bottom:0.5rem;">GAMES TRACKED</div>
+      <div id="gamesTracked" style="font-size:2.5rem; font-weight:700; color:var(--purple); font-family:'Crimson Pro', serif;">-</div>
+      <div id="pitchersTracked" style="font-size:0.8rem; color:var(--slate-400); margin-top:0.25rem;"></div>
+    </div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3 id="roster-size-heading">📊 Roster Sizes by Team</h3>
+      <div class="chart-wrapper tall">
+        <canvas id="roster-size-chart" role="img" aria-labelledby="roster-size-heading"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h3 id="position-dist-heading">⚾ Position Distribution</h3>
+      <div class="chart-wrapper">
+        <canvas id="position-distribution-chart" role="img" aria-labelledby="position-dist-heading"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h3 id="class-year-heading">🎓 Class Year Breakdown</h3>
+      <div class="chart-wrapper">
+        <canvas id="class-year-chart" role="img" aria-labelledby="class-year-heading"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h3 id="conference-heading">🏆 Conference Roster Depth</h3>
+      <div class="chart-wrapper">
+        <canvas id="conference-comparison-chart" role="img" aria-labelledby="conference-heading"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card" style="grid-column: 1 / -1;">
+      <h3 id="participation-trend-heading">📈 Weekly Pitcher Appearances</h3>
+      <div class="chart-wrapper" style="height:220px;">
+        <canvas id="participation-trend-chart" role="img" aria-labelledby="participation-trend-heading"></canvas>
+      </div>
+      <div id="participation-trend-loading" style="text-align:center; color:var(--slate-400); font-size:0.875rem; padding:1rem 0;">Loading participation trend…</div>
+    </div>
+  </div>
+  <!-- Season Leaders -->
+  <div class="leaders-section">
+    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
+      <h3 style="margin:0;">🏅 Season Leaders</h3>
+      <select id="leaderboardConf" onchange="renderLeaderboards(this.value)" style="background:var(--white);border:1.5px solid var(--slate-300);border-radius:8px;padding:0.45rem 0.75rem;font-size:0.875rem;color:var(--slate-700);cursor:pointer;">
+        <option value="">All Conferences</option>
+        <option value="SEC">SEC</option>
+        <option value="Big Ten">Big Ten</option>
+        <option value="ACC">ACC</option>
+        <option value="Big 12">Big 12</option>
+        <option value="Pac-12">Pac-12</option>
+      </select>
+      <button id="refreshStatsBtn" onclick="refreshStats(this)" title="Clear cache and reload fresh stats" style="background:var(--slate-100);border:1.5px solid var(--slate-300);border-radius:8px;padding:0.45rem 0.85rem;font-size:0.875rem;color:var(--slate-700);cursor:pointer;font-family:inherit;transition:all .2s;" onmouseover="this.style.borderColor='var(--emerald)';this.style.color='var(--emerald-dark)'" onmouseout="this.style.borderColor='var(--slate-300)';this.style.color='var(--slate-700)'">↺ Refresh</button>
+    </div>
+    <div class="leaders-grid">
+      <div class="leaders-card">
+        <div class="leaders-card-title">⚡ ERA Leaders <span style="font-weight:400;font-size:.7rem;">(min 5 IP)</span></div>
+        <div id="era-leaders"><div class="leaders-loading">Loading…</div></div>
+      </div>
+      <div class="leaders-card">
+        <div class="leaders-card-title">🔥 Strikeout Leaders</div>
+        <div id="k-leaders"><div class="leaders-loading">Loading…</div></div>
+      </div>
+      <div class="leaders-card">
+        <div class="leaders-card-title">⏱ Innings Pitched Leaders</div>
+        <div id="ip-leaders"><div class="leaders-loading">Loading…</div></div>
+      </div>
+      <div class="leaders-card">
+        <div class="leaders-card-title">📅 Appearance Leaders</div>
+        <div id="app-leaders"><div class="leaders-loading">Loading…</div></div>
+      </div>
+      <div class="leaders-card">
+        <div class="leaders-card-title">💨 K/9 Leaders <span style="font-weight:400;font-size:.7rem;">(min 5 IP)</span></div>
+        <div id="k9-leaders"><div class="leaders-loading">Loading…</div></div>
+      </div>
+      <div class="leaders-card">
+        <div class="leaders-card-title">🎯 BB/9 Leaders <span style="font-weight:400;font-size:.7rem;">(min 5 IP, lower = better)</span></div>
+        <div id="bb9-leaders"><div class="leaders-loading">Loading…</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Pitching Summary -->
+  <div class="leaders-section" style="margin-top:2rem;">
+    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
+      <h3 style="margin:0;">🏫 Team Pitching Summary</h3>
+      <select id="teamSummaryConf" onchange="filterTeamTable()" style="background:var(--white);border:1.5px solid var(--slate-300);border-radius:8px;padding:0.45rem 0.75rem;font-size:0.875rem;color:var(--slate-700);cursor:pointer;">
+        <option value="">All Conferences</option>
+        <option value="SEC">SEC</option>
+        <option value="Big Ten">Big Ten</option>
+        <option value="ACC">ACC</option>
+        <option value="Big 12">Big 12</option>
+        <option value="Pac-12">Pac-12</option>
+      </select>
+      <span id="teamSummaryCount" style="font-size:0.8rem;color:var(--slate-400);margin-left:auto;"></span>
+    </div>
+    <div id="team-summary-table"><div class="leaders-loading">Loading…</div></div>
+  </div>
+
+  </div> <!-- End analyticsContent -->
+</main>
+
+<!-- Pitcher Game Log Modal -->
+<div id="gameLogModal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="gameLogTitle">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 id="gameLogTitle" style="margin:0;font-family:'Crimson Pro',serif;font-size:1.4rem;color:var(--slate-900);">Game Log</h3>
+        <div id="gameLogSubtitle" style="font-size:0.85rem;color:var(--slate-500);margin-top:0.2rem;"></div>
+      </div>
+      <button id="closeGameLog" style="background:none;border:none;font-size:1.75rem;color:var(--slate-600);cursor:pointer;padding:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:8px;" aria-label="Close game log">&times;</button>
+    </div>
+    <div class="modal-content" style="padding:0;overflow-y:auto;max-height:65vh;">
+      <div id="gameLogBody" style="padding:1.25rem;">
+        <div style="text-align:center;padding:2rem;color:var(--slate-400);">Loading…</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Screen reader announcer
+const announce = (message) => {
+  const el = document.getElementById('announcements');
+  if (!el) return;
+  el.textContent = '';
+  setTimeout(() => { el.textContent = message; }, 100);
+  setTimeout(() => { el.textContent = ''; }, 3000);
+};
+
+const SUPABASE_URL = 'https://dtnozcqkuzhjmjvsfjqk.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR0bm96Y3FrdXpoam1qdnNmanFrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5MDY4MzAsImV4cCI6MjA4MDQ4MjgzMH0.7puo2RCr6VMNNp_lywpAqufLEGnnE3TYqAtX8zQ0X8c';
+
+let pitchersData = null;
+let teamsData = null;
+
+let rosterSizeChart = null;
+let positionChart = null;
+let classYearChart = null;
+let conferenceChart = null;
+
+async function loadData() {
+  const [pitchers, teams] = await Promise.all([
+    fetch('data/pitchers.json').then(r => r.json()),
+    fetch('data/teams.json').then(r => r.json())
+  ]);
+
+  pitchersData = pitchers;
+  teamsData = teams;
+
+  updateSummaryStats();
+  initializeCharts();
+  loadLeaderboards(); // async, populates after charts
+
+  // Hide loading state and show content
+  const loadingState = document.getElementById('loadingState');
+  const analyticsContent = document.getElementById('analyticsContent');
+
+  if(loadingState){
+    loadingState.style.transition = 'opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    loadingState.style.opacity = '0';
+    setTimeout(() => {
+      loadingState.style.display = 'none';
+      if(analyticsContent) {
+        analyticsContent.style.display = 'block';
+        analyticsContent.style.animation = 'fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+      }
+    }, 300);
+  }
+}
+
+function updateSummaryStats() {
+  const conferenceFilter = document.getElementById('conference-filter')?.value || 'all';
+  let teams = pitchersData.teams || [];
+  if (conferenceFilter !== 'all') {
+    teams = teams.filter(t => t.conference === conferenceFilter);
+  }
+  const totalPitchers = teams.reduce((sum, t) => sum + (t.pitchers?.length || 0), 0);
+  const avgRosterSize = teams.length > 0 ? (totalPitchers / teams.length).toFixed(1) : 0;
+
+  document.getElementById('totalTeams').textContent = teams.length;
+  document.getElementById('totalPitchers').textContent = totalPitchers.toLocaleString();
+  document.getElementById('avgRosterSize').textContent = avgRosterSize;
+  // gamesTracked is populated async by loadLeaderboards()
+}
+
+function initializeCharts() {
+  createRosterSizeChart();
+  createPositionDistributionChart();
+  createClassYearChart();
+  createConferenceComparisonChart();
+}
+
+function updateCharts() {
+  updateSummaryStats();
+  createRosterSizeChart();
+  createPositionDistributionChart();
+  createClassYearChart();
+  createConferenceComparisonChart();
+}
+
+// Parse innings pitched string like "3.2" → decimal 3.667
+function parseIP(ipStr) {
+  if (!ipStr) return 0;
+  const s = String(ipStr);
+  const parts = s.split('.');
+  const full = parseInt(parts[0]) || 0;
+  const thirds = parseInt(parts[1]) || 0;
+  return full + thirds / 3;
+}
+
+// Build a name→team lookup from pitchersData
+function buildPitcherLookup() {
+  const map = {};
+  const teams = pitchersData?.teams || [];
+  for (const team of teams) {
+    for (const p of (team.pitchers || [])) {
+      const id = String(p.id || p.espnId || '').replace(/\D/g,'');
+      if (id) map[id] = { name: p.name || p.last || id, team: team.team || team.teamName || '' };
+    }
+  }
+  return map;
+}
+
+function renderLeaderList(containerId, rows, valueKey, valueSuffix = '') {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  if (!rows.length) {
+    el.innerHTML = '<div class="leaders-loading">No data yet</div>';
+    return;
+  }
+  el.innerHTML = '';
+  rows.forEach((row, i) => {
+    const div = document.createElement('div');
+    div.className = 'leader-row';
+    div.setAttribute('role', 'button');
+    div.setAttribute('tabindex', '0');
+    div.setAttribute('aria-label', `View game log for ${row.name}`);
+    div.title = 'Click to view game log';
+
+    div.addEventListener('click', () => showGameLog(row.pitcherId || row.name, row.name, row.team));
+    div.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showGameLog(row.pitcherId || row.name, row.name, row.team); }
+    });
+
+    const rankEl = document.createElement('span');
+    rankEl.className = 'leader-rank' + (i === 0 ? ' gold' : i === 1 ? ' silver' : i === 2 ? ' bronze' : '');
+    rankEl.textContent = i + 1;
+
+    const nameEl = document.createElement('span');
+    nameEl.className = 'leader-name';
+    nameEl.innerHTML = `${row.name}<span class="leader-team">${row.team}</span>`;
+
+    const valEl = document.createElement('span');
+    valEl.className = 'leader-value';
+    valEl.textContent = row[valueKey] + valueSuffix;
+
+    div.append(rankEl, nameEl, valEl);
+    el.append(div);
+  });
+}
+
+// ── Pitcher Game Log ──────────────────────────────────────────────────────────
+
+let TEAMS_LOOKUP = null; // lazy-loaded: ESPN team id → team name
+
+async function getTeamsLookup() {
+  if (TEAMS_LOOKUP) return TEAMS_LOOKUP;
+  try {
+    const resp = await fetch('/data/teams.json');
+    const data = await resp.json();
+    TEAMS_LOOKUP = {};
+    for (const t of (data.teams || [])) {
+      TEAMS_LOOKUP[String(t.id)] = t.shortName || t.name || '';
+    }
+  } catch(e) { TEAMS_LOOKUP = {}; }
+  return TEAMS_LOOKUP;
+}
+
+function formatGameDate(dateStr) {
+  if (!dateStr) return '—';
+  try {
+    return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  } catch(e) { return dateStr; }
+}
+
+async function showGameLog(pitcherId, pitcherName, teamName) {
+  const modal = document.getElementById('gameLogModal');
+  const body  = document.getElementById('gameLogBody');
+  document.getElementById('gameLogTitle').textContent = pitcherName;
+  document.getElementById('gameLogSubtitle').textContent = teamName;
+  body.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-400);">Loading game log…</div>';
+  modal.style.display = 'flex';
+
+  try {
+    // Fetch all appearances for this pitcher
+    const partResp = await fetch(
+      `${SUPABASE_URL}/rest/v1/cbb_pitcher_participation?pitcher_id=eq.${pitcherId}&select=game_id,team_id,stats&order=game_id.asc`,
+      { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
+    );
+    const appearances = await partResp.json();
+
+    if (!appearances.length) {
+      body.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-400);">No game data found for this pitcher.</div>';
+      return;
+    }
+
+    // Fetch game metadata for the game IDs
+    const gameIds = [...new Set(appearances.map(a => a.game_id))];
+    const gamesResp = await fetch(
+      `${SUPABASE_URL}/rest/v1/cbb_games?game_id=in.(${gameIds.join(',')})&select=game_id,week,date,home_team_id,away_team_id`,
+      { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
+    );
+    const games = await gamesResp.json();
+    const gamesMap = {};
+    for (const g of games) gamesMap[g.game_id] = g;
+
+    const teamsLookup = await getTeamsLookup();
+
+    // Build rows
+    let totalIP = 0, totalK = 0, totalBB = 0, totalER = 0, totalH = 0, totalPC = 0;
+
+    const rowsHtml = appearances.map(a => {
+      const g   = gamesMap[a.game_id] || {};
+      const s   = a.stats || {};
+      const tid = String(a.team_id || '');
+      const opponentId = g.home_team_id && String(g.home_team_id) !== tid
+        ? String(g.home_team_id) : String(g.away_team_id || '');
+      const opponent = teamsLookup[opponentId] || `#${opponentId}`;
+      const isHome = String(g.home_team_id) === tid;
+
+      const ip  = s.IP  || '—';
+      const pc  = s['PC-ST'] || s.PC || '—';
+      const h   = s.H   ?? '—';
+      const k   = s.K   ?? '—';
+      const bb  = s.BB  ?? '—';
+      const er  = s.ER  ?? '—';
+
+      // Accumulate totals
+      totalIP += parseIP(s.IP);
+      totalK  += parseInt(s.K)  || 0;
+      totalBB += parseInt(s.BB) || 0;
+      totalER += parseInt(s.ER) || 0;
+      totalH  += parseInt(s.H)  || 0;
+      totalPC += parseInt(s['PC-ST'] || s.PC) || 0;
+
+      return `<tr>
+        <td>${formatGameDate(g.date)}</td>
+        <td style="color:var(--slate-500);font-size:0.8rem;">Wk ${g.week || '?'}</td>
+        <td>${isHome ? '' : '@'}${opponent}</td>
+        <td>${ip}</td>
+        <td>${pc}</td>
+        <td>${h}</td>
+        <td>${k}</td>
+        <td>${bb}</td>
+        <td>${er}</td>
+      </tr>`;
+    }).join('');
+
+    // Format totals IP
+    const totalWhole  = Math.floor(totalIP);
+    const totalThirds = Math.round((totalIP - totalWhole) * 3);
+    const totalIPStr  = totalThirds === 0 ? `${totalWhole}` : `${totalWhole}.${totalThirds}`;
+    const seasonERA   = totalIP > 0 ? (totalER / totalIP * 9).toFixed(2) : '—';
+
+    body.innerHTML = `
+      <table class="game-log-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Wk</th>
+            <th style="text-align:left">Opponent</th>
+            <th>IP</th>
+            <th>PC</th>
+            <th>H</th>
+            <th>K</th>
+            <th>BB</th>
+            <th>ER</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rowsHtml}
+        </tbody>
+        <tfoot>
+          <tr class="game-log-totals">
+            <td colspan="3">Season Totals (${appearances.length} app · ERA ${seasonERA})</td>
+            <td>${totalIPStr}</td>
+            <td>${totalPC || '—'}</td>
+            <td>${totalH}</td>
+            <td>${totalK}</td>
+            <td>${totalBB}</td>
+            <td>${totalER}</td>
+          </tr>
+        </tfoot>
+      </table>
+    `;
+
+  } catch(e) {
+    body.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--red);">Failed to load game log: ${e.message}</div>`;
+  }
+}
+
+// Close game log modal
+document.getElementById('closeGameLog')?.addEventListener('click', () => {
+  document.getElementById('gameLogModal').style.display = 'none';
+});
+document.getElementById('gameLogModal')?.addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const m = document.getElementById('gameLogModal');
+    if (m && m.style.display === 'flex') m.style.display = 'none';
+  }
+});
+
+let teamSortKey = 'era';
+let teamSortDir = 1; // 1 = asc (ERA lower=better), -1 = desc
+let _teamRows = [];
+let _aggData = {}; // full pitcher agg keyed by pitcherId, used for leaderboard filtering
+
+function sortTeamTable(key) {
+  const defaultAsc = ['era', 'bb9']; // lower is better → default ascending
+  if (teamSortKey === key) { teamSortDir *= -1; }
+  else { teamSortKey = key; teamSortDir = defaultAsc.includes(key) ? 1 : -1; }
+  filterTeamTable();
+}
+
+function filterTeamTable() {
+  const conf = document.getElementById('teamSummaryConf')?.value || '';
+  const filtered = conf ? _teamRows.filter(r => r.conf === conf) : _teamRows;
+  renderTeamSummaryTable(filtered, true);
+}
+
+function renderTeamSummaryTable(rows, skipStore = false) {
+  if (!skipStore) _teamRows = rows;
+  const el = document.getElementById('team-summary-table');
+  if (!el) return;
+  const countEl = document.getElementById('teamSummaryCount');
+  if (countEl) countEl.textContent = `${rows.length} team${rows.length !== 1 ? 's' : ''}`;
+  if (!rows.length) { el.innerHTML = '<div class="leaders-loading">No team data yet</div>'; return; }
+
+  const ipFmt = ip => {
+    const w = Math.floor(ip), t = Math.round((ip - w) * 3);
+    return t === 0 ? String(w) : `${w}.${t}`;
+  };
+
+  const getVal = (r, key) => {
+    if (key === 'era')      return r.totalIP > 0 ? r.totalER / r.totalIP * 9 : 99;
+    if (key === 'k9')       return r.totalIP > 0 ? r.totalK  / r.totalIP * 9 : 0;
+    if (key === 'bb9')      return r.totalIP > 0 ? r.totalBB / r.totalIP * 9 : 99;
+    if (key === 'ip')       return r.totalIP;
+    if (key === 'k')        return r.totalK;
+    if (key === 'bb')       return r.totalBB;
+    if (key === 'apps')     return r.apps;
+    if (key === 'pitchers') return r.pitchers.size;
+    return 0;
+  };
+
+  const sorted = [...rows].sort((a, b) => teamSortDir * (getVal(a, teamSortKey) - getVal(b, teamSortKey)));
+
+  const cols = [
+    { key: 'team',     label: 'Team',     sortable: false },
+    { key: 'conf',     label: 'Conf',     sortable: false },
+    { key: 'pitchers', label: 'Pitchers', sortable: true  },
+    { key: 'apps',     label: 'App',      sortable: true  },
+    { key: 'ip',       label: 'IP',       sortable: true  },
+    { key: 'k',        label: 'K',        sortable: true  },
+    { key: 'bb',       label: 'BB',       sortable: true  },
+    { key: 'era',      label: 'ERA',      sortable: true  },
+    { key: 'k9',       label: 'K/9',      sortable: true  },
+    { key: 'bb9',      label: 'BB/9',     sortable: true  },
+  ];
+
+  const thead = cols.map(c => {
+    const active = c.sortable && teamSortKey === c.key;
+    const cls = active ? ` class="${teamSortDir === 1 ? 'sort-asc' : 'sort-desc'}"` : '';
+    const click = c.sortable ? ` onclick="sortTeamTable('${c.key}')"` : '';
+    return `<th${cls}${click}>${c.label}</th>`;
+  }).join('');
+
+  const tbody = sorted.map(r => {
+    const era = r.totalIP > 0 ? (r.totalER / r.totalIP * 9).toFixed(2) : '—';
+    const k9  = r.totalIP > 0 ? (r.totalK  / r.totalIP * 9).toFixed(1) : '—';
+    const bb9 = r.totalIP > 0 ? (r.totalBB / r.totalIP * 9).toFixed(1) : '—';
+    const eraNum = parseFloat(era);
+    const eraClass = !isNaN(eraNum) ? (eraNum < 3.5 ? ' class="team-era-good"' : eraNum > 5.5 ? ' class="team-era-bad"' : '') : '';
+    return `<tr>
+      <td>${r.team}</td>
+      <td>${r.conf}</td>
+      <td>${r.pitchers.size}</td>
+      <td>${r.apps}</td>
+      <td>${ipFmt(r.totalIP)}</td>
+      <td>${r.totalK}</td>
+      <td>${r.totalBB}</td>
+      <td${eraClass}>${era}</td>
+      <td>${k9}</td>
+      <td>${bb9}</td>
+    </tr>`;
+  }).join('');
+
+  el.innerHTML = `<table class="team-summary-table">
+    <thead><tr>${thead}</tr></thead>
+    <tbody>${tbody}</tbody>
+  </table>`;
+}
+
+function renderLeaderboards(confFilter) {
+  const vals = Object.values(_aggData);
+  const filtered = confFilter ? vals.filter(p => p.conf === confFilter) : vals;
+
+  const eraLeaders = filtered
+    .filter(p => p.totalIP >= 5)
+    .map(p => ({ ...p, era: (p.totalER / p.totalIP * 9).toFixed(2) }))
+    .sort((a, b) => parseFloat(a.era) - parseFloat(b.era))
+    .slice(0, 8);
+
+  const kLeaders = filtered
+    .filter(p => p.totalK > 0)
+    .sort((a, b) => b.totalK - a.totalK)
+    .slice(0, 8)
+    .map(p => ({ ...p, ks: p.totalK }));
+
+  const ipLeaders = filtered
+    .filter(p => p.totalIP > 0)
+    .sort((a, b) => b.totalIP - a.totalIP)
+    .slice(0, 8)
+    .map(p => ({ ...p, ipDisplay: p.totalIP.toFixed(1) }));
+
+  const appLeaders = filtered
+    .sort((a, b) => b.appearances - a.appearances)
+    .slice(0, 8)
+    .map(p => ({ ...p, apps: p.appearances }));
+
+  const k9Leaders = filtered
+    .filter(p => p.totalIP >= 5)
+    .map(p => ({ ...p, k9: (p.totalK / p.totalIP * 9).toFixed(2) }))
+    .sort((a, b) => parseFloat(b.k9) - parseFloat(a.k9))
+    .slice(0, 8);
+
+  const bb9Leaders = filtered
+    .filter(p => p.totalIP >= 5)
+    .map(p => ({ ...p, bb9: (p.totalBB / p.totalIP * 9).toFixed(2) }))
+    .sort((a, b) => parseFloat(a.bb9) - parseFloat(b.bb9))
+    .slice(0, 8);
+
+  renderLeaderList('era-leaders', eraLeaders, 'era');
+  renderLeaderList('k-leaders', kLeaders, 'ks');
+  renderLeaderList('ip-leaders', ipLeaders, 'ipDisplay');
+  renderLeaderList('app-leaders', appLeaders, 'apps');
+  renderLeaderList('k9-leaders', k9Leaders, 'k9');
+  renderLeaderList('bb9-leaders', bb9Leaders, 'bb9');
+}
+
+// ── Participation data cache (localStorage, 2-hour TTL) ─────────────────────
+const PARTICIPATION_CACHE_KEY = 'analytics_participation_v1';
+const PARTICIPATION_CACHE_TTL = 2 * 60 * 60 * 1000; // 2 hours
+
+function getCachedParticipation() {
+  try {
+    const raw = localStorage.getItem(PARTICIPATION_CACHE_KEY);
+    if (!raw) return null;
+    const { rows, ts } = JSON.parse(raw);
+    if (Date.now() - ts > PARTICIPATION_CACHE_TTL) {
+      localStorage.removeItem(PARTICIPATION_CACHE_KEY);
+      return null;
+    }
+    return rows;
+  } catch { return null; }
+}
+
+function setCachedParticipation(rows) {
+  try {
+    localStorage.setItem(PARTICIPATION_CACHE_KEY, JSON.stringify({ rows, ts: Date.now() }));
+  } catch (e) {
+    console.warn('[cache] Could not write participation cache:', e.message);
+  }
+}
+
+function clearParticipationCache() {
+  localStorage.removeItem(PARTICIPATION_CACHE_KEY);
+  localStorage.removeItem('analytics_games_v1');
+}
+
+async function refreshStats(btn) {
+  const orig = btn.textContent;
+  btn.textContent = '⏳ Loading…';
+  btn.disabled = true;
+  clearParticipationCache();
+  await loadLeaderboards();
+  btn.textContent = orig;
+  btn.disabled = false;
+}
+
+// cbb_games week-map cache (same TTL as participation)
+function getCachedGames() {
+  try {
+    const raw = localStorage.getItem('analytics_games_v1');
+    if (!raw) return null;
+    const { data, ts } = JSON.parse(raw);
+    if (Date.now() - ts > PARTICIPATION_CACHE_TTL) { localStorage.removeItem('analytics_games_v1'); return null; }
+    return data;
+  } catch { return null; }
+}
+function setCachedGames(data) {
+  try { localStorage.setItem('analytics_games_v1', JSON.stringify({ data, ts: Date.now() })); } catch {}
+}
+// ────────────────────────────────────────────────────────────────────────────
+
+async function loadLeaderboards() {
+  try {
+    // Try cache first
+    let allRows = getCachedParticipation();
+    let fromCache = !!allRows;
+
+    if (!allRows) {
+      // Fetch all participation rows from Supabase
+      allRows = [];
+      let offset = 0;
+      const pageSize = 1000;
+      while (true) {
+        const url = `${SUPABASE_URL}/rest/v1/cbb_pitcher_participation?select=pitcher_id,pitcher_name,game_id,stats&order=pitcher_id.asc&limit=${pageSize}&offset=${offset}`;
+        const resp = await fetch(url, {
+          headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
+        });
+        if (!resp.ok) throw new Error(`Supabase ${resp.status}`);
+        const rows = await resp.json();
+        if (!rows || rows.length === 0) break;
+        allRows = allRows.concat(rows);
+        if (rows.length < pageSize) break;
+        offset += pageSize;
+      }
+      setCachedParticipation(allRows);
+    }
+
+    // Show cache status next to refresh button
+    const refreshBtn = document.getElementById('refreshStatsBtn');
+    if (refreshBtn) {
+      const cacheTs = (() => { try { const r = localStorage.getItem(PARTICIPATION_CACHE_KEY); return r ? JSON.parse(r).ts : null; } catch { return null; } })();
+      const age = cacheTs ? Math.round((Date.now() - cacheTs) / 60000) : 0;
+      refreshBtn.title = fromCache
+        ? `Cached ${age}min ago — click to refresh`
+        : 'Just fetched fresh data';
+      let cacheLabel = document.getElementById('cacheAgeLabel');
+      if (!cacheLabel) {
+        cacheLabel = document.createElement('span');
+        cacheLabel.id = 'cacheAgeLabel';
+        cacheLabel.style.cssText = 'font-size:.75rem;color:var(--slate-500);white-space:nowrap;';
+        refreshBtn.parentNode.insertBefore(cacheLabel, refreshBtn.nextSibling);
+      }
+      cacheLabel.textContent = fromCache ? `cached ${age}min ago` : 'live data';
+    }
+
+    if (!allRows.length) {
+      ['era-leaders','k-leaders','ip-leaders','app-leaders','k9-leaders','bb9-leaders','team-summary-table'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = '<div class="leaders-loading">No participation data yet</div>';
+      });
+      return;
+    }
+
+    const lookup = buildPitcherLookup();
+
+    // Aggregate per pitcher
+    const agg = {};
+    for (const row of allRows) {
+      const pid = String(row.pitcher_id || '').replace(/\D/g,'');
+      if (!pid) continue;
+      if (!agg[pid]) {
+        const info = lookup[pid] || {};
+        agg[pid] = {
+          pitcherId: pid,
+          name: row.pitcher_name || info.name || pid,
+          team: info.team || '',
+          appearances: 0,
+          totalIP: 0,
+          totalK: 0,
+          totalBB: 0,
+          totalER: 0
+        };
+      }
+      const s = row.stats || {};
+      agg[pid].appearances++;
+      agg[pid].totalIP += parseIP(s.IP);
+      agg[pid].totalK += parseInt(s.K) || 0;
+      agg[pid].totalBB += parseInt(s.BB) || 0;
+      agg[pid].totalER += parseInt(s.ER) || 0;
+    }
+
+    // Attach conference to each pitcher agg entry
+    const teamsArrForConf = teamsData?.teams || [];
+    const teamConfMap = {};
+    for (const t of teamsArrForConf) {
+      teamConfMap[t.team || t.name || ''] = t.conference || '';
+    }
+    for (const pid of Object.keys(agg)) {
+      agg[pid].conf = teamConfMap[agg[pid].team] || '';
+    }
+
+    // Store for conference filtering
+    _aggData = agg;
+
+    // Render leaderboards (default: all conferences)
+    renderLeaderboards('');
+
+    // Reset leaderboard conference filter select on fresh load
+    const lbConfSel = document.getElementById('leaderboardConf');
+    if (lbConfSel) lbConfSel.value = '';
+
+    // Build team aggregation
+    const teamAgg = {};
+    for (const p of Object.values(agg)) {
+      const team = p.team || 'Unknown';
+      if (!teamAgg[team]) {
+        teamAgg[team] = { team, conf: '', apps: 0, totalIP: 0, totalK: 0, totalBB: 0, totalER: 0, pitchers: new Set() };
+      }
+      teamAgg[team].apps      += p.appearances;
+      teamAgg[team].totalIP   += p.totalIP;
+      teamAgg[team].totalK    += p.totalK;
+      teamAgg[team].totalBB   += p.totalBB;
+      teamAgg[team].totalER   += p.totalER;
+      teamAgg[team].pitchers.add(p.pitcherId);
+    }
+    // Attach conference from teamsData
+    const teamsArr = teamsData?.teams || [];
+    for (const t of teamsArr) {
+      const key = t.team || t.name || '';
+      if (teamAgg[key]) teamAgg[key].conf = t.conference || '';
+    }
+    renderTeamSummaryTable(Object.values(teamAgg));
+    // Reset conference filter on fresh load
+    const confSel = document.getElementById('teamSummaryConf');
+    if (confSel) confSel.value = '';
+
+    // Update "GAMES TRACKED" summary card
+    const uniqueGames = new Set(allRows.map(r => r.game_id)).size;
+    const uniquePitchers = Object.keys(agg).length;
+    const gamesEl = document.getElementById('gamesTracked');
+    if (gamesEl) gamesEl.textContent = uniqueGames.toLocaleString();
+    const pitchersEl = document.getElementById('pitchersTracked');
+    if (pitchersEl) pitchersEl.textContent = `${uniquePitchers.toLocaleString()} pitchers`;
+
+    // Build weekly participation trend from cbb_games week mapping
+    buildParticipationTrend(allRows);
+
+  } catch (e) {
+    console.error('[leaders] Failed:', e);
+    ['era-leaders','k-leaders','ip-leaders','app-leaders','k9-leaders','bb9-leaders','team-summary-table'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = `<div class="leaders-error">Failed to load: ${e.message}</div>`;
+    });
+    const loadingEl = document.getElementById('participation-trend-loading');
+    if (loadingEl) loadingEl.textContent = 'Could not load participation trend.';
+  }
+}
+
+let participationTrendChart = null;
+
+async function buildParticipationTrend(participationRows) {
+  const loadingEl = document.getElementById('participation-trend-loading');
+  try {
+    // Fetch game_id → week mapping from cbb_games (cached)
+    let games = getCachedGames();
+    if (!games) {
+      const resp = await fetch(
+        `${SUPABASE_URL}/rest/v1/cbb_games?select=game_id,week&order=week.asc&limit=1000`,
+        { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
+      );
+      if (!resp.ok) throw new Error(`Supabase ${resp.status}`);
+      games = await resp.json();
+      setCachedGames(games);
+    }
+
+    // Build game_id → week map
+    const gameWeekMap = {};
+    games.forEach(g => { gameWeekMap[g.game_id] = g.week; });
+
+    // Count appearances per week
+    const weekAppearances = {};
+    const weekGames = {};
+    participationRows.forEach(row => {
+      const week = gameWeekMap[row.game_id];
+      if (!week) return;
+      weekAppearances[week] = (weekAppearances[week] || 0) + 1;
+      if (!weekGames[week]) weekGames[week] = new Set();
+      weekGames[week].add(row.game_id);
+    });
+
+    const weeks = Object.keys(weekAppearances).map(Number).sort((a, b) => a - b);
+    if (!weeks.length) {
+      if (loadingEl) loadingEl.textContent = 'No weekly data available yet.';
+      return;
+    }
+
+    if (loadingEl) loadingEl.style.display = 'none';
+
+    const ctx = document.getElementById('participation-trend-chart');
+    if (!ctx) return;
+
+    if (participationTrendChart) participationTrendChart.destroy();
+
+    participationTrendChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: weeks.map(w => `Wk ${w}`),
+        datasets: [
+          {
+            label: 'Pitcher Appearances',
+            data: weeks.map(w => weekAppearances[w] || 0),
+            backgroundColor: 'rgba(16,185,129,0.7)',
+            borderColor: '#059669',
+            borderWidth: 1,
+            borderRadius: 6,
+            yAxisID: 'y'
+          },
+          {
+            label: 'Games Tracked',
+            data: weeks.map(w => weekGames[w]?.size || 0),
+            type: 'line',
+            borderColor: '#3b82f6',
+            backgroundColor: 'rgba(59,130,246,0.1)',
+            borderWidth: 2,
+            pointRadius: 4,
+            pointBackgroundColor: '#3b82f6',
+            tension: 0.3,
+            fill: true,
+            yAxisID: 'y2'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: { font: { family: 'DM Sans', size: 12 }, usePointStyle: true, padding: 16 }
+          },
+          tooltip: {
+            backgroundColor: 'rgba(15,23,42,0.95)',
+            padding: 12,
+            titleFont: { family: 'DM Sans', size: 13 },
+            bodyFont: { family: 'DM Sans', size: 12 }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            position: 'left',
+            grid: { color: '#f1f5f9' },
+            ticks: { font: { family: 'DM Sans', size: 11 } },
+            title: { display: true, text: 'Appearances', font: { family: 'DM Sans', size: 11 }, color: '#059669' }
+          },
+          y2: {
+            beginAtZero: true,
+            position: 'right',
+            grid: { display: false },
+            ticks: { font: { family: 'DM Sans', size: 11 } },
+            title: { display: true, text: 'Games', font: { family: 'DM Sans', size: 11 }, color: '#3b82f6' }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { font: { family: 'DM Sans', size: 11 } }
+          }
+        }
+      }
+    });
+
+  } catch (e) {
+    console.error('[trend] Failed:', e);
+    if (loadingEl) loadingEl.textContent = 'Could not load weekly trend.';
+  }
+}
+
+// Chart functions are loaded from analytics_charts.js
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  // Ignore if typing in an input field
+  if(e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
+    if(e.key === 'Escape') {
+      e.target.blur();
+    }
+    return;
+  }
+
+  switch(e.key) {
+    case 'r':
+      e.preventDefault();
+      window.location.href = 'index.html';
+      break;
+    case 's':
+      e.preventDefault();
+      window.location.href = 'schedule.html';
+      break;
+    case 'a':
+      e.preventDefault();
+      // Already on analytics page
+      break;
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+      e.preventDefault();
+      const conferenceFilter = document.getElementById('conference-filter');
+      if(conferenceFilter) {
+        const options = ['all', 'SEC', 'Big Ten', 'ACC', 'Big 12', 'Pac-12'];
+        const index = parseInt(e.key) - 1;
+        if(index >= 0 && index < options.length) {
+          conferenceFilter.value = options[index];
+          updateCharts();
+        }
+      }
+      break;
+  }
+});
+
+// ====================================
+// PWA Service Worker Registration
+// ====================================
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('✓ Service Worker registered:', registration.scope);
+
+        // Check for updates periodically
+        setInterval(() => {
+          registration.update();
+        }, 60000); // Check every minute
+      })
+      .catch((error) => {
+        console.log('✗ Service Worker registration failed:', error);
+      });
+  });
+}
+
+// ====================================
+// PWA Install Prompt
+// ====================================
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  console.log('💾 App can be installed');
+});
+
+window.addEventListener('appinstalled', () => {
+  console.log('✓ PWA installed successfully');
+  deferredPrompt = null;
+});
+
+// Listen for service worker updates
+navigator.serviceWorker?.addEventListener('controllerchange', () => {
+  console.log('🔄 Service Worker updated, reloading page...');
+  window.location.reload();
+});
+
+
+loadData();
+</script>
+
+</body>
+</html>

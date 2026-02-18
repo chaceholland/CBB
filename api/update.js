@@ -50,33 +50,39 @@ async function getCurrentWeek() {
   return Math.max(...startedWeeks, 1);
 }
 
-// Get games needing scrape (completed but not yet scraped)
-async function getGamesNeedingScrape(week) {
-  // Get completed games for the week
+// Get games needing scrape (completed but not yet scraped) - checks ALL weeks
+async function getGamesNeedingScrape() {
+  // Get all completed games across all weeks (ordered by week desc so recent games come first)
   const gamesResp = await fetch(
-    `${SUPABASE_URL}/rest/v1/cbb_games?week=eq.${week}&completed=eq.true&select=game_id,week,home_team_id,away_team_id,date`,
+    `${SUPABASE_URL}/rest/v1/cbb_games?completed=eq.true&select=game_id,week,home_team_id,away_team_id,date&order=week.desc&limit=500`,
     { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
   );
   const completedGames = await gamesResp.json();
   if (!completedGames.length) return [];
-  
+
   // Get game IDs that already have participation data
   const gameIds = completedGames.map(g => g.game_id);
-  const partResp = await fetch(
-    `${SUPABASE_URL}/rest/v1/cbb_pitcher_participation?game_id=in.(${gameIds.join(',')})&select=game_id`,
-    { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
-  );
-  const existingPart = await partResp.json();
-  const scrapedGameIds = new Set(existingPart.map(p => p.game_id));
-  
-  // Return only games that haven't been scraped
+
+  // Supabase URL limit: batch the lookup in chunks of 100
+  const scrapedGameIds = new Set();
+  for (let i = 0; i < gameIds.length; i += 100) {
+    const chunk = gameIds.slice(i, i + 100);
+    const partResp = await fetch(
+      `${SUPABASE_URL}/rest/v1/cbb_pitcher_participation?game_id=in.(${chunk.join(',')})&select=game_id`,
+      { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
+    );
+    const existing = await partResp.json();
+    existing.forEach(p => scrapedGameIds.add(p.game_id));
+  }
+
+  // Return only games that haven't been scraped, recent weeks first
   return completedGames.filter(g => !scrapedGameIds.has(g.game_id));
 }
 
-// Get incomplete games for status check (limited batch)
-async function getIncompleteGames(week, limit = 50) {
+// Get incomplete games for status check across all weeks (limited batch)
+async function getIncompleteGames(limit = 50) {
   const resp = await fetch(
-    `${SUPABASE_URL}/rest/v1/cbb_games?week=eq.${week}&completed=eq.false&select=game_id,week,home_team_id,away_team_id,date&limit=${limit}`,
+    `${SUPABASE_URL}/rest/v1/cbb_games?completed=eq.false&select=game_id,week,home_team_id,away_team_id,date&order=week.desc&limit=${limit}`,
     { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
   );
   return await resp.json();
@@ -218,12 +224,12 @@ export default async function handler(req, res) {
   
   try {
     results.week = await getCurrentWeek();
-    console.log(`Processing Week ${results.week}`);
-    
-    // Phase 1: Check status of incomplete games (limited batch)
-    const incompleteGames = await getIncompleteGames(results.week, 50);
-    console.log(`Checking ${incompleteGames.length} incomplete games`);
-    
+    console.log(`Current week: ${results.week}`);
+
+    // Phase 1: Check status of incomplete games (all weeks, recent first)
+    const incompleteGames = await getIncompleteGames(50);
+    console.log(`Checking ${incompleteGames.length} incomplete games across all weeks`);
+
     for (const game of incompleteGames) {
       if (checkTimeout()) {
         results.earlyExit = true;
@@ -236,20 +242,21 @@ export default async function handler(req, res) {
         results.statusChecked++;
         if (status.updated) {
           results.gamesUpdated++;
-          console.log(`✓ Game ${game.game_id} marked complete`);
+          console.log(`✓ Game ${game.game_id} (week ${game.week}) marked complete`);
         }
       } catch (e) {
         results.errors.push(`Status ${game.game_id}: ${e.message}`);
       }
     }
-    
-    // Phase 2: Scrape games that need participation data
+
+    // Phase 2: Scrape games that need participation data (all weeks, recent first)
     if (!checkTimeout()) {
-      const gamesToScrape = await getGamesNeedingScrape(results.week);
+      const gamesToScrape = await getGamesNeedingScrape();
       const batch = gamesToScrape.slice(0, MAX_GAMES_PER_RUN);
       results.gamesRemaining = gamesToScrape.length - batch.length;
       
-      console.log(`Scraping ${batch.length} of ${gamesToScrape.length} games needing data`);
+      const weekRange = batch.length > 0 ? `weeks ${Math.min(...batch.map(g=>g.week))}-${Math.max(...batch.map(g=>g.week))}` : '';
+      console.log(`Scraping ${batch.length} of ${gamesToScrape.length} games needing data (${weekRange})`);
       
       const allParticipation = [];
       for (const game of batch) {

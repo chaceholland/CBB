@@ -5,9 +5,17 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <title>CBB Weekly Matchups & Pitcher Participation</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="College Baseball Weekly Matchups - Track pitcher participation, game schedules, and matchups across Power 5 conferences" />
+<meta name="theme-color" content="#10b981" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="CBB Tracker" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <style>
   /* Modern Premium Sports Analytics Theme - Matching roster.html */
   :root{
@@ -404,6 +412,16 @@
     position: relative;
     overflow: visible;
     z-index: 0;
+    transition: border-color 0.2s, background 0.2s, opacity 0.2s;
+  }
+
+  .side.winner{
+    border-color: var(--emerald);
+    background: linear-gradient(160deg, var(--emerald-light) 0%, var(--slate-50) 60%);
+  }
+
+  .side.loser{
+    opacity: 0.65;
   }
 
   .team-h{
@@ -506,6 +524,44 @@
     align-self: center;
     text-align: center;
     color: var(--slate-400);
+  }
+
+  /* Final Score Display */
+  .score-display{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .score-num{
+    color: var(--slate-700);
+    min-width: 1.5ch;
+    text-align: center;
+  }
+
+  .score-num.winner{
+    color: var(--emerald-dark);
+  }
+
+  .score-sep{
+    color: var(--slate-300);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0 0.1rem;
+  }
+
+  .score-label{
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--slate-400);
+    margin-top: 0.25rem;
+    font-family: 'DM Sans', sans-serif;
   }
 
   /* Pitcher Section */
@@ -691,6 +747,11 @@
     color: var(--white);
   }
 
+  .pill-pos{
+    background: var(--slate-200);
+    color: var(--slate-700);
+  }
+
   /* Pitch Stats */
   .pitch-stats{
     font-size: 0.75rem;
@@ -762,6 +823,66 @@
 
   .pitcher-details-line a:hover{
     text-decoration: underline;
+  }
+
+  /* Full stat line chips */
+  .pitcher-stat-line{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.4rem 0 0.5rem;
+  }
+
+  .stat-chip{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: var(--slate-100);
+    border: 1px solid var(--slate-200);
+    border-radius: 6px;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+
+  .stat-label{
+    color: var(--slate-400);
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
+
+  .stat-value{
+    color: var(--slate-800);
+    font-weight: 700;
+  }
+
+  .stat-chip-season{
+    background: var(--emerald-light);
+    border-color: rgba(16,185,129,.25);
+  }
+  .stat-chip-season .stat-label{ color: var(--emerald-dark); }
+  .stat-chip-season .stat-value{ color: var(--emerald-dark); }
+
+  .pitcher-season-line{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    margin-top: 0.3rem;
+    padding-top: 0.3rem;
+    border-top: 1px dashed var(--slate-200);
+  }
+
+  .season-stats-label{
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--emerald-dark);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    white-space: nowrap;
+    margin-right: 0.15rem;
   }
 
   /* Star Favorite */
@@ -917,7 +1038,98 @@
     color: var(--emerald);
   }
 
+  .weeks-grid label.week-current{
+    border-color: var(--emerald);
+    background: var(--emerald-light);
+    position: relative;
+  }
+
+  .weeks-grid label.week-current::after{
+    content: '●';
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    font-size: 6px;
+    color: var(--emerald);
+    line-height: 1;
+  }
+
   .weeks-grid input{
+    margin: 0;
+    accent-color: var(--emerald);
+  }
+
+  /* Conferences Grid */
+  .conferences-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .conferences-grid label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.85rem;
+  }
+
+  .conferences-grid label:hover{
+    background: var(--emerald-light);
+    border-color: var(--emerald);
+  }
+
+  .conferences-grid input:checked + span{
+    color: var(--emerald);
+    font-weight: 600;
+  }
+
+  .conferences-grid input{
+    margin: 0;
+    accent-color: var(--emerald);
+  }
+
+  /* Teams Grid */
+  .teams-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .teams-grid label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8rem;
+  }
+
+  .teams-grid label:hover{
+    background: var(--emerald-light);
+    border-color: var(--emerald);
+  }
+
+  .teams-grid label.hidden{
+    display: none;
+  }
+
+  .teams-grid input:checked + span{
+    color: var(--emerald);
+    font-weight: 600;
+  }
+
+  .teams-grid input{
     margin: 0;
     accent-color: var(--emerald);
   }
@@ -998,17 +1210,442 @@
   .game{
     animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /* Loading Spinner */
+  .spinner{
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--slate-200);
+    border-top-color: var(--emerald);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin{
+    to{ transform: rotate(360deg); }
+  }
+
+  #loadingState{
+    animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* ====================================== */
+  /* MOBILE & RESPONSIVE STYLES             */
+  /* ====================================== */
+
+  /* Tablet and below (< 1024px) */
+  @media (max-width: 1023px) {
+    #top-bar{
+      padding: 1rem 1.5rem;
+      gap: 0.75rem;
+    }
+
+    #top-bar h1{
+      font-size: 1.5rem;
+    }
+
+    .game-card{
+      padding: 1.25rem;
+    }
+
+    .matchup-header{
+      font-size: 1.5rem;
+    }
+
+    .team-section h4{
+      font-size: 1.15rem;
+    }
+  }
+
+  /* ---- Accessibility ---- */
+  .skip-link{
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background: var(--slate-900);
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 0 0 .5rem .5rem;
+    font-size: .875rem;
+    font-weight: 600;
+    z-index: 9999;
+    transition: top .15s;
+    text-decoration: none;
+  }
+  .skip-link:focus{
+    top: 0;
+  }
+
+  .sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  *:focus-visible{
+    outline: 3px solid var(--emerald);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  @media (prefers-contrast: high){
+    :root{
+      --slate-200: #888;
+      --slate-300: #666;
+      --slate-400: #444;
+    }
+    .game-card{
+      border: 2px solid var(--slate-900);
+    }
+  }
+
+  /* Mobile (< 768px) */
+  @media (max-width: 767px) {
+    body{
+      font-size: 14px;
+    }
+
+    #top-bar{
+      padding: 0.875rem 1rem;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    #top-bar h1{
+      font-size: 1.35rem;
+      text-align: center;
+    }
+
+    .btn,
+    .btn-secondary{
+      width: 100%;
+      font-size: 0.9rem;
+      padding: 0.75rem 1rem;
+      min-height: 44px; /* Touch-friendly */
+      justify-content: center;
+    }
+
+    #top-bar input{
+      width: 100%;
+      padding: 0.75rem 1rem;
+      min-height: 44px;
+    }
+
+    /* Week selection */
+    #weeks{
+      padding: 1rem;
+      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+
+    .week-checkbox{
+      padding: 0.75rem;
+      font-size: 0.85rem;
+      min-height: 44px;
+    }
+
+    /* Game cards */
+    .game-card{
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .game-header{
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75rem;
+    }
+
+    .game-meta{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .game-actions{
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .game-star,
+    .watch-toggle,
+    .priority-badge{
+      font-size: 1.15rem;
+      min-width: 36px;
+      min-height: 36px;
+    }
+
+    /* Matchup */
+    .matchup{
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .matchup-header{
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    .vs-divider{
+      display: none;
+    }
+
+    .team-logo{
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Team sections */
+    .team-section h4{
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .pitcher-filter-row{
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .pitcher-filter-row select,
+    .pitcher-filter-row input{
+      width: 100%;
+      padding: 0.65rem 0.875rem;
+      min-height: 44px;
+    }
+
+    /* Pitcher rows */
+    .pitcher-row{
+      padding: 0.75rem;
+      gap: 0.75rem;
+    }
+
+    .pitcher-headshot{
+      width: 50px;
+      height: 50px;
+    }
+
+    .pitcher-name{
+      font-size: 0.95rem;
+    }
+
+    .pitcher-meta{
+      font-size: 0.75rem;
+      gap: 0.4rem;
+    }
+
+    .badge{
+      font-size: 0.65rem;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .pitcher-star{
+      font-size: 1.15rem;
+      min-width: 36px;
+      min-height: 36px;
+    }
+
+    /* ESPN links */
+    .espn-links{
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .espn-links a{
+      width: 100%;
+      text-align: center;
+      padding: 0.65rem 1rem;
+      min-height: 44px;
+    }
+
+    /* Filter modal */
+    .modal-overlay{
+      padding: 1rem;
+      align-items: flex-end;
+    }
+
+    .modal-box{
+      max-height: 85vh;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .modal-header{
+      padding: 1rem 1.25rem;
+    }
+
+    .modal-header h3{
+      font-size: 1.25rem;
+    }
+
+    .modal-content{
+      padding: 1.25rem;
+      max-height: calc(85vh - 70px);
+      overflow-y: auto;
+    }
+
+    .close-modal{
+      width: 36px;
+      height: 36px;
+      font-size: 1.75rem;
+    }
+
+    .filter-group{
+      margin-bottom: 1.25rem;
+    }
+
+    .filter-group label{
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .filter-group select,
+    .filter-group input{
+      padding: 0.75rem 1rem;
+      min-height: 44px;
+    }
+
+    /* Multi-select chips */
+    .multi-select-grid{
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .multi-select-chip{
+      padding: 0.75rem 1rem;
+      min-height: 44px;
+      font-size: 0.9rem;
+    }
+
+    /* Preset controls */
+    .preset-controls{
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .preset-controls input,
+    .preset-controls button{
+      width: 100%;
+      min-height: 44px;
+    }
+
+    .preset-item{
+      padding: 0.75rem 1rem;
+    }
+
+    .preset-item button{
+      min-width: 36px;
+      min-height: 36px;
+      font-size: 0.9rem;
+    }
+
+    /* Help modal */
+    .help-section{
+      margin-bottom: 1.5rem;
+    }
+
+    .help-section h4{
+      font-size: 1.1rem;
+    }
+
+    .shortcut-row{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.75rem;
+    }
+
+    .shortcut-key{
+      font-size: 0.75rem;
+      padding: 0.35rem 0.6rem;
+    }
+
+    /* Toast notifications */
+    #toast{
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      transform: none;
+      padding: 0.875rem 1.25rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Small mobile (< 480px) */
+  @media (max-width: 479px) {
+    #top-bar h1{
+      font-size: 1.2rem;
+    }
+
+    .game-card{
+      padding: 0.875rem;
+    }
+
+    .matchup-header{
+      font-size: 1.1rem;
+    }
+
+    .team-logo{
+      width: 40px;
+      height: 40px;
+    }
+
+    .pitcher-headshot{
+      width: 45px;
+      height: 45px;
+    }
+
+    .pitcher-name{
+      font-size: 0.9rem;
+    }
+
+    .badge{
+      font-size: 0.6rem;
+      padding: 0.2rem 0.4rem;
+    }
+
+    #weeks{
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+
+    .week-checkbox{
+      padding: 0.65rem;
+      font-size: 0.8rem;
+    }
+  }
 </style>
 </head>
 <body>
 
-<div id="top-bar">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+<div id="top-bar" role="banner">
   <h1>⚾ CBB Weekly Matchups & Pitcher Participation</h1>
-  <input type="text" id="search" placeholder="Search teams or pitchers..." />
-  <select id="divFilter"><option value="">All divisions</option></select>
-  <select id="watchOrder" title="Watch Order">
+  <input type="text" id="search" placeholder="Search teams or pitchers..." aria-label="Search teams or pitchers" />
+  <select id="divFilter" aria-label="Filter by division"><option value="">All divisions</option></select>
+  <select id="watchOrder" aria-label="Watch order filter" title="Watch Order">
     <option value="all">All games</option>
     <option value="unwatched">Unwatched</option>
+    <option value="finals">Finals Only</option>
+    <option value="upcoming">Upcoming Only</option>
     <option value="favorites">Favorites Only</option>
     <option value="Priority">Priority Only</option>
     <option value="High">High Only</option>
@@ -1025,14 +1662,30 @@
     <button id="expandAllBtn">Expand All Details</button>
   <button id="toggleVirtualScrollBtn" style="background:#6c757d; color:#fff; border-color:#6c757d;">Virtual Scroll: ON</button>
   <button id="loadParticipationBtn" style="background:#28a745; color:#fff; border-color:#28a745;">Load Participation</button>
-  <button id="loadDetailedInningsBtn" style="background:#fd7e14; color:#fff; border-color:#fd7e14;">Load Innings</button>
+  <button id="loadDetailedInningsBtn" style="background:#fd7e14; color:#fff; border-color:#fd7e14;" title="Expand all pitcher stat lines">Stats Detail</button>
   <button id="filtersBtn">Filters</button>
   <button id="commandsBtn">Data Tools</button>
+  <button id="exportBtn" style="background:var(--emerald);color:var(--white);border-color:var(--emerald);">Export CSV</button>
+  <button id="helpBtn" style="background:var(--amber);color:var(--white);border-color:var(--amber);" title="Keyboard Shortcuts (?)">❓ Help</button>
+  <nav aria-label="Site navigation">
+    <a href="index.html">Rosters</a>
+    <a href="schedule.html" class="active" aria-current="page">Schedule</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
 </div>
 
-<div id="counters"></div>
-<div id="notice">No games match your filters</div>
+<!-- Loading State -->
+<div id="loadingState" style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:60vh; padding:3rem;">
+  <div class="spinner"></div>
+  <p style="margin-top:1.5rem; font-size:1.1rem; color:var(--slate-600); font-weight:500;">Loading weekly matchups...</p>
+  <p style="margin-top:0.5rem; font-size:0.9rem; color:var(--slate-400);">Fetching schedule and pitcher rosters</p>
+</div>
+
+<main id="main-content">
+<div id="counters" aria-live="polite" aria-atomic="true"></div>
+<div id="notice" role="status">No games match your filters</div>
 <div id="games-wrap"></div>
+</main>
 
 <div class="modal-overlay" id="filtersModal" aria-hidden="true" inert>
   <div class="modal">
@@ -1041,7 +1694,21 @@
       <button class="btn" data-close="#filtersModal">Close</button>
     </header>
     <div class="body">
-      
+
+      <!-- FILTER PRESETS -->
+      <div style="margin-bottom:2rem; padding:1.25rem; background:linear-gradient(135deg, var(--emerald-light) 0%, var(--slate-50) 100%); border-radius:12px; border:2px solid var(--emerald);">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;">
+          <h4 style="margin:0; color:var(--emerald-dark); font-family:'Crimson Pro', serif; font-size:1.1rem;">💾 Filter Presets</h4>
+          <button id="savePresetBtn" class="btn" style="background:var(--emerald); color:var(--white); border-color:var(--emerald); font-size:0.85rem; padding:0.4rem 0.8rem;">Save Current</button>
+        </div>
+
+        <div id="presetsContainer" style="display:grid; gap:0.5rem; margin-bottom:1rem;">
+          <!-- Presets will be rendered here -->
+        </div>
+
+        <p style="margin:0; font-size:0.85rem; color:var(--slate-600); font-style:italic;">Save your favorite filter combinations for quick access</p>
+      </div>
+
       <!-- WATCH ORDER -->
       <div class="row">
         <label style="flex: 1;">
@@ -1051,6 +1718,8 @@
             <option value="unwatched">Unwatched</option>
             <option value="watched">Watched only</option>
             <option value="favorites">Favorites Only</option>
+            <option value="finals">Finals Only (has score)</option>
+            <option value="upcoming">Upcoming Only (future games)</option>
             <option value="Priority">Priority Only</option>
             <option value="High">High Only</option>
             <option value="Medium">Medium Only</option>
@@ -1067,7 +1736,6 @@
           <strong>Pitchers</strong>
           <select id="pitcherFilterModal" style="width:100%;">
             <option value="fav_or_played" selected>Favorites or Played (Default)</option>
-            <option value="all">All Pitchers</option>
             <option value="favorites">Favorites only</option>
             <option value="played">Played only</option>
             <option value="fav_played">Favorites and Played</option>
@@ -1085,14 +1753,31 @@
         </label>
       </div>
 
-      <!-- CONFERENCE/DIVISION -->
-      <div class="row">
-        <label style="flex: 1;">
-          <strong>Conference/Division</strong>
-          <select id="divFilterModal" style="width:100%;">
-            <option value="">All divisions</option>
-          </select>
-        </label>
+      <!-- CONFERENCE MULTI-SELECT -->
+      <div class="row" style="margin-top:1rem;">
+        <div style="width:100%;">
+          <strong>Conferences (multi-select)</strong>
+          <div id="conferencesGrid" class="conferences-grid" style="margin-top:.5rem;"></div>
+          <div class="row" style="margin-top:.5rem; gap:.5rem;">
+            <button class="btn" id="conferencesAll">Select All</button>
+            <button class="btn" id="conferencesPower5">Power 5 Only</button>
+            <button class="btn" id="conferencesClear">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEAM MULTI-SELECT -->
+      <div class="row" style="margin-top:1rem;">
+        <div style="width:100%;">
+          <strong>Teams (multi-select)</strong>
+          <input type="text" id="teamSearchFilter" placeholder="Search teams..." style="width:100%; margin-bottom:0.5rem;" />
+          <div id="teamsGrid" class="teams-grid" style="margin-top:.5rem; max-height:300px; overflow-y:auto;"></div>
+          <div class="row" style="margin-top:.5rem; gap:.5rem;">
+            <button class="btn" id="teamsAll">Select All</button>
+            <button class="btn" id="teamsClear">Clear</button>
+          </div>
+          <div id="teamFilterSummary" style="margin-top:0.5rem; font-size:0.85rem; color:var(--slate-600);"></div>
+        </div>
       </div>
 
       <!-- SORT BY -->
@@ -1116,6 +1801,7 @@
           <div class="row" id="weeksActions" style="margin-top:.5rem; gap:.5rem;">
             <button class="btn" id="weeksAll">Select All</button>
             <button class="btn" id="weeksClear">Clear</button>
+            <button class="btn" id="weeksThisWeek" style="background:var(--emerald);color:#fff;border-color:var(--emerald);">This Week</button>
           </div>
         </div>
       </div>
@@ -1252,6 +1938,106 @@ node server.mjs   # Starts on http://localhost:8072</textarea>
   </div>
 </div>
 
+<!-- Help Modal -->
+<div id="helpModal" class="modal-overlay" style="display:none;">
+  <div class="modal-box" style="max-width:700px;">
+    <div class="modal-header">
+      <h3 style="margin:0; font-family:'Crimson Pro', serif; font-size:1.5rem; color:var(--slate-900);">⌨️ Keyboard Shortcuts & Quick Guide</h3>
+      <button class="close-modal" id="closeHelp" style="background:none; border:none; font-size:1.75rem; color:var(--slate-600); cursor:pointer; line-height:1; padding:0; width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:8px; transition:all 0.2s;" onmouseover="this.style.background='var(--slate-100)'" onmouseout="this.style.background='none'">&times;</button>
+    </div>
+    <div class="modal-content" style="max-height:70vh; overflow-y:auto;">
+
+      <!-- Keyboard Shortcuts Section -->
+      <div style="margin-bottom:2rem;">
+        <h4 style="font-family:'Crimson Pro', serif; font-size:1.2rem; color:var(--slate-800); margin:0 0 1rem 0; padding-bottom:0.5rem; border-bottom:2px solid var(--emerald);">⌨️ Keyboard Shortcuts</h4>
+        <div style="display:grid; gap:0.75rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--emerald);">
+            <span style="font-weight:600; color:var(--slate-700);">Search games/pitchers</span>
+            <kbd style="background:var(--white); border:1.5px solid var(--slate-300); border-radius:6px; padding:0.35rem 0.75rem; font-family:monospace; font-size:0.85rem; color:var(--slate-700); box-shadow:0 1px 2px rgba(15,23,42,.05);">/</kbd>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--blue);">
+            <span style="font-weight:600; color:var(--slate-700);">Open filters</span>
+            <kbd style="background:var(--white); border:1.5px solid var(--slate-300); border-radius:6px; padding:0.35rem 0.75rem; font-family:monospace; font-size:0.85rem; color:var(--slate-700); box-shadow:0 1px 2px rgba(15,23,42,.05);">F</kbd>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--emerald);">
+            <span style="font-weight:600; color:var(--slate-700);">Jump to this week's games</span>
+            <kbd style="background:var(--white); border:1.5px solid var(--slate-300); border-radius:6px; padding:0.35rem 0.75rem; font-family:monospace; font-size:0.85rem; color:var(--slate-700); box-shadow:0 1px 2px rgba(15,23,42,.05);">T</kbd>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--purple);">
+            <span style="font-weight:600; color:var(--slate-700);">Export to CSV</span>
+            <kbd style="background:var(--white); border:1.5px solid var(--slate-300); border-radius:6px; padding:0.35rem 0.75rem; font-family:monospace; font-size:0.85rem; color:var(--slate-700); box-shadow:0 1px 2px rgba(15,23,42,.05);">E</kbd>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--amber);">
+            <span style="font-weight:600; color:var(--slate-700);">Show this help</span>
+            <kbd style="background:var(--white); border:1.5px solid var(--slate-300); border-radius:6px; padding:0.35rem 0.75rem; font-family:monospace; font-size:0.85rem; color:var(--slate-700); box-shadow:0 1px 2px rgba(15,23,42,.05);">?</kbd>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--slate-400);">
+            <span style="font-weight:600; color:var(--slate-700);">Close modals / Clear search</span>
+            <kbd style="background:var(--white); border:1.5px solid var(--slate-300); border-radius:6px; padding:0.35rem 0.75rem; font-family:monospace; font-size:0.85rem; color:var(--slate-700); box-shadow:0 1px 2px rgba(15,23,42,.05);">Esc</kbd>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--emerald);">
+            <span style="font-weight:600; color:var(--slate-700);">Jump to week (selects only that week)</span>
+            <kbd style="background:var(--white); border:1.5px solid var(--slate-300); border-radius:6px; padding:0.35rem 0.75rem; font-family:monospace; font-size:0.85rem; color:var(--slate-700); box-shadow:0 1px 2px rgba(15,23,42,.05);">1–9</kbd>
+          </div>
+        </div>
+      </div>
+
+      <!-- Multi-Select Filtering Section -->
+      <div style="margin-bottom:2rem;">
+        <h4 style="font-family:'Crimson Pro', serif; font-size:1.2rem; color:var(--slate-800); margin:0 0 1rem 0; padding-bottom:0.5rem; border-bottom:2px solid var(--emerald);">🎯 Multi-Select Filtering</h4>
+        <div style="background:var(--emerald-light); border-left:4px solid var(--emerald); border-radius:8px; padding:1rem; margin-bottom:1rem;">
+          <p style="margin:0; font-size:0.95rem; color:var(--slate-700);"><strong>Tip:</strong> Select multiple conferences and teams to see games matching <strong>ANY</strong> of your selections (OR logic).</p>
+        </div>
+        <div style="display:grid; gap:1rem;">
+          <div style="padding:1rem; background:var(--slate-50); border-radius:8px;">
+            <h5 style="margin:0 0 0.5rem 0; color:var(--emerald); font-weight:600;">Conference Filtering</h5>
+            <ul style="margin:0.5rem 0 0 0; padding-left:1.25rem; color:var(--slate-700); font-size:0.9rem;">
+              <li>Check multiple conferences to see games from any of them</li>
+              <li>Use "Power 5 Only" for quick ACC/Big Ten/Big 12/Pac-12/SEC filtering</li>
+              <li>"Select All" or "Clear" for quick reset</li>
+            </ul>
+          </div>
+          <div style="padding:1rem; background:var(--slate-50); border-radius:8px;">
+            <h5 style="margin:0 0 0.5rem 0; color:var(--blue); font-weight:600;">Team Filtering</h5>
+            <ul style="margin:0.5rem 0 0 0; padding-left:1.25rem; color:var(--slate-700); font-size:0.9rem;">
+              <li>Check multiple teams to see their games</li>
+              <li>Use the search box to quickly find specific teams</li>
+              <li>Selection summary shows how many teams are active</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Tips Section -->
+      <div style="margin-bottom:1rem;">
+        <h4 style="font-family:'Crimson Pro', serif; font-size:1.2rem; color:var(--slate-800); margin:0 0 1rem 0; padding-bottom:0.5rem; border-bottom:2px solid var(--emerald);">💡 Power User Tips</h4>
+        <div style="display:grid; gap:0.75rem;">
+          <div style="padding:0.75rem 1rem; background:var(--amber-light); border-radius:8px; border-left:3px solid var(--amber);">
+            <strong style="color:var(--slate-800);">⭐ Favorites:</strong>
+            <span style="color:var(--slate-700); font-size:0.9rem;"> Click stars on pitchers, teams, or games to save favorites. They sync across devices via Supabase!</span>
+          </div>
+          <div style="padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--slate-600);">
+            <strong style="color:var(--slate-800);">📊 CSV Export:</strong>
+            <span style="color:var(--slate-700); font-size:0.9rem;"> Export filtered game data with all pitcher details for analysis in Excel/Google Sheets.</span>
+          </div>
+          <div style="padding:0.75rem 1rem; background:var(--emerald-light); border-radius:8px; border-left:3px solid var(--emerald);">
+            <strong style="color:var(--slate-800);">🔍 Search:</strong>
+            <span style="color:var(--slate-700); font-size:0.9rem;"> Search by team name or pitcher name. Works across all games and rosters instantly.</span>
+          </div>
+          <div style="padding:0.75rem 1rem; background:var(--slate-50); border-radius:8px; border-left:3px solid var(--purple);">
+            <strong style="color:var(--slate-800);">📅 Week Selection:</strong>
+            <span style="color:var(--slate-700); font-size:0.9rem;"> Select multiple weeks to see games across your chosen date range.</span>
+          </div>
+          <div style="padding:0.75rem 1rem; background:var(--red-light); border-radius:8px; border-left:3px solid var(--red);">
+            <strong style="color:var(--slate-800);">🎯 Priority Levels:</strong>
+            <span style="color:var(--slate-700); font-size:0.9rem;"> Set game priorities and sort by them to focus on must-watch matchups.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script id="playedIndexEmbed" type="application/json">{}</script>
 <div id="toast">Copied</div>
 <script>
@@ -1265,6 +2051,15 @@ const $  = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 const toast = (m='Copied') => { const t=$("#toast"); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1100); };
 
+// Screen reader announcer
+const announce = (message) => {
+  const el = document.getElementById('announcements');
+  if (!el) return;
+  el.textContent = '';
+  setTimeout(() => { el.textContent = message; }, 100);
+  setTimeout(() => { el.textContent = ''; }, 3000);
+};
+
 function getParams(){ 
   const u=new URL(location.href); 
   return { year: u.searchParams.get('year')||'2025', week: u.searchParams.get('week')||'' }; 
@@ -1277,10 +2072,40 @@ function setParam(k,v){
   history.replaceState(null,'',u.toString()); 
 }
 
-async function getJSON(path){ 
-  const r=await fetch(path,{cache:'no-store'}); 
-  if(!r.ok) throw new Error('HTTP '+r.status+' '+path); 
-  return r.json(); 
+async function getJSON(path){
+  const cacheKey = `cbb_cache_${path}`;
+  const cacheTimeKey = `cbb_cache_time_${path}`;
+  const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+
+  try {
+    // Check if cache exists and is fresh
+    const cached = localStorage.getItem(cacheKey);
+    const cacheTime = localStorage.getItem(cacheTimeKey);
+
+    if(cached && cacheTime) {
+      const age = Date.now() - parseInt(cacheTime);
+      if(age < CACHE_DURATION) {
+        return JSON.parse(cached);
+      }
+    }
+  } catch(e) {
+    console.warn('Cache read error:', e);
+  }
+
+  // Fetch fresh data
+  const r = await fetch(path, {cache: 'no-store'});
+  if(!r.ok) throw new Error('HTTP '+r.status+' '+path);
+  const data = await r.json();
+
+  // Store in cache
+  try {
+    localStorage.setItem(cacheKey, JSON.stringify(data));
+    localStorage.setItem(cacheTimeKey, Date.now().toString());
+  } catch(e) {
+    console.warn('Cache write error:', e);
+  }
+
+  return data;
 }
 
 async function tryMany(paths){ 
@@ -1299,6 +2124,8 @@ let DIV_META = null;
 let SCHED = null;
 let PLAYED_IDX = {};
 let weeksSelected = new Set();
+let conferencesSelected = new Set();
+let teamsSelected = new Set();
 let currentViewMode = 'games'; // 'games' or 'series'
 
 const teamsById = {};
@@ -1493,6 +2320,139 @@ const Settings = (()=>{
   return {init,get,set,getAll,save};
 })();
 
+/* ---------- Filter Presets Module ---------- */
+const FilterPresets = (() => {
+  const STORAGE_KEY = 'cbb_filter_presets';
+
+  function getAll() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch(e) {
+      console.error('Failed to load presets:', e);
+      return [];
+    }
+  }
+
+  function save(presets) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(presets));
+    } catch(e) {
+      console.error('Failed to save presets:', e);
+    }
+  }
+
+  function getCurrentState() {
+    return {
+      weeksSelected: Array.from(weeksSelected),
+      conferencesSelected: Array.from(conferencesSelected),
+      teamsSelected: Array.from(teamsSelected),
+      watchOrder: $("#watchOrderModal")?.value || 'all',
+      pitcherFilter: $("#pitcherFilterModal")?.value || 'fav_or_played',
+      sortBy: $("#sortByModal")?.value || 'time',
+      divFilter: $("#divFilterModal")?.value || ''
+    };
+  }
+
+  function loadState(state) {
+    // Load weeks
+    weeksSelected.clear();
+    if(state.weeksSelected) {
+      state.weeksSelected.forEach(w => weeksSelected.add(w));
+    }
+    fillWeeksGrid();
+
+    // Load conferences
+    conferencesSelected.clear();
+    if(state.conferencesSelected) {
+      state.conferencesSelected.forEach(c => conferencesSelected.add(c));
+    }
+    fillConferencesGrid();
+
+    // Load teams
+    teamsSelected.clear();
+    if(state.teamsSelected) {
+      state.teamsSelected.forEach(t => teamsSelected.add(t));
+    }
+    fillTeamsGrid();
+    updateTeamsGridVisibility();
+    updateTeamFilterSummary();
+
+    // Load dropdowns
+    if($("#watchOrderModal")) $("#watchOrderModal").value = state.watchOrder || 'all';
+    if($("#watchOrder")) $("#watchOrder").value = state.watchOrder || 'all';
+    if($("#pitcherFilterModal")) $("#pitcherFilterModal").value = state.pitcherFilter || 'fav_or_played';
+    if($("#sortByModal")) $("#sortByModal").value = state.sortBy || 'time';
+    if($("#divFilterModal")) $("#divFilterModal").value = state.divFilter || '';
+    if($("#divFilter")) $("#divFilter").value = state.divFilter || '';
+
+    render();
+  }
+
+  function addPreset(name) {
+    const presets = getAll();
+    const state = getCurrentState();
+
+    presets.push({
+      id: Date.now().toString(),
+      name: name,
+      state: state,
+      createdAt: new Date().toISOString()
+    });
+
+    save(presets);
+    renderPresets();
+    toast(`✅ Preset "${name}" saved`);
+  }
+
+  function deletePreset(id) {
+    const presets = getAll().filter(p => p.id !== id);
+    save(presets);
+    renderPresets();
+    toast('🗑️ Preset deleted');
+  }
+
+  function loadPreset(id) {
+    const presets = getAll();
+    const preset = presets.find(p => p.id === id);
+    if(preset) {
+      loadState(preset.state);
+      toast(`✅ Loaded "${preset.name}"`);
+    }
+  }
+
+  function renderPresets() {
+    const container = $("#presetsContainer");
+    if(!container) return;
+
+    const presets = getAll();
+
+    if(presets.length === 0) {
+      container.innerHTML = '<p style="margin:0; padding:1rem; text-align:center; color:var(--slate-400); font-size:0.9rem; background:var(--white); border-radius:8px;">No saved presets yet</p>';
+      return;
+    }
+
+    container.innerHTML = presets.map(preset => `
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1rem; background:var(--white); border-radius:8px; border:1px solid var(--slate-200); transition:all 0.2s;" onmouseover="this.style.borderColor='var(--emerald)'; this.style.boxShadow='0 2px 8px rgba(16,185,129,0.1)'" onmouseout="this.style.borderColor='var(--slate-200)'; this.style.boxShadow='none'">
+        <div style="flex:1;">
+          <div style="font-weight:600; color:var(--slate-800); margin-bottom:0.25rem;">${preset.name}</div>
+          <div style="font-size:0.75rem; color:var(--slate-500);">
+            ${preset.state.weeksSelected?.length || 0} weeks,
+            ${preset.state.conferencesSelected?.length || 0} conferences,
+            ${preset.state.teamsSelected?.length || 0} teams
+          </div>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <button onclick="FilterPresets.loadPreset('${preset.id}')" class="btn" style="background:var(--emerald); color:var(--white); border-color:var(--emerald); font-size:0.8rem; padding:0.35rem 0.75rem;">Load</button>
+          <button onclick="FilterPresets.deletePreset('${preset.id}')" class="btn" style="background:var(--red); color:var(--white); border-color:var(--red); font-size:0.8rem; padding:0.35rem 0.75rem;">Delete</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  return { addPreset, deletePreset, loadPreset, renderPresets, getAll };
+})();
+
 /* ---------- Pitcher helper functions ---------- */
 function pitcherNumber(pitcher){
   if (!pitcher) return null;
@@ -1545,17 +2505,11 @@ function teamMeta(tid){
 }
 
 function teamPitchers(tid){
-  const result = (pitchersById[tid] && pitchersById[tid].pitchers) ? pitchersById[tid].pitchers : [];
-  if(result && result.length > 0){
-    console.log('[DEBUG] ✓ Found', result.length, 'pitchers for team ID:', tid);
-  } else {
-    console.log('[DEBUG] ✗ No pitchers found for team ID:', tid, '| Available IDs:', Object.keys(pitchersById).slice(0, 10));
-  }
-  return result;
+  return (pitchersById[tid] && pitchersById[tid].pitchers) ? pitchersById[tid].pitchers : [];
 }
 
 function espnTeamLinks(tid){
-  const base = `https://www.espn.com/mlb/team`;
+  const base = `https://www.espn.com/college-sports/team`;
   return {
     roster: `${base}/roster/_/id/${tid}`,
     schedule: `${base}/schedule/_/id/${tid}`,
@@ -1564,7 +2518,7 @@ function espnTeamLinks(tid){
 }
 
 function espnGameLink(gid){
-  return `https://www.espn.com/mlb/game/_/gameId/${gid}`;
+  return `https://www.espn.com/college-baseball/game/_/gameId/${gid}`;
 }
 
 /* ---------- Pitcher participation tracking ---------- */
@@ -1637,9 +2591,47 @@ function getPitcherStats(gameId, teamId, pitcherId){
   
   return {
     innings_pitched: stats.IP || null,
-    pitch_count: stats.PC || null,
-    innings_list: inningsList
+    pitch_count: stats.PC || stats['PC-ST'] || null,
+    innings_list: inningsList,
+    // Full stat line from ESPN boxscore
+    hits: stats.H || null,
+    strikeouts: stats.K || null,
+    walks: stats.BB || null,
+    runs: stats.R || null,
+    earned_runs: stats.ER || null,
+    home_runs: stats.HR || null,
+    era: stats.ERA || null,
+    pc_strikes: stats['PC-ST'] || null
   };
+}
+
+// Aggregate a pitcher's season stats from PLAYED_IDX across all tracked games
+function getPitcherSeasonStats(pitcherId){
+  const norm = x => String(x||'').replace(/\D+/g,'');
+  const pitcherData = window.PLAYED_IDX?.pitchers?.[norm(pitcherId)];
+  if (!pitcherData || !pitcherData.games || !pitcherData.games.length) return null;
+
+  let totalIP = 0, totalK = 0, totalBB = 0, totalER = 0, apps = 0;
+  for (const g of pitcherData.games) {
+    const s = g.stats || {};
+    if (!s.IP) continue;
+    const ipStr = String(s.IP);
+    const [full, thirds = '0'] = ipStr.split('.');
+    totalIP += (parseInt(full) || 0) + (parseInt(thirds[0]) || 0) / 3;
+    totalK  += parseInt(s.K)  || 0;
+    totalBB += parseInt(s.BB) || 0;
+    totalER += parseInt(s.ER) || 0;
+    apps++;
+  }
+  if (!apps) return null;
+
+  const era  = totalIP > 0 ? (totalER / totalIP * 9).toFixed(2) : '—';
+  const k9   = totalIP > 0 ? (totalK  / totalIP * 9).toFixed(1) : '—';
+  const ipWhole  = Math.floor(totalIP);
+  const ipThirds = Math.round((totalIP - ipWhole) * 3);
+  const ipDisplay = ipThirds === 0 ? String(ipWhole) : `${ipWhole}.${ipThirds}`;
+
+  return { apps, ip: ipDisplay, k: totalK, bb: totalBB, era, k9 };
 }
 
 // Convert pitcher-first format to game-first format for played pills
@@ -1676,49 +2668,116 @@ function convertPitcherFirstToGameFirst(pitcherData){
   return gameFirst;
 }
 
-async function reloadPlayedIndex(initial=false){
-  const bust   = `?t=${Date.now()}`;
-  const merged = {};
-  
-  // PERFORMANCE: Load optimized consolidated file (9MB, ~2-3s load time)
-  console.log('[played] Loading participation data...');
-  const url = `./data/pitchers_played_index.json${bust}`;
-  
+// ── Participation cache for schedule page (localStorage, 2-hour TTL) ─────────
+const SCHED_PART_CACHE_KEY = 'schedule_participation_v1';
+const SCHED_PART_CACHE_TTL = 2 * 60 * 60 * 1000;
+function getScheduleParticipationCache() {
   try {
-    const j = await getJSON(url);
-    if (j && typeof j === 'object'){
-      // Check if this is the pitcher-first format
-      if (j.pitchers && typeof j.pitchers === 'object') {
-        // Convert for game-first lookups (pills)
-        const converted = convertPitcherFirstToGameFirst(j);
-        mergePlayedIndex(merged, converted);
-        
-        // ALSO preserve original pitcher data for stats
-        merged.pitchers = j.pitchers;
-        
-        console.log('[played] loaded', url, 'pitchers=', Object.keys(j.pitchers).length);
-      } else {
-        mergePlayedIndex(merged, j);
-        console.log('[played] loaded', url, 'entries=', Object.keys(j).length);
+    const raw = localStorage.getItem(SCHED_PART_CACHE_KEY);
+    if (!raw) return null;
+    const { rows, ts } = JSON.parse(raw);
+    if (Date.now() - ts > SCHED_PART_CACHE_TTL) { localStorage.removeItem(SCHED_PART_CACHE_KEY); return null; }
+    return rows;
+  } catch { return null; }
+}
+function setScheduleParticipationCache(rows) {
+  try { localStorage.setItem(SCHED_PART_CACHE_KEY, JSON.stringify({ rows, ts: Date.now() })); } catch (e) { console.warn('[cache] write failed:', e.message); }
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
+async function reloadPlayedIndex(initial=false){
+  const merged = {};
+
+  // Load participation data from Supabase cbb_pitcher_participation
+  console.log('[played] Loading participation data from Supabase...');
+
+  try {
+    // Try localStorage cache first
+    let allRows = getScheduleParticipationCache();
+    if (allRows) {
+      console.log('[played] Using cached participation data:', allRows.length, 'rows');
+    } else {
+      // Fetch all participation records (paginate if needed)
+      allRows = [];
+      let offset = 0;
+      const pageSize = 1000;
+
+      while (true) {
+        const url = `${SUPABASE_URL}/rest/v1/cbb_pitcher_participation?select=game_id,team_id,pitcher_id,pitcher_name,stats&order=game_id.asc&limit=${pageSize}&offset=${offset}`;
+        const resp = await fetch(url, {
+          headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
+        });
+
+        if (!resp.ok) {
+          throw new Error(`Supabase error: ${resp.status}`);
+        }
+
+        const rows = await resp.json();
+        if (!rows || rows.length === 0) break;
+        allRows = allRows.concat(rows);
+        if (rows.length < pageSize) break;
+        offset += pageSize;
+      }
+
+      setScheduleParticipationCache(allRows);
+      console.log('[played] Fetched and cached:', allRows.length, 'rows');
+    }
+
+    console.log('[played] Supabase rows fetched:', allRows.length);
+
+    // Build pitcher-first format: { pitchers: { pitcherId: { games: [{ gameId, stats }] } } }
+    const pitchersMap = {};
+
+    for (const row of allRows) {
+      const pid = String(row.pitcher_id || '');
+      const gid = String(row.game_id || '');
+      if (!pid || !gid) continue;
+
+      if (!pitchersMap[pid]) {
+        pitchersMap[pid] = { games: [] };
+      }
+
+      pitchersMap[pid].games.push({
+        gameId: gid,
+        teamId: String(row.team_id || ''),
+        stats: row.stats || {}
+      });
+
+      // Also build game-first format for played pills
+      if (!merged[gid]) merged[gid] = {};
+      if (!merged[gid].played) merged[gid].played = [];
+      if (!merged[gid].played.includes(pid)) {
+        merged[gid].played.push(pid);
       }
     }
+
+    merged.pitchers = pitchersMap;
+    console.log('[played] pitchers with data:', Object.keys(pitchersMap).length, 'games:', Object.keys(merged).length - 1);
+
   } catch (e) {
-    console.error('[played] Failed to load:', e);
-  }
-  
-  try {
-    const em = document.getElementById('playedIndexEmbed');
-    if (em && em.textContent.trim()){
-      mergePlayedIndex(merged, JSON.parse(em.textContent));
-      console.log('[played] merged inline override');
+    console.error('[played] Failed to load from Supabase:', e);
+
+    // Fallback: try local JSON file
+    try {
+      const bust = `?t=${Date.now()}`;
+      const j = await getJSON(`./data/pitchers_played_index.json${bust}`);
+      if (j && typeof j === 'object' && j.pitchers) {
+        const converted = convertPitcherFirstToGameFirst(j);
+        mergePlayedIndex(merged, converted);
+        merged.pitchers = j.pitchers;
+        console.log('[played] fallback: loaded from local JSON');
+      }
+    } catch (e2) {
+      console.error('[played] Fallback also failed:', e2);
     }
-  } catch {}
-  
+  }
+
   PLAYED_IDX = merged;
   window.PLAYED_IDX = merged;
-  
+
   let gamesWithIds = 0, totalIds = 0;
-  for (const game of Object.values(merged)){
+  for (const [key, game] of Object.entries(merged)){
+    if (key === 'pitchers') continue;
     let thisGame = 0;
     for (const v of Object.values(game)){
       const n = _asIds(v).length;
@@ -1727,7 +2786,7 @@ async function reloadPlayedIndex(initial=false){
     if (thisGame) gamesWithIds++;
   }
   console.log('[played] games with ids:', gamesWithIds, 'total ids:', totalIds);
-  
+
   if (!initial){
     refreshPlayedPills();
     if (typeof toast === 'function'){
@@ -1911,6 +2970,11 @@ function setPrioSwatch(sel){
   sel.classList.add('wo-' + key);
 }
 
+function yearAbbr(y) {
+  const m = { freshman: 'Fr.', sophomore: 'So.', junior: 'Jr.', senior: 'Sr.', graduate: 'Gr.' };
+  return m[(y || '').toLowerCase().split(/[\s-]/)[0]] || '';
+}
+
 function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   const li = document.createElement('li');
   li.className='pitcher-row';
@@ -1959,9 +3023,19 @@ function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   }
   
   // Create sub line with inning stats + Pitcher + ESPN link
-  const sub = document.createElement('div'); 
+  const sub = document.createElement('div');
   sub.className='sub';
-  
+
+  // Year abbreviation (Fr./So./Jr./Sr.)
+  if (pitcher?.year) {
+    const abbr = yearAbbr(pitcher.year);
+    if (abbr) {
+      const yrSpan = document.createElement('span');
+      yrSpan.textContent = abbr;
+      sub.append(yrSpan);
+    }
+  }
+
   // Add inning stats inline if available with styled boxes
   if(gameHasData && playedSet.has(normId(pickPitcherId(pitcher)))){
     const stats = getPitcherStats(gameId, teamId, normId(pickPitcherId(pitcher)));
@@ -2006,38 +3080,89 @@ function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
     }
   }
   
-  // Add pipe before ESPN link if there were stats
-  if(sub.childNodes.length > 0){
-    const pipe = document.createTextNode('| ');
-    sub.append(pipe);
+  // Add ESPN link only if a URL exists (avoid broken href="#" link)
+  if(pitcher?.espn){
+    if(sub.childNodes.length > 0){
+      const pipe = document.createTextNode('| ');
+      sub.append(pipe);
+    }
+    const link = document.createElement('a');
+    link.href = pitcher.espn;
+    link.target='_blank';
+    link.textContent='ESPN Profile →';
+    sub.append(link);
   }
-  
-  // Add ESPN link
-  const link = document.createElement('a'); 
-  link.href = pitcher?.espn || '#'; 
-  link.target='_blank'; 
-  link.textContent='ESPN Profile →';
-  sub.append(link);
   
   // Create collapsible details section only if participation loaded
   let detailsDiv = null;
   if (participationLoaded) {
     detailsDiv = document.createElement('div');
     detailsDiv.className = 'pitcher-details';
-    
-    // Combine Age, Height, Weight on one line (Age first)
+
+    // Full game stat line if pitcher played
+    if (gameHasData && playedSet.has(normId(pickPitcherId(pitcher)))) {
+      const stats = getPitcherStats(gameId, teamId, normId(pickPitcherId(pitcher)));
+      if (stats) {
+        const statLine = document.createElement('div');
+        statLine.className = 'pitcher-details-line pitcher-stat-line';
+
+        const statPairs = [
+          ['IP', stats.innings_pitched],
+          ['PC', stats.pitch_count],
+          ['H', stats.hits],
+          ['K', stats.strikeouts],
+          ['BB', stats.walks],
+          ['R', stats.runs],
+          ['ER', stats.earned_runs],
+          ['HR', stats.home_runs],
+          ['ERA', stats.era]
+        ].filter(([, v]) => v !== null && v !== undefined);
+
+        if (statPairs.length > 0) {
+          statPairs.forEach(([label, value], i) => {
+            const chip = document.createElement('span');
+            chip.className = 'stat-chip';
+            chip.innerHTML = `<span class="stat-label">${label}</span><span class="stat-value">${value}</span>`;
+            statLine.append(chip);
+          });
+          detailsDiv.append(statLine);
+        }
+      }
+    }
+
+    // Season stats (aggregate from all tracked games)
+    if (participationLoaded) {
+      const seasonStats = getPitcherSeasonStats(normId(pickPitcherId(pitcher)));
+      if (seasonStats && seasonStats.apps > 0) {
+        const seasonLine = document.createElement('div');
+        seasonLine.className = 'pitcher-details-line pitcher-season-line';
+        const lbl = document.createElement('span');
+        lbl.className = 'season-stats-label';
+        lbl.textContent = `Season (${seasonStats.apps} app${seasonStats.apps !== 1 ? 's' : ''}):`;
+        seasonLine.append(lbl);
+        [['IP', seasonStats.ip], ['K', seasonStats.k], ['BB', seasonStats.bb], ['ERA', seasonStats.era], ['K/9', seasonStats.k9]].forEach(([sl, sv]) => {
+          const chip = document.createElement('span');
+          chip.className = 'stat-chip stat-chip-season';
+          chip.innerHTML = `<span class="stat-label">${sl}</span><span class="stat-value">${sv}</span>`;
+          seasonLine.append(chip);
+        });
+        detailsDiv.append(seasonLine);
+      }
+    }
+
+    // Bio stats
     const bioStats = [];
     if(pitcher?.age) bioStats.push(`Age: ${pitcher.age}`);
     if(pitcher?.height) bioStats.push(`Height: ${pitcher.height}`);
     if(pitcher?.weight) bioStats.push(`Weight: ${pitcher.weight}`);
-    
+
     if(bioStats.length > 0){
       const line = document.createElement('div');
       line.className = 'pitcher-details-line';
       line.textContent = bioStats.join(' • ');
       detailsDiv.append(line);
     }
-    
+
     if(pitcher?.espn){
       const line = document.createElement('div');
       line.className = 'pitcher-details-line';
@@ -2086,11 +3211,15 @@ function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   // Append star and pill badges
   right.append(star, pillEl);
   
-  // Add position/role badges if available
-  if(pitcher?.position?.abbreviation){
+  // Add position badge (LHP / RHP / SP / RP etc.)
+  const posStr = typeof pitcher?.position === 'string' ? pitcher.position
+    : (pitcher?.position?.abbreviation || '');
+  if (posStr) {
+    const isStarter  = posStr === 'SP';
+    const isReliever = /^(RP|CL|LHRP|RHRP)$/.test(posStr);
     const posPill = document.createElement('span');
-    posPill.className = 'pill pill-' + (pitcher.position.abbreviation === 'SP' ? 'starter' : 'reliever');
-    posPill.textContent = pitcher.position.abbreviation === 'SP' ? 'Starter' : 'Reliever';
+    posPill.className = 'pill ' + (isStarter ? 'pill-starter' : isReliever ? 'pill-reliever' : 'pill-pos');
+    posPill.textContent = posStr;
     right.append(posPill);
   }
   
@@ -2124,6 +3253,7 @@ function logoNode(meta){
   if (hasLogo){
     const img = document.createElement('img');
     img.className = 'team-logo-img';
+    img.loading = 'lazy';
     img.alt = meta?.name || 'Team';
     img.src = meta.logo;
     img.onerror = () => { img.replaceWith(fallbackLogo(meta)); };
@@ -2133,7 +3263,6 @@ function logoNode(meta){
 }
 
 function sideBlock(tid, gameId){
-  console.log('[DEBUG] sideBlock called with tid:', tid, 'gameId:', gameId);
   const gameHasData = !!(window.PLAYED_IDX && window.PLAYED_IDX[String(gameId)]);
   const meta = teamMeta(tid);
   const box  = document.createElement('div');
@@ -2185,16 +3314,16 @@ function sideBlock(tid, gameId){
     const pitcherId = (pickPitcherId(pitcher) || '').replace(/\D+/g,'');
     const played = playedSet.has(pitcherId);
     const fav    = isFavPitcher(pitcher);
-    const role = (pitcher?.role || pitcher?.position || '').toLowerCase();
-    
+    const pos = (pitcher?.position || '').toUpperCase();
+
     // Apply pitcher type filter
     let passesTypeFilter = true;
     if (pitcherFilter === 'fav_or_played') passesTypeFilter = fav || played;
     else if (pitcherFilter === 'played') passesTypeFilter = played;
     else if (pitcherFilter === 'favorites') passesTypeFilter = fav;
     else if (pitcherFilter === 'fav_played') passesTypeFilter = fav && played;
-    else if (pitcherFilter === 'starters') passesTypeFilter = role === 'starter';
-    else if (pitcherFilter === 'relievers') passesTypeFilter = role === 'reliever';
+    else if (pitcherFilter === 'starters') passesTypeFilter = pos === 'SP';
+    else if (pitcherFilter === 'relievers') passesTypeFilter = /^(RP|CL|LHRP|RHRP)$/.test(pos);
     
     // Apply name search filter
     let passesNameFilter = true;
@@ -2218,11 +3347,11 @@ function sideBlock(tid, gameId){
     return pitcherName(a).localeCompare(pitcherName(b));
   });
   
-  const starters = listFiltered.filter(p => (p?.role || p?.position || '').toLowerCase() === 'starter');
-  const relievers = listFiltered.filter(p => (p?.role || p?.position || '').toLowerCase() === 'reliever');
+  const starters = listFiltered.filter(p => (p?.position || '').toUpperCase() === 'SP');
+  const relievers = listFiltered.filter(p => /^(RP|CL|LHRP|RHRP)$/.test((p?.position || '').toUpperCase()));
   const others = listFiltered.filter(p => {
-    const role = (p?.role || p?.position || '').toLowerCase();
-    return role !== 'starter' && role !== 'reliever';
+    const pPos = (p?.position || '').toUpperCase();
+    return pPos !== 'SP' && !/^(RP|CL|LHRP|RHRP)$/.test(pPos);
   });
   
   if(starters.length > 0){
@@ -2285,10 +3414,18 @@ function favoriteStar(el, key, val){
   const active = Fav.has(key, val);
   el.classList.toggle('active', active);
   el.textContent = active ? '★' : '☆';
-  el.onclick = () => {
+  el.setAttribute('aria-pressed', String(active));
+  if (!el.getAttribute('aria-label')) {
+    el.setAttribute('aria-label', `Favorite ${key.replace(/s$/, '')} ${val}`);
+  }
+  el.setAttribute('tabindex', '0');
+  const toggle = () => {
     Fav.toggle(key, val);
     favoriteStar(el, key, val);
+    announce(Fav.has(key, val) ? 'Added to favorites' : 'Removed from favorites');
   };
+  el.onclick = toggle;
+  el.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } };
 }
 
 function fmtDate(iso){
@@ -2298,6 +3435,34 @@ function fmtDate(iso){
     return d.toLocaleString(undefined, opts); 
   }
   catch{ return iso||''; }
+}
+
+function computeScore(g){
+  const idx = window.PLAYED_IDX;
+  if (!idx) return null;
+  const entry = idx[String(g.id)];
+  if (!entry || !entry.played || entry.played.length === 0) return null;
+  const pitchers = idx.pitchers;
+  if (!pitchers) return null;
+
+  const homeId = String(g.home || '');
+  const awayId = String(g.away || '');
+  let homeScore = 0, awayScore = 0, hadR = false;
+
+  for (const pid of entry.played) {
+    const pd = pitchers[String(pid)];
+    if (!pd || !pd.games) continue;
+    const ge = pd.games.find(x => x.gameId === String(g.id));
+    if (!ge || !ge.stats) continue;
+    const r = parseInt(ge.stats.R, 10);
+    if (isNaN(r)) continue;
+    hadR = true;
+    if (ge.teamId === homeId) awayScore += r;  // home pitchers give up runs to away batters
+    else if (ge.teamId === awayId) homeScore += r;
+  }
+
+  if (!hadR) return null;
+  return { home: homeScore, away: awayScore };
 }
 
 function gameCard(g){
@@ -2361,14 +3526,13 @@ function gameCard(g){
   prioSel.value = prio;
   setPrioSwatch(prioSel);
   prioSel.onchange = () => {
-    const oldPrio = prio;
     const newPrio = prioSel.value;
     
     Prio.set(g.id, newPrio);
     setPrioSwatch(prioSel);
     
     // Instant visual feedback - update card classes directly
-    if (oldPrio) card.classList.remove('prio-' + oldPrio);
+    ['prio-Priority', 'prio-High', 'prio-Medium', 'prio-Low'].forEach(c => card.classList.remove(c));
     if (newPrio) card.classList.add('prio-' + newPrio);
     
     // Update card header background
@@ -2394,6 +3558,7 @@ function gameCard(g){
   
   const favBtn = document.createElement('button');
   favBtn.className = 'fav-btn';
+  favBtn.setAttribute('aria-label', `Favorite game ${g.away?.name || ''} vs ${g.home?.name || ''}`);
   favoriteStar(favBtn, 'games', g.id);
   
   const ghLinks = document.createElement('div');
@@ -2401,11 +3566,11 @@ function gameCard(g){
   
   // Game Recap link
   const recapLink = document.createElement('a');
-  recapLink.href = `https://www.espn.com/mlb/recap/_/gameId/${g.id}`;
+  recapLink.href = `https://www.espn.com/college-baseball/recap/_/gameId/${g.id}`;
   recapLink.target = '_blank';
   recapLink.textContent = 'RECAP';
   ghLinks.append(recapLink);
-  
+
   // Box Score link
   const boxLink = document.createElement('a');
   boxLink.href = espnGameLink(g.id);
@@ -2413,27 +3578,44 @@ function gameCard(g){
   boxLink.textContent = 'BOX SCORE';
   ghLinks.append(boxLink);
   
-  // Game Replay link
-  const replayLink = document.createElement('a');
-  replayLink.href = `https://www.mlb.com/video/search?q=gameId=${g.id}`;
-  replayLink.target = '_blank';
-  replayLink.textContent = 'REPLAY';
-  ghLinks.append(replayLink);
-  
   ghRight.append(watchedToggle, prioSel, favBtn, ghLinks);
   head.append(ghLeft, ghRight);
   
   const match = document.createElement('div');
   match.className = 'match';
-  
-  match.append(sideBlock(g.away, g.id));
-  
+
+  // Compute score first so we can apply winner/loser styling to both sides
+  const score = computeScore(g);
+  const awayWon = score ? score.away > score.home : false;
+  const homeWon = score ? score.home > score.away : false;
+
+  const awaySide = sideBlock(g.away, g.id);
+  if (score) {
+    if (awayWon) awaySide.classList.add('winner');
+    else if (homeWon) awaySide.classList.add('loser');
+  }
+  match.append(awaySide);
+
   const vs = document.createElement('div');
   vs.className = 'vs';
-  vs.textContent = '@';
+  if (score) {
+    vs.innerHTML =
+      `<div class="score-display">` +
+      `<span class="score-num${awayWon ? ' winner' : ''}">${score.away}</span>` +
+      `<span class="score-sep">–</span>` +
+      `<span class="score-num${homeWon ? ' winner' : ''}">${score.home}</span>` +
+      `</div><div class="score-label">FINAL</div>`;
+  } else {
+    vs.textContent = '@';
+  }
   match.append(vs);
-  
-  match.append(sideBlock(g.home, g.id));
+
+  const homeSide = sideBlock(g.home, g.id);
+  if (score) {
+    if (homeWon) homeSide.classList.add('winner');
+    else if (awayWon) homeSide.classList.add('loser');
+  }
+  match.append(homeSide);
   
   card.append(head, match);
   return card;
@@ -2443,11 +3625,26 @@ function filterGames(games){
   const search = ($("#search")?.value || '').toLowerCase();
   const conf = $("#divFilter")?.value || '';
   const watchOrder = $("#watchOrder")?.value || 'all';
-  
+
   return games.filter(g => {
     if(weeksSelected.size > 0 && !weeksSelected.has(String(g.week))) return false;
-    
-    if(conf){
+
+    // Multi-select conference filter (OR logic - show if ANY team matches)
+    if(conferencesSelected.size > 0){
+      const homeConf = teamMeta(g.home).confFull;
+      const awayConf = teamMeta(g.away).confFull;
+      if(!conferencesSelected.has(homeConf) && !conferencesSelected.has(awayConf)) return false;
+    }
+
+    // Multi-select team filter (OR logic - show if ANY team matches)
+    if(teamsSelected.size > 0){
+      const homeId = String(g.homeTeamId || g.home);
+      const awayId = String(g.awayTeamId || g.away);
+      if(!teamsSelected.has(homeId) && !teamsSelected.has(awayId)) return false;
+    }
+
+    // Legacy single-select conference filter (if no multi-select active)
+    if(conf && conferencesSelected.size === 0){
       const homeConf = teamMeta(g.home).confFull;
       const awayConf = teamMeta(g.away).confFull;
       if(homeConf !== conf && awayConf !== conf) return false;
@@ -2464,6 +3661,13 @@ function filterGames(games){
     
     if(watchOrder === 'unwatched' && Watched.has(g.id)) return false;
     if(watchOrder === 'watched' && !Watched.has(g.id)) return false;
+    if(watchOrder === 'finals' && !computeScore(g)) return false;
+    if(watchOrder === 'upcoming'){
+      // Show only future games (date not yet passed, with 6-hour grace period)
+      const gDate = g.date ? new Date(g.date) : null;
+      const cutoff = new Date(Date.now() - 6 * 3600000);
+      if(gDate && gDate < cutoff) return false;
+    }
     if(watchOrder === 'favorites'){
       const homeFav = Fav.has('teams', g.home);
       const awayFav = Fav.has('teams', g.away);
@@ -2487,7 +3691,7 @@ function filterGames(games){
 }
 
 function sortGames(games){
-  const sortBy = $("#sortBy")?.value || 'date';
+  const sortBy = $("#sortByModal")?.value || $("#sortBy")?.value || 'date';
   return games.slice().sort((a,b) => {
     if(sortBy === 'priority'){
       const ap = Prio.LEVELS.indexOf(Prio.get(a.id));
@@ -2705,10 +3909,12 @@ function renderVirtualized(wrap, sorted) {
 function isAnyFilterActive(){
   const confOn   = ($("#divFilter")?.value || '') !== '';
   const weeksOn  = weeksSelected && weeksSelected.size > 0;
+  const confsOn  = conferencesSelected && conferencesSelected.size > 0;
+  const teamsOn  = teamsSelected && teamsSelected.size > 0;
   const pitcherOn = ($("#pitcherFilterModal")?.value || 'fav_or_played') !== 'fav_or_played';
   const pitcherSearchOn = ($("#pitcherSearchModal")?.value || '').trim() !== '';
   const watchOn  = ($("#watchOrder")?.value || 'all') !== 'all';
-  return confOn || weeksOn || pitcherOn || pitcherSearchOn || watchOn;
+  return confOn || weeksOn || confsOn || teamsOn || pitcherOn || pitcherSearchOn || watchOn;
 }
 
 function updateFiltersBtnHighlight(){
@@ -2839,25 +4045,26 @@ function fillWeekSelect(){
 function fillWeeksGrid(){
   const grid = $("#weeksGrid");
   if(!grid) return;
+  const thisWeek = getThisWeek();
   grid.innerHTML = '';
   for(let w=1; w<=26; w++){
     const lab = document.createElement('label');
     const cb = document.createElement('input');
     cb.type = 'checkbox';
     cb.value = String(w);
-    // Sync checkbox state with weeksSelected Set
     cb.checked = weeksSelected.has(String(w));
-    cb.onchange = () => { 
-      if(cb.checked) {
-        weeksSelected.add(cb.value);
-      } else {
-        weeksSelected.delete(cb.value);
-      }
-      render(); // Update the display when weeks change
+    cb.onchange = () => {
+      if(cb.checked) weeksSelected.add(cb.value);
+      else weeksSelected.delete(cb.value);
+      render();
     };
-    const t=document.createElement('span'); 
-    t.textContent=String(w);
-    lab.append(cb,t); 
+    const t = document.createElement('span');
+    t.textContent = String(w);
+    if (String(w) === thisWeek) {
+      lab.classList.add('week-current');
+      lab.title = 'This week';
+    }
+    lab.append(cb, t);
     grid.append(lab);
   }
 }
@@ -2879,20 +4086,184 @@ function populateDivisionDropdowns(){
     }
   }
   const sorted = Array.from(confs).sort();
-  
+
   const sel1 = $("#divFilter");
   const sel2 = $("#divFilterModal");
-  
+
   for(const conf of sorted){
     const opt1 = document.createElement('option');
     opt1.value = conf;
     opt1.textContent = conf;
     if(sel1) sel1.append(opt1);
-    
+
     const opt2 = document.createElement('option');
     opt2.value = conf;
     opt2.textContent = conf;
     if(sel2) sel2.append(opt2);
+  }
+}
+
+function fillConferencesGrid(){
+  const grid = $("#conferencesGrid");
+  if(!grid || !DIV_MAP) return;
+
+  const confs = new Set();
+  for(const c of Object.values(DIV_MAP)){
+    if(c && c !== 'Unknown') confs.add(c);
+  }
+  const sorted = Array.from(confs).sort();
+
+  grid.innerHTML = '';
+  for(const conf of sorted){
+    const lab = document.createElement('label');
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.value = conf;
+    cb.checked = conferencesSelected.has(conf);
+    cb.onchange = () => {
+      if(cb.checked){
+        conferencesSelected.add(conf);
+      } else {
+        conferencesSelected.delete(conf);
+      }
+      updateTeamsGridVisibility();
+      render();
+    };
+    const t = document.createElement('span');
+    t.textContent = conf;
+    lab.append(cb, t);
+    grid.append(lab);
+  }
+
+  // Wire up quick action buttons (use onclick= to prevent stacking listeners on repeated calls)
+  const allBtn = $("#conferencesAll");
+  if(allBtn) allBtn.onclick = () => {
+    conferencesSelected.clear();
+    for(const conf of sorted) conferencesSelected.add(conf);
+    fillConferencesGrid();
+    updateTeamsGridVisibility();
+    render();
+  };
+
+  const p5Btn = $("#conferencesPower5");
+  if(p5Btn) p5Btn.onclick = () => {
+    conferencesSelected.clear();
+    const power5 = ['SEC', 'Big Ten', 'ACC', 'Big 12', 'Pac-12'];
+    for(const conf of power5){
+      if(sorted.includes(conf)) conferencesSelected.add(conf);
+    }
+    fillConferencesGrid();
+    updateTeamsGridVisibility();
+    render();
+  };
+
+  const clearBtn = $("#conferencesClear");
+  if(clearBtn) clearBtn.onclick = () => {
+    conferencesSelected.clear();
+    fillConferencesGrid();
+    updateTeamsGridVisibility();
+    render();
+  };
+}
+
+function fillTeamsGrid(){
+  const grid = $("#teamsGrid");
+  if(!grid || !TEAMS || !TEAMS.teams) return;
+
+  const sorted = TEAMS.teams.slice().sort((a,b) =>
+    (a.shortName || a.name).localeCompare(b.shortName || b.name)
+  );
+
+  grid.innerHTML = '';
+  for(const team of sorted){
+    const lab = document.createElement('label');
+    lab.dataset.teamId = team.id;
+    lab.dataset.conference = team.conference || '';
+
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.value = team.id;
+    cb.checked = teamsSelected.has(team.id);
+    cb.onchange = () => {
+      if(cb.checked){
+        teamsSelected.add(team.id);
+      } else {
+        teamsSelected.delete(team.id);
+      }
+      updateTeamFilterSummary();
+      render();
+    };
+
+    const t = document.createElement('span');
+    t.textContent = team.shortName || team.name;
+    lab.append(cb, t);
+    grid.append(lab);
+  }
+
+  // Wire up quick action buttons (use onclick= to prevent stacking listeners on repeated calls)
+  const teamsAllBtn = $("#teamsAll");
+  if(teamsAllBtn) teamsAllBtn.onclick = () => {
+    const visible = grid.querySelectorAll('label:not(.hidden)');
+    teamsSelected.clear();
+    for(const lab of visible){
+      const teamId = lab.dataset.teamId;
+      if(teamId) teamsSelected.add(teamId);
+    }
+    fillTeamsGrid();
+    updateTeamFilterSummary();
+    render();
+  };
+
+  const teamsClearBtn = $("#teamsClear");
+  if(teamsClearBtn) teamsClearBtn.onclick = () => {
+    teamsSelected.clear();
+    fillTeamsGrid();
+    updateTeamFilterSummary();
+    render();
+  };
+
+  // Wire up team search filter (use oninput= to prevent stacking listeners on repeated calls)
+  const teamSearch = $("#teamSearchFilter");
+  if(teamSearch) teamSearch.oninput = (e) => {
+    const search = e.target.value.toLowerCase();
+    const labels = grid.querySelectorAll('label');
+    for(const lab of labels){
+      const text = lab.textContent.toLowerCase();
+      if(search === '' || text.includes(search)){
+        lab.classList.remove('hidden');
+      } else {
+        lab.classList.add('hidden');
+      }
+    }
+  };
+
+  updateTeamsGridVisibility();
+  updateTeamFilterSummary();
+}
+
+function updateTeamsGridVisibility(){
+  const grid = $("#teamsGrid");
+  if(!grid) return;
+
+  const labels = grid.querySelectorAll('label');
+  for(const lab of labels){
+    const conf = lab.dataset.conference;
+    if(conferencesSelected.size === 0 || conferencesSelected.has(conf)){
+      lab.style.display = 'flex';
+    } else {
+      lab.style.display = 'none';
+    }
+  }
+}
+
+function updateTeamFilterSummary(){
+  const summary = $("#teamFilterSummary");
+  if(!summary) return;
+
+  if(teamsSelected.size === 0){
+    summary.textContent = '';
+  } else {
+    summary.textContent = `${teamsSelected.size} team${teamsSelected.size === 1 ? '' : 's'} selected`;
   }
 }
 
@@ -2908,7 +4279,7 @@ async function boot(){
   // Apply saved filter settings
   const savedDiv = Settings.get('divFilter', '');
   const savedWatchOrder = Settings.get('watchOrder', 'priority');
-  const savedPitcherFilter = Settings.get('pitcherFilter', 'fav_or_played');
+  const savedPitcherFilter = (() => { const v = Settings.get('pitcherFilter', 'fav_or_played'); return v === 'all' ? 'fav_or_played' : v; })();
   const savedSortBy = Settings.get('sortBy', 'time');
   
   if($("#divFilter")) $("#divFilter").value = savedDiv;
@@ -2921,10 +4292,14 @@ async function boot(){
   fillWeekSelect();
   loadWeeksFromParam(); // Load URL params FIRST
   fillWeeksGrid(); // Then fill the grid (checkboxes will now sync correctly)
-  
+
   console.log('[boot] weeksSelected size:', weeksSelected.size, 'weeks:', Array.from(weeksSelected));
-  
+
   TEAMS = await tryMany(['./data/teams.json']);
+
+  // Initialize multi-select grids
+  fillConferencesGrid();
+  fillTeamsGrid();
   
   let basePitchers = await tryMany([
     './data/pitchers.json',
@@ -2948,12 +4323,7 @@ async function boot(){
       : ['./data/schedule.json', './data/schedule_week.json']
   );
   SCHED = normalizeSchedule(rawSched);
-  console.log('[DEBUG] First 5 games team IDs:');
-  for(let i = 0; i < Math.min(5, SCHED.games.length); i++){
-    const g = SCHED.games[i];
-    console.log(`  Game ${i+1}: away=${g.away}, home=${g.home}`);
-  }
-
+  fillWeeksGrid(); // Re-render with "this week" highlight now that SCHED is loaded
   if(TEAMS && TEAMS.teams){
     for(const t of TEAMS.teams){
       const tid = String(t.id || t.team_id || '');
@@ -2962,30 +4332,42 @@ async function boot(){
   }
   
   if(PITCHERS && PITCHERS.teams){
-    console.log('[DEBUG] Loading pitchers data:', PITCHERS.teams.length, 'teams');
     for(const t of PITCHERS.teams){
       const tid = String(t.team_id || t.id || '');
       if(tid) pitchersById[tid] = t;
     }
-    console.log('[DEBUG] pitchersById populated with', Object.keys(pitchersById).length, 'teams');
-    console.log('[DEBUG] Sample team IDs:', Object.keys(pitchersById).slice(0, 5));
-  } else {
-    console.error('[DEBUG] PITCHERS data not loaded or invalid structure');
   }
   
   populateDivisionDropdowns();
   
-  // Set default pitcher filter - SHOW ALL for preseason, can change to fav_or_played during season
   const pitcherFilterEl = $("#pitcherFilterModal");
   if(pitcherFilterEl && !pitcherFilterEl.value) {
-    pitcherFilterEl.value = 'all';
+    pitcherFilterEl.value = 'fav_or_played';
   }
   
   // PERFORMANCE: Skip initial load - lazy load after render
   // await reloadPlayedIndex(true);
-  
+
+  // Auto-jump to this week on first load when no week is pre-selected
+  if (weeksSelected.size === 0) {
+    jumpToThisWeek();
+  }
+
   render();
-  
+
+  // Render filter presets
+  FilterPresets.renderPresets();
+
+  // Hide loading state with fade out
+  const loadingState = document.getElementById('loadingState');
+  if(loadingState){
+    loadingState.style.transition = 'opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    loadingState.style.opacity = '0';
+    setTimeout(() => {
+      loadingState.style.display = 'none';
+    }, 300);
+  }
+
   console.log('🎉 CBB Pitcher Tracker loaded!');
   console.log('Teams:', Object.keys(teamsById).length);
   console.log('Teams with pitchers:', Object.keys(pitchersById).length);
@@ -3016,30 +4398,62 @@ function hideLoadingIndicator() {
 let participationLoaded = false;
 let isLoadingParticipation = false;
 
-async function lazyLoadParticipation() {
-  if (participationLoaded) {
-    toast('Participation data already loaded!');
-    return;
+function updateParticipationBtn(state) {
+  const btn = $("#loadParticipationBtn");
+  if (!btn) return;
+  if (state === 'loaded') {
+    btn.textContent = '↺ Refresh Data';
+    btn.style.background = '#6c757d';
+    btn.style.borderColor = '#6c757d';
+    const cacheTs = (() => { try { const r = localStorage.getItem(SCHED_PART_CACHE_KEY); return r ? JSON.parse(r).ts : null; } catch { return null; } })();
+    if (cacheTs) {
+      const age = Math.round((Date.now() - cacheTs) / 60000);
+      btn.title = `Cached ${age}min ago — click to refresh`;
+    }
+  } else if (state === 'loading') {
+    btn.textContent = '⏳ Loading…';
+    btn.disabled = true;
+  } else {
+    btn.textContent = 'Load Participation';
+    btn.style.background = '#28a745';
+    btn.style.borderColor = '#28a745';
+    btn.disabled = false;
   }
-  
+}
+
+async function lazyLoadParticipation(forceRefresh = false) {
+  if (participationLoaded && !forceRefresh) {
+    // Already loaded — offer to refresh
+    const btn = $("#loadParticipationBtn");
+    if (btn && btn.textContent.includes('Refresh')) {
+      // User clicked Refresh explicitly
+      localStorage.removeItem(SCHED_PART_CACHE_KEY);
+      participationLoaded = false;
+    } else {
+      toast('Participation data already loaded!');
+      return;
+    }
+  }
+
   if (isLoadingParticipation) {
     toast('Already loading...');
     return;
   }
-  
+
   isLoadingParticipation = true;
+  updateParticipationBtn('loading');
   showLoadingIndicator();
   console.log('[perf] Loading participation data...');
   const start = Date.now();
-  
+
   try {
     await reloadPlayedIndex(true);
     participationLoaded = true;
     console.log(`[perf] Participation loaded in ${Date.now() - start}ms`);
-    
+
     // Re-render to show dropdowns/participation data
     render();
-    
+
     // Wait for DOM to paint before refreshing pills
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
@@ -3047,11 +4461,13 @@ async function lazyLoadParticipation() {
         console.log('[perf] Pills refreshed after render');
       });
     });
-    
+
+    updateParticipationBtn('loaded');
     toast('✅ Participation data loaded!');
   } catch (e) {
     console.error('[perf] Failed to load participation:', e);
     toast('❌ Failed to load participation data');
+    updateParticipationBtn('idle');
   } finally {
     hideLoadingIndicator();
     isLoadingParticipation = false;
@@ -3073,6 +4489,110 @@ const triggerLoad = () => {
     toast('Participation data already loaded!');
   }
 };
+
+// CSV Export
+function exportToCSV(){
+  const allGames = SCHED?.games || [];
+  if(allGames.length === 0) return;
+
+  const filtered = filterGames(allGames);
+  const rows = [];
+
+  // Add headers
+  rows.push(['Week', 'Date', 'Away Team', 'Home Team', 'Away Score', 'Home Score', 'Conference', 'Priority', 'Watched', 'Favorited', 'Away Pitchers', 'Home Pitchers', 'Game ID']);
+
+  // Add data rows
+  for(const game of filtered){
+    const homeMeta = teamMeta(game.home);
+    const awayMeta = teamMeta(game.away);
+    const homePitchers = Array.from(teamPitchers(String(game.home)) || []).length;
+    const awayPitchers = Array.from(teamPitchers(String(game.away)) || []).length;
+    const score = computeScore(game);
+
+    rows.push([
+      game.week || '',
+      game.date || '',
+      awayMeta?.name || game.away || '',
+      homeMeta?.name || game.home || '',
+      score ? score.away : '',
+      score ? score.home : '',
+      homeMeta?.conf || homeMeta?.confFull || awayMeta?.conf || awayMeta?.confFull || '',
+      Prio.get(game.id) || '',
+      Watched.has(game.id) ? 'Yes' : 'No',
+      Fav.has('games', game.id) ? 'Yes' : 'No',
+      awayPitchers,
+      homePitchers,
+      game.id || ''
+    ]);
+  }
+
+  const csv = Papa.unparse(rows);
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `cbb_schedule_${new Date().toISOString().split('T')[0]}.csv`;
+  link.click();
+
+  toast(`Exported ${rows.length - 1} games`);
+}
+
+document.getElementById('exportBtn')?.addEventListener('click', exportToCSV);
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  // Ignore if typing in an input field
+  if(e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
+    // Allow Escape to blur input fields
+    if(e.key === 'Escape') {
+      e.target.blur();
+    }
+    return;
+  }
+
+  switch(e.key) {
+    case '/':
+      e.preventDefault();
+      document.getElementById('search')?.focus();
+      break;
+    case 'f': {
+      e.preventDefault();
+      const fm = document.getElementById('filtersModal');
+      if(fm?.classList.contains('open')) closeModal('filtersModal');
+      else openModal('filtersModal');
+      break;
+    }
+    case 't':
+      e.preventDefault();
+      jumpToThisWeek();
+      break;
+    case 'e':
+      e.preventDefault();
+      exportToCSV();
+      break;
+    case '?': {
+      e.preventDefault();
+      const hm = document.getElementById('helpModal');
+      if(hm) hm.style.display = 'flex';
+      break;
+    }
+    case 'Escape':
+      document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m));
+      { const hm = document.getElementById('helpModal'); if(hm) hm.style.display = 'none'; }
+      break;
+    default: {
+      // 1–9: jump to that week
+      const wk = parseInt(e.key);
+      if(wk >= 1 && wk <= 9) {
+        e.preventDefault();
+        weeksSelected.clear();
+        weeksSelected.add(String(wk));
+        fillWeeksGrid();
+        render();
+        toast(`Jumped to Week ${wk}`);
+      }
+    }
+  }
+});
 
 document.addEventListener('DOMContentLoaded', boot);
 
@@ -3143,6 +4663,36 @@ $("#sortBy")?.addEventListener('change', () => {
 
 $("#filtersBtn")?.addEventListener('click', () => openModal('filtersModal'));
 $("#commandsBtn")?.addEventListener('click', () => openModal('commandsModal'));
+$("#helpBtn")?.addEventListener('click', () => {
+  const helpModal = document.getElementById('helpModal');
+  if(helpModal) {
+    helpModal.style.display = 'flex';
+  }
+});
+
+// Filter presets handler
+$("#savePresetBtn")?.addEventListener('click', () => {
+  const name = prompt('Enter a name for this filter preset:');
+  if(name && name.trim()) {
+    FilterPresets.addPreset(name.trim());
+  }
+});
+
+// Close help modal handlers
+$("#closeHelp")?.addEventListener('click', () => {
+  const helpModal = document.getElementById('helpModal');
+  if(helpModal) {
+    helpModal.style.display = 'none';
+  }
+});
+
+// Close help modal when clicking outside
+$("#helpModal")?.addEventListener('click', (e) => {
+  const helpModal = document.getElementById('helpModal');
+  if(e.target === helpModal) {
+    helpModal.style.display = 'none';
+  }
+});
 
 $("#weeksAll")?.addEventListener('click', () => {
   $$('#weeksGrid input[type="checkbox"]').forEach(cb => {
@@ -3159,6 +4709,46 @@ $("#weeksClear")?.addEventListener('click', () => {
   });
   render();
 });
+
+// Returns the current/closest week number as a string, or null if SCHED not loaded
+function getThisWeek() {
+  const games = SCHED?.games || [];
+  if (!games.length) return null;
+  const now = Date.now();
+  const weekDists = {};
+  for (const g of games) {
+    if (!g.date || !g.week) continue;
+    const d = new Date(g.date).getTime();
+    const dist = d - now;
+    const w = String(g.week);
+    if (!(w in weekDists) || (dist >= 0 && (weekDists[w] < 0 || dist < weekDists[w])) || (dist < 0 && weekDists[w] < 0 && dist > weekDists[w])) {
+      weekDists[w] = dist;
+    }
+  }
+  let best = null, bestDist = Infinity;
+  for (const [w, dist] of Object.entries(weekDists)) {
+    if (dist >= 0 && dist < bestDist) { best = w; bestDist = dist; }
+  }
+  if (!best) {
+    bestDist = -Infinity;
+    for (const [w, dist] of Object.entries(weekDists)) {
+      if (dist > bestDist) { best = w; bestDist = dist; }
+    }
+  }
+  return best;
+}
+
+function jumpToThisWeek() {
+  const best = getThisWeek();
+  if (!best) return;
+  weeksSelected.clear();
+  weeksSelected.add(best);
+  fillWeeksGrid();
+  render();
+  toast(`Jumped to Week ${best}`);
+}
+
+$("#weeksThisWeek")?.addEventListener('click', jumpToThisWeek);
 
 $("#viewGames")?.addEventListener('click', () => {
   currentViewMode = 'games';
@@ -3243,30 +4833,35 @@ $("#copyStopScript")?.addEventListener('click', () => {
 });
 
 
-// Enhanced Data Tools button handlers
+// Data Tools button handlers (commands match the textareas above)
+$("#copyDeployCmd")?.addEventListener('click', () => {
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\n./deploy.sh');
+  toast('Deploy command copied!');
+});
+
 $("#copyBackupCmd")?.addEventListener('click', () => {
-  navigator.clipboard.writeText('cd ~/Desktop/CBB\ntar -czf "backups/mlb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/ schedule.html');
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\nmkdir -p backups\ntar -czf "backups/cbb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/');
   toast('Backup command copied!');
 });
 
 $("#copyWeekUpdate")?.addEventListener('click', () => {
   const week = $("#cmdWeek")?.value || '1';
-  navigator.clipboard.writeText(`cd ~/Desktop/CBB\nnode tools/fetch_schedule.js --year=2025 --weeks=${week}\nnode tools/fetch_all_pitcher_participation.cjs --week=${week}\nnode rebuild_played_index.js\necho "✅ Done! Refresh browser: Cmd+Shift+R"`);
+  navigator.clipboard.writeText(`cd ~/Desktop/CBB\nnode fetch_all_pitcher_participation.cjs --week=${week}\nnode strip_unused_stats.cjs\n./deploy.sh\necho "✅ Done! Live at: https://cbb-pitcher-tracker.vercel.app"`);
   toast('Week update copied!');
 });
 
 $("#copyPitcherUpdate")?.addEventListener('click', () => {
-  navigator.clipboard.writeText('cd ~/Desktop/CBB\nnode tools/fetch_all_pitcher_participation.cjs\necho "✅ Done! Refresh: Cmd+Shift+R"');
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\nnode fetch_all_pitcher_participation.cjs\nnode strip_unused_stats.cjs');
   toast('Pitcher update copied!');
 });
 
 $("#copyCompleteUpdate")?.addEventListener('click', () => {
-  navigator.clipboard.writeText('cd ~/Desktop/CBB\ntar -czf "backups/mlb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/\nnode tools/fetch_schedule.js --year=2025 --weeks=1-26\nnode tools/fetch_all_pitcher_participation.cjs\nnode rebuild_played_index.js\necho "✅ Complete! Refresh browser."');
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\nmkdir -p backups\ntar -czf "backups/cbb_backup_$(date +%Y%m%d_%H%M%S).tar.gz" data/\nnode fetch_all_pitcher_participation.cjs\nnode strip_unused_stats.cjs\n./deploy.sh\necho "✅ Complete! Live at: https://cbb-pitcher-tracker.vercel.app"');
   toast('Complete update copied!');
 });
 
 $("#copyLaunchCmd")?.addEventListener('click', () => {
-  navigator.clipboard.writeText('cd ~/Desktop/CBB\n./launch.command');
+  navigator.clipboard.writeText('cd ~/Desktop/CBB\nnode server.mjs');
   toast('Launch command copied!');
 });
 
@@ -3318,28 +4913,35 @@ $("#loadParticipationBtn")?.addEventListener('click', () => {
   lazyLoadParticipation();
 });
 
-$("#loadDetailedInningsBtn")?.addEventListener('click', async () => {
+let statsDetailExpanded = false;
+$("#loadDetailedInningsBtn")?.addEventListener('click', () => {
   const btn = $("#loadDetailedInningsBtn");
   if (!btn) return;
-  
-  // Disable button while loading
-  btn.disabled = true;
-  btn.textContent = 'Loading... (20-30s)';
-  
-  const data = await loadDetailedInnings();
-  
-  if (data) {
-    btn.textContent = '✅ Innings Loaded';
-    btn.style.background = '#198754';
-    btn.disabled = false;
-    
-    // Re-render to show detailed innings in the UI
-    render();
-    toast('✅ Detailed innings now visible!');
-  } else {
-    btn.textContent = 'Load Innings';
-    btn.disabled = false;
+
+  if (!participationLoaded) {
+    toast('Load participation data first');
+    return;
   }
+
+  statsDetailExpanded = !statsDetailExpanded;
+
+  // Toggle all pitcher-details sections open/closed
+  document.querySelectorAll('.pitcher-details').forEach(det => {
+    if (statsDetailExpanded) {
+      det.classList.add('expanded');
+    } else {
+      det.classList.remove('expanded');
+    }
+  });
+
+  // Also update expand toggles
+  document.querySelectorAll('.expand-toggle').forEach(tog => {
+    tog.textContent = statsDetailExpanded ? '▼' : '▶';
+  });
+
+  btn.textContent = statsDetailExpanded ? '▲ Hide Stats' : 'Stats Detail';
+  btn.style.background = statsDetailExpanded ? '#198754' : '#fd7e14';
+  toast(statsDetailExpanded ? '✅ Stat lines expanded' : 'Stat lines collapsed');
 });
 
 // Toggle virtual scrolling
@@ -3376,6 +4978,48 @@ $("#toggleVirtualScrollBtn")?.addEventListener('click', () => {
   } else {
     toast(virtualScrollEnabled ? '✅ Virtual scrolling enabled' : '⚠️ Virtual scrolling disabled');
   }
+});
+
+// ====================================
+// PWA Service Worker Registration
+// ====================================
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('✓ Service Worker registered:', registration.scope);
+
+        // Check for updates periodically
+        setInterval(() => {
+          registration.update();
+        }, 60000); // Check every minute
+      })
+      .catch((error) => {
+        console.log('✗ Service Worker registration failed:', error);
+      });
+  });
+}
+
+// ====================================
+// PWA Install Prompt
+// ====================================
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  console.log('💾 App can be installed');
+});
+
+window.addEventListener('appinstalled', () => {
+  console.log('✓ PWA installed successfully');
+  deferredPrompt = null;
+});
+
+// Listen for service worker updates
+navigator.serviceWorker?.addEventListener('controllerchange', () => {
+  console.log('🔄 Service Worker updated, reloading page...');
+  window.location.reload();
 });
 
 </script>
