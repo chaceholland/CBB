@@ -622,20 +622,22 @@
 
   /* Headshot */
   .headshot-wrap{
-    width: 56px;
-    height: 56px;
+    width: 72px;
+    height: 72px;
     overflow: visible;
     border-radius: 10px;
     background: var(--slate-100);
     position: relative;
     cursor: pointer;
     border: 1px solid var(--slate-200);
+    flex-shrink: 0;
   }
 
   .headshot{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 1;
@@ -644,19 +646,19 @@
   }
 
   .headshot-wrap:hover .headshot{
-    transform: scale(2.2);
+    transform: scale(2.0);
     z-index: 100;
     box-shadow: 0 12px 32px rgba(0,0,0,0.3);
     border-radius: 10px;
   }
 
   .pitcher-details .headshot-wrap{
-    width: 56px;
-    height: 56px;
+    width: 72px;
+    height: 72px;
   }
 
   .pitcher-details .headshot-wrap:hover .headshot{
-    transform: scale(2.2);
+    transform: scale(2.0);
     z-index: 100;
     box-shadow: 0 12px 32px rgba(0,0,0,0.3);
   }
@@ -893,18 +895,23 @@
   /* Star Favorite */
   .star{
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: var(--slate-300);
-    transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s ease;
     user-select: none;
+    line-height: 1;
+    padding: 2px 4px;
+    border-radius: 4px;
   }
 
   .star:hover{
     color: var(--amber);
+    transform: scale(1.2);
   }
 
   .star.active{
     color: var(--amber);
+    filter: drop-shadow(0 0 4px rgba(245,158,11,0.5));
   }
 
   /* Modal Overlay */
@@ -1635,6 +1642,195 @@
       font-size: 0.8rem;
     }
   }
+
+  /* ====================================== */
+  /* DATA QUALITY ISSUES SYSTEM             */
+  /* ====================================== */
+
+  /* Warning / flag button in the game card header */
+  .dq-flag-btn {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1.5px solid transparent;
+    background: rgba(15,23,42,0.06);
+    color: var(--slate-400);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 1;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .dq-flag-btn:hover {
+    background: rgba(245,158,11,0.15);
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  .dq-flag-btn.has-issues {
+    background: rgba(245,158,11,0.18);
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  /* Global "Data Issues" nav button */
+  #dqBtn {
+    background: var(--white) !important;
+    border: 1.5px solid var(--slate-300) !important;
+    color: var(--slate-700) !important;
+    position: relative;
+  }
+
+  #dqBtn.has-issues {
+    background: rgba(245,158,11,0.12) !important;
+    border-color: var(--amber) !important;
+    color: var(--amber) !important;
+  }
+
+  /* Count badge on nav button */
+  .dq-nav-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--amber);
+    color: var(--white);
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    margin-left: 0.35rem;
+    line-height: 1;
+  }
+
+  /* Data quality issue modal checkboxes */
+  .dq-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .dq-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.85rem;
+    border: 1.5px solid var(--slate-200);
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--slate-700);
+    background: var(--white);
+    transition: all 0.15s;
+    user-select: none;
+  }
+
+  .dq-checkbox-label:hover {
+    border-color: var(--amber);
+    background: rgba(245,158,11,0.06);
+  }
+
+  .dq-checkbox-label input[type="checkbox"] {
+    accent-color: var(--amber);
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .dq-checkbox-label input[type="checkbox"]:checked + span {
+    color: var(--slate-900);
+    font-weight: 600;
+  }
+
+  .dq-checkbox-label:has(input:checked) {
+    border-color: var(--amber);
+    background: rgba(245,158,11,0.1);
+  }
+
+  /* Issue tag pills in summary modal */
+  .dq-issue-tag {
+    display: inline-block;
+    background: rgba(245,158,11,0.15);
+    color: #92400e;
+    border: 1px solid rgba(245,158,11,0.4);
+    border-radius: 6px;
+    padding: 0.2rem 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  /* Flagged game row in global modal */
+  .dq-game-row {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--slate-200);
+    border-radius: 12px;
+    background: var(--white);
+    margin-bottom: 0.75rem;
+    transition: all 0.15s;
+  }
+
+  .dq-game-row:hover {
+    border-color: var(--amber);
+    box-shadow: 0 2px 8px rgba(245,158,11,0.1);
+  }
+
+  .dq-game-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--slate-900);
+    margin-bottom: 0.4rem;
+  }
+
+  .dq-game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .dq-game-note {
+    font-size: 0.82rem;
+    color: var(--slate-600);
+    font-style: italic;
+    margin-top: 0.3rem;
+  }
+
+  /* Empty state in global modal */
+  .dq-empty {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--slate-400);
+    font-size: 0.95rem;
+  }
+
+  .dq-empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.5;
+  }
+
+  /* "Show Issues Only" toggle button */
+  #dqShowIssuesOnly {
+    background: var(--white) !important;
+    border-color: var(--slate-300) !important;
+    color: var(--slate-600) !important;
+  }
+
+  #dqShowIssuesOnly.active {
+    background: rgba(245,158,11,0.15) !important;
+    border-color: var(--amber) !important;
+    color: #92400e !important;
+  }
 </style>
 </head>
 <body>
@@ -1672,6 +1868,7 @@
   <button id="commandsBtn">Data Tools</button>
   <button id="exportBtn" style="background:var(--emerald);color:var(--white);border-color:var(--emerald);">Export CSV</button>
   <button id="helpBtn" style="background:var(--amber);color:var(--white);border-color:var(--amber);" title="Keyboard Shortcuts (?)">❓ Help</button>
+  <button id="dqBtn" title="View and manage data quality issues">⚠ Data Issues</button>
   <nav aria-label="Site navigation">
     <a href="index.html">Rosters</a>
     <a href="schedule.html" class="active" aria-current="page">Schedule</a>
@@ -2043,6 +2240,55 @@ node server.mjs   # Starts on http://localhost:8072</textarea>
   </div>
 </div>
 
+<!-- ============================================================ -->
+<!-- DATA QUALITY: per-game flag modal                          -->
+<!-- ============================================================ -->
+<div class="modal-overlay" id="dqFlagModal" aria-hidden="true" inert>
+  <div class="modal" style="max-width: 520px;">
+    <header>
+      <h3>Flag Data Issue</h3>
+      <button class="btn" data-close="#dqFlagModal" aria-label="Close">Close</button>
+    </header>
+    <div class="body">
+      <div id="dqFlagGameTitle" style="font-size:0.95rem; font-weight:600; color:var(--slate-700); margin-bottom:1.25rem; padding:0.75rem 1rem; background:var(--slate-50); border-radius:9px; border:1px solid var(--slate-200);"></div>
+      <p style="font-size:0.88rem; font-weight:600; color:var(--slate-700); margin:0 0 0.6rem 0;">Select issue type(s):</p>
+      <div class="dq-checkbox-grid" id="dqCheckboxGrid">
+        <!-- filled by JS -->
+      </div>
+      <label style="display:block; font-size:0.88rem; font-weight:600; color:var(--slate-700); margin-bottom:0.4rem;">Custom note (optional):</label>
+      <textarea id="dqCustomNote" rows="3" placeholder="Add any extra detail..." style="width:100%; padding:0.65rem 1rem; border:1.5px solid var(--slate-300); border-radius:10px; font-family:'DM Sans',sans-serif; font-size:0.9rem; resize:vertical; outline:none; transition: border-color 0.2s, box-shadow 0.2s;" onfocus="this.style.borderColor='var(--amber)'; this.style.boxShadow='0 0 0 3px rgba(245,158,11,0.15)'" onblur="this.style.borderColor='var(--slate-300)'; this.style.boxShadow='none'"></textarea>
+      <div style="display:flex; gap:0.75rem; margin-top:1.25rem; flex-wrap:wrap;">
+        <button id="dqFlagSaveBtn" style="background:var(--amber); color:var(--white); border-color:var(--amber); flex:1; min-width:100px;">Save Issue</button>
+        <button id="dqFlagClearBtn" style="background:var(--red); color:var(--white); border-color:var(--red);">Clear Flag</button>
+        <button data-close="#dqFlagModal" style="flex:1; min-width:80px;">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- DATA QUALITY: global summary modal                          -->
+<!-- ============================================================ -->
+<div class="modal-overlay" id="dqSummaryModal" aria-hidden="true" inert>
+  <div class="modal" style="max-width: 700px;">
+    <header>
+      <h3>Data Quality Issues</h3>
+      <button class="btn" data-close="#dqSummaryModal" aria-label="Close">Close</button>
+    </header>
+    <div class="body">
+      <div style="display:flex; gap:0.75rem; margin-bottom:1.25rem; flex-wrap:wrap; align-items:center;">
+        <button id="dqCopyAllBtn" style="background:var(--emerald); color:var(--white); border-color:var(--emerald);">Copy All Issues</button>
+        <button id="dqClearAllBtn" style="background:var(--red); color:var(--white); border-color:var(--red);">Clear All Issues</button>
+        <button id="dqShowIssuesOnly">Show Issues Only</button>
+        <span id="dqSummaryCount" style="font-size:0.85rem; color:var(--slate-500); margin-left:auto;"></span>
+      </div>
+      <div id="dqSummaryList">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
 <script id="playedIndexEmbed" type="application/json">{}</script>
 <div id="toast">Copied</div>
 <script>
@@ -2284,9 +2530,306 @@ const Watched = (()=>{
   function add(gid){ if(!has(gid)){ cache.push(String(gid)); save(); } }
   function rm(gid){ cache = cache.filter(x=>x!==String(gid)); save(); }
   function toggle(gid){ has(gid) ? rm(gid) : add(gid); }
-  
+
   return {init,has,add,rm,toggle};
 })();
+
+/* ---------- Data Quality Issues (localStorage) ---------- */
+const DataQuality = (()=>{
+  const STORAGE_KEY = 'cbb-schedule-quality-issues';
+  const ISSUE_TYPES = [
+    'Missing pitcher data',
+    'Wrong teams listed',
+    'Wrong date/time',
+    'Game cancelled',
+    'Score incorrect',
+    'Duplicate game',
+    'Misc.'
+  ];
+
+  // showIssuesOnly filter state
+  let showIssuesOnly = false;
+
+  function load(){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch(e){ return []; }
+  }
+
+  function saveAll(arr){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(arr)); }
+    catch(e){ console.error('[DQ] save error', e); }
+  }
+
+  function get(gameId){
+    return load().find(x => x.gameId === String(gameId)) || null;
+  }
+
+  function set(gameId, issues, customNote){
+    const all = load();
+    const idx = all.findIndex(x => x.gameId === String(gameId));
+    if(issues.length === 0 && !customNote){
+      if(idx !== -1){ all.splice(idx,1); saveAll(all); }
+      return;
+    }
+    const entry = { gameId: String(gameId), issues: issues };
+    if(customNote && customNote.trim()) entry.customNote = customNote.trim();
+    if(idx === -1) all.push(entry);
+    else all[idx] = entry;
+    saveAll(all);
+  }
+
+  function remove(gameId){
+    const all = load().filter(x => x.gameId !== String(gameId));
+    saveAll(all);
+  }
+
+  function clearAll(){
+    localStorage.removeItem(STORAGE_KEY);
+  }
+
+  function count(){
+    return load().length;
+  }
+
+  function getAll(){
+    return load();
+  }
+
+  function hasIssue(gameId){
+    return !!get(gameId);
+  }
+
+  function getShowIssuesOnly(){ return showIssuesOnly; }
+  function setShowIssuesOnly(val){ showIssuesOnly = val; }
+
+  // Build game label string "Away vs Home (Day Mon DD)"
+  function gameLabel(gameId){
+    const g = (window.SCHED && window.SCHED.games)
+      ? window.SCHED.games.find(x => String(x.id) === String(gameId))
+      : null;
+    if(!g) return 'Game ' + gameId;
+    const awayName = (typeof teamMeta === 'function') ? teamMeta(g.away).name : String(g.away);
+    const homeName = (typeof teamMeta === 'function') ? teamMeta(g.home).name : String(g.home);
+    let datePart = '';
+    if(g.date){
+      try{
+        const d = new Date(g.date);
+        datePart = ' (' + d.toLocaleDateString(undefined, {weekday:'short', month:'short', day:'numeric'}) + ')';
+      } catch(e){}
+    }
+    return awayName + ' vs ' + homeName + datePart;
+  }
+
+  // Format all issues as plain text for clipboard
+  function copyText(){
+    const all = getAll();
+    if(!all.length) return 'No data quality issues flagged.';
+    return all.map(entry => {
+      const label = gameLabel(entry.gameId);
+      const issues = entry.issues.join(', ');
+      const note = entry.customNote ? ' - ' + entry.customNote : '';
+      return label + ': ' + issues + note;
+    }).join('\n');
+  }
+
+  return {
+    ISSUE_TYPES, load, get, set, remove, clearAll,
+    count, getAll, hasIssue, gameLabel, copyText,
+    getShowIssuesOnly, setShowIssuesOnly
+  };
+})();
+
+/* ---- DataQuality UI helpers ---- */
+
+// Update the nav button badge count
+function dqUpdateNavBtn(){
+  const btn = document.getElementById('dqBtn');
+  if(!btn) return;
+  const n = DataQuality.count();
+  const existingBadge = btn.querySelector('.dq-nav-badge');
+  if(existingBadge) existingBadge.remove();
+  if(n > 0){
+    btn.classList.add('has-issues');
+    const badge = document.createElement('span');
+    badge.className = 'dq-nav-badge';
+    badge.textContent = n;
+    btn.appendChild(badge);
+  } else {
+    btn.classList.remove('has-issues');
+  }
+}
+
+// Update a single flag button's visual state
+function dqUpdateFlagBtn(btn, gameId){
+  if(!btn) return;
+  const has = DataQuality.hasIssue(gameId);
+  btn.classList.toggle('has-issues', has);
+  btn.title = has ? 'Data issue flagged — click to edit' : 'Flag a data quality issue';
+  btn.textContent = has ? '⚠' : '⚑';
+}
+
+// Open the per-game flag modal
+function dqOpenFlagModal(gameId){
+  const modal = document.getElementById('dqFlagModal');
+  if(!modal) return;
+
+  // Set title
+  const titleEl = document.getElementById('dqFlagGameTitle');
+  if(titleEl) titleEl.textContent = DataQuality.gameLabel(gameId);
+
+  // Store gameId on modal for save handler
+  modal.dataset.currentGameId = String(gameId);
+
+  // Populate checkboxes
+  const grid = document.getElementById('dqCheckboxGrid');
+  if(grid){
+    const existing = DataQuality.get(gameId);
+    const checkedIssues = existing ? existing.issues : [];
+    grid.innerHTML = DataQuality.ISSUE_TYPES.map(issue => {
+      const isChecked = checkedIssues.includes(issue) ? 'checked' : '';
+      const safeId = 'dqcb_' + issue.replace(/[^a-zA-Z0-9]/g,'_');
+      return `
+        <label class="dq-checkbox-label" for="${safeId}">
+          <input type="checkbox" id="${safeId}" value="${issue}" ${isChecked}>
+          <span>${issue}</span>
+        </label>`;
+    }).join('');
+  }
+
+  // Populate note
+  const noteEl = document.getElementById('dqCustomNote');
+  if(noteEl){
+    const existing = DataQuality.get(gameId);
+    noteEl.value = existing ? (existing.customNote || '') : '';
+  }
+
+  // Open using the existing openModal helper
+  openModal('dqFlagModal');
+}
+
+// Render the global summary modal contents
+function dqRenderSummary(){
+  const list = document.getElementById('dqSummaryList');
+  const countEl = document.getElementById('dqSummaryCount');
+  if(!list) return;
+
+  const all = DataQuality.getAll();
+  if(countEl) countEl.textContent = all.length === 0 ? 'No issues flagged' : `${all.length} game${all.length!==1?'s':''} flagged`;
+
+  if(all.length === 0){
+    list.innerHTML = `
+      <div class="dq-empty">
+        <div class="dq-empty-icon">✓</div>
+        <div>No data quality issues have been flagged.</div>
+      </div>`;
+    return;
+  }
+
+  list.innerHTML = all.map(entry => {
+    const label = DataQuality.gameLabel(entry.gameId);
+    const tags = entry.issues.map(i => `<span class="dq-issue-tag">${i}</span>`).join('');
+    const note = entry.customNote ? `<div class="dq-game-note">${entry.customNote}</div>` : '';
+    return `
+      <div class="dq-game-row">
+        <div class="dq-game-title">${label}</div>
+        <div class="dq-game-tags">${tags}</div>
+        ${note}
+        <button onclick="DataQuality.remove('${entry.gameId}'); dqUpdateNavBtn(); dqRenderSummary(); dqRefreshAllFlagBtns();" style="margin-top:0.5rem; font-size:0.8rem; padding:0.35rem 0.75rem; background:var(--red); color:var(--white); border-color:var(--red); border-radius:7px; border:1px solid; cursor:pointer; font-family:'DM Sans',sans-serif; font-weight:600;">Remove</button>
+      </div>`;
+  }).join('');
+}
+
+// Refresh all flag buttons on visible game cards
+function dqRefreshAllFlagBtns(){
+  document.querySelectorAll('.dq-flag-btn[data-game-id]').forEach(btn => {
+    dqUpdateFlagBtn(btn, btn.dataset.gameId);
+  });
+}
+
+// Wire up modal close buttons and DataQuality buttons
+function dqInitUI(){
+  // Per-game modal save
+  const saveBtn = document.getElementById('dqFlagSaveBtn');
+  if(saveBtn){
+    saveBtn.onclick = () => {
+      const modal = document.getElementById('dqFlagModal');
+      const gameId = modal?.dataset.currentGameId;
+      if(!gameId) return;
+      const checked = Array.from(document.querySelectorAll('#dqCheckboxGrid input:checked')).map(cb => cb.value);
+      const note = document.getElementById('dqCustomNote')?.value || '';
+      DataQuality.set(gameId, checked, note);
+      dqUpdateNavBtn();
+      dqRefreshAllFlagBtns();
+      closeModal('dqFlagModal');
+      toast(checked.length > 0 ? 'Issue flagged' : 'Flag cleared');
+    };
+  }
+
+  // Per-game modal clear (remove flag entirely)
+  const clearBtn = document.getElementById('dqFlagClearBtn');
+  if(clearBtn){
+    clearBtn.onclick = () => {
+      const modal = document.getElementById('dqFlagModal');
+      const gameId = modal?.dataset.currentGameId;
+      if(!gameId) return;
+      DataQuality.remove(gameId);
+      dqUpdateNavBtn();
+      dqRefreshAllFlagBtns();
+      closeModal('dqFlagModal');
+      toast('Flag cleared');
+    };
+  }
+
+  // Global "Data Issues" nav button
+  const dqNavBtn = document.getElementById('dqBtn');
+  if(dqNavBtn){
+    dqNavBtn.onclick = () => {
+      dqRenderSummary();
+      openModal('dqSummaryModal');
+    };
+  }
+
+  // Copy All
+  const copyBtn = document.getElementById('dqCopyAllBtn');
+  if(copyBtn){
+    copyBtn.onclick = () => {
+      navigator.clipboard.writeText(DataQuality.copyText()).then(() => toast('Issues copied to clipboard'));
+    };
+  }
+
+  // Clear All
+  const clearAllBtn = document.getElementById('dqClearAllBtn');
+  if(clearAllBtn){
+    clearAllBtn.onclick = () => {
+      if(!confirm('Clear ALL flagged data quality issues? This cannot be undone.')) return;
+      DataQuality.clearAll();
+      dqUpdateNavBtn();
+      dqRefreshAllFlagBtns();
+      dqRenderSummary();
+      toast('All issues cleared');
+    };
+  }
+
+  // Show Issues Only toggle — filters main games view
+  const showOnlyBtn = document.getElementById('dqShowIssuesOnly');
+  if(showOnlyBtn){
+    showOnlyBtn.onclick = () => {
+      const isOn = DataQuality.getShowIssuesOnly();
+      DataQuality.setShowIssuesOnly(!isOn);
+      showOnlyBtn.classList.toggle('active', !isOn);
+      showOnlyBtn.textContent = !isOn ? 'Show All Games' : 'Show Issues Only';
+      // Re-render main game list with the new filter
+      render();
+      // Close the summary modal so user can see the filtered results
+      closeModal('dqSummaryModal');
+      toast(!isOn ? 'Showing flagged games only' : 'Showing all games');
+    };
+  }
+
+  dqUpdateNavBtn();
+}
 
 /* ---------- User Settings storage (filters, preferences) ---------- */
 const Settings = (()=>{
@@ -2570,29 +3113,26 @@ function getPitcherStats(gameId, teamId, pitcherId){
   // Convert ESPN stats format to expected format
   const stats = gameRecord.stats;
   
-  // Process innings_list - ONLY show if detailed data is loaded
+  // Innings list — read directly from stats JSONB (backfilled by scripts/backfill-innings.mjs)
+  // Falls back to detailed data file if loaded, otherwise null
   let inningsList = null;
-  
-  // Only check detailed innings data if it's been explicitly loaded
-  if (detailedInningsData && detailedInningsData.pitchers) {
+
+  if (Array.isArray(stats.innings_list) && stats.innings_list.length > 0) {
+    inningsList = stats.innings_list;
+  } else if (detailedInningsData && detailedInningsData.pitchers) {
     const detailedPitcher = detailedInningsData.pitchers[norm(pitcherId)];
     if (detailedPitcher && detailedPitcher.games) {
       const detailedGame = detailedPitcher.games.find(g => norm(g.gameId) === norm(gameId));
-      if (detailedGame && detailedGame.innings_list && Array.isArray(detailedGame.innings_list)) {
+      if (detailedGame && Array.isArray(detailedGame.innings_list) && detailedGame.innings_list.length > 0) {
         const uniqueInnings = new Set();
         detailedGame.innings_list.forEach(inning => {
-          if (inning && inning.number) {
-            uniqueInnings.add(inning.number);
-          }
+          const n = inning?.number ?? inning;
+          if (n) uniqueInnings.add(n);
         });
-        if (uniqueInnings.size > 0) {
-          inningsList = Array.from(uniqueInnings).sort((a, b) => a - b);
-        }
+        if (uniqueInnings.size > 0) inningsList = Array.from(uniqueInnings).sort((a, b) => a - b);
       }
     }
   }
-  
-  // Don't show innings count fallback - only show specific innings after Load Innings is clicked
   
   return {
     innings_pitched: stats.IP || null,
@@ -2998,10 +3538,10 @@ function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   img.className='headshot';
   img.loading='lazy';
   img.alt = pitcher?.name || 'Pitcher';
-  const primary  = pitcher?.headshot || '';
+  const primary  = (pitcher?.headshot || '').replace(/^http:\/\//i, 'https://');
   const fallback = teamLogo || '';
   img.src = primary || fallback || '';
-  img.onerror = ()=>{ if (img.src !== fallback && fallback){ img.src = fallback; } };
+  img.onerror = ()=>{ if (img.src !== fallback && fallback){ img.src = fallback; } else { img.style.display='none'; } };
   wrap.append(img);
 
   const main = document.createElement('div');
@@ -3583,7 +4123,18 @@ function gameCard(g){
   boxLink.textContent = 'BOX SCORE';
   ghLinks.append(boxLink);
   
-  ghRight.append(watchedToggle, prioSel, favBtn, ghLinks);
+  // Data Quality flag button — inline in game header right side
+  const dqFlagBtnEl = document.createElement('button');
+  dqFlagBtnEl.className = 'dq-flag-btn';
+  dqFlagBtnEl.dataset.gameId = String(g.id || '');
+  dqFlagBtnEl.setAttribute('aria-label', 'Flag data quality issue for this game');
+  dqUpdateFlagBtn(dqFlagBtnEl, g.id);
+  dqFlagBtnEl.onclick = (e) => {
+    e.stopPropagation();
+    dqOpenFlagModal(g.id);
+  };
+
+  ghRight.append(watchedToggle, prioSel, favBtn, ghLinks, dqFlagBtnEl);
   head.append(ghLeft, ghRight);
   
   const match = document.createElement('div');
@@ -3621,7 +4172,7 @@ function gameCard(g){
     else if (awayWon) homeSide.classList.add('loser');
   }
   match.append(homeSide);
-  
+
   card.append(head, match);
   return card;
 }
@@ -3636,6 +4187,9 @@ function filterGames(games){
     const hid = String(g.home || '');
     const aid = String(g.away || '');
     if(!pitchersById[hid] && !pitchersById[aid]) return false;
+
+    // Data Quality: "Show Issues Only" filter
+    if(DataQuality.getShowIssuesOnly() && !DataQuality.hasIssue(g.id)) return false;
 
     if(weeksSelected.size > 0 && !weeksSelected.has(String(g.week))) return false;
 
@@ -4035,7 +4589,7 @@ document.addEventListener('click', (e)=>{
   if (id) closeModal(id);
 });
 
-['filtersModal','commandsModal'].forEach(id=>{
+['filtersModal','commandsModal','dqFlagModal','dqSummaryModal'].forEach(id=>{
   const m = document.getElementById(id);
   if (!m) return;
   m.addEventListener('click', (ev)=>{ if (ev.target === m) closeModal(m); });
@@ -4367,6 +4921,9 @@ async function boot(){
 
   // Render filter presets
   FilterPresets.renderPresets();
+
+  // Initialize Data Quality Issues UI
+  dqInitUI();
 
   // Hide loading state with fade out
   const loadingState = document.getElementById('loadingState');

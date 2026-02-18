@@ -105,38 +105,70 @@ async function updateGameStatus(game) {
   return { updated: false, game_id: game.game_id };
 }
 
+// Extract which innings a pitcher appeared in from ESPN play-by-play / header details
+function extractInningsList(data, pitcherId) {
+  const innings = new Set();
+  try {
+    // Method 1: play-by-play participants
+    if (data?.plays) {
+      data.plays.forEach(play => {
+        if (play.period && play.participants) {
+          play.participants.forEach(p => {
+            if (String(p.athlete?.id) === String(pitcherId)) innings.add(play.period);
+          });
+        }
+      });
+    }
+    // Method 2: competition details (most reliable for baseball)
+    data?.header?.competitions?.[0]?.details?.forEach(detail => {
+      if (detail.inning) {
+        detail.athletesInvolved?.forEach(a => {
+          if (String(a.id) === String(pitcherId)) innings.add(detail.inning);
+        });
+      }
+    });
+  } catch (e) { /* best-effort */ }
+  return Array.from(innings).sort((a, b) => a - b);
+}
+
 // Extract pitcher participation from game data
 function extractPitchersFromGame(data, game) {
   const records = [];
-  
+
   try {
     const boxscore = data?.boxscore;
     if (!boxscore?.players) return records;
-    
+
     boxscore.players.forEach(teamData => {
       const teamId = normalizeId(teamData.team?.id);
-      
-      const pitchingStats = teamData.statistics?.find(stat => 
+
+      const pitchingStats = teamData.statistics?.find(stat =>
         stat.name === 'pitching' || stat.type === 'pitching'
       );
       if (!pitchingStats?.athletes) return;
-      
+
       pitchingStats.athletes.forEach(athlete => {
         const pitcherId = normalizeId(athlete.athlete?.id);
         const pitcherName = athlete.athlete?.displayName || '';
-        
+
         if (!pitcherId) return;
-        
+
         const statsObj = {};
         const labels = pitchingStats.labels || [];
         const values = athlete.stats || [];
-        
+
         labels.forEach((label, i) => {
           if (values[i] !== undefined) {
             statsObj[label] = values[i];
           }
         });
-        
+
+        // Attach innings list directly into stats JSONB
+        const inningsList = extractInningsList(data, pitcherId);
+        if (inningsList.length > 0) {
+          statsObj.innings_list = inningsList;
+        }
+
         records.push({
           game_id: game.game_id,
           team_id: teamId,
@@ -149,7 +181,7 @@ function extractPitchersFromGame(data, game) {
   } catch (error) {
     console.log(`Error extracting pitchers: ${error.message}`);
   }
-  
+
   return records;
 }
 
