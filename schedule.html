@@ -3498,7 +3498,7 @@ function refreshPlayedPills(){
     updates.push({ 
       pill, 
       className: 'pill ' + (played ? 'pill-played' : 'pill-dnp'),
-      text: played ? 'Played' : 'DNP',
+      text: played ? 'Played' : 'Did Not Pitch',
       played
     });
   });
@@ -3777,7 +3777,7 @@ function pitcherRow(pitcher, playedSet, teamLogo, gameHasData, gameId, teamId){
   } else {
     const played = playedSet.has(pitcherIdDigits);
     pillEl.className = 'pill ' + (played ? 'pill-played' : 'pill-dnp');
-    pillEl.textContent = played ? 'Played' : 'DNP';
+    pillEl.textContent = played ? 'Played' : 'Did Not Pitch';
   }
   
   // Append star and pill badges
