@@ -283,7 +283,7 @@
           "headshot": "data/headshots/auburn_2-2-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+      "logo": "/logos/55.png",
       "conference": "SEC"
     },
     {
@@ -569,7 +569,7 @@
           "headshot": "data/headshots/arkansas_58-P22.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+      "logo": "/logos/58.png",
       "conference": "SEC"
     },
     {
@@ -878,7 +878,7 @@
           "bioUrl": ""
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png"
+      "logo": "/logos/65.png"
     },
     {
       "teamId": "75",
@@ -1139,7 +1139,7 @@
           "headshot": "data/headshots/florida_75-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "logo": "/logos/75.png",
       "conference": "SEC"
     },
     {
@@ -1437,7 +1437,7 @@
           "headshot": "data/headshots/georgia_78-P24.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "logo": "/logos/78.png",
       "conference": "SEC"
     },
     {
@@ -1711,7 +1711,7 @@
           "headshot": "data/headshots/kentucky_82-P3.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+      "logo": "/logos/82.png",
       "conference": "SEC"
     },
     {
@@ -1973,7 +1973,7 @@
           "headshot": "data/headshots/lsu_99-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+      "logo": "/logos/85.png",
       "conference": "SEC"
     },
     {
@@ -2271,7 +2271,7 @@
           "headshot": "data/headshots/missouri_91-P3.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+      "logo": "/logos/91.png",
       "conference": "SEC"
     },
     {
@@ -2523,7 +2523,7 @@
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/leo-odom/6185"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+      "logo": "/logos/92.png",
       "conference": "SEC"
     },
     {
@@ -2773,7 +2773,7 @@
           "headshot": "data/headshots/oklahoma_112-P20.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "logo": "/logos/112.png",
       "conference": "SEC"
     },
     {
@@ -3059,7 +3059,7 @@
           "headshot": "data/headshots/vanderbilt_120-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+      "logo": "/logos/120.png",
       "conference": "SEC"
     },
     {
@@ -3297,7 +3297,7 @@
           "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftamu.sidearmsports.com%2Fimages%2F2026%2F1%2F21%2FBollinger_-MJ.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+      "logo": "/logos/123.png",
       "conference": "SEC"
     },
     {
@@ -3583,7 +3583,7 @@
           "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Ftexassports_com%2Fimages%2F2025%2F12%2F8%2FVolantis_Dylan_Cropped-2026_pwLpD.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "logo": "/logos/126.png",
       "conference": "SEC"
     },
     {
@@ -3965,7 +3965,7 @@
           "headshot": "data/headshots/alabama_148-P18.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+      "logo": "/logos/148.png",
       "conference": "SEC"
     },
     {
@@ -4239,7 +4239,7 @@
           "headshot": "data/headshots/mississippi-state_150-P5.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+      "logo": "/logos/150.png",
       "conference": "SEC"
     },
     {
@@ -4489,7 +4489,7 @@
           "headshot": "data/headshots/south-carolina_2579-2579-P20.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+      "logo": "/logos/193.png",
       "conference": "SEC"
     },
     {
@@ -4619,7 +4619,7 @@
           "headshot": "data/headshots/tennessee_2633-2633-P10.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+      "logo": "/logos/199.png",
       "conference": "SEC"
     },
     {
@@ -4906,7 +4906,7 @@
           "headshot": "data/headshots/boston-college_86-P23.png"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png"
+      "logo": "/logos/86.png"
     },
     {
       "teamId": "117",
@@ -5204,7 +5204,7 @@
           "headshot": "data/headshots/clemson_117-P24.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png"
+      "logo": "/logos/117.png"
     },
     {
       "teamId": "72",
@@ -5442,7 +5442,7 @@
           "headshot": "data/headshots/florida-state_72-P19.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png"
+      "logo": "/logos/72.png"
     },
     {
       "teamId": "83",
@@ -5728,7 +5728,7 @@
           "headshot": "data/headshots/louisville_83-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png"
+      "logo": "/logos/83.png"
     },
     {
       "teamId": "95",
@@ -5942,7 +5942,7 @@
           "headshot": "data/headshots/nc-state_95-P17.png"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png"
+      "logo": "/logos/95.png"
     },
     {
       "teamId": "96",
@@ -6180,7 +6180,7 @@
           "headshot": "data/headshots/north-carolina_96-P19.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png"
+      "logo": "/logos/96.png"
     },
     {
       "teamId": "115",
@@ -6430,7 +6430,7 @@
           "headshot": "data/headshots/pittsburgh_115-P39.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png"
+      "logo": "/logos/115.png"
     },
     {
       "teamId": "131",
@@ -6624,7 +6624,7 @@
           "headshot": "data/headshots/virginia_131-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png"
+      "logo": "/logos/131.png"
     },
     {
       "teamId": "97",
@@ -6850,7 +6850,7 @@
           "headshot": "data/headshots/wake-forest_97-P36.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png"
+      "logo": "/logos/97.png"
     },
     {
       "teamId": "121",
@@ -7112,7 +7112,7 @@
           "headshot": "data/headshots/baylor_121-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png"
+      "logo": "/logos/121.png"
     },
     {
       "teamId": "124",
@@ -7374,7 +7374,7 @@
           "headshot": "data/headshots/houston_124-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png"
+      "logo": "/logos/124.png"
     },
     {
       "teamId": "168",
@@ -7672,7 +7672,7 @@
           "headshot": "data/headshots/kansas_168-P24.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png"
+      "logo": "/logos/168.png"
     },
     {
       "teamId": "264",
@@ -7934,7 +7934,7 @@
           "headshot": "data/headshots/kansas-state_264-P21.png"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png"
+      "logo": "/logos/264.png"
     },
     {
       "teamId": "110",
@@ -8220,7 +8220,7 @@
           "headshot": "data/headshots/oklahoma-state_110-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png"
+      "logo": "/logos/110.png"
     },
     {
       "teamId": "198",
@@ -8446,7 +8446,7 @@
           "headshot": "data/headshots/tcu_198-P18.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png"
+      "logo": "/logos/198.png"
     },
     {
       "teamId": "201",
@@ -8804,7 +8804,7 @@
           "headshot": "data/headshots/texas-tech_201-P29.png"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png"
+      "logo": "/logos/201.png"
     },
     {
       "teamId": "128",
@@ -9061,7 +9061,7 @@
           "bioUrl": "https://utahutes.com/sports/baseball/roster/chance-covert-ii/17099"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png"
+      "logo": "/logos/128.png"
     },
     {
       "teamId": "136",
@@ -9371,7 +9371,7 @@
           "headshot": "data/headshots/west-virginia_136-P25.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png"
+      "logo": "/logos/136.png"
     },
     {
       "teamId": "153",
@@ -9633,7 +9633,7 @@
           "headshot": "data/headshots/illinois_153-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
+      "logo": "/logos/153.png"
     },
     {
       "teamId": "294",
@@ -9763,7 +9763,7 @@
           "headshot": "data/headshots/indiana_294-P20.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png"
+      "logo": "/logos/294.png"
     },
     {
       "teamId": "87",
@@ -10025,7 +10025,7 @@
           "headshot": "data/headshots/maryland_87-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png"
+      "logo": "/logos/87.png"
     },
     {
       "teamId": "89",
@@ -10287,7 +10287,7 @@
           "headshot": "data/headshots/michigan_89-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png"
+      "logo": "/logos/89.png"
     },
     {
       "teamId": "88",
@@ -10513,7 +10513,7 @@
           "headshot": "data/headshots/michigan-state_88-P36.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png"
+      "logo": "/logos/88.png"
     },
     {
       "teamId": "90",
@@ -10763,7 +10763,7 @@
           "headshot": "data/headshots/minnesota_90-P20.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png"
+      "logo": "/logos/90.png"
     },
     {
       "teamId": "411",
@@ -10977,7 +10977,7 @@
           "headshot": "data/headshots/northwestern_411-P17.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png"
+      "logo": "/logos/411.png"
     },
     {
       "teamId": "108",
@@ -11287,7 +11287,7 @@
           "headshot": "data/headshots/georgia_108-P25.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
+      "logo": "/logos/108.png"
     },
     {
       "teamId": "102",
@@ -11549,7 +11549,7 @@
           "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fscarletknights.com%2Fimages%2F2026%2F2%2F9%2F45_Kirchner.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png"
+      "logo": "/logos/102.png"
     },
     {
       "teamId": "66",
@@ -11811,7 +11811,7 @@
           "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuclabruins.com%2Fimages%2F2026%2F1%2F14%2FCervantes.png"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png"
+      "logo": "/logos/66.png"
     },
     {
       "teamId": "68",
@@ -12061,7 +12061,7 @@
           "headshot": "data/headshots/usc_68-P20.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png"
+      "logo": "/logos/68.png"
     },
     {
       "teamId": "133",
@@ -12287,7 +12287,7 @@
           "headshot": "data/headshots/washington_133-P18.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
+      "logo": "/logos/133.png"
     },
     {
       "teamId": "113",
@@ -12537,7 +12537,7 @@
           "headshot": "data/headshots/oregon-state_113-P20.png"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
+      "logo": "/logos/113.png"
     },
     {
       "teamId": "134",
@@ -12699,7 +12699,7 @@
           "headshot": "data/headshots/washington-state_134-P19.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png"
+      "logo": "/logos/134.png"
     },
     {
       "teamId": "93",
@@ -12973,7 +12973,7 @@
           "headshot": ""
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png"
+      "logo": "/logos/93.png"
     },
     {
       "teamId": "176",
@@ -13143,7 +13143,7 @@
           "headshot": "data/headshots/miami_176-P20.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png"
+      "logo": "/logos/176.png"
     },
     {
       "teamId": "81",
@@ -13321,7 +13321,7 @@
           "headshot": "data/headshots/notre-dame_81-P21.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png"
+      "logo": "/logos/81.png"
     },
     {
       "teamId": "127",
@@ -13559,7 +13559,7 @@
           "headshot": ""
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png"
+      "logo": "/logos/127.png"
     },
     {
       "teamId": "167",
@@ -13809,7 +13809,7 @@
           "headshot": "data/headshots/iowa_iowa-P38.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png"
+      "logo": "/logos/167.png"
     },
     {
       "teamId": "99",
@@ -14083,7 +14083,7 @@
           "headshot": "data/headshots/nebraska_nebraska-P41.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png"
+      "logo": "/logos/99.png"
     },
     {
       "teamId": "273",
@@ -14346,7 +14346,7 @@
           "bioUrl": "https://goducks.com/sports/baseball/roster/devin-bell/18236"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png"
+      "logo": "/logos/273.png"
     },
     {
       "teamId": "161",
@@ -14620,7 +14620,7 @@
           "hometown": ""
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png"
+      "logo": "/logos/161.png"
     },
     {
       "teamId": "414",
@@ -14906,7 +14906,7 @@
           "headshot": "https://gopsusports.com/imgproxy/oKSWYBPO0uLJ8kHly9IxJM-OMkOYGNwjJ2Q0PgOTVgs/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wNy9xajFMdXdRTjFNN2VwMGh5d3ZRUXN6R2FzWnl5VE1USnNRbGhFcVB6LmpwZw.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png"
+      "logo": "/logos/414.png"
     },
     {
       "teamId": "77",
@@ -15049,7 +15049,7 @@
           "headshot": "data/headshots/georgia-tech_georgia-tech-P19.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
+      "logo": "/logos/77.png"
     },
     {
       "teamId": "189",
@@ -15275,7 +15275,7 @@
           "headshot": "data/headshots/purdue_purdue-P34.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png"
+      "logo": "/logos/189.png"
     },
     {
       "teamId": "132",
@@ -15445,7 +15445,7 @@
           "headshot": "data/headshots/virginia-tech_virginia-tech-P20.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png"
+      "logo": "/logos/132.png"
     },
     {
       "teamId": "59",
@@ -15707,7 +15707,7 @@
           "hometown": ""
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png"
+      "logo": "/logos/59.png"
     },
     {
       "teamId": "64",
@@ -15901,7 +15901,7 @@
           "headshot": "data/headshots/stanford_stanford-P23.jpg"
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png"
+      "logo": "/logos/64.png"
     },
     {
       "teamId": "60",
@@ -16127,7 +16127,7 @@
           "hometown": ""
         }
       ],
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png"
+      "logo": "/logos/60.png"
     }
   ]
 }
