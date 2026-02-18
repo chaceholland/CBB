@@ -3627,6 +3627,11 @@ function filterGames(games){
   const watchOrder = $("#watchOrder")?.value || 'all';
 
   return games.filter(g => {
+    // Only show games where at least one team is in our 64 tracked teams
+    const hid = String(g.home || '');
+    const aid = String(g.away || '');
+    if(!pitchersById[hid] && !pitchersById[aid]) return false;
+
     if(weeksSelected.size > 0 && !weeksSelected.has(String(g.week))) return false;
 
     // Multi-select conference filter (OR logic - show if ANY team matches)

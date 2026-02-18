@@ -697,7 +697,7 @@
     </div>
 
   <div class="analytics-filters">
-    <select id="conference-filter" aria-label="Filter by conference" onchange="updateCharts()">
+    <select id="conference-filter" aria-label="Filter by conference" onchange="updateAll()">
       <option value="all">All Conferences</option>
       <option value="SEC">SEC</option>
       <option value="Big Ten">Big Ten</option>
@@ -769,14 +769,6 @@
   <div class="leaders-section">
     <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
       <h3 style="margin:0;">🏅 Season Leaders</h3>
-      <select id="leaderboardConf" onchange="renderLeaderboards(this.value)" style="background:var(--white);border:1.5px solid var(--slate-300);border-radius:8px;padding:0.45rem 0.75rem;font-size:0.875rem;color:var(--slate-700);cursor:pointer;">
-        <option value="">All Conferences</option>
-        <option value="SEC">SEC</option>
-        <option value="Big Ten">Big Ten</option>
-        <option value="ACC">ACC</option>
-        <option value="Big 12">Big 12</option>
-        <option value="Pac-12">Pac-12</option>
-      </select>
       <button id="refreshStatsBtn" onclick="refreshStats(this)" title="Clear cache and reload fresh stats" style="background:var(--slate-100);border:1.5px solid var(--slate-300);border-radius:8px;padding:0.45rem 0.85rem;font-size:0.875rem;color:var(--slate-700);cursor:pointer;font-family:inherit;transition:all .2s;" onmouseover="this.style.borderColor='var(--emerald)';this.style.color='var(--emerald-dark)'" onmouseout="this.style.borderColor='var(--slate-300)';this.style.color='var(--slate-700)'">↺ Refresh</button>
     </div>
     <div class="leaders-grid">
@@ -811,14 +803,6 @@
   <div class="leaders-section" style="margin-top:2rem;">
     <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
       <h3 style="margin:0;">🏫 Team Pitching Summary</h3>
-      <select id="teamSummaryConf" onchange="filterTeamTable()" style="background:var(--white);border:1.5px solid var(--slate-300);border-radius:8px;padding:0.45rem 0.75rem;font-size:0.875rem;color:var(--slate-700);cursor:pointer;">
-        <option value="">All Conferences</option>
-        <option value="SEC">SEC</option>
-        <option value="Big Ten">Big Ten</option>
-        <option value="ACC">ACC</option>
-        <option value="Big 12">Big 12</option>
-        <option value="Pac-12">Pac-12</option>
-      </select>
       <span id="teamSummaryCount" style="font-size:0.8rem;color:var(--slate-400);margin-left:auto;"></span>
     </div>
     <div id="team-summary-table"><div class="leaders-loading">Loading…</div></div>
@@ -924,6 +908,18 @@ function updateCharts() {
   createPositionDistributionChart();
   createClassYearChart();
   createConferenceComparisonChart();
+}
+
+// Single entry point: top conference filter drives charts + leaderboards + team summary
+function updateAll() {
+  updateCharts();
+  const confVal = document.getElementById('conference-filter')?.value || 'all';
+  const leaderConf = confVal === 'all' ? '' : confVal;
+  renderLeaderboards(leaderConf);
+  // filter team summary using same value
+  const conf = confVal === 'all' ? '' : confVal;
+  const filtered = conf ? _teamRows.filter(r => r.conf === conf) : _teamRows;
+  renderTeamSummaryTable(filtered, true);
 }
 
 // Parse innings pitched string like "3.2" → decimal 3.667
@@ -1280,7 +1276,7 @@ function renderLeaderboards(confFilter) {
 }
 
 // ── Participation data cache (localStorage, 2-hour TTL) ─────────────────────
-const PARTICIPATION_CACHE_KEY = 'analytics_participation_v1';
+const PARTICIPATION_CACHE_KEY = 'analytics_participation_v2';
 const PARTICIPATION_CACHE_TTL = 2 * 60 * 60 * 1000; // 2 hours
 
 function getCachedParticipation() {
@@ -1306,6 +1302,7 @@ function setCachedParticipation(rows) {
 
 function clearParticipationCache() {
   localStorage.removeItem(PARTICIPATION_CACHE_KEY);
+  localStorage.removeItem('analytics_participation_v1'); // remove old cache key
   localStorage.removeItem('analytics_games_v1');
 }
 
@@ -1346,7 +1343,7 @@ async function loadLeaderboards() {
       let offset = 0;
       const pageSize = 1000;
       while (true) {
-        const url = `${SUPABASE_URL}/rest/v1/cbb_pitcher_participation?select=pitcher_id,pitcher_name,game_id,stats&order=pitcher_id.asc&limit=${pageSize}&offset=${offset}`;
+        const url = `${SUPABASE_URL}/rest/v1/cbb_pitcher_participation?select=pitcher_id,pitcher_name,team_id,game_id,stats&order=pitcher_id.asc&limit=${pageSize}&offset=${offset}`;
         const resp = await fetch(url, {
           headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
         });
@@ -1428,19 +1425,16 @@ async function loadLeaderboards() {
     // Store for conference filtering
     _aggData = agg;
 
-    // Render leaderboards (default: all conferences)
-    renderLeaderboards('');
+    // Re-apply top conference filter to leaderboards
+    const activeConf = document.getElementById('conference-filter')?.value || 'all';
+    renderLeaderboards(activeConf === 'all' ? '' : activeConf);
 
-    // Reset leaderboard conference filter select on fresh load
-    const lbConfSel = document.getElementById('leaderboardConf');
-    if (lbConfSel) lbConfSel.value = '';
-
-    // Build team aggregation
+    // Build team aggregation — conf comes from p.conf (already resolved via teamIdMap)
     const teamAgg = {};
     for (const p of Object.values(agg)) {
       const team = p.team || 'Unknown';
       if (!teamAgg[team]) {
-        teamAgg[team] = { team, conf: '', apps: 0, totalIP: 0, totalK: 0, totalBB: 0, totalER: 0, pitchers: new Set() };
+        teamAgg[team] = { team, conf: p.conf || '', apps: 0, totalIP: 0, totalK: 0, totalBB: 0, totalER: 0, pitchers: new Set() };
       }
       teamAgg[team].apps      += p.appearances;
       teamAgg[team].totalIP   += p.totalIP;
@@ -1449,16 +1443,7 @@ async function loadLeaderboards() {
       teamAgg[team].totalER   += p.totalER;
       teamAgg[team].pitchers.add(p.pitcherId);
     }
-    // Attach conference from teamsData
-    const teamsArr = teamsData?.teams || [];
-    for (const t of teamsArr) {
-      const key = t.team || t.name || '';
-      if (teamAgg[key]) teamAgg[key].conf = t.conference || '';
-    }
     renderTeamSummaryTable(Object.values(teamAgg));
-    // Reset conference filter on fresh load
-    const confSel = document.getElementById('teamSummaryConf');
-    if (confSel) confSel.value = '';
 
     // Update "GAMES TRACKED" summary card
     const uniqueGames = new Set(allRows.map(r => r.game_id)).size;

@@ -1,7 +1,7 @@
 // College Baseball Tracker - Service Worker
 // Provides offline support and performance optimization
 
-const CACHE_VERSION = 'cbb-tracker-v1.0.0';
+const CACHE_VERSION = 'cbb-tracker-v1.1.0';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -84,7 +84,13 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Strategy: Cache First for static assets
+  // Strategy: Network First for HTML pages (so deployments take effect immediately)
+  if (request.headers.get('accept')?.includes('text/html') || url.pathname.endsWith('.html') || url.pathname === '/') {
+    event.respondWith(networkFirst(request, STATIC_CACHE));
+    return;
+  }
+
+  // Strategy: Cache First for static non-HTML assets (JS, fonts, external CDN)
   if (STATIC_ASSETS.some(asset => url.pathname.includes(asset))) {
     event.respondWith(cacheFirst(request, STATIC_CACHE));
     return;
