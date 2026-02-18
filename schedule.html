@@ -301,6 +301,24 @@
     border: 1px solid rgba(16,185,129,0.3);
   }
 
+  .live-data-badge{
+    display: none;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--emerald);
+    font-family: 'DM Sans', sans-serif;
+  }
+  .live-data-badge::before{
+    content: '•';
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+  .live-data-badge.visible{
+    display: inline-flex;
+  }
+
   .gh-links{
     display: flex;
     align-items: center;
@@ -3495,6 +3513,15 @@ function refreshPlayedPills(){
   });
   
   console.log('[pills] refreshed:', pills.length, 'matched:', matched, 'dnp:', mismatched);
+
+  // Update "• Live Data" badges on all game cards
+  document.querySelectorAll('.game[data-game-id]').forEach(card => {
+    const gameId = card.dataset.gameId;
+    const badge = card.querySelector('.live-data-badge');
+    if (!badge) return;
+    const hasData = !!(window.PLAYED_IDX && window.PLAYED_IDX[String(gameId)]);
+    badge.classList.toggle('visible', hasData);
+  });
 }
 
 function isFavPitcher(pitcher){
@@ -4034,7 +4061,14 @@ function gameCard(g){
   dateDiv.style.color = 'var(--ink-2)';
   dateDiv.textContent = fmtDate(g.date);
   
-  ghLeft.append(wkTag, dateDiv);
+  const liveDataBadge = document.createElement('span');
+  liveDataBadge.className = 'live-data-badge';
+  liveDataBadge.textContent = 'Live Data';
+  if (!!(window.PLAYED_IDX && window.PLAYED_IDX[String(g.id)])) {
+    liveDataBadge.classList.add('visible');
+  }
+
+  ghLeft.append(wkTag, dateDiv, liveDataBadge);
   
   const ghRight = document.createElement('div');
   ghRight.className = 'gh-right';
