@@ -1386,19 +1386,26 @@ async function loadLeaderboards() {
       return;
     }
 
-    const lookup = buildPitcherLookup();
+    // Build teamId → {name, conf} map from pitchersData (ESPN numeric IDs)
+    const teamIdMap = {};
+    for (const t of (pitchersData?.teams || [])) {
+      const info = { name: t.team || '', conf: t.conference || '' };
+      if (t.teamId) teamIdMap[String(t.teamId)] = info;
+      if (t.team_id) teamIdMap[String(t.team_id)] = info;
+    }
 
-    // Aggregate per pitcher
+    // Aggregate per pitcher - use row.team_id for team lookup (ESPN numeric ID)
     const agg = {};
     for (const row of allRows) {
       const pid = String(row.pitcher_id || '').replace(/\D/g,'');
       if (!pid) continue;
       if (!agg[pid]) {
-        const info = lookup[pid] || {};
+        const teamInfo = teamIdMap[String(row.team_id || '')] || {};
         agg[pid] = {
           pitcherId: pid,
-          name: row.pitcher_name || info.name || pid,
-          team: info.team || '',
+          name: row.pitcher_name || pid,
+          team: teamInfo.name || '',
+          conf: teamInfo.conf || '',
           appearances: 0,
           totalIP: 0,
           totalK: 0,
@@ -1412,16 +1419,6 @@ async function loadLeaderboards() {
       agg[pid].totalK += parseInt(s.K) || 0;
       agg[pid].totalBB += parseInt(s.BB) || 0;
       agg[pid].totalER += parseInt(s.ER) || 0;
-    }
-
-    // Attach conference to each pitcher agg entry
-    const teamsArrForConf = teamsData?.teams || [];
-    const teamConfMap = {};
-    for (const t of teamsArrForConf) {
-      teamConfMap[t.team || t.name || ''] = t.conference || '';
-    }
-    for (const pid of Object.keys(agg)) {
-      agg[pid].conf = teamConfMap[agg[pid].team] || '';
     }
 
     // Store for conference filtering
