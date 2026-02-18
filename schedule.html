@@ -3752,12 +3752,12 @@ function renderCounters(filtered){
   if(!wrap) return;
   
   const totalGames = SCHED?.games?.length || 0;
-  const totalTeams = TEAMS?.teams?.length || 0;
+  const trackedTeams = Object.keys(pitchersById).length;
   const totalPitchers = Object.values(pitchersById).reduce((sum, team) => sum + (team.pitchers?.length || 0), 0);
-  
+
   wrap.innerHTML = `
     <div class="badge">📊 ${filtered.length} / ${totalGames} games</div>
-    <div class="badge">⚾ ${totalTeams} teams</div>
+    <div class="badge">⚾ ${trackedTeams} tracked teams</div>
     <div class="badge">⚾ ${totalPitchers} pitchers</div>
   `;
 }
