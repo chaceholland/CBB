@@ -1386,8 +1386,12 @@ async function loadLeaderboards() {
       return;
     }
 
-    // Build teamId → {name, conf} map from pitchersData (ESPN numeric IDs)
+    // Build teamId → {name, conf} map - combine teams.json (all D1) + pitchers.json (scraped teams)
     const teamIdMap = {};
+    for (const t of (teamsData?.teams || teamsData || [])) {
+      if (t.id) teamIdMap[String(t.id)] = { name: t.shortName || t.name || '', conf: t.conference || '' };
+    }
+    // pitchers.json overrides (has canonical names for our tracked teams)
     for (const t of (pitchersData?.teams || [])) {
       const info = { name: t.team || '', conf: t.conference || '' };
       if (t.teamId) teamIdMap[String(t.teamId)] = info;
