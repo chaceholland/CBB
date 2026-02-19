@@ -2288,7 +2288,7 @@
           "year": "Sophomore",
           "height": "6' 1\"",
           "weight": "185",
-          "headshot": "https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2025%2F5%2F12%2FTownsend.jpg&height=300&type=webp",
+          "headshot": "data/headshots/ole_miss_92-cade_townsend.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/cade-townsend/6164"
         },
         {
@@ -2299,7 +2299,7 @@
           "year": "Sophomore",
           "height": "6' 4\"",
           "weight": "220",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FCooper_Johnson.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-cooper_johnson.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/cooper-johnson/6155"
         },
         {
@@ -2310,7 +2310,7 @@
           "year": "Senior",
           "height": "6' 4\"",
           "weight": "220",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FMarko_Sipila.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-marko_sipila.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/marko-sipila/6172"
         },
         {
@@ -2321,7 +2321,7 @@
           "year": "Freshman",
           "height": "6' 1\"",
           "weight": "220",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FLuke_Romine.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-luke_romine.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/luke-romine/6173"
         },
         {
@@ -2332,7 +2332,7 @@
           "year": "Sophomore",
           "height": "6' 4\"",
           "weight": "265",
-          "headshot": "https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2025%2F2%2F27%2FHooks.jpg&height=300&type=webp",
+          "headshot": "data/headshots/ole_miss_92-walker_hooks.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/walker-hooks/6154"
         },
         {
@@ -2343,7 +2343,7 @@
           "year": "Junior",
           "height": "6' 4\"",
           "weight": "220",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FOwen_Kelly.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-owen_kelly.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/owen-kelly/6174"
         },
         {
@@ -2354,7 +2354,7 @@
           "year": "Junior",
           "height": "6' 5\"",
           "weight": "230",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FPatrick_Collopy.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-patrick_collopy.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/patrick-collopy/6175"
         },
         {
@@ -2365,7 +2365,7 @@
           "year": "Junior",
           "height": "6' 4\"",
           "weight": "210",
-          "headshot": "https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2024%2F4%2F22%2FCalhoun.jpg&height=300&type=webp",
+          "headshot": "data/headshots/ole_miss_92-hudson_calhoun.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/hudson-calhoun/6148"
         },
         {
@@ -2376,7 +2376,7 @@
           "year": "Junior",
           "height": "6' 3\"",
           "weight": "215",
-          "headshot": "https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F5%2FElliott.jpg&height=300&type=webp",
+          "headshot": "data/headshots/ole_miss_92-hunter_elliott.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/hunter-elliott/5688"
         },
         {
@@ -2387,7 +2387,7 @@
           "year": "Freshman",
           "height": "6' 7\"",
           "weight": "205",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FNoah_Allen.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-noah_allen.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/noah-allen/6177"
         },
         {
@@ -2398,7 +2398,7 @@
           "year": "Freshman",
           "height": "6' 1\"",
           "weight": "210",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FGrayson_Gibson.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-grayson_gibson.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/grayson-gibson/6178"
         },
         {
@@ -2409,7 +2409,7 @@
           "year": "Junior",
           "height": "6' 6\"",
           "weight": "245",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FLandon_Koenig.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-landon_koenig.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/landon-koenig/6180"
         },
         {
@@ -2420,7 +2420,7 @@
           "year": "Senior",
           "height": "6' 1\"",
           "weight": "210",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FLandon_Waters.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-landon_waters.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/landon-waters/6166"
         },
         {
@@ -2431,7 +2431,7 @@
           "year": "Sophomore",
           "height": "6' 5\"",
           "weight": "205",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FOwen_Hancock.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-owen_hancock.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/owen-hancock/6153"
         },
         {
@@ -2442,7 +2442,7 @@
           "year": "Sophomore",
           "height": "6' 4\"",
           "weight": "225",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FTerry_Hayes.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-terry_hayes_jr.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/terry-hayes-jr/6181"
         },
         {
@@ -2453,7 +2453,7 @@
           "year": "Freshman",
           "height": "6' 4\"",
           "weight": "220",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FBlake_Ilitch.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-blake_ilitch.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/blake-ilitch/6182"
         },
         {
@@ -2464,7 +2464,7 @@
           "year": "Redshirt Sophomore",
           "height": "6' 0\"",
           "weight": "190",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FJP_Robertson.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-jp_robertson.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/jp-robertson/6162"
         },
         {
@@ -2475,7 +2475,7 @@
           "year": "Freshman",
           "height": "6' 5\"",
           "weight": "205",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FEvan_Farrow.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-evan_farrow.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/evan-farrow/6183"
         },
         {
@@ -2486,7 +2486,7 @@
           "year": "Redshirt Freshman",
           "height": "6' 6\"",
           "weight": "238",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FJake_Reigert.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-jake_reigert.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/jake-reigert/6160"
         },
         {
@@ -2497,7 +2497,7 @@
           "year": "Sophomore",
           "height": "6' 1\"",
           "weight": "215",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FWil_Libbert.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-wil_libbert.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/wil-libbert/6184"
         },
         {
@@ -2508,7 +2508,7 @@
           "year": "Sophomore",
           "height": "6' 5\"",
           "weight": "200",
-          "headshot": "https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2024%2F4%2F12%2FTaylorRabe.jpg&height=300&type=webp",
+          "headshot": "data/headshots/ole_miss_92-taylor_rabe.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/taylor-rabe/6158"
         },
         {
@@ -2519,7 +2519,7 @@
           "year": "Freshman",
           "height": "6' 2\"",
           "weight": "200",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Folemisssports.com%2Fimages%2F2026%2F2%2F6%2FLeo_Odom.jpg&width=180&height=270&type=webp",
+          "headshot": "data/headshots/ole_miss_92-leo_odom.jpg",
           "bioUrl": "https://olemisssports.com/sports/baseball/roster/leo-odom/6185"
         }
       ],
@@ -8823,7 +8823,7 @@
           "weight": "200",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FMcAnelly__Colter_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-colter_mcanelly.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/colter-mcanelly/17034"
         },
         {
@@ -8836,7 +8836,7 @@
           "weight": "175",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FNielson__Cameron_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-cameron_nielson.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/cameron-nielson/17036"
         },
         {
@@ -8849,7 +8849,7 @@
           "weight": "225",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FGalindo__David.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-david_galindo.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/david-galindo/17097"
         },
         {
@@ -8862,7 +8862,7 @@
           "weight": "200",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FKittridge__Ryan_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-ryan_kittredge.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/ryan-kittredge/17045"
         },
         {
@@ -8875,7 +8875,7 @@
           "weight": "170",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FAbercrombie__Justin_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-justin_abercrombie.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/justin-abercrombie/17042"
         },
         {
@@ -8888,7 +8888,7 @@
           "weight": "205",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FDiamant__Demitri.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-demitri_diamant.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/demitri-diamant/17023"
         },
         {
@@ -8901,7 +8901,7 @@
           "weight": "180",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FSoder__Kaden_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-kaden_soder.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/kaden-soder/17095"
         },
         {
@@ -8914,7 +8914,7 @@
           "weight": "170",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FLenius__Ian_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-ian_lenius.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/ian-lenius/17103"
         },
         {
@@ -8927,7 +8927,7 @@
           "weight": "160",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FRiske__Payton_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-payton_riske.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/payton-riske/17038"
         },
         {
@@ -8940,7 +8940,7 @@
           "weight": "205",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FMcGorman__Anson_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-anson_mcgorman.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/anson-mcgorman/17035"
         },
         {
@@ -8953,7 +8953,7 @@
           "weight": "210",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FCulver__Ian_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-ian_culver.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/ian-culver/17021"
         },
         {
@@ -8966,7 +8966,7 @@
           "weight": "205",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FSalvesen__Landon_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-landon_salvesen.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/landon-salvesen/17107"
         },
         {
@@ -8979,7 +8979,7 @@
           "weight": "195",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FJones__Easton_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-easton_jones.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/easton-jones/17029"
         },
         {
@@ -8992,7 +8992,7 @@
           "weight": "235",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FHarris__Malik_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-malik_harris.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/malik-harris/17046"
         },
         {
@@ -9005,7 +9005,7 @@
           "weight": "200",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FGazaway__Dylan_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-dylan_gazaway.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/dylan-gazaway/17026"
         },
         {
@@ -9018,7 +9018,7 @@
           "weight": "200",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FCova__Sammy_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-sammy_cova.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/sammy-cova/17100"
         },
         {
@@ -9031,7 +9031,7 @@
           "weight": "190",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FFine__Dillon_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-dillon_fine.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/dillon-fine/17024"
         },
         {
@@ -9044,7 +9044,7 @@
           "weight": "185",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FGraham-Pippin__Seth_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-seth_graham_pippin.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/seth-grahampippin/17106"
         },
         {
@@ -9057,7 +9057,7 @@
           "weight": "200",
           "batsThrows": "",
           "hometown": "",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Futahutes.com%2Fimages%2F2026%2F1%2F29%2FCovert_II__Chance_01.JPG&width=100&height=100&type=webp",
+          "headshot": "data/headshots/utah_128-chance_covert_ii.jpg",
           "bioUrl": "https://utahutes.com/sports/baseball/roster/chance-covert-ii/17099"
         }
       ],
@@ -14100,7 +14100,7 @@
           "year": "So.",
           "height": "6' 3''",
           "weight": "213",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FJones__Tyler.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-tyler_jones.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/tyler-jones/17560"
         },
         {
@@ -14111,7 +14111,7 @@
           "year": "Jr.",
           "height": "6' 1''",
           "weight": "212",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FTwist__Toby.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-toby_twist.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/toby-twist/17573"
         },
         {
@@ -14122,7 +14122,7 @@
           "year": "Jr.",
           "height": "6' 3''",
           "weight": "205",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FClarke__Collin.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-collin_clarke.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/collin-clarke/17548"
         },
         {
@@ -14133,7 +14133,7 @@
           "year": "Jr.",
           "height": "6' 3''",
           "weight": "200",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FGosztola__Miles.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-miles_gosztola.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/miles-gosztola/18219"
         },
         {
@@ -14144,7 +14144,7 @@
           "year": "R-Fr.",
           "height": "6' 5''",
           "weight": "265",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FLauaki_Jr.__Naulivou.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-naulivou_lauaki_jr.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/naulivou-lauaki-jr/17563"
         },
         {
@@ -14155,7 +14155,7 @@
           "year": "So.",
           "height": "6' 3''",
           "weight": "201",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FMeckna__Michael.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-michael_meckna.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/michael-meckna/17565"
         },
         {
@@ -14166,7 +14166,7 @@
           "year": "Sr.",
           "height": "6' 0''",
           "weight": "210",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FUmlandt__Ian.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-ian_umlandt.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/ian-umlandt/17575"
         },
         {
@@ -14177,7 +14177,7 @@
           "year": "So.",
           "height": "6' 0''",
           "weight": "202",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FSanford__Will.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-will_sanford.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/will-sanford/17571"
         },
         {
@@ -14188,7 +14188,7 @@
           "year": "So.",
           "height": "6' 1''",
           "weight": "190",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F1%2F27%2FBradley__Tanner.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-tanner_bradley.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/tanner-bradley/17545"
         },
         {
@@ -14199,7 +14199,7 @@
           "year": "Fr.",
           "height": "6' 2''",
           "weight": "190",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FCarvalho__Hudson.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-hudson_carvalho.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/hudson-carvalho/18224"
         },
         {
@@ -14210,7 +14210,7 @@
           "year": "R-Fr.",
           "height": "6' 2''",
           "weight": "200",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F1%2F27%2FBarkoff__Jonah.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-jonah_barkoff.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/jonah-barkoff/17543"
         },
         {
@@ -14221,7 +14221,7 @@
           "year": "R-So.",
           "height": "6' 4''",
           "weight": "220",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FScolari__Cal.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-cal_scolari.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/cal-scolari/18227"
         },
         {
@@ -14232,7 +14232,7 @@
           "year": "So.",
           "height": "6' 3''",
           "weight": "206",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FHoward__Gabe.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-gabe_howard.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/gabe-howard/17559"
         },
         {
@@ -14243,7 +14243,7 @@
           "year": "R-So.",
           "height": "6' 4''",
           "weight": "219",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FUelmen__Leo.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-leo_uelmen.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/leo-uelmen/17574"
         },
         {
@@ -14254,7 +14254,7 @@
           "year": "Fr.",
           "height": "6' 2''",
           "weight": "203",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FHollis__Josh.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-josh_hollis.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/josh-hollis/18228"
         },
         {
@@ -14265,7 +14265,7 @@
           "year": "R-So.",
           "height": "6' 5''",
           "weight": "233",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FStrawn__Cooper.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-cooper_strawn.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/cooper-strawn/18229"
         },
         {
@@ -14276,7 +14276,7 @@
           "year": "Fr.",
           "height": "6' 3''",
           "weight": "229",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FMarkham__Cooper.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-cooper_markham.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/cooper-markham/18230"
         },
         {
@@ -14287,7 +14287,7 @@
           "year": "Jr.",
           "height": "6' 2''",
           "weight": "207",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FFeatherston__Ryan.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-ryan_featherston.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/ryan-featherston/17552"
         },
         {
@@ -14298,7 +14298,7 @@
           "year": "R-Fr.",
           "height": "6' 4''",
           "weight": "218",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FCrawford__Blake.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-blake_crawford.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/blake-crawford/17550"
         },
         {
@@ -14309,7 +14309,7 @@
           "year": "Fr.",
           "height": "5' 9''",
           "weight": "195",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FJohnson__Shane.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-shane_johnson.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/shane-johnson/18232"
         },
         {
@@ -14320,7 +14320,7 @@
           "year": "Sr.",
           "height": "6' 2''",
           "weight": "163",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FEdwards__Ryder.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-ryder_edwards.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/ryder-edwards/18234"
         },
         {
@@ -14331,7 +14331,7 @@
           "year": "So.",
           "height": "6' 3''",
           "weight": "230",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F2%2F3%2FMorgan__Luke.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-luke_morgan.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/luke-morgan/18235"
         },
         {
@@ -14342,7 +14342,7 @@
           "year": "Sr.",
           "height": "6' 4''",
           "weight": "194",
-          "headshot": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuoregon.sidearmsports.com%2Fimages%2F2026%2F1%2F27%2FBell__Devin.png&width=100&height=100&type=webp",
+          "headshot": "data/headshots/oregon_273-devin_bell.jpg",
           "bioUrl": "https://goducks.com/sports/baseball/roster/devin-bell/18236"
         }
       ],
@@ -14639,7 +14639,7 @@
           "weight": "205",
           "batsThrows": "L/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/lo7hUd9NbA4RbgiBNVD1y2Xh2vZvSkjlIsFj5Sd8B-s/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wNy8xNi8zZk5aZ05BUGJLM1hWOFlRT01NMGNvMm0yd1lLZ0NzTGYwQWM2U0t2LmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-ben_demell.jpg"
         },
         {
           "id": "penn-state-P3",
@@ -14651,7 +14651,7 @@
           "weight": "195",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/Ns97LQajZMW9Vg7Vnb2jBCsskNtlmuDV49ldt_eek84/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyMy8xMi8wMS80eDJTSTd0TnZvcmNhNlBJdlBzREh6YVd3YUtwOGJiYUx2cmthR28yLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-mason_butash.jpg"
         },
         {
           "id": "penn-state-P5",
@@ -14663,7 +14663,7 @@
           "weight": "215",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/VsXW9_DDoJrPwi-KaWOR7txoZSwUjllxDChbXUawySY/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wOS8xMi9ZSGJPcFN1NGFYZjJxWnZUSjZhNGN1V2VmeU56U205WjN1d2tnckNILmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-skip_shenosky.jpg"
         },
         {
           "id": "penn-state-P6",
@@ -14675,7 +14675,7 @@
           "weight": "185",
           "batsThrows": "L/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/m-6EL16ALzipoF2ku_JvFCHgxQValLQLahFmVw0Ohfg/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi9xVHJRM2F4aWJiVFRtZ2psN0x6OVhtbERCb3ZjZ1hpVTdQblVVcEtNLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-ben_hudson.jpg"
         },
         {
           "id": "penn-state-P7",
@@ -14687,7 +14687,7 @@
           "weight": "185",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/PZvkXZMbfVwajgABI5TS9lOFoIKFSNkpoiqTR5iXWRw/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wOS8yMC9qTVdLQTJ2dnlUMWFpem9tcGxLYnFOb2hUaGZlRmtDNDJsT2paaHBiLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-dimond_loosli.jpg"
         },
         {
           "id": "penn-state-P8",
@@ -14699,7 +14699,7 @@
           "weight": "200",
           "batsThrows": "L/L",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/esFnlE3_SDmb80elpnZGCO1Ak0hI3PTTf-QKjin_NMo/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wOS8xMi8wZW1zNG1Ra01vcUJBSTJmY2VFSFRCcWZTVWxpYk5kWVJ3dHp4b084LmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-logan_olson.jpg"
         },
         {
           "id": "penn-state-P9",
@@ -14711,7 +14711,7 @@
           "weight": "195",
           "batsThrows": "L/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/v2bZM09ABQLkT3mYK_lqgFjIK6nyla4K1yGvWva81os/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wNy8xNi90VTNwQVZ5ZmRpMlNjUnIwek1lOXMzMHlCcXdZYlhzeXplRXdCYnZaLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-frankie_sanchez.jpg"
         },
         {
           "id": "penn-state-P11",
@@ -14723,7 +14723,7 @@
           "weight": "180",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/MOWmtnY6mtt6iumi5mnjM84eFxuTr7G7QdFjNSCQF40/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi9RdlZZNmc4MVRZaUFUb1cxYTVReEVNNnV1QmxrNHFyejN4WEhxQ2tXLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-ethan_bauerschmidt.jpg"
         },
         {
           "id": "penn-state-P12",
@@ -14735,7 +14735,7 @@
           "weight": "200",
           "batsThrows": "L/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/17JCNSkiWOpPUREDy7xA70KyzD7cnEF4thcTN6C64EQ/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi9EMndzUklqMHp5QU5TZkdNZWpnaVVrRDZWVDA4RnFGdHpXeWpJelhVLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-ren_devereux.jpg"
         },
         {
           "id": "penn-state-P13",
@@ -14747,7 +14747,7 @@
           "weight": "200",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/JBd90UTIK7So-igDmdHxgKq2vsPywyEzSq9EoEipR-0/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi9DR0E4MmJ3RzNWd3k3c29BRWpyMDlwYTVYTFJpUjM1VUt6RTVQTHdzLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-robert_brown_iii.jpg"
         },
         {
           "id": "penn-state-P14",
@@ -14759,7 +14759,7 @@
           "weight": "200",
           "batsThrows": "L/L",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/I9rvaA-Dh1SrIwrVuzGjQ8hpYNx8JuS0Y7bNBfV640Y/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wNy8xNi9FbU1zc0V4cDE0N1IzdVBldEVsRHRGTFg5RE1GaksxY2c4a3Q0YnZPLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-matt_morash.jpg"
         },
         {
           "id": "penn-state-P16",
@@ -14771,7 +14771,7 @@
           "weight": "185",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/SRYWJpEgItRyEqjyJVkdbKiFlRqzRcYRka3Hatfu3JU/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wOS8xMi8zSVJnY1lHdFF6ZElZTW00WERJa0g5SGc4YkVtM2R6cjl4b2dNZ0M0LmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-mason_horwat.jpg"
         },
         {
           "id": "penn-state-P18",
@@ -14783,7 +14783,7 @@
           "weight": "215",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/mrAvA4oFMAUapDo3yhsbaygmgqMeDtzzvP31Sp_hX6w/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wOS8xMi93U01zbVB3WDZNeTJEQldjdXR4bkF6bElEZmtJQ1hNVW1KZUFnVjczLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-carson_renner.jpg"
         },
         {
           "id": "penn-state-P19",
@@ -14795,7 +14795,7 @@
           "weight": "185",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/tp9uUNUHnTRP7JspTHUEn2YE9V_e55tP1SeFCn0EYLQ/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi9xVjdncEhWRFU1V3BGOHZYbU1sTm9zRTR5a2RxbUQ1THlrRkRsSHlVLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-leo_boucher.jpg"
         },
         {
           "id": "penn-state-P20",
@@ -14807,7 +14807,7 @@
           "weight": "210",
           "batsThrows": "L/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/poTAGac03_9JIsZidbIgc_vOW9QFXZxF7rYRxE2au24/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi9ndHNXSVpSbHlBeFNMcG1ZRGxoWlRldlp1Z2d5RURWRXZRMHZkWk9iLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-braden_leed.jpg"
         },
         {
           "id": "penn-state-P21",
@@ -14819,7 +14819,7 @@
           "weight": "195",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/ECiXbUDcHb0OY7SO4QubK6Z0tK3ASJDhbGGhiDhGYSQ/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi82ZUlIMGMxaVRGam5CVFRFb1k1MlBVTzFHUzRGSFRaNUtQZzZnU2VhLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-peter_thompson.jpg"
         },
         {
           "id": "penn-state-P22",
@@ -14831,7 +14831,7 @@
           "weight": "200",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/xkDAkuoIYOmHskSSKv7LWFs4DJzZdJLc3AEii1nYOtQ/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi9PenBsbXdENW1MMllYVTd1blZMN3BJMWJhbUJySllxUVlHOEhDaVVKLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-colin_fitzgerald.jpg"
         },
         {
           "id": "penn-state-P23",
@@ -14843,7 +14843,7 @@
           "weight": "178",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/GIFAmxyB3wJQCLpw3WJGktOaiRk3mBrOsbiv3hygE6M/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi91V3VudTFJd2ZDdU1BVEtYVWY2YW9CUnFJWnJTYllFdjNUdk5KUHhYLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-dylan_firmstone.jpg"
         },
         {
           "id": "penn-state-P24",
@@ -14855,7 +14855,7 @@
           "weight": "190",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/klbJkmPDPj1JwMEuWLEXSmR2q909aKGy3n1yxiblqU4/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wMi8yRUdiRjNEV3pDUTc4M1pTa0xxWW9ocFJFYVdTbTRkeUZpcmpmZXlhLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-isaiah_shayter.jpg"
         },
         {
           "id": "penn-state-P25",
@@ -14867,7 +14867,7 @@
           "weight": "220",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/36qHSmPcFJ6RI-2o2DLnq-tINcPu58FLta1lyfTAmQs/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wNy9QcnlWOGpqZmE0YjZLbDFCc1V2emU5TlFWOGU0aUxhZTA4SnlZdzhpLmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-greg_minnick.jpg"
         },
         {
           "id": "penn-state-P26",
@@ -14879,7 +14879,7 @@
           "weight": "205",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/DpFlGjmkt5bSv8oViCMqseE-f8Gs_-TDF3s9fuv5u0Y/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wOS8xMi9KSjlidWNoMGNXZUdyVzJCVlYwc2N1QnVFZnc2RGQ2OGlnNWZacnJ4LmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-harrison_lollin.jpg"
         },
         {
           "id": "penn-state-P27",
@@ -14891,7 +14891,7 @@
           "weight": "180",
           "batsThrows": "L/L",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/CZGn04w66WaQh4zRNIqp1luUrsFOqqizskmQbqDqIyg/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wOS8yMC85RlpndlFuQzhOUU9KeWdqOFV0SHZsZGoxZ1laaWJKYUdTTXBxUnk3LmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-matthew_vanostenbridge.jpg"
         },
         {
           "id": "penn-state-P28",
@@ -14903,7 +14903,7 @@
           "weight": "220",
           "batsThrows": "R/R",
           "hometown": "",
-          "headshot": "https://gopsusports.com/imgproxy/oKSWYBPO0uLJ8kHly9IxJM-OMkOYGNwjJ2Q0PgOTVgs/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNi8wMi8wNy9xajFMdXdRTjFNN2VwMGh5d3ZRUXN6R2FzWnl5VE1USnNRbGhFcVB6LmpwZw.jpg"
+          "headshot": "data/headshots/penn_state_nittany_lions_414-kyle_emmons.jpg"
         }
       ],
       "logo": "/logos/414.png"
