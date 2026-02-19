@@ -4893,7 +4893,7 @@ async function boot(){
 
   console.log('[boot] weeksSelected size:', weeksSelected.size, 'weeks:', Array.from(weeksSelected));
 
-  TEAMS = await tryMany(['./data/teams.json']);
+  TEAMS = await tryMany(['./data/teams.json?v=20260218-2']);
 
   // Initialize multi-select grids
   fillConferencesGrid();
