@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-02-18T11:47:52.815Z",
+  "totalStorageFiles": 1530,
+  "matched": 5,
+  "alreadyHasStorage": 0,
+  "noMatch": 1336,
+  "sample": [
+    {
+      "name": "Jake Kennedy",
+      "url": "jake-kennedy.jpg"
+    },
+    {
+      "name": "Jack Brown",
+      "url": "jack-brown.webp"
+    },
+    {
+      "name": "Matthew Martinez",
+      "url": "matt-martinez.png"
+    },
+    {
+      "name": "David Lally Jr.",
+      "url": "david-steinbrick-jr.jpg"
+    },
+    {
+      "name": "Jake McCoy",
+      "url": "jake-mccoy.webp"
+    }
+  ]
+}
